@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/ruleta.css">
+    <style>
+        .resilt{
+            background: linear-gradient(319deg, #ffb34e, #ff62aa);
+            width: 100%;
+            display: flex;
+            height: auto;
+            position: fixed;
+            bottom: 0;
+            justify-content: space-between;
+        }
+        .fra{
+            height: 100%;
+            background: #fff;
+            width: 40%;
+            border-radius: 0% 10rem 0% 0%;
+            max-height: 200px;
+        }
+        .text_res{
+            height: 100%;
+            background: #fff;
+            width: 40%;
+            border-radius: 10rem 0% 0% 0%;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="wheel__wrapper">
+          <div class="wheel__controller" @click="turning">
+            <img src="https://canalonce.mx/REST/data/images/ruleta-flecha-3.png" alt="">
+          </div>
+          <div class="content__wrapper" ref="roulette" @transitionend="turningEnd">
+            <div class="sector__wrapper">
+              <div
+                class="sector"
+                :class="awardIdx() === i && isShowResult? 'is-highlight' : ''"
+                v-for="(p, i) in prizes"
+                :style="`transform: rotate(${0.25 - (1/length)/2 - i*(1/length)}turn) skew(${90 - 360/length}deg)`"
+              ></div>
+            </div>
+            <div class="label__wrapper">
+              <div
+                class="label"
+                v-for="(p, i) in prizes"
+                :style="`transform: translateX(-50%) rotate(${-i*(1/length)}turn)`"
+                :class="awardIdx === i && isShowResult ? 'is-highlight' : ''"
+              >
+                <i class="icon" :class="p.icon"></i>
+                <h2 class="text">
+                    <span v-html="p.text"></span>
+                </h2>
+              </div>
+            </div>
+          </div>          
+          <div class="result__wrapper" :class="isShowResult ? 'is-show': ''">
+            <div class="result__inner">
+              <div class="congratute center-content-flex">Resultado:</div>
+              <div class="result__text center-content-flex">
+                <h1 class="award">
+                    <span v-html="result"></span>!
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-none">
+            {{res}}
+        </div>
+    </div>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        let vm = new Vue({
+        el: '#app',
+        computed: {
+            length() {
+                return this.prizes.length;
+            },
+            result() {
+                if (this.awardIdx === -1) {
+                    return null;
+                } else {
+                    if(this.i != 0){
+                        return this.prizes[this.awardIdx].text;
+                    }
+                }
+            },
+            turn() {
+                return this.r * 50 + 5;
+            },
+            awardIdx() {
+                return (
+                    Math.round((this.turn - Math.floor(this.turn)) * this.length) %
+                    this.length
+                );
+            }
+        },
+        data() {
+            return {
+                prizes: [
+                    {
+                        text: "Tema<br>sorpresa",
+                        icon: "fas fa-birthday-cake"
+                    },
+                    {
+                        text: "Pierde el <br> turno",
+                        icon: "fas fa-video"
+                    },
+                    {
+                        text: "Instituciones<br>del IPN",
+                        icon: "fas fa-star"
+                    },
+                    {
+                        text: "Creaciones<br>politecnicas",
+                        icon: "fas fa-baby"
+                    },
+                    {
+                        text: "Doble<br>turno",
+                        icon: "fas fa-plane"
+                    },
+                    {
+                        text: "Politécnicos<br>Destacados",
+                        icon: "fas fa-bicycle"
+                    }                
+                ],
+                res: [],
+                r: 0,
+                i: 0,
+                isShowResult: false
+            };
+        },
+        methods: {
+            async fetchCategorys(){
+                let infoUrl = `https://icsem.mx/Admin/admin/assets/php/json/${url}.json`
+                try {
+                    const res = await fetch(`https://admino.fabricaapps.com/rest/ruleta_temas?cache=`)
+                    // const res = await fetch(`https://icsem.mx/Admin/admin/assets/php/json/api.json  `)
+                    // const res = await fetch(`https://canaloncetv.s3.amazonaws.com/REST/data/mdb/channels.json`)
+                    const data = await res.json()                    
+                    return data;                    
+
+                } catch (error) {
+                    console.log(error);
+                }
+            },
+            turning() {
+                this.isShowResult = false;
+                this.r = Math.random();
+                this.$refs.roulette.style.transform = `rotate(${this.turn}turn)`;
+                this.$refs.roulette.classList.add("turning");
+            },
+            turningEnd() {
+                this.$refs.roulette.classList.remove("turning");
+                this.isShowResult = true;
+                this.i = 1;
+            }
+        }
+        })
+    </script>
+</body>
+</html>

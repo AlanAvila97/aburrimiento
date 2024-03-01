@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="https://canalonce.mx/REST/data/favicon-96_96.png">
+    <!-- CSS -->
+    <link href="assets/css/para_no_olvidar.css" rel="stylesheet">
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Video js CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/video.js@7.7.3/dist/video-js.min.css'>    
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/DJ-PD/test/videojs-http-source-selector.css'>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@silvermine/videojs-chromecast@1.2.0/dist/silvermine-videojs-chromecast.css' media="none" onload="if(media!='all')media='all'">
+</head>
+<body>
+    <main id="wrapper" class="bg-home">
+        <section class="section-capsulas pt-md-100">
+            <div class="container-capsulas d-grid">
+                <div class="content-video d-flex">
+                    <div class="title d-flex">
+                        <div class="capsula">
+                            <h2>Cápsula #1</h2>
+                        </div>
+                        <div class="text-title d-flex">
+                            <h2>Nombre de la <span>cápsula</span></h2>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <!-- <video id="streamplayer" class="video-js vjs-big-play-centered" controls autoplay muted preload="auto" playsinline data-setup='{"fluid": true}'> -->
+                        <video id="streamplayer" class="video-js vjs-big-play-centered" controls muted preload="auto" playsinline data-setup='{"fluid": true}'>
+                            <source src="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/trailer/ep_spot_ep2_v1.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="galeria">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">Slide 1</div>
+                              <div class="swiper-slide">Slide 2</div>
+                              <div class="swiper-slide">Slide 3</div>
+                              <div class="swiper-slide">Slide 4</div>
+                              <div class="swiper-slide">Slide 5</div>
+                              <div class="swiper-slide">Slide 6</div>
+                              <div class="swiper-slide">Slide 7</div>
+                              <div class="swiper-slide">Slide 8</div>
+                              <div class="swiper-slide">Slide 9</div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-list d-flex">
+                    <div class="title d-flex">
+                        <div class="datos">
+                            <h2>Datos Curiosos</h2>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                Titulo de la lista 
+                            </li>
+                            <li>
+                                Titulo de la lista 
+                            </li>
+                            <li>
+                                Titulo de la lista 
+                            </li>
+                            <li>
+                                Titulo de la lista 
+                            </li>
+                            <li>
+                                Titulo de la lista 
+                            </li>
+                            <li>
+                                Titulo de la lista 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Video Js -->
+	<script src="assets/js/videojs/video.min.js"></script>
+	<script src="assets/js/videojs/Youtube.min.js"></script>
+	<script src="assets/js/videojs/videojs-http-source-selector.js"></script>
+	<script src="assets/js/videojs/videojs-contrib-quality-levels.min.js"></script>
+	<script src="assets/js/videojs/videojs-landscape-fullscreen.min.js"></script>
+	<script src="assets/js/videojs/videojs-player-analytics.js"></script>
+	<script src="assets/js/videojs/videojs-vimeo.umd.js"></script>
+	<script src="assets/js/videojs/videojs.hotkeys.min.js"></script>
+	<script src="assets/js/videojs/silvermine-videojs-chromecast.min.js"></script>
+	<script src='https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1'></script>
+    <script src='https://cdn.jsdelivr.net/gh/DJ-PD/test/videojs-http-source-selector.js'></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        cssMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+    </script>
+</body>
+</html>

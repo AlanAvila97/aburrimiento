@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #000;
+
+            }
+            .section-microitios{
+                padding: 1rem;
+            }
+            .section-microitios .display-flex-column{
+                display: flex;
+                flex-direction: column;
+            }
+            .section-microitios .container-micrositios{
+                background-color: #fff;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: nowrap;
+                padding: 0.5rem;
+                gap: 1rem;
+            }
+            .section-microitios .title-micrositios {
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .section-microitios .title-micrositios div {
+                width: 70%;
+            }
+            .section-microitios .title-micrositios h3:only-child {
+                max-width: 100%;
+                flex: 0 0 auto;
+                float: left;
+                width: 29%;
+            }
+            .section-microitios .title-micrositios h3{
+                padding: 5px 15px 5px 25px;
+                position: relative;
+                opacity: 0.99;
+                display: inline-block !important;
+                width: auto;
+                font-size: 18px;
+                line-height: 1.3;
+                font-weight: 500;
+                margin: 0.5rem 0rem;
+                color: #fff;
+                margin-left: 1rem;
+            }
+            .section-microitios .title-micrositios h3::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #701d47;
+                transform: skew(-20deg) translateX(6px);
+                z-index: -1;
+            }
+            .section-microitios .container-micrositios .content-left{
+                width: 70%;
+                gap: 1rem;
+            }
+            .section-microitios .container-micrositios .item img{  
+                height: 100%;
+                max-width: 100%;
+                display: block;
+            }
+            .section-microitios .container-micrositios .content-left .item{
+                width: 100%;
+                height: 100%;
+            }
+            .section-microitios .container-micrositios .content-rigth{ 
+                width: 29%;
+                gap: 5px;
+            }
+            .section-microitios .container-micrositios .content-rigth .item{ 
+                width: auto;
+                width: 100%;
+                height: 100%;
+            }
+            @media (max-width: 680px){
+                .section-microitios .title-micrositios div {
+                    width: 100%;
+                    display: none;
+                }
+                .section-microitios .title-micrositios h3:only-child {
+                    width: 100%;
+                }
+                .section-microitios .container-micrositios{
+                    flex-direction: column-reverse;
+                }
+                .section-microitios .container-micrositios .content-rigth,
+                .section-microitios .container-micrositios .content-left{
+                    width: 100%;
+                    padding: 1rem;
+                }
+                .section-microitios .container-micrositios .item img{
+                    width: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="section-microitios">
+            <div class="title-micrositios">
+                <div></div>
+                <h3>Micrositios</h3>
+            </div>
+            <div class="container-micrositios">
+                <div class="content-left display-flex-column">
+                    <a class="item">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/1200x450_PR.jpg" alt="" srcset="">                    
+                    </a>
+                    <a class="item">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/3.png" alt="" srcset="">                    
+                    </a>
+                </div>
+                <div class="content-rigth display-flex-column">
+                    <a class="item">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/banner-800-x-260.png" alt="" srcset="">                    
+                    </a>
+                    <a class="item">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-proyectosjpg.jpg" alt="" srcset="">                    
+                    </a>
+                    <a class="item">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-tren-maya.jpg" alt="" srcset="">                    
+                    </a>
+                    <a class="item">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-drogas.jpg" alt="" srcset="">                    
+                    </a>
+                    <a class="item">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-tramites.jpg" alt="" srcset="">                    
+                    </a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .section-videos{
+            padding: 2rem;
+        }
+        .section-videos .container-videos {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(300px, 1fr));
+            justify-items: center;
+            gap: 1rem;
+        }
+        .section-videos .container-videos .column-video{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .section-videos .container-videos .column-video .tittle{
+            border: 1px solid #701d47;
+            padding: 1rem;
+        }
+        .section-videos .container-videos .column-video .tittle h4{
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        @media (max-width: 991px){
+            .section-videos .container-videos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px){
+            .section-videos .container-videos {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-videos">
+        <div class="container-videos">
+            <div class="column-video" id="contenedor-video1">
+                <div class="tittle">
+                    <h4> titulo del cuadro</h4>
+                    más texto del cuadro
+                </div>
+                <div class="iframe-video">b</div>
+                <div class="imagen-video">c</div>
+            </div>
+            <div class="column-video" id="contenedor-video2">
+                <div class="tittle">
+                    <h4> titulo del cuadro</h4>
+                    más texto del cuadro
+                </div>
+                <div class="iframe-video">b</div>
+                <div class="imagen-video">c</div>
+            </div>
+            <div class="column-video" id="contenedor-video3">
+                <div class="tittle">
+                    <h4> titulo del cuadro</h4>
+                    más texto del cuadro
+                </div>
+                <div class="iframe-video">b</div>
+                <div class="imagen-video"></div>
+            </div>
+            <div class="column-video" id="contenedor-video4">
+                <div class="tittle">
+                    <h4> titulo del cuadro</h4>
+                    más texto del cuadro
+                </div>
+                <div class="iframe-video">b</div>
+                <div class="imagen-video">c</div>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          margin: 0 auto;
+        /*  background: firebrick; */
+        }
+        svg {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <svg height="100%" width="100%">
+        <defs>
+          <linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="skyblue" stop-opacity="1" />
+            <stop offset="70%" stop-color="skyblue" stop-opacity="0.3" />
+            <stop offset="100%" stop-color="skyblue" stop-opacity="0" />
+          </linearGradient>
+          <filter id="sky">
+            <feTurbulence baseFrequency="0.003 0.005" numOctaves="10" />
+            <feColorMatrix type="hueRotate" values="0">
+              <animate attributeName="values" from="0" to="360" dur="30s" repeatCount="indefinite" />
+            </feColorMatrix>
+            <feColorMatrix values="4.2 -4.6 3.1 -1.4 4.8 -0.8 -0.8 -1.9 2.7 4.4 0.8 -3.6 4.1 1.9 4.3 -3.4 0.1 1.7 3.5 -2.1" />
+            <feComposite operator="in" in2="SourceGraphic" />
+          </filter>
+        </defs>
+        <rect height="100%" width="100%" fill="url(#grad)" />
+        <rect height="100%" width="100%" filter="url(#sky)" />
+    </svg>
+</body>
+</html>

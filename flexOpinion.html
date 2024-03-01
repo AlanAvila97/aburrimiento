@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }            
+            .section-opiniones .grid-opiniones{
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(300px, 1fr));
+                justify-items: center;
+                gap: 10px 5px;                
+                background: #494949;
+                background: linear-gradient(180deg, #701d47 0%, #701d47 27%, transparent 27%, transparent 60%, #701d47 60%, #701d47 100% );
+                padding: 1rem 0rem;
+            }
+            .section-opiniones .grid-opiniones .items-opiniones{
+                width: auto;
+                height: auto;
+                text-decoration: none;
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .section-opiniones .grid-opiniones .image-perfil {
+                max-width: 100%;
+                height: auto;
+                width: auto;
+            }
+            .section-opiniones .grid-opiniones .name-perfil{
+                background: #75254c;
+                color: #fff;
+                padding: 5px 10px;
+                text-align: center;
+            }
+            .section-opiniones .grid-opiniones .name-perfil h2 {
+                font-size: 1rem;
+            }
+            @media (max-width: 650px){
+                .section-opiniones .grid-opiniones{
+                    grid-template-columns: repeat(1, minmax(300px, 1fr));
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="section-opiniones">
+            <div class="grid-opiniones">
+                <a class="items-opiniones" href="" target="_self" rel="Redireccion Opninión">
+                    <div class="image-perfil">
+                        <img class="lazy loaded" src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" data-src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" alt="Epigmenio Ibarra" title="Foto Perfil" width="250" height="250" data-was-processed="true">
+                    </div>
+                    <div class="name-perfil"> 
+                        <h2>Epigmenio Ibarra</h2>
+                    </div>
+                </a>
+                <a class="items-opiniones" href="https://oncenoticias.digital/tag/opinion-jairo-calixto/" target="_self" rel="Redireccion Opninión">
+                    <div class="image-perfil">
+                        <img class="lazy loaded" src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_3.webp" data-src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_3.webp" alt="Jairo Calixto" title="Foto Perfil" width="250" height="250" data-was-processed="true">
+                    </div>
+                    <div class="name-perfil"> 
+                        <h2>Jairo Calixto Albarrán</h2>
+                    </div>
+                </a>
+                <a class="items-opiniones" href="https://oncenoticias.digital/tag/opinion-felipe-avila/" target="_self" rel="Redireccion Opninión">
+                    <div class="image-perfil">
+                        <img class="lazy loaded" src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_1.webp" data-src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_1.webp" alt="Felipe Ávila" title="Foto Perfil" width="250" height="250" data-was-processed="true">
+                    </div>
+                    <div class="name-perfil"> 
+                        <h2>Felipe Ávila</h2>
+                    </div>
+                </a>
+                <a class="items-opiniones" href="https://oncenoticias.digital/tag/opinion-enrique-galvan/" target="_self" rel="Redireccion Opninión">
+                    <div class="image-perfil">
+                        <img class="lazy loaded" src="https://oncenoticias.digital/wp-content/uploads/2023/06/CIRCULO-_4.webp" data-src="https://oncenoticias.digital/wp-content/uploads/2023/06/CIRCULO-_4.webp" alt="Felipe Ávila" title="Foto Perfil" width="250" height="250" data-was-processed="true">
+                    </div>
+                    <div class="name-perfil"> 
+                        <h2>Enrique Galván Ochoa</h2>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </body>
+</html>

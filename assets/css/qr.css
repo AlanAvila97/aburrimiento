@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{    
+    background: linear-gradient(0deg, rgba(0,27,46,1), rgba(175,29,77,1) 100%);
+}
+.section-qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.section-qr .scan{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.section-qr .scan .qrcode{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: url('../images/qrcode.png');
+    background-size: 200px;
+}
+.section-qr .scan .qrcode::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/qrcode.png);
+    background-size: 200px;
+    filter: invert(1);
+    animation: animate 4s ease-in-out infinite;
+    -webkit-animation: animate 4s ease-in-out infinite;
+}
+.section-qr .scan .qrcode::after{
+    content: '';
+    position: absolute;
+    inset: 20px;
+    width: calc(100% - 40px);
+    height: 2px;
+    background: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 20px rgb(255, 255, 255)) drop-shadow( 0 0 60px rgb(255, 255, 255));
+    animation: animateLine 4s ease-in-out infinite;
+    -webkit-filter: drop-shadow(0 0 20px rgb(255, 255, 255)) drop-shadow( 0 0 60px rgba(175,29,77,1));
+    -webkit-animation: animateLine 4s ease-in-out infinite;
+}
+.section-qr .border-qr{
+    position: absolute;
+    inset: 0;
+    background: url(../images/border.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    animation: animateText 0.5 steps(1) infinite;
+    -webkit-filter: invert(1);
+    -webkit-animation: animateText 0.8s steps(1) infinite;
+}
+.section-qr .scan h3{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    font-family: console;
+    letter-spacing: 2px;
+    filter: drop-shadow(0 0 0px #fff) drop-shadow(0 0 2px #fff);
+    animation: animateText 0.5s steps(1) infinite;
+    -webkit-filter: drop-shadow(0 0 0px #fff) drop-shadow(0 0 2px #fff);
+    -webkit-animation: animateText 0.8s steps(1) infinite;
+}
+@keyframes animate {
+    0%, 100%{
+        height: 20px;
+    }
+    50%{
+        height: calc(100% - 20px);
+    }
+}
+@keyframes animateLine {
+    0%{
+        top: 20px;
+    }
+    50%{
+        top: calc(100% - 20px);
+    }
+}
+@keyframes animateText {
+    0%, 100% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}

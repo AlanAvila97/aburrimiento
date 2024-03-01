@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .section-carrusel .container-carrusel{
+            width: 100%;
+            height: auto;
+        }
+        .section-carrusel .flex-carrusel{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 5px;
+            justify-content: space-around;
+            height: auto;
+            
+            padding: 1rem 0rem;
+        }
+        .section-carrusel .flex-carrusel .item-banner{
+            width: 100%;
+            width: 24.2%;
+            height: auto;
+        }
+        .section-carrusel .flex-carrusel .item-banner a{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .section-carrusel .flex-carrusel .item-banner img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            width: auto;
+        }
+        @media (max-width: 1200px){
+            .section-carrusel .flex-carrusel .item-banner{
+                width: 48%;
+            }        
+        }
+        @media (max-width: 550px){
+            .section-carrusel .flex-carrusel .item-banner{
+                width: 100%;
+            }        
+        }
+    </style>
+</head>
+<body>
+    <section class="section-carrusel">
+        <div class="flex-carrusel">
+            <div class="item-banner">
+                <a href="https://oncenoticias.digital/acapulco-el-plan-de-reconstruccion-mas-grande-de-nuestra-historia/">
+                    <img class="lazy loaded" src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/banner-800-x-260.png" data-src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/banner-800-x-260.png" width="440" height="600" data-was-processed="true">
+                </a>
+            </div>
+            <div class="item-banner">
+                <a href="https://oncenoticias.digital/maraton-de-proyectos/">
+                    <img class="lazy loaded" src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-proyectosjpg.jpg" data-src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-proyectosjpg.jpg" width="440" height="600" data-was-processed="true">
+                </a>
+            </div>
+            <div class="item-banner">
+                <a href="https://oncenoticias.digital/tren-maya-4t/">
+                    <img class="lazy loaded" src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-tren-maya.jpg" data-src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-tren-maya.jpg" width="440" height="600" data-was-processed="true">
+                </a>
+            </div>
+            <div class="item-banner">
+                <a href="https://oncenoticias.digital/entrevista-amlo/">
+                    <img class="lazy loaded" src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/Banner-Entrevista-Amlo-6.png" data-src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/Banner-Entrevista-Amlo-6.png" width="440" height="600" data-was-processed="true">
+                </a>
+            </div>
+            <div class="item-banner">
+                <a href="https://oncenoticias.digital/secciones/tramites-y-servicios/">
+                    <img class="lazy loaded" src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-tramites.jpg" data-src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/800x260-tramites.jpg" width="440" height="600" data-was-processed="true">
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

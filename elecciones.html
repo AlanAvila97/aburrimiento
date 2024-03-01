@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            background-color: #000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-notas-elecciones {
+            padding: 1rem;
+        }
+        .section-notas-elecciones .container-notas-elecciones {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding: 1rem;
+            gap: 1rem;
+            background: #404040;
+        }
+        .section-notas-elecciones .container-notas-elecciones .grid-item-elecciones{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .section-notas-elecciones .container-notas-elecciones .container-notas-elecciones-g,
+        .section-notas-elecciones .container-notas-elecciones .container-notas-elecciones-ch {
+            gap: 1rem;
+        }
+        .section-notas-elecciones .container-notas-elecciones .item-elecciones{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .section-notas-elecciones .container-notas-elecciones .item-elecciones img{
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-notas-elecciones .container-notas-elecciones .item-elecciones h3{
+            color: #fff;
+            font-size: calc(1rem + 1vw);
+        }
+        .section-notas-elecciones .container-notas-elecciones .container-notas-elecciones-ch{
+            width: 100%;
+            gap: 1rem;
+        }
+        .section-notas-elecciones .container-notas-elecciones .container-notas-elecciones-ch .item-elecciones img{
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            max-height: 180px;
+            object-position: bottom;
+        }
+        @media (max-width: 620px){
+            .section-notas-elecciones .container-notas-elecciones .item-elecciones h3{
+                font-size: calc(1rem + 0.8vw);                
+            }
+        }
+        @media (max-width: 550px){
+            .section-notas-elecciones .container-notas-elecciones .item-elecciones h3 {
+                font-size: calc(0.5rem + 1vw);
+            }
+        }
+        @media (max-width: 480px){
+            .section-notas-elecciones .container-notas-elecciones .container-notas-elecciones-g, 
+            .section-notas-elecciones .container-notas-elecciones .container-notas-elecciones-ch{
+                gap: 5px;
+            }
+            .section-notas-elecciones .container-notas-elecciones .item-elecciones h3 {
+                font-size: calc(0.5rem + 1vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-notas-elecciones">
+        <div class="container-notas-elecciones">
+            <div class="container-notas-elecciones-g grid-item-elecciones">
+                <a href="#" class="item-elecciones">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/Popocatepetl.jpeg" alt="" srcset="">
+                    <h3>Popocatépetl continúa intensa actividad; permanece semáforo Amarillo Fase 2</h3>
+                </a>
+                <a href="#" class="item-elecciones">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/Popocatepetl.jpeg" alt="" srcset="">
+                    <h3>Popocatépetl continúa intensa actividad; permanece semáforo Amarillo Fase 2</h3>
+                </a>
+                <a href="#" class="item-elecciones">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/Popocatepetl.jpeg" alt="" srcset="">
+                    <h3>Popocatépetl continúa intensa actividad; permanece semáforo Amarillo Fase 2</h3>
+                </a>
+            </div>
+            <div class="container-notas-elecciones-ch grid-item-elecciones">
+                <a href="#" class="item-elecciones">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/Popocatepetl-746x420.jpeg" alt="" srcset="">
+                    <h3>Popocatépetl continúa intensa actividad; permanece semáforo Amarillo Fase 2</h3>
+                </a>
+                <a href="#" class="item-elecciones">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/Popocatepetl-746x420.jpeg" alt="" srcset="">
+                    <h3>Popocatépetl continúa intensa actividad; permanece semáforo Amarillo Fase 2</h3>
+                </a>
+                <a href="#" class="item-elecciones">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/02/Popocatepetl-746x420.jpeg" alt="" srcset="">
+                    <h3>Popocatépetl continúa intensa actividad; permanece semáforo Amarillo Fase 2</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
