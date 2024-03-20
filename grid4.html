@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-grid-four-colums{
+            
+        }
+        .section-grid-four-colums .container-grid-four-colums{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(4,minmax(300px,1fr));
+            gap: 1rem;
+        }
+        .section-grid-four-colums .container-grid-four-colums .item-grid-four-colums{
+            background-color: #000;
+            width: 100%;
+            height: 100px;            
+        }
+    </style>
+</head>
+<body>
+    <section class="section-grid-four-colums">
+        <div class="container-grid-four-colums">
+            <div class="item-grid-four-colums">
+
+            </div>
+            <div class="item-grid-four-colums">
+
+            </div>
+            <div class="item-grid-four-colums">
+
+            </div>
+            <div class="item-grid-four-colums">
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>

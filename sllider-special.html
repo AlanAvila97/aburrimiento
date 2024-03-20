@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Slider Especial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="apple-touch-icon" sizes="57x57" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/apple-icon-180x180.png">
+    <link rel="icon" sizes="192x192" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-192x192.png">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Demo styles -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%
+        }
+        body {
+            background: #eee;
+            color: #000;
+        }
+        .section-interactive-note .container-notas-elecciones {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            background: #404040;
+            width: 100%;
+            height: 100vh;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper {      
+            height: 100%;
+            width: 100%;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide.swiper-slide-active .container-item-note .item-note{
+            opacity: 1;
+            transition: opacity linear 1s;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-horizontal>.swiper-scrollbar, 
+        .section-interactive-note .container-notas-elecciones .swiper-scrollbar.swiper-scrollbar-horizontal{
+            top: 0.2rem;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-scrollbar-drag{
+            background: rgb(255 255 255 / 50%);
+            box-shadow: 0px 0px 5px 2px #000000d1;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        /* .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note:nth-child(even){
+        } */
+        .section-interactive-note .container-notas-elecciones .swiper-slide:nth-child(odd) .container-item-note{
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide:nth-child(even) .container-item-note{
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .background-item-note {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note  .background-item-note img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .item-note{
+            background: #c5bfe2;
+            box-shadow: 0px 0px 5px 1px #ffffff73;
+            border-radius: 0.5rem;   
+            height: auto;
+            padding: 1rem;
+            width: 40%;
+            z-index: 2;
+            margin: 1rem;
+            opacity: 0;
+        }                
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .item-note h2{
+            color: #000;
+            font-size: 2rem;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .container-audio{
+            display: none;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .container-controls{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            z-index: 2;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .container-controls .btn-play,
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .container-controls .btn-pause{
+            background: #0000009c;
+            border-radius: 5px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .container-controls .btn-active{
+            background: #701d47;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .container-controls img{
+            filter: invert(1);
+        }
+        .section-interactive-note .container-notas-elecciones .slider-interactive-note .swiper-button-prev,
+        .section-interactive-note .container-notas-elecciones .slider-interactive-note .swiper-button-next{
+            cursor: pointer;
+            color: #fff;
+            background: #00000075;
+            width: 40px;
+            height: auto;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+            padding: 5rem 3rem;
+        }
+        .section-interactive-note .container-notas-elecciones .slider-interactive-note .swiper-button-prev{
+            left: 0;
+            transform: translateX(-100%);
+            transition: transform 0.2s ease-out;
+            -webkit-transition: transform 0.2s ease-out;
+            -moz-transition: transform 0.2s ease-out;
+            -ms-transition: transform 0.2s ease-out;
+            -o-transition: transform 0.2s ease-out;
+        }
+        .section-interactive-note .container-notas-elecciones .slider-interactive-note .swiper-button-next{
+            right: 0;
+            transform: translateX(100%);
+            transition: transform 0.2s ease-out;
+            -webkit-transition: transform 0.2s ease-out;
+            -moz-transition: transform 0.2s ease-out;
+            -ms-transition: transform 0.2s ease-out;
+            -o-transition: transform 0.2s ease-out;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper:hover .swiper-button-prev,
+        .section-interactive-note .container-notas-elecciones .swiper:hover .swiper-button-next{
+            transform: translateX(0%);
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .container-autor{
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            z-index: 2;
+            background: #0000009c;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .container-autor h2{
+            font-size: 1rem;
+            color: #fff;
+        }
+        @media (max-width: 1100px){
+            .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .item-note{
+                width: 80%;
+            }
+        }   
+        @media (max-width: 991px){
+            .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note{
+                justify-content: center;
+                align-items: flex-end;
+            }
+            .section-interactive-note .container-notas-elecciones {
+                height: 65vh;
+            }
+            .section-interactive-note .container-notas-elecciones .swiper-slide .container-item-note .item-note {
+                width: 70%;
+            }
+            .section-interactive-note .container-notas-elecciones .swiper-slide:nth-child(odd) .container-item-note{
+                justify-content: center;
+            }
+            .section-interactive-note .container-notas-elecciones .swiper-slide:nth-child(even) .container-item-note{
+                justify-content: center;
+            }
+            .section-interactive-note .container-notas-elecciones .slider-interactive-note .swiper-button-prev{
+                transform: translateX(0%);
+            }
+            .section-interactive-note .container-notas-elecciones .slider-interactive-note .swiper-button-next{
+                transform: translateX(0%);
+            }
+            .section-interactive-note .container-notas-elecciones .slider-interactive-note .swiper-button-prev, 
+            .section-interactive-note .container-notas-elecciones .slider-interactive-note .swiper-button-next{
+                padding: 2rem;
+            }
+        }
+        @media (max-width: 500px){
+            .section-interactive-note .container-notas-elecciones {
+                height: 50vh;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <section class="section-interactive-note">
+        <div class="container-notas-elecciones">
+            <div class="swiper slider-interactive-note">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div id="item-0" class="container-item-note"> 
+                            <div class="background-item-note">
+                                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/foto_especial_1.jpg" alt="">
+                            </div>
+                            <div class="item-note item-none-0">
+                                <h2>
+                                    Este 8 de marzo de 2024, las mujeres volvieron a salir a las calles. Gritaron para no olvidar que, en 1908, en Estados Unidos, un patrón dejó encerradas a 130 mujeres y murieron calcinadas, exigiendo sus derechos.
+                                    <br>
+                                    Porque sus exigencias, reafirman, son históricas…
+                                </h2>
+                            </div>
+                            <div class="container-audio audio-none-0">
+                                <audio controls>
+                                    <source src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/audio_especial_1.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="container-controls">
+                                <div class="btn-play play-none-0" data-id="0">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/play.png" alt="" srcset="" width="30" height="30" data-id="0">
+                                </div>
+                                <div class="btn-pause pause-none-0" data-id="0">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/video-pause-button.png" alt="" srcset="" width="30" height="30" data-id="0">
+                                </div>
+                            </div>
+                            <div class="container-autor">
+                                <h2>Foto: Aline Espinosa</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div id="" class="container-item-note"> 
+                            <div class="background-item-note">
+                                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/foto_especial_2.jpg" alt="">
+                            </div>
+                            <div class="item-note item-none-1">
+                                <h2>
+                                    Todas juntas, como una sola, por ellas, por mí, por ti, por todas, por las que estamos y las que vienen, para que llegué el día en que sí podamos festejar que ni una más fue víctima de violencia.
+                                </h2>
+                            </div>
+                            <div class="container-audio audio-none-1">
+                                <audio controls>
+                                    <source src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/audio_especial_2.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="container-controls">
+                                <div class="btn-play play-none-1" data-id="1">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/play.png" alt="" srcset="" width="30" height="30" data-id="1">
+                                </div>
+                                <div class="btn-pause pause-none-1" data-id="1">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/video-pause-button.png" alt="" srcset="" width="30" height="30" data-id="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div id="" class="container-item-note"> 
+                            <div class="background-item-note">
+                                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/foto_especial_3.jpeg" alt="">
+                            </div>
+                            <div class="item-note item-none-2">
+                                <h2>
+                                    Llenaron las plazas del país, fueron unidad, grupo, comunidad y patria.
+                                    <br>
+                                    A las calles, niñas, adolecentes, jóvenes y adultas, que ahora en su plenitud, se atreven a denunciar que hace años esos matrimonios de paz, eran silencio y miedo...
+                                </h2>
+                            </div>
+                            <div class="container-audio audio-none-2">
+                                <audio controls>
+                                    <source src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/audio_especial_3.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="container-controls">
+                                <div class="btn-play play-none-2" data-id="2">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/play.png" alt="" srcset="" width="30" height="30" data-id="2">
+                                </div>
+                                <div class="btn-pause pause-none-2" data-id="2">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/video-pause-button.png" alt="" srcset="" width="30" height="30" data-id="2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div id="" class="container-item-note"> 
+                            <div class="background-item-note">
+                                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/foto_especial_4.jpeg" alt="">
+                            </div>
+                            <div class="item-note item-none-3">
+                                <h2>
+                                    Tomaron las principales calles de sus ciudades, fueron reprimidas por policías municipales cuando pintaban consignas en las paredes, que denuncian las desapariciones, violaciones, feminicidios.
+                                    <br>
+                                    Porque, aunque alguien les reclame pintar una pared, ellas escriben: “es tu pared, pero era mi niña, hermana, amiga, madre”.
+                                </h2>
+                            </div>
+                            <div class="container-audio audio-none-3">
+                                <audio controls>
+                                    <source src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/audio_especial_4.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="container-controls">
+                                <div class="btn-play play-none-3" data-id="3">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/play.png" alt="" srcset="" width="30" height="30" data-id="3">
+                                </div>
+                                <div class="btn-pause pause-none-3" data-id="3">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/video-pause-button.png" alt="" srcset="" width="30" height="30" data-id="3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div id="" class="container-item-note"> 
+                            <div class="background-item-note">
+                                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/foto_especial_5.jpeg" alt="">
+                            </div>
+                            <div class="item-note item-none-4">
+                                <h2>
+                                    ¡Las niñas no se tocan, no es no! “Yo peleo por los derechos de las niñas, porque no tengo nietas, pero quiero que vivan en un lugar donde estén tranquilas”.
+                                    <br>
+                                    Diferentes carteles las acompañaron a darse abrazos sororos, desde la empatía.
+                                </h2>
+                            </div>
+                            <div class="container-audio audio-none-4">
+                                <audio controls>
+                                    <source src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/audio_especial_5.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="container-controls">
+                                <div class="btn-play play-none-4" data-id="4">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/play.png" alt="" srcset="" width="30" height="30" data-id="4">
+                                </div>
+                                <div class="btn-pause pause-none-4" data-id="4">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/video-pause-button.png" alt="" srcset="" width="30" height="30" data-id="4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div id="" class="container-item-note"> 
+                            <div class="background-item-note">
+                                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/foto_especial_6.jpeg" alt="">
+                            </div>
+                            <div class="item-note item-none-5">
+                                <h2>
+                                    Las mujeres encendieron velas, cantaron, bailaron, se abrazaron y recordaron que no son botín político de nadie ni de nada.
+                                    <br>
+                                    Sus exigencias; trabajo, educación, salud, pero sobre todo seguir vivas.
+                                </h2>
+                            </div>
+                            <div class="container-audio audio-none-5">
+                                <audio controls>
+                                    <source src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/03/audio_especial_6.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div class="container-controls">
+                                <div class="btn-play play-none-5" data-id="5">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/play.png" alt="" srcset="" width="30" height="30" data-id="5">
+                                </div>
+                                <div class="btn-pause pause-none-5" data-id="5">
+                                    <img src="https://once.fabricaapps.com/aburrimiento/assets/images/video-pause-button.png" alt="" srcset="" width="30" height="30" data-id="5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper-button-prev slider-interactive-note-button-prev"></div>
+                <div class="swiper-button-next slider-interactive-note-button-next"></div>
+                <!-- <div class="arrow-preview">
+                    <img src="https://canalonce.mx/REST/data/images/arrowhead-left-direction.png" alt="Elemento Slider Preview" width="30" height="30">
+                </div>
+                <div class="arrow-next">
+                    <img src="https://canalonce.mx/REST/data/images/arrowhead-right-direction.png" alt="Elemento Slider Next"  width="30" height="30">
+                </div> -->
+            </div>
+        </div>
+    </section>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    /**
+    * @description Funcion que obtiene un elemento html
+    */   
+    const getElement = (element) => {
+        return document.querySelector(element);
+    }  
+    /**
+     * @description Función agrega una clase varios elementos html
+    */   
+    const getAllElement = (element) => {
+        return document.querySelectorAll(element);
+    }
+    const btn_play = getAllElement('.btn-play')
+    const btn_pause = getAllElement('.btn-pause')
+    btn_play.forEach(item => {
+        item.addEventListener("click", playAudio) 
+    });        
+    btn_pause.forEach(item => {
+        item.addEventListener("click", pauseAudio) 
+    });        
+    function playAudio(e) {
+        let id_audio = e.target.dataset.id;
+        let audio = document.querySelector('.audio-none-'+id_audio+' audio');
+        let active_Btn = getElement('.play-none-'+id_audio);
+        let pause_btn = getElement('.pause-none-'+id_audio);
+            pause_btn.classList.remove("btn-active");
+            active_Btn.classList.add('btn-active');
+            audio.play();
+    }
+    function pauseAudio(e) {
+        let id_audio = e.target.dataset.id;
+        let audio = document.querySelector('.audio-none-'+id_audio+' audio');
+        let active_Btn = getElement('.pause-none-'+id_audio);
+        let play_btn = getElement('.play-none-'+id_audio);
+            play_btn.classList.remove("btn-active");
+            active_Btn.classList.add('btn-active');
+            audio.pause();
+    }
+    document.addEventListener("DOMContentLoaded", function(event) {   
+        let primerAudio = getElement('.section-interactive-note .container-notas-elecciones .swiper-slide-active .container-audio audio');
+        let active_Btn = getElement('.play-none-0');
+        let pause_btn = getElement('.pause-none-0');
+            pause_btn.classList.remove("btn-active");
+            active_Btn.classList.add('btn-active');
+        primerAudio.play();
+    });
+    var swiper_interactive_note  = new Swiper(".slider-interactive-note", {
+      mousewheel: true,
+      effect: "fade",
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+      navigation: {
+        nextEl: ".slider-interactive-note .swiper-button-next",
+        prevEl: ".slider-interactive-note .swiper-button-prev",
+      },
+    });
+    swiper_interactive_note .on('slideChange', function (e) {
+        let element = document.querySelector('.item-none-'+e.realIndex);
+        let audio = document.querySelector('.audio-none-'+e.realIndex+' audio');
+        let active_Btn = getElement('.play-none-'+e.realIndex);
+        let pause_btn = getElement('.pause-none-'+e.realIndex);
+            pause_btn.classList.remove("btn-active");
+            active_Btn.classList.add('btn-active');
+        pusedAudios();
+        audio.play()
+    });
+    function pusedAudios() {
+        let audios = document.querySelectorAll('.container-audio audio');
+            audios.forEach(item => {
+                item.currentTime = 0
+                item.pause();
+            });
+    }
+  </script>
+</body>
+</html>
