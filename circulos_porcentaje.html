@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .section-votos .container-votos{
+            width: 100%;
+            height: auto;
+            display: flex;
+            padding: 1rem;
+            background-color: #d0f3ee;
+        }
+        .section-votos .container-votos .title{
+            width: 100%;
+        }
+        .section-votos .container-votos .title h2{
+            text-transform: uppercase;
+        }
+        .section-votos .container-votos .item-votos{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .section-votos .container-votos .item-votos .porcentaje{
+            width: auto;
+        }
+        .section-votos .container-votos .item-votos .porcentaje h3{
+            color: #000;
+            font-size: 1.5rem;
+        }
+        .section-votos .container-votos .item-votos .imagen{
+            clip-path: circle(50% at 50% 50%);
+            border-radius: 50%;
+            border: 2px solid #000;
+            padding: 2rem;
+            max-width: 70%;
+            height: auto;
+        }
+        .section-votos .container-votos .item-votos .imagen img{
+            width: auto;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: cover;
+            clip-path: circle(50% at 50% 50%);
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+        .section-votos .container-votos .item-votos .partido h3{
+            color: #000;
+            font-size: 1.5rem;
+        }
+        @media (max-width: 991px){
+            .section-votos .container-votos .item-votos .imagen{
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-votos">
+        <div class="container-votos">
+            <div class="title">
+                <h2>Tabasco</h2>
+            </div>
+        </div>
+        <div class="container-votos">
+            <div class="item-votos">
+                <div class="porcentaje">
+                    <h3>12%</h3>
+                </div>
+                <div class="imagen">
+                    <img src="https://dummyimage.com/350x350/ccc/fff" alt="">
+                </div>
+                <div class="partido">
+                    <h3>Pan</h3>
+                </div>
+            </div>
+            <div class="item-votos">
+                <div class="porcentaje">
+                    <h3>12%</h3>
+                </div>
+                <div class="imagen">
+                    <img src="https://dummyimage.com/350x350/ccc/fff" alt="">
+                </div>
+                <div class="partido">
+                    <h3>Pan</h3>
+                </div>
+            </div>
+            <div class="item-votos">
+                <div class="porcentaje">
+                    <h3>12%</h3>
+                </div>
+                <div class="imagen">
+                    <img src="https://dummyimage.com/350x350/ccc/fff" alt="">
+                </div>
+                <div class="partido">
+                    <h3>Pan</h3>
+                </div>
+            </div>
+            <div class="item-votos">
+                <div class="porcentaje">
+                    <h3>12%</h3>
+                </div>
+                <div class="imagen">
+                    <img src="https://dummyimage.com/350x350/ccc/fff" alt="">
+                </div>
+                <div class="partido">
+                    <h3>Pan</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

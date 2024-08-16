@@ -1,0 +1,1311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+    /* font-family: "Mikado Black", system-ui!important; */
+    font-family: 'Mikado_Black';
+                                                
+}
+:root{
+    --width_picture : max(450px, 500px);
+    --height_picture : max(450px, 480px);
+}
+.d-flex{
+    display: flex!important;   
+}
+.d-none{
+    display: none!important;   
+}
+.body-overflow{
+    overflow-x: hidden;
+}
+body{
+    background-image: url(../image/fondo_credenciales-transformed.jpeg);
+    background-image: url(../image/fondoONN.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background: #000;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url(../image/fondo_credenciales-transformed.jpeg);
+    background-image: url(../image/fondoONN.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+html .size-img{
+    width: 706px!important;
+    height: 1477px!important;
+    /* position: absolute!important;
+    z-index: 0;
+    opacity: 0; */
+}
+.img-fluid{
+    height: auto;
+    max-height: 100%;
+}
+.visibility-hidden{
+    visibility: hidden;
+}
+/*-------------------------------------------------------------
+# Modal Nube
+--------------------------------------------------------------*/
+html .modal-dialog-scrollable .modal-content{
+    border: 0.7rem solid #ef4d46;
+}
+html .modal-title{
+    font-size: 1.5rem;
+    color: #4d4d4df5;
+    font-weight: bold;
+}
+html .modal-header{
+    border: 2px solid #000;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px!important;
+    -webkit-border-radius: 0px!important;
+    -moz-border-radius: 0px!important;
+    -ms-border-radius: 0px!important;
+    -o-border-radius: 0px!important;
+}
+html .modal-body{
+    border: 2px solid #000;
+    border-top: none;
+    border-bottom: none;
+}
+html .modal-footer{
+    border: 2px solid #000;
+    border-top: none;
+    border-radius: 0px!important;
+    -webkit-border-radius: 0px!important;
+    -moz-border-radius: 0px!important;
+    -ms-border-radius: 0px!important;
+    -o-border-radius: 0px!important;
+}
+html .modal-footer button{
+    background-color: #ef4d46;
+    color: #fff;
+}
+html .modal-footer button:hover{
+    background-color: #ef4d46;
+    color: #fff;
+}
+.title-modal{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4d4d4df5;
+    margin: 0;
+}
+.text-modal{
+    font-size: 0.9rem;
+    color: #4d4d4df5;
+    margin: 0;
+}
+/*-------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+.preloader{ 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    height:100vh; 
+    width:100%; 
+    background: #1c1b1bc9;
+    background-size: 100% 100%;
+    position:fixed; 
+    top:0; 
+    left:0; 
+    z-index:9999; 
+    transition:opacity 1.5s linear;                    
+}
+.spinner {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    border: 4.5px solid #0000;
+    border-radius: 50%;
+    border-color: #dbdcef #0000;
+    animation: spinner-e04l1k 1s infinite linear;
+}
+.spinner::before,
+.spinner::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2.2px;
+    border: inherit;
+    border-radius: 50%;
+}  
+.spinner::before {
+    border-color: #ef4d46 #0000;
+    animation: inherit;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+.spinner::after {
+    margin: 8.9px;
+}
+@keyframes spinner-e04l1k {
+    100% {
+      transform: rotate(1turn);
+    }
+}
+/*-------------------------------------------------------------
+# Seccion Alerta 
+--------------------------------------------------------------*/
+.section-alert{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.section-alert .container-alert{
+    position: fixed;
+    right: 1rem;
+    bottom: 0;
+}
+/*-------------------------------------------------------------
+# Seccion Foto 
+--------------------------------------------------------------*/
+.container-picture{    
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 0.5rem;
+}
+.container-picture .content-take-picture{
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;    
+}
+.container-picture .content-take-picture .live-camera{
+    width: var(--width_picture);
+    height: var(--height_picture);
+}
+.container-picture .content-take-picture .live-camera video{
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+.container-picture .content-take-picture .foto-tomada{
+    width: 376px;
+    height: 580px;
+    background-color: #000;
+    /* background-image: url(../image/person_f.png); */
+    background-image: url(../image/credencial-reportera-transformed.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-picture .content-take-picture .foto-tomada .photo{
+    width: 98px;
+    height: 136px;
+    background: #5a89a0b5;
+    position: absolute;
+    top: 25px;
+    right: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container-picture .content-take-picture .foto-tomada .name{
+    height: 45px;
+    background: #85a4b42e;
+    width: 290px;
+    position: absolute;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(1rem + 1vh);
+    bottom: 80px;
+    border-radius: 5rem;
+}
+.container-picture .info-user{
+    gap: 1rem;
+}
+
+/*-------------------------------------------------------------
+# Seccion Diploma
+--------------------------------------------------------------*/
+.section-picture .contentainer-diploma{
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+.section-picture .contentainer-diploma .content-credential{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.section-picture .contentainer-diploma .content-credential .credential{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+}
+.section-picture .contentainer-diploma .content-credential .credential-left{
+    
+}
+.section-picture .contentainer-diploma .content-credential .credential-left .container-disclaimer{
+    display: flex;
+    height: auto;
+    width: 60%;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.section-picture .contentainer-diploma .content-credential .credential-left .container-disclaimer picture{
+    height: auto;
+    width: auto;
+}
+.section-picture .contentainer-diploma .content-credential .credential-left .container-disclaimer picture img{
+}
+.section-picture .contentainer-diploma .content-credential .credential-left .container-disclaimer .counter-download{
+    background: #fcfadf;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: auto;
+}
+.section-picture .contentainer-diploma .content-credential .credential-left .container-disclaimer .counter-download h2{
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+    color: #da7b28;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0rem 1rem;
+}
+.section-picture .contentainer-diploma .content-credential .credential-left .container-disclaimer .counter-download h2 span{
+    background: #f2ddb7;
+    border-radius: 5px;
+    padding: 10px 1rem;
+}
+.section-picture .contentainer-diploma .content-credential .credential .bg-hover-credential{
+    background-color: #07070780;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+}
+.section-picture .contentainer-diploma .content-credential .credential .bg-hover-credential picture{
+    display: block;
+    width: auto;
+    height: auto;
+}
+.section-picture .contentainer-diploma .content-credential .credential .bg-hover-credential picture img{
+    max-height: 200px;
+    filter: invert(1) drop-shadow(2px 4px 6px #000);
+}
+.section-picture .contentainer-diploma .content-credential .credential:hover .bg-hover-credential{
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    opacity: 1;
+}
+.section-picture .contentainer-diploma .content-credential .credential:hover .bg-hover-credential{
+}
+.section-picture .contentainer-diploma .content-credential .credential picture{
+    display: block;
+    width: auto;
+    height: auto;
+}
+.section-picture .contentainer-diploma .content-credential .credential picture img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    max-height: 650px;
+    max-width: 100%;
+}
+.section-picture .contentainer-diploma .bg-diploma{
+    width: auto;
+    height: 94%;
+    background-image: url('../image/fondo-d.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    position: relative;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+.section-picture .contentainer-diploma .bg-diploma .close-form{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;   
+    z-index: 400; 
+}
+.section-picture .contentainer-diploma .bg-diploma .close-form img{
+    cursor: pointer;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma{    
+    background: #fff;
+    box-shadow: 0 0 10px 3px #00000059;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    height: 100%;
+    width: 100%;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .body-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .title{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .title h2{
+    color: #000000;
+    font-size: calc(0.9rem + 1vh);
+    margin: 0;
+    font-weight: bolder;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma hr{
+    background: #eda1a3;
+    border-radius: 15px;
+    border: 1px solid #eda1a3;
+    box-shadow: 0 0 30px #eca0a2;
+    height: 1px;
+    width: 100%;
+    opacity: 1;
+    margin: 0.5rem;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .title-take-picture p,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .title-info-user p{
+    color: #000;
+    margin: 0;
+    font-weight: bold;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    padding-top: 5px;
+    width: 100%;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera #listaDeDispositivos{
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: calc(6px + 1vh);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture{
+    cursor: pointer;
+    border: #c3dbf3 solid 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1%;
+    width: 40px;
+    height: auto;
+    background: #c3dbf3;
+    position: relative;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture{
+    width: 50%;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture:disabled,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture:disabled,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture:disabled{
+    background: #b0b0b0bd;
+    opacity: 0.5;
+    cursor: no-drop;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture[disabled]:hover .box,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture[disabled]:hover .box,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture[disabled]:hover .box,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture[disabled]:hover .box {
+    opacity: 0;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture .text-movile,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture .text-movile,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture .text-movile,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture .text-movile{
+    display: none;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture .box.arrow-top {
+    bottom: -44px;
+    left: -77px;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture .box.arrow-top {
+    bottom: -47px;
+    left: -205px;
+    width: 235px;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture .box.arrow-top-left {
+    width: 145px;
+    bottom: -48px;
+    left: 0px;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture:hover .box,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture:hover .box,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture:hover .box,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture:hover .box {
+    opacity: 1;
+    transition: opacity ease-in 0.2s;
+    -webkit-transition: opacity ease-in 0.2s;
+    -moz-transition: opacity ease-in 0.2s;
+    -ms-transition: opacity ease-in 0.2s;
+    -o-transition: opacity ease-in 0.2s;
+    z-index: 300;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .camera{
+    width: 100%;
+    height: auto;
+    padding-top: 0.5rem;
+    position: relative;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .camera .overlay-camera{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 1rem 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .camera .overlay-camera img{
+    width: auto;
+    height: 100%;
+    filter: opacity(0.5);
+    -webkit-filter: opacity(0.5);
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .camera .live-camera{
+    text-align: center;
+    background: #000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .camera .live-camera video{
+    width: 100%;
+    height: 200px;
+    background: black;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .camera .live-camera #canvas{
+    width: auto;
+    height: 200px;
+    background: black;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .title-info-user{
+    padding-top: 5px;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding-top: 5px;
+    width: 100%;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user label{
+    color: #000;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-name,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-email{
+    border-radius: 5px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 50%;
+    row-gap: 5px;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color select{
+    cursor: pointer;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-name input,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color select,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color input,
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-email input{
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #000;
+    height: 100%;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-name{
+    width: 100%;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color{
+    width: 0%;
+    display: none!important;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color .btn-back{
+    cursor: pointer;
+    border: #c3dbf3 solid 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1%;
+    width: 50px;
+    height: auto;
+    background: #c3dbf3;
+    position: relative;
+    padding: 5px;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color .btn-back img{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 30px;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .footer-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .footer-form .btn-back{
+    cursor: pointer;
+    border: #c3dbf3 solid 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1%;
+    width: 50px;
+    height: auto;
+    background: #c3dbf3;
+    position: relative;
+    padding: 5px;
+
+}
+.section-picture .contentainer-diploma .bg-diploma .form-diploma .footer-form .btn-save{
+    background-color: #e75565;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*-------------------------------------------------------------
+# Seccion Seleccion Credencial
+--------------------------------------------------------------*/
+.section-selection { 
+    top: 0;
+}
+.section-selection .container-selection{
+    width: 100%;
+    position: fixed;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    gap: 5px;
+} 
+.section-selection .container-selection .disclaimer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.section-selection .container-selection .disclaimer picture{
+    height: auto;
+    width: 75%;
+}
+.section-selection .container-selection .disclaimer picture img{
+    max-width: 100%;
+    width: auto;
+}
+.section-selection .container-selection .disclaimer .counter-download{
+    background: #fcfadf;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: auto;
+}
+.section-selection .container-selection .disclaimer .counter-download h2{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    color: #da7b28;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0rem 1rem;
+}
+.section-selection .container-selection .disclaimer .counter-download h2 span{
+    background: #f2ddb7;
+    border-radius: 5px;
+    padding: 10px 1rem;
+}
+.section-selection .container-selection .alert-selection{ 
+    width: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    max-height: 58px;
+}
+.section-selection .container-selection .alert-selection img{ 
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
+/*-------------------------------------------------------------
+# Seccion Disclaimer
+--------------------------------------------------------------*/
+.section-disclaimer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1002;
+}
+.section-disclaimer .container-disclaimer{ 
+    width: 100%;
+    position: fixed;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.section-disclaimer .disclaimer-center{ 
+    top: 0;
+}
+.section-disclaimer .container-disclaimer .alert-disclaimer{ 
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.section-disclaimer .container-disclaimer .alert-disclaimer img{ 
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    display: block;
+    object-fit: contain;
+}
+.section-disclaimer .container-disclaimer .counter-download{ 
+    background: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 0.3rem solid #ef4d46;
+}
+/*-------------------------------------------------------------
+# Seccion Popovers
+--------------------------------------------------------------*/
+.box {
+    width: 105px;
+    height: auto;
+    background-color: #c2daf2;
+    color: #000;
+    padding: 5px;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+}
+.box.arrow-top-left:after {    
+    content: " ";
+    position: absolute;
+    left: 0px;
+    top: -11px;
+    border-top: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #c2daf2;
+}
+.box.arrow-top:after {
+    content: " ";
+    position: absolute;
+    right: 0px;
+    top: -11px;
+    border-top: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #c2daf2;
+}
+.box.arrow-right:after {
+    content: " ";
+    position: absolute;
+    right: -15px;
+    top: 15px;
+    border-top: 15px solid transparent;
+    border-right: none;
+    border-left: 15px solid black;
+    border-bottom: 15px solid transparent;
+}
+.box.arrow-bottom:after {
+    content: " ";
+    position: absolute;
+    right: 30px;
+    bottom: -15px;
+    border-top: 15px solid black;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: none;
+}
+.box.arrow-left:after {
+    content: " ";
+    position: absolute;
+    left: -15px;
+    top: 15px;
+    border-top: 15px solid transparent;
+    border-right: 15px solid black;
+    border-left: none;
+    border-bottom: 15px solid transparent;
+}
+/*-------------------------------------------------------------
+# Section Credencial
+--------------------------------------------------------------*/
+.section-credential-user{
+    position: relative;
+    z-index: 10000;
+}
+.section-credential-user .container-credential-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: #233329f7;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.section-credential-user .container-credential-user .credential{
+    background: #fff;
+    background-size: 100% 100%;
+    width: 420px;
+    height: 90%;
+    max-height: 670px;
+    position: relative;
+    padding: 3rem 3rem 2rem;
+    background-image: url(../image/fondo_credencial_amigo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.section-credential-user .container-credential-user .credential .logos-onn{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.section-credential-user .container-credential-user .credential .logos-onn picture{
+    width: auto;
+    height: auto;
+    display: block;
+}
+.section-credential-user .container-credential-user .credential .logos-onn picture img{
+    width: auto;
+    max-height: 75px;
+}
+.section-credential-user .container-credential-user .credential .foto{
+    width: 180px;
+    height: 190px;
+    background: #ffffff;
+    background-size: 100% 100%;
+    display: flex;
+    padding: 6px;
+    z-index: 2;
+}
+.section-credential-user .container-credential-user .credential .foto img{
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-fit: contain;
+    height: auto;
+    max-height: 100%;
+    display: block;
+}
+.section-credential-user .container-credential-user .credential .content-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.section-credential-user .container-credential-user .credential .content-name .txt-mi-nombre{
+    width: auto;
+    max-height: 20px;
+}
+.section-credential-user .container-credential-user .credential .content-name .name{
+    width: 350px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+}
+.section-credential-user .container-credential-user .credential .content-name .name h2{
+    font-size: 1.3rem;
+}
+.section-credential-user .container-credential-user .credential .content-name .txt-parte{
+    width: auto;
+    max-height: 30px;
+}
+.section-credential-user .container-credential-user .credential .type-credential{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-credential-user .container-credential-user .credential .type-credential .txt-onn{
+    width: auto;
+    max-height: 55px;
+}
+.section-credential-user .container-credential-user .credential .cotent-bg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+    position: relative;
+}
+.section-credential-user .container-credential-user .credential .cotent-bg picture{
+    width: 100%;
+    height: 100%;
+}
+.section-credential-user .container-credential-user .credential .cotent-bg picture img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.name2{
+    background: #7fffd400;
+    position: absolute;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.section-credential-user .container-credential-user .credential .name h2{
+    margin: 0;
+    font-size: calc(1rem + 1vh);
+}
+.section-credential-user .close-form{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    z-index: 10100;
+}
+.section-credential-user .close-form img{
+    cursor: pointer;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+.section-credential-user .download-btn{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    z-index: 10100;
+}
+.section-credential-user .download-btn img{
+    cursor: pointer;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (min-width: 1450px) {
+    .section-picture .contentainer-diploma .content-credential .credential picture img{
+        max-height: 520px;
+    }
+}
+@media (max-width: 1150px) {
+    /*-------------------------------------------------------------
+    # Seccion Seleccion Credencial
+    --------------------------------------------------------------*/
+    .section-picture .contentainer-diploma .content-credential .credential-left .container-disclaimer {
+        width: 75%;
+    }
+
+    /*-------------------------------------------------------------
+    # Seccion Credenciales
+    --------------------------------------------------------------*/
+    .section-picture .contentainer-diploma .content-credential .credential picture{
+        height: auto;
+    }
+    .section-picture .contentainer-diploma .content-credential .credential{
+        height: auto;
+    }
+}
+@media (max-width: 991px) {
+    /*-------------------------------------------------------------
+    # Seccion Seleccion Credencial
+    --------------------------------------------------------------*/
+    .section-picture .contentainer-diploma .content-credential .credential-left .container-disclaimer {
+        width: 100%;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Foto 
+    --------------------------------------------------------------*/
+    .section-picture .contentainer-diploma .bg-diploma{
+        background-attachment: unset;
+        background-size: cover;
+    }
+    .section-selection .container-selection .alert-selection{
+        width: 30%;
+    }
+}
+@media (max-width: 750px) {
+    .section-picture .contentainer-diploma .content-credential .credential picture img{
+        max-height: 450px;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Credenciales
+    --------------------------------------------------------------*/
+    .section-picture .contentainer-diploma .content-credential .credential .bg-hover-credential{
+        opacity: 1;
+        background-color: #07070757;
+    }
+    .section-picture .contentainer-diploma .content-credential .credential .bg-hover-credential picture img{
+        opacity: 0.5;
+    }
+    .section-picture .contentainer-diploma .content-credential{
+        align-items: flex-start;
+    }
+    .section-picture .contentainer-diploma .content-credential .credential-left .container-disclaimer,
+    .section-picture .contentainer-diploma .content-credential .container-disclaimer{
+        display: none;
+    }
+    .section-selection .container-selection .alert-selection {
+        max-width: 50%;
+        width: 100%;
+    }
+    .section-selection .container-selection .disclaimer{
+        display: flex;
+    }
+    
+}
+@media (max-width: 650px) {
+    /*-------------------------------------------------------------
+    # Seccion Foto 
+    --------------------------------------------------------------*/
+    .section-picture .contentainer-diploma .bg-diploma{
+        background-attachment: unset;
+        background-size: cover;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Diploma
+    --------------------------------------------------------------*/
+    .section-picture .contentainer-diploma{
+        position: relative;
+        padding: 10px;
+    }
+    .section-picture .contentainer-diploma .bg-diploma{
+        width: 100%;
+        height: 100%;
+        height: auto;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .footer-form{
+        padding-top: 1rem;
+    }
+    .section-picture .container-calendar .title-calendar {
+        width: 100%;
+    }
+    .section-picture .container-calendar .title-calendar .content-title-fixed{
+        align-items: flex-start;
+    }
+    .section-picture .container-calendar .title-calendar h1, 
+    .section-picture .container-calendar .title-calendar h3, 
+    .section-picture .container-calendar .title-calendar p{
+        margin: 0;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .title h2{
+        font-size: calc(0.6rem + 1vh);
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .title-take-picture p, 
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .title-info-user p{
+        font-size: calc(0.7rem + 0.5vh);
+        text-align: center;
+    }
+    .section-picture .contentainer-diploma .content-credential{
+        height: 90vh;
+    }   
+    .section-selection .container-selection .disclaimer{
+        flex-direction: column-reverse;
+    }
+    .section-selection .container-selection .disclaimer picture{
+        width: 65%;
+    }
+    .section-selection .container-selection .alert-selection{
+        max-width: 65%;
+    }
+    .section-selection .container-selection .disclaimer .counter-download{        
+        padding: 5px 10px;
+    }
+}
+@media (max-width: 560px) {
+    .section-selection .container-selection{
+        width: 100%;
+        max-width: 100%;
+    }
+    .section-selection .container-selection .disclaimer {
+        flex-direction: column-reverse;
+    }
+    .section-selection .container-selection .disclaimer picture{
+        width: 100%;
+    }
+    .section-selection .container-selection .alert-selection{
+        max-width: 90%;
+    }
+}
+@media (max-width: 520px) {
+
+    /*-------------------------------------------------------------
+    # Seccion Diploma
+    --------------------------------------------------------------*/
+    .section-picture .contentainer-diploma .bg-diploma{
+        padding: 1rem;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Diploma
+    --------------------------------------------------------------*/
+    .section-picture .container-calendar .title-calendar{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .section-picture .container-calendar .title-calendar h1{
+        font-size: calc(1.5rem + 1vh);
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .camera .live-camera video{
+        height: 150px;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .camera .live-camera #canvas{
+        height: 150px;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera{
+        flex-wrap: wrap;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture {
+        width: 100%;
+        order: 4;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture, 
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture, 
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture, 
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture{
+        width: 100%;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture img, 
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture img, 
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture img, 
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture img{
+        width: auto;
+        max-height: 30px;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture,
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .upload-picture,
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture{
+        display: flex;
+        align-items: center;
+        gap: 5px;    
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture .text-movile,
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture .text-movile{
+        display: block;
+        font-size: calc(0.5rem + 0.9vh);
+        margin: 0;
+        font-weight: bold;
+    }
+    /*-------------------------------------------------------------
+    # Section Credencial
+    --------------------------------------------------------------*/
+    /* .section-credential-user .container-credential-user .credential .foto{
+        right: 26px;
+    } */
+    .section-credential-user .close-form{
+        padding: 10px;
+    } 
+    .section-credential-user .close-form img{
+        filter: invert(0);
+        border: 1px solid #000;
+        background: #b1c6dc;
+        padding: 5px;
+        width: 40px;
+        height: 40px;
+    }  
+    /*-------------------------------------------------------------
+    # Seccion Popovers
+    --------------------------------------------------------------*/
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture .box.arrow-top{
+        bottom: -47px;
+        left: 0px;
+        background: #404040; 
+        color: #fff;   
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .take-picture .box.arrow-top:after{
+        right: 85px;
+        border-bottom: 10px solid #404040;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture .box.arrow-top-left{
+        width: 145px;
+        bottom: -48px;
+        left: -114px;
+        background: #404040;
+        color: #fff;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .items-camera .reload-picture .box.arrow-top-left:after{
+        left: 124px;
+        border-bottom: 10px solid #404040;
+    }
+}
+
+@media (max-width: 480px) {
+    /*-------------------------------------------------------------
+    # Section Credencial
+    --------------------------------------------------------------*/
+    .section-credential-user .container-credential-user .credential{
+        width: 95%;
+        height: auto;
+    }
+    .section-credential-user .container-credential-user .credential .foto{
+        right: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+    .section-credential-user .container-credential-user .credential .name h2{
+        font-size: calc(0.7rem + 1vh);
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-name input,
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color select,
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color input,
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-email input{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 450px) {
+    /*-------------------------------------------------------------
+    # Seccion Diploma
+    --------------------------------------------------------------*/
+    .section-calendar .contentainer-diploma .bg-diploma .form-diploma .body-form{
+        width: 100%;   
+    }
+    .section-calendar .contentainer-diploma .bg-diploma .form-diploma .items-camera{
+        flex-wrap: wrap;
+    }
+    .section-calendar .contentainer-diploma .bg-diploma .form-diploma .items-camera #listaDeDispositivos{
+        width: 100%;
+    }
+    .section-calendar .contentainer-diploma .bg-diploma .form-diploma .info-user{
+        flex-direction: column;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user{
+        flex-wrap: wrap;
+    }
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-name,
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-color,
+    .section-picture .contentainer-diploma .bg-diploma .form-diploma .info-user .content-email{
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    /*-------------------------------------------------------------
+    # Section Credencial
+    --------------------------------------------------------------*/
+    .section-credential-user .container-credential-user .credential{
+        width: 90%;
+    }
+    .section-credential-user .container-credential-user .credential .foto{        
+        display: flex;
+        align-items: center;
+    }
+    .section-credential-user .container-credential-user .credential .foto img{
+        height: 100%;
+        height: auto;
+    }
+    .section-credential-user .container-credential-user .credential .name{
+        height: 74px;
+    }
+    .section-credential-user .container-credential-user .credential .content-name .name{
+        width: 300px;
+    }
+}
+@media (max-width: 350px) {
+    /*-------------------------------------------------------------
+    # Section Credencial
+    --------------------------------------------------------------*/
+    .section-credential-user .container-credential-user .credential .name {
+        width: 244px;
+        height: 118px;
+        bottom: 1%;
+    }
+    .section-credential-user .container-credential-user .credential .name h2{
+        font-size: calc(0.7rem + 0.8vh);
+    }
+    .section-credential-user .container-credential-user .credential .content-name .name{
+        width: 280px;
+    }
+}

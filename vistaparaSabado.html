@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .section-live-votes,
+        .section-notes-votes,
+        .section-information-places,
+        .section-specials-notes,
+        .section-states-notes{
+            padding-bottom: 1rem;
+        }  
+        #tie-block_2526,
+        #tie-block_1535,
+        #tie-block_2696{
+            margin-bottom: 0rem;
+        }
+        .p-t-70{
+            padding-top: 70px;
+        }
+        /*-------------------------------------------------------------
+        # Sección en vivo votación
+        --------------------------------------------------------------*/   
+        .section-live-votes .container-live-votes{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            height: 100%;
+            width: 100%;
+            gap: 1rem;   
+        }
+        .section-live-votes .container-live-votes .video-votes{
+            background-color: #000;
+            width: 70%;
+            height: auto;
+        }
+        .section-live-votes .container-live-votes .video-votes iframe{
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+        }
+        .section-live-votes .container-live-votes .banner-programation-votes{
+           width: 30%;
+           height: auto;
+           display: flex;
+        }
+        .section-live-votes .container-live-votes .banner-programation-votes img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+        }   
+        /*-------------------------------------------------------------
+        # Sección notas de votos
+        --------------------------------------------------------------*/     
+        .section-notes-votes .container-notes-votes{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            height: 100%;
+            width: 100%;
+            gap: 1rem;   
+        }
+        .section-notes-votes .container-notes-votes .notes-votes{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            height: auto;
+            width: 100%;
+            gap: 1rem;
+        }
+        .section-notes-votes .container-notes-votes .notes-votes .item-note{
+            width: 50%;
+            height: 100%;
+            position: relative;
+        }
+        .section-notes-votes .container-notes-votes .notes-votes .item-note .sinopsis{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+            max-height: 35%;
+            padding: 2rem 1rem;
+            background-color: #00000087;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .section-notes-votes .container-notes-votes .notes-votes .item-note .sinopsis .text{
+            color: #fff;
+            font-size: 1rem;
+        }
+        .section-notes-votes .container-notes-votes .notes-votes .item-note .sinopsis .date{
+            font-size: 0.7rem;
+            color: #fff;
+        }
+        .section-notes-votes .container-notes-votes .notes-votes .item-note img,
+        .section-notes-votes .container-notes-votes .ultimate-note-votes img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .section-notes-votes .container-notes-votes .notes-votes .item-note img{
+            width: 100%;
+        }
+        .section-notes-votes .container-notes-votes .notes-votes .item-note img{
+            height: 100%;
+        }
+        .section-notes-votes .container-notes-votes .ultimate-note-votes{
+            width: 30%;
+            height: auto;
+            display: flex;
+        }
+        .section-notes-votes .container-notes-votes .ultimate-note-votes .item-note{
+            width: 100%;
+            height: auto;            
+            display: flex;
+        }   
+        /*-------------------------------------------------------------
+        # Sección información de lugares
+        --------------------------------------------------------------*/   
+        .section-information-places .container-information-places{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap: 1rem;
+        }
+        .section-information-places .container-information-places .item-place{
+            width: 100%;
+            height: auto;
+        }
+        .section-information-places .container-information-places .item-place img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        /*-------------------------------------------------------------
+        # Sección información de lugares
+        --------------------------------------------------------------*/  
+        .section-specials-notes .title-specials-notes{
+            color: #fff;
+            background-color: #ec5a8f;
+            background: #ec5a8f!important;
+            transform: none!important;
+            width: max-content;
+            padding: 0.7rem 2.5rem;
+        }   
+        .section-specials-notes .container-specials-notes{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            width: 100%;
+            height: auto;
+        }
+        .section-specials-notes .container-specials-notes .special-note{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+        .section-specials-notes .container-specials-notes .special-note img{
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-specials-notes .container-specials-notes .special-note h3 {
+            color: #fff;
+            font-size: calc(0.6rem + 0.9vh);
+        }
+        .section-specials-notes .container-specials-notes .special-note{
+            position: relative;
+        }
+        .section-specials-notes .container-specials-notes .special-note .sinopsis {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 32%;
+            padding: 1rem;
+            background-color: #00000087;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .section-specials-notes .container-specials-notes .special-note .sinopsis .date{
+            font-size: 0.7rem;
+            color: #fff;
+        }
+        .section-specials-notes .container-specials-notes .special-note img{
+            max-height: 300px;
+            min-height: 100%;
+        }
+        /*-------------------------------------------------------------
+        # Sección Notas de los Estados
+        --------------------------------------------------------------*/    
+        .section-states-notes .title-states-notes h2{
+            color: #fff;
+            background-color: #ec5a8f;
+            background: #ec5a8f!important;
+            transform: none!important;
+            width: max-content;
+            padding: 0.7rem 2.5rem;
+        }
+        .section-states-notes .container-states-notes{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap: 1rem;
+            width: 100%;
+            height: auto;
+        }
+        .section-states-notes .container-states-notes .item-state-note{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .section-states-notes .container-states-notes .item-state-note .image-note{
+            width: auto;
+            position: relative;
+        }
+        .section-states-notes .container-states-notes .item-state-note .image-note img{
+            width: auto;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-states-notes .container-states-notes .item-state-note .image-note .title{
+            top: 0;
+            background: #f56296;
+            padding: 5px 1rem;
+            position: absolute;
+            width: auto;
+        }
+        .section-states-notes .container-states-notes .item-state-note .image-note .title h3{
+            color: #000;
+            text-transform: uppercase;
+        }
+        .section-states-notes .container-states-notes .item-state-note .text-note .info-note{
+            font-size: 1rem;
+            padding-bottom: 0.5rem;
+        }
+        .section-states-notes .container-states-notes .item-state-note .text-note .date{
+            font-size: 0.7rem;
+        }
+        /*-------------------------------------------------------------
+        # Responsive
+        --------------------------------------------------------------*/    
+        @media (max-width: 1170px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note h3 {
+                color: #fff;
+                font-size: calc(0.5rem + 1vh);
+            }
+        }
+        @media (max-width: 991px){
+            /*-------------------------------------------------------------
+            # Sección notas de votos
+            --------------------------------------------------------------*/    
+            .section-notes-votes .container-notes-votes{
+                flex-direction: column;
+            }
+            .section-notes-votes .container-notes-votes .notes-votes{
+                width: 100%;
+                align-items: center;
+            }
+            .section-notes-votes .container-notes-votes .notes-votes .item-note{
+                width: auto;
+            }
+            .section-notes-votes .container-notes-votes .ultimate-note-votes{
+                justify-content: center;
+            }
+            .section-notes-votes .container-notes-votes .ultimate-note-votes,
+            .section-notes-votes .container-notes-votes .ultimate-note-votes .item-note{
+                width: auto;
+            }
+            
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note h3 {
+                font-size: calc(0.5rem + 0.8vh);
+            }
+            .section-specials-notes .container-specials-notes .special-note .sinopsis{
+                height: 30%;
+            }
+            .section-specials-notes .container-specials-notes .special-note img{
+                min-height: 350px;
+            }
+        }
+        @media (max-width: 880px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note h3 {
+                font-size: calc(0.5rem + 0.8vh);
+            }
+            .section-specials-notes .container-specials-notes .special-note .sinopsis{
+                height: 45%;
+                padding: 5px;
+            }
+        }
+        @media (max-width: 760px){
+            /*-------------------------------------------------------------
+            # Sección en vivo votación
+            --------------------------------------------------------------*/ 
+            .section-live-votes .container-live-votes{
+                flex-direction: column;
+            }
+            .section-live-votes .container-live-votes .video-votes{
+                width: 100%;
+                height: min(50rem, 400px);
+                height: auto;
+            }
+            .section-live-votes .container-live-votes .banner-programation-votes{
+                width: auto;
+                display: flex;
+               justify-content: center;
+            }
+            /*-------------------------------------------------------------
+            # Sección notas de votos
+            --------------------------------------------------------------*/   
+            .section-notes-votes .container-notes-votes .notes-votes .item-note{
+                height: 400px;
+            }
+            .section-notes-votes .container-notes-votes .notes-votes .item-note .sinopsis{
+                max-height: 45%;
+            }
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note img{
+                min-height: 360px;
+            }
+        }
+        @media (max-width: 680px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/   
+            .section-specials-notes .container-specials-notes{
+                grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            }        
+        }
+        @media (max-width: 620px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note .sinopsis{
+                padding: 5px;
+                height: 35%;
+            }
+            .section-specials-notes .container-specials-notes .special-note h3{
+                font-size: calc(0.5rem + 0.8vh);        
+            }
+        }
+        @media (max-width: 550px){
+
+            .section-information-places .container-information-places{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            /*-------------------------------------------------------------
+            # Sección notas de votos
+            --------------------------------------------------------------*/
+            .section-notes-votes .container-notes-votes .notes-votes{
+                flex-direction: column;
+            }
+            .section-notes-votes .container-notes-votes .notes-votes .item-note{
+                width: 100%;
+                height: auto;
+            }
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes{
+                gap: 0.5rem;
+            }
+            .section-specials-notes .container-specials-notes .special-note .sinopsis h3 {
+                font-size: calc(0.4rem + 0.8vh);
+            }            
+        }
+        @media (max-width: 480px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes{
+                gap: 5px;
+            }
+            .section-specials-notes .container-specials-notes .special-note .sinopsis h3{
+                font-size: calc(0.4rem + 0.5vh);
+            }
+        }
+        @media (max-width: 430px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note .sinopsis h3{
+                font-size: calc(0.4rem + 0.5vh);
+            }
+        }
+        /*-------------------------------------------------------------
+        # 
+        --------------------------------------------------------------*/  
+        #tiepost-240269-section-4770 .theiaStickySidebar #posts-list-widget-45 .widget-title:before{
+           background: #ec5a8f!important;
+           transform: none!important;
+        }
+        #tiepost-240269-section-4770 .theiaStickySidebar #posts-list-widget-45 {
+           margin-bottom: 1rem;
+        }
+        @media (max-width: 991px) {
+           #tiepost-240269-section-4770 .has-sidebar .sidebar {
+              margin-top: 0px;
+           }
+           #tie-block_3333{
+              margin-bottom: 0rem;
+           }
+       }
+        /*-------------------------------------------------------------
+        # 
+        --------------------------------------------------------------*/  
+        #tiepost-331187-section-9948 .theiaStickySidebar .widget-title:before{
+           background: #ec5a8f!important;
+           transform: none!important;
+        }
+        #tiepost-331187-section-9948 .theiaStickySidebar #posts-list-widget-42 {
+           margin-bottom: 1rem;
+        }
+        #tie-block_2696 .mag-box-title h3:before{
+           background: #ec5a8f!important;
+           transform: none!important;
+        }
+        @media (max-width: 991px) {
+           #tiepost-331187-section-9948 .has-sidebar .sidebar {
+              margin-top: 0px;
+           }
+           #tie-block_2696{
+              margin-bottom: 0rem;
+           }
+        }
+        /*-------------------------------------------------------------
+        # 
+        --------------------------------------------------------------*/  
+        .section-notes-votes .container-notes-votes .content-votes-map{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            height: auto;
+            width: 100%;
+            gap: 1rem;
+        }
+        .section-notes-votes .container-notes-votes .content-votes-map .item-note{
+            width: 100%;
+            height: 100%;
+        }
+        .section-notes-votes .container-notes-votes .content-votes-map .item-note img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-specials-notes">
+        <div class="container-specials-notes">
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- Primer bloque separado -->
+    <section class="section-live-votes">
+        <div class="container-live-votes">
+            <div class="video-votes">   
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/lr9dIa5ujP4?si=8RiV_oqLAX8qhdpp" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>                 
+            </div>
+            <div class="banner-programation-votes">
+                <img src="https://dummyimage.com/600x700/fe609a/fff" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Segundo bloque separado con ultimas noticias -->
+    <section class="section-notes-votes">
+        <div class="container-notes-votes">
+            <div class="notes-votes">
+                <a href="#" class="item-note">
+                    <img src="https://dummyimage.com/700x800/ccc/fff" alt="">
+                    <div class="sinopsis">
+                        <h3 class="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Possimus voluptates magnam voluptas voluptate id reiciendis
+                        </h3>
+                        <p class="date">
+                            29 Mayo, 2024
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="item-note">
+                    <img src="https://dummyimage.com/700x800/ccc/fff" alt="">     
+                    <div class="sinopsis">
+                        <h3 class="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Possimus voluptates magnam voluptas voluptate id reiciendis
+                        </h3>
+                        <p class="date">
+                            29 Mayo, 2024
+                        </p>
+                    </div>               
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Secciones restantes -->
+    <section class="section-information-places">
+        <div class="container-information-places">
+            <a class="item-place">
+                <img src="https://dummyimage.com/360x260/ccc/fff" alt="">
+            </a>
+            <a class="item-place">
+                <img src="https://dummyimage.com/360x260/ccc/fff" alt="">
+            </a>
+            <a class="item-place">
+                <img src="https://dummyimage.com/360x260/ccc/fff" alt="">
+            </a>
+            <a class="item-place">
+                <img src="https://dummyimage.com/360x260/ccc/fff" alt="">
+            </a>
+        </div>
+    </section>
+
+    <section class="section-states-notes">
+        <div class="title-states-notes">
+            <h2>Elecciones estatales</h2>
+        </div>
+        <div class="container-states-notes">
+            <div class="item-state-note">
+                <div class="image-note">
+                    <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    <div class="title">
+                        <h3>Estado</h3>
+                    </div>
+                </div>
+                <div class="text-note">
+                    <h3 class="info-note">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </div>
+            <div class="item-state-note">
+                <div class="image-note">
+                    <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    <div class="title">
+                        <h3>Estado</h3>
+                    </div>
+                </div>
+                <div class="text-note">
+                    <h3 class="info-note">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </div>
+            <div class="item-state-note">
+                <div class="image-note">
+                    <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    <div class="title">
+                        <h3>Estado</h3>
+                    </div>
+                </div>
+                <div class="text-note">
+                    <h3 class="info-note">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </div>
+            <div class="item-state-note">
+                <div class="image-note">
+                    <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    <div class="title">
+                        <h3>Estado</h3>
+                    </div>
+                </div>
+                <div class="text-note">
+                    <h3 class="info-note">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </div>
+            <div class="item-state-note">
+                <div class="image-note">
+                    <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    <div class="title">
+                        <h3>Estado</h3>
+                    </div>
+                </div>
+                <div class="text-note">
+                    <h3 class="info-note">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </div>
+            <div class="item-state-note">
+                <div class="image-note">
+                    <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    <div class="title">
+                        <h3>Estado</h3>
+                    </div>
+                </div>
+                <div class="text-note">
+                    <h3 class="info-note">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </div>
+            <div class="item-state-note">
+                <div class="image-note">
+                    <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    <div class="title">
+                        <h3>Estado</h3>
+                    </div>
+                </div>
+                <div class="text-note">
+                    <h3 class="info-note">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </div>
+            <div class="item-state-note">
+                <div class="image-note">
+                    <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    <div class="title">
+                        <h3>Estado</h3>
+                    </div>
+                </div>
+                <div class="text-note">
+                    <h3 class="info-note">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Secciones Mapa -->
+    <section class="section-notes-votes">
+        <div class="container-notes-votes">
+            <div class="content-votes-map">
+                <a href="#" class="item-note">
+                    <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">                  
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

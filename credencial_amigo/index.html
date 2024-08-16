@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Once Niñas y Niños</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="https://onceninasyninos.tv/wp-content/uploads/2020/01/cropped-Logo_Transparencia_legales.png-4-32x32.png">
+        <link rel="apple-touch-icon" href="https://onceninasyninos.tv/wp-content/uploads/2020/01/cropped-Logo_Transparencia_legales.png-4-180x180.png">
+        <link rel="icon" sizes="192x192" href="https://onceninasyninos.tv/wp-content/uploads/2020/01/cropped-Logo_Transparencia_legales.png-4-192x192.png">
+        <link href="assets/css/fonts.css" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/animate.min.css" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/mikado-demo" rel="stylesheet">
+                
+        <!-- <link rel="preload" href="assets/css/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="assets/css/animate.min.css"></noscrip> -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1904039-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-1904039-1');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-90NXERK58H"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-90NXERK58H');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N41DETTFS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8N41DETTFS');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL6V1HLS7Y"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-TL6V1HLS7Y');
+        </script> -->
+    </head>
+    <body>
+        <div class="preloader">
+            <div class="spinner"></div>
+        </div>
+        <section class="section-picture ">
+            <div class="contentainer-diploma">
+                <div class="content-credential wow">
+                    <div class="credential-amigo credential credential-left" data-credencial="Amigon">
+                        <picture>
+                            <source class="lazy img-fluid" srcset="./assets/image/Amigon.png" type="image/webp" alt="Logo Once" loading="lazy">
+                            <source class="lazy img-fluid" srcset="./assets/image/Amigon.png" type="image/png" alt="Logo Once" loading="lazy"> 
+                            <img class="img-fluid lazy" src="./assets/image/Amigon.png" alt="Logo Once" width="139" height="30">
+                        </picture>
+                        <div class="bg-hover-credential">
+                            <picture>
+                                <source class="lazy img-fluid wow animate__animated  animate__infinite animate__pulse animated" srcset="./assets/image/tap.png" type="image/webp" alt="Logo Once" loading="lazy">
+                                <source class="lazy img-fluid wow animate__animated  animate__infinite animate__pulse animated" srcset="./assets/image/tap.png" type="image/png" alt="Logo Once" loading="lazy"> 
+                                <img class="img-fluid lazy wow animate__animated  animate__infinite animate__pulse animated" src="./assets/image/tap.png" alt="Logo Once" width="139" height="30">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="credential-amiga credential" data-credencial="Amigona">
+                        <picture>
+                            <source class="lazy img-fluid" srcset="./assets/image/Amigona.png" type="image/webp" alt="Logo Once" loading="lazy">
+                            <source class="lazy img-fluid" srcset="./assets/image/Amigona.png" type="image/png" alt="Logo Once" loading="lazy"> 
+                            <img class="img-fluid lazy" src="./assets/image/Amigona.png" alt="Logo Once" width="139" height="30">
+                        </picture>
+                        <div class="bg-hover-credential">
+                            <picture>
+                                <source class="lazy img-fluid wow animate__animated  animate__infinite animate__pulse animated" srcset="./assets/image/tap.png" type="image/webp" alt="Logo Once" loading="lazy">
+                                <source class="lazy img-fluid wow animate__animated  animate__infinite animate__pulse animated" srcset="./assets/image/tap.png" type="image/png" alt="Logo Once" loading="lazy"> 
+                                <img class="img-fluid lazy wow animate__animated  animate__infinite animate__pulse animated" src="./assets/image/tap.png" alt="Logo Once" width="139" height="30">
+                            </picture>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="bg-diploma wow d-none">
+                    <form id="form_diploma" class="form-diploma">
+                        <div class="body-form">
+                            <div class="title">
+                                <h2>¡Completa el formulario!</h2>
+                            </div>
+                            <hr>
+                            <div class="title-take-picture">
+                                <p>¡Selecciona tu foto para crear tu credencial!</p>
+                            </div>
+                            <div class="camera">
+                                <div class="overlay-camera">
+                                    <img src="./assets/image/silueta.png" alt="" width="300" height="300px">
+                                </div>
+                                <div class="live-camera" data-type="0">
+                                    <video muted autoplay playsinline id="video"></video>
+                                    <canvas id="canvas" class="d-none"></canvas>
+                                </div>                    
+                                <div class="foto-tomada d-none" data-foto=""></div>
+                            </div>
+                            <div class="title-take-picture">
+                                <p>Por favor sube una imagen de 3.5cm x 4cm </p>
+                            </div>
+                            <div class="items-camera">
+                                <button id="boton" class="take-picture" type="button">
+                                    <picture>
+                                        <source class="lazy img-fluid" srcset="./assets/image/camera-activate.png" type="image/webp" alt="Take Picture" loading="lazy">
+                                        <source class="lazy img-fluid" srcset="./assets/image/camera-activate.png" type="image/png" alt="Take Picture" loading="lazy"> 
+                                        <img class="img-fluid lazy" src="./assets/image/camera-activate.png" alt="Take Picture" width="50" height="50">
+                                    </picture>
+                                    <h2 class="text-movile">Toma una fotografia</h2>
+                                    <div class="box arrow-top">
+                                        Tomar Foto
+                                    </div>
+                                </button>
+                                <button id="reload_boton" class="reload-picture d-none" type="button">
+                                    <picture>
+                                        <source class="lazy img-fluid" srcset="./assets/image/reload-camera.png" type="image/webp" alt="Take Picture" loading="lazy">
+                                        <source class="lazy img-fluid" srcset="./assets/image/reload-camera.png" type="image/png" alt="Take Picture" loading="lazy"> 
+                                        <img class="img-fluid lazy" src="./assets/image/reload-camera.png" alt="Take Picture" width="50" height="50">
+                                    </picture>
+                                    <h2 class="text-movile">Activar de nuevo la camara</h2>
+                                    <div class="box arrow-top">
+                                        Activar de nuevo la camara
+                                    </div>
+                                </button>
+                                <button id="upload_picture" class="upload-picture" type="button">
+                                    <picture>
+                                        <source class="lazy img-fluid" srcset="./assets/image/upload.png" type="image/webp" alt="Take Picture" loading="lazy">
+                                        <source class="lazy img-fluid" srcset="./assets/image/upload.png" type="image/png" alt="Take Picture" loading="lazy"> 
+                                        <img class="img-fluid lazy" src="./assets/image/upload.png" alt="Take Picture" width="40" height="40">
+                                    </picture>
+                                    <input id="TableImage" name="TableImage" class="TableImage" type="file" style="display: none; height:0" accept="image/*">
+                                    <input id="HidenTblImage" name="HidenTblImage" type="text" style="display: none;" value="">
+                                    Sube tu foto
+                                </button>
+                                <button id="boton-clean" class="reload-picture" disabled type="button">
+                                    <picture>
+                                        <source class="lazy img-fluid" srcset="./assets/image/arrows-camera.png" type="image/webp" alt="Take Picture" loading="lazy">
+                                        <source class="lazy img-fluid" srcset="./assets/image/arrows-camera.png" type="image/png" alt="Take Picture" loading="lazy"> 
+                                        <img class="img-fluid lazy" src="./assets/image/arrows-camera.png" alt="Take Picture" width="50" height="50">
+                                    </picture>
+                                    <h2 class="text-movile">Tomar de nuevo</h2>
+                                    <div class="box arrow-top-left">
+                                        Tomar de nuevo
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="title-info-user">
+                                <p>Completa tu información</p>
+                            </div>
+                            <div class="info-user">
+                                <div class="content-name d-flex">
+                                    <label for="NameUser">Nombre:</label>
+                                    <input id="NameUser" name="NameUser" class="name-user info-user-diploma" 
+                                           type="text" placeholder="Ingresa tu nombre" alt="" required>
+                                </div>
+                                <div class="content-color d-flex">
+                                    <label for="Color_Credencial">Volver:</label>
+                                    <select id="Color_Credencial" name="Color_Credencial" class="color-credencial d-none info-user-diploma">                                        
+                                    </select>
+                                    <button  type="button" class="btn-back d-none"> 
+                                        <img src="./assets/image/arrow.png" alt="Boton Regreso" width="30" height="30">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-form">
+                            <button id="btn_back_credential" type="button" class="btn-save btn btn-success"> Volver</button>
+                            <button type="submit" class="btn-save btn btn-success"> Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="section-credential-user d-none">
+            <div class="close-form">
+                <img id="close-form" src="./assets/image/close.png" alt="Close" width="30" height="30">
+            </div>
+            <div class="container-credential-user">
+                <div id="credential" class="credential ">                    
+                    <div class="logos-onn">
+                        <picture>
+                            <img class="img-fluid logo_onn" src="assets/image/logo_onn.png" alt="Credencial" srcset="" width="400" height="650">
+                        </picture>
+                        <picture>
+                            <img class="img-fluid logo_SOMOS_FAMILIA" src="assets/image/logo_SOMOS_FAMILIA.png" alt="Credencial" srcset="" width="400" height="650">
+                        </picture>
+                    </div>
+                    <div class="foto">                        
+                    </div>
+                    <div class="content-name">
+                        <picture>
+                            <img class="img-fluid txt-mi-nombre" src="assets/image/text_mi_nombre.png" alt="Credencial" srcset="" width="400" height="50">
+                        </picture>
+                        <div class="name">
+                        </div>
+                        <picture>
+                            <img class="img-fluid txt-parte" src="assets/image/formo_parte.png" alt="Credencial" srcset="" width="400" height="50">
+                        </picture>
+                    </div>
+                    <div class="type-credential">
+                        <picture>
+                            <img id="logo_type_credential" class="img-fluid" src="assets/image/logo_AMIGON.png" alt="Credencial" srcset="" width="400" height="50">
+                        </picture>
+                        <picture>
+                            <img class="img-fluid txt-onn" src="assets/image/text_once_ninos.png" alt="Credencial" srcset="" width="400" height="50">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="download-btn">
+                <a id="btn-download-form" href="#">
+                    <img src="./assets/image/downloading.png" alt="Close" width="30" height="30">
+                </a>
+            </div>
+        </section>
+        <section class="section-alert d-none">
+            <div class="container-alert">
+                <div class="alert alert-danger" role="alert">
+                    Es necesario tomar o cargar una foto
+                </div>
+            </div>
+        </section>
+        <section class="section-selection">
+            <div class="container-selection">
+                <div class="disclaimer animate__animated animate__tada">
+                    <div class="counter-download">
+                        <h2 id="counter_download_movile"> SOMOS: </h2>
+                    </div>
+                </div>
+                <div class="alert-selection animate__animated animate__tada">
+                    <img src="./assets/image/select-credential.png" alt="Letrero elegir credencial" srcset="">
+                </div>
+                <div class="disclaimer animate__animated animate__tada">
+                    <picture>
+                        <source class="lazy img-fluid" srcset="./assets/image/Nota_tr.png" type="image/webp" alt="Logo Once" loading="lazy">
+                        <source class="lazy img-fluid" srcset="./assets/image/Nota_tr.png" type="image/png" alt="Logo Once" loading="lazy"> 
+                        <img class="img-fluid lazy" src="./assets/image/Nota_tr.png" alt="Logo Once" width="139" height="30">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <!-- Modal -->
+        <div class="modal fade" id="modal_onn"  data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">¡Elige tu credencial!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="title-modal">
+                        Nota importante: 
+                    </h4>
+                    <p class="text-modal">
+                        Once Niñas y Niños no almacena ninguna imagen e información proporcionada en esta página web.
+                        Este material es de uso exclusivo de quien lo descarga. 
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- HTML Canvas -->
+		<script src="assets/js/jquery-3.6.1.min.js"></script>	
+		<script src="assets/js/bootstrap.min.js"></script>	
+		<script src="assets/js/html2canvas.min.js"></script>	
+        <script src="assets/js/camera.js"></script>
+        <script>
+            const myModal = new bootstrap.Modal(document.getElementById('modal_onn'))
+            // myModal.show()
+        </script>
+    </body>
+</html>

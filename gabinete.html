@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-color: #ccc;
+            }
+            .d-none{
+                display: none!important;
+            }
+            /*-------------------------------------------------------------
+            # Sección Gabinnete
+            --------------------------------------------------------------*/   
+            .section-gabinete{
+                padding-top: 70px;
+            }
+            .section-gabinete .container-gabinete{
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+                gap: 1rem;
+                /* padding: 1rem; */
+            }
+            .section-gabinete .container-gabinete .item-gabinete{
+                cursor: pointer;
+                width: auto;
+                height: auto;
+                min-height: 250px;
+                background-color: #fff;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 1rem 1rem 0rem 0rem;
+                margin: 2rem 0rem;
+            }
+            .section-gabinete .container-gabinete .item-gabinete .image-gabinete{
+                width: auto;
+                position: absolute;
+                top: -4rem;
+            }
+            .section-gabinete .container-gabinete .item-gabinete .image-gabinete img{
+                height: auto;
+                width: auto;
+                max-width: 100%;
+                max-height: 160px;
+                object-fit: cover;
+                border: 4px solid #833355;
+                border-radius: 50%;
+            }
+            .section-gabinete .container-gabinete .item-gabinete .info-ganinete{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 110px 0rem 1rem 0rem;
+                width: 100%;
+                text-align: center;
+            }
+            .section-gabinete .container-gabinete .item-gabinete .info-ganinete .title-gabinete{
+                background-color: #fa9607;
+                padding: 0.5rem 0.6rem;
+            }
+            .section-gabinete .container-gabinete .item-gabinete .info-ganinete .title-gabinete h2{
+                color: #fff;
+                font-size: 1rem;
+            }
+            .section-gabinete .container-gabinete .item-gabinete .info-ganinete .text-gabinete{
+                width: auto;
+                height: auto;
+                padding: 0rem 1rem;
+            }
+            .section-gabinete .container-gabinete .item-gabinete .info-ganinete .text-gabinete p{
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+            /*-------------------------------------------------------------
+            # Modal Episodios
+            --------------------------------------------------------------*/
+            .section-modal{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                min-height: 100vh;
+                width: 100%;
+                background: #000000c7;
+                background-size: 100% 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 10000;
+            }
+            .section-modal .container-modal{
+                width: auto;
+                height: 90%;
+                max-width: 400px;
+                background-color: #fff;
+                border-radius: 0.5rem;
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+                gap: 1rem;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            .open-modal {
+                cursor: pointer;
+            }
+            .section-modal .container-modal .close-modal{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .section-modal .container-modal .close-modal picture img{
+                cursor: pointer;
+            }
+            .section-modal .container-modal .image-infografia{
+                width: 100%;
+                height: 90%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            .section-modal .container-modal .image-infografia .image-gabinete{
+                width: auto;
+            }
+            .section-modal .container-modal .image-gabinete img{
+                height: auto;
+                width: auto;
+                max-width: 100%;
+                max-height: 160px;
+                object-fit: cover;
+                border: 4px solid #833355;
+                border-radius: 50%;
+            }
+            .section-modal .container-modal .info-ganinete{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0rem;
+                width: 100%;
+                text-align: center;
+            }
+            .section-modal .container-modal .info-ganinete .title-gabinete{
+                background-color: #fa9607;
+                padding: 1rem;
+            }
+            .section-modal .container-modal .info-ganinete .title-gabinete h2{
+                color: #fff;
+                font-size: 1.3rem;
+            }
+            .section-modal .container-modal .info-ganinete .text-gabinete{
+                width: auto;
+                height: auto;
+                padding: 0rem 1rem;
+            }
+            .section-modal .container-modal .info-ganinete .text-gabinete .cargo{
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            .section-modal .container-modal .info-ganinete .text-gabinete .desc{                
+                font-size: 1.1rem;
+                padding-top: 1rem;
+            }
+            .section-modal .container-modal .image-infografia picture img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+            .section-modal .container-modal .redirect-gabinete{
+                width: auto;
+            }
+            .section-modal .container-modal .redirect-gabinete a{
+                padding: 1rem 2rem;
+                background: #921e4d;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 50%;
+                display: block;
+            }
+            @media (max-width: 991px){
+                /*-------------------------------------------------------------
+                # Modal Episodios
+                --------------------------------------------------------------*/
+                .section-modal .container-modal{
+                    width: 90%;
+                }
+            }
+            @media (max-width: 550px){
+                .section-gabinete .container-gabinete{
+                    grid-template-columns: repeat(2, minmax(220px,1fr));
+                }
+                .section-modal .container-modal .image-infografia{
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="section-gabinete">
+            <div class="container-gabinete">
+                <div id="item_1" class="item-gabinete" data-imagen="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" 
+                data-nombre="Alfonso Gómez Méndez0" data-cargo="¿Reviviendo nuestra historia?" 
+                data-desc="texto de prueba para describir" data-link="#" data-id="1">
+                    <div class="image-gabinete" data-id="1">
+                        <img src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" alt="" data-id="1">
+                    </div>
+                    <div class="info-ganinete" data-id="1">
+                        <div class="title-gabinete" data-id="1">
+                            <h2 data-id="1">Alfonso Gómez Méndez</h2>
+                        </div>
+                        <div class="text-gabinete" data-id="1">
+                            <p data-id="1">¿Reviviendo nuestra historia?</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="item_2" class="item-gabinete" data-imagen="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" 
+                data-nombre="Alfonso Gómez Méndez1" data-cargo="¿Reviviendo nuestra historia?" 
+                data-desc="texto de prueba para describir" data-link="#" data-id="2">
+                    <div class="image-gabinete" data-id="2">
+                        <img src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" alt="" data-id="2">
+                    </div>
+                    <div class="info-ganinete" data-id="2">
+                        <div class="title-gabinete" data-id="2">
+                            <h2 data-id="2">Alfonso Gómez Méndez</h2>
+                        </div>
+                        <div class="text-gabinete" data-id="2">
+                            <p data-id="2">¿Reviviendo nuestra historia?</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="item_3" class="item-gabinete" data-imagen="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" 
+                data-nombre="Alfonso Gómez Méndez2" data-cargo="¿Reviviendo nuestra historia?" 
+                data-desc="texto de prueba para describir" data-link="#" data-id="3">
+                    <div class="image-gabinete" data-id="3">
+                        <img src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" alt="" data-id="3">
+                    </div>
+                    <div class="info-ganinete" data-id="3">
+                        <div class="title-gabinete" data-id="3">
+                            <h2 data-id="3">Alfonso Gómez Méndez</h2>
+                        </div>
+                        <div class="text-gabinete" data-id="3">
+                            <p data-id="3">¿Reviviendo nuestra historia?</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="item_4" class="item-gabinete" data-imagen="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" 
+                data-nombre="Alfonso Gómez Méndez3" data-cargo="¿Reviviendo nuestra historia?" 
+                data-desc="texto de prueba para describir" data-link="#" data-id="4">
+                    <div class="image-gabinete" data-id="4">
+                        <img src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" alt="" data-id="4">
+                    </div>
+                    <div class="info-ganinete" data-id="4">
+                        <div class="title-gabinete" data-id="4">
+                            <h2 data-id="4">Alfonso Gómez Méndez</h2>
+                        </div>
+                        <div class="text-gabinete" data-id="4">
+                            <p data-id="4">¿Reviviendo nuestra historia?</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="item_5" class="item-gabinete" data-imagen="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" 
+                data-nombre="Alfonso Gómez Méndez4" data-cargo="¿Reviviendo nuestra historia?" 
+                data-desc="texto de prueba para describir" data-link="#" data-id="5">
+                    <div class="image-gabinete" data-id="5">
+                        <img src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" alt="" data-id="5">
+                    </div>
+                    <div class="info-ganinete" data-id="5">
+                        <div class="title-gabinete" data-id="5">
+                            <h2 data-id="5">Alfonso Gómez Méndez</h2>
+                        </div>
+                        <div class="text-gabinete" data-id="5">
+                            <p data-id="5">¿Reviviendo nuestra historia?</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="item_6" class="item-gabinete" data-imagen="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" 
+                data-nombre="Alfonso Gómez Méndez5" data-cargo="¿Reviviendo nuestra historia?" 
+                data-desc="texto de prueba para describir" data-link="#" data-id="6">
+                    <div class="image-gabinete" data-id="6">
+                        <img src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" alt="" data-id="6">
+                    </div>
+                    <div class="info-ganinete" data-id="6">
+                        <div class="title-gabinete" data-id="6">
+                            <h2 data-id="6">Alfonso Gómez Méndez</h2>
+                        </div>
+                        <div class="text-gabinete" data-id="6">
+                            <p data-id="6">¿Reviviendo nuestra historia?</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="item_7" class="item-gabinete" data-imagen="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" 
+                data-nombre="Alfonso Gómez Méndez6" data-cargo="¿Reviviendo nuestra historia?" 
+                data-desc="texto de prueba para describir" data-link="#"  data-id="7">
+                    <div class="image-gabinete"  data-id="7">
+                        <img src="https://oncenoticias.digital/wp-content/uploads/2023/04/CIRCULO-_2.webp" alt=""  data-id="7">
+                    </div>
+                    <div class="info-ganinete"  data-id="7">
+                        <div class="title-gabinete"  data-id="7">
+                            <h2 data-id="7">Alfonso Gómez Méndez</h2>
+                        </div>
+                        <div class="text-gabinete" data-id="7">
+                            <p data-id="7">¿Reviviendo nuestra historia?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal -->
+        <section class="section-modal d-none">
+            <div class="container-modal">
+                <div class="close-modal action-modal" data-status="2">
+                    <picture>
+                        <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/close.png" type="image/webp" alt="Logo Once" loading="lazy">
+                        <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/close.png" type="image/png" alt="Logo Once" loading="lazy"> 
+                        <img class="img-fluid lazy" src="https://canalonce.mx/REST/data/images/close.png" alt="Logo Once" width="30" height="30">
+                    </picture>
+                </div>
+                <div class="image-infografia">
+                    <div class="image-gabinete">
+                        <!-- <img src="" alt="Imagen Gabinete"> -->
+                    </div>
+                    <div class="info-ganinete">
+                        <div class="title-gabinete">
+                            <h2></h2>
+                        </div>
+                        <div class="text-gabinete">
+                            <p class="cargo"></p>
+                            <p class="desc"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="redirect-gabinete">
+                    <a href="">
+                        Ver más
+                    </a>
+                </div>
+            </div>
+        </section>
+        <script>
+            /**
+            * @description Funcion que obtiene un elemento html
+            */   
+            const getElement = (element) => {
+                return document.querySelector(element);
+            }    
+            /**
+             * @description Función agrega una clase varios elementos html
+            */   
+            const getAllElement = (element) => {
+                return document.querySelectorAll(element);
+            }
+            /**
+             * @description Función agrega un texto a un elemento html
+            */   
+            const setTextElement = (value, element) => {
+                return element.innerHTML = value; 
+            }
+            /**
+             * @description Función agrega un atributo a un elemento html
+            */   
+            const setAttributeElement = (attribute, value, element) => {
+                return element.setAttribute(attribute, value);                
+            }
+            const CloseGabinete = getElement('.close-modal');
+            const ItemsGabinete = getAllElement('.item-gabinete');
+                  ItemsGabinete.forEach((ele) =>{            
+                    ele.addEventListener('click', showModalGabinete);
+                  });
+                  CloseGabinete.addEventListener('click', hiddenModalGabinete);                  
+            function showModalGabinete(e){
+                let id = e.target.dataset.id;                
+                let element = getElement('#item_'+id);
+                // 
+                let in_nombre = element.dataset.nombre;
+                let in_imagen = element.dataset.imagen;
+                let in_cargo = element.dataset.cargo;
+                let in_desc = element.dataset.desc;
+                let in_link = element.dataset.link;
+                // 
+                let el_imagen = getElement('.section-modal .image-gabinete');
+                let el_nombre = getElement('.section-modal .title-gabinete h2');
+                let el_cargo = getElement('.section-modal .text-gabinete .cargo');
+                let el_desc = getElement('.section-modal .text-gabinete .desc');
+                let el_link = getElement('.section-modal .redirect-gabinete a');
+                // 
+                setTextElement(in_nombre, el_nombre);
+                setTextElement(in_cargo, el_cargo);
+                setTextElement(in_desc, el_desc);
+                // 
+                let create_image = document.createElement('img');
+                    create_image.alt = 'Imagen Gabinete';
+                    create_image.src = in_imagen;
+                    el_imagen.append(create_image)
+                setAttributeElement('href', in_link, el_link);
+                // 
+                actionModalGabinete();
+            }
+            function hiddenModalGabinete(e){
+                let el_imagen = getElement('.section-modal .image-gabinete img');
+                let el_nombre = getElement('.section-modal .title-gabinete h2');
+                let el_cargo = getElement('.section-modal .text-gabinete .cargo');
+                let el_desc = getElement('.section-modal .text-gabinete .desc');
+                let el_link = getElement('.section-modal .redirect-gabinete a');
+                // 
+                el_nombre.innerHTML = '';
+                el_cargo.innerHTML = '';
+                el_desc.innerHTML = '';
+                // 
+                setAttributeElement('src', '', el_imagen);
+                setAttributeElement('href', '', el_link);
+                // 
+                actionModalGabinete();
+            }
+            function actionModalGabinete() { 
+                let section =  getElement('.section-modal');            
+                    section.classList.toggle("d-none");
+             }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .section-olimpicos{
+            
+        }
+        .section-olimpicos .container-olimpicos{
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .section-olimpicos .container-olimpicos .navigation{
+            width: auto;
+            cursor: pointer;
+        }
+        .section-olimpicos .container-olimpicos .navigation img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-olimpicos .container-olimpicos .swiper-olimpicos {
+            width: 100%;
+            height: 100%;
+        }
+
+        .section-olimpicos .container-olimpicos .swiper-olimpicos .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-olimpicos .container-olimpicos .swiper-olimpicos .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="section-olimpicos">
+        <div class="container-olimpicos">
+            <div class="navigation navigation-prev">
+                <img src="https://canalonce.mx/REST/data/images/prev_noti.png" alt="">
+            </div>
+            <div class="swiper swiper-olimpicos">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+                <!-- <div class="swiper-button-next"></div> -->
+                <!-- <div class="swiper-button-prev"></div> -->
+            </div>
+            <div class="navigation navigation-next">
+                <img src="https://canalonce.mx/REST/data/images/next_noti.png" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper-olimpicos", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+        
+            navigation: {
+                nextEl: ".section-olimpicos .navigation-next img",
+                prevEl: ".section-olimpicos .navigation-prev img",
+            },
+            breakpoints: {
+                300: {
+                    slidesPerView: "auto",
+                },
+                310: {
+                    slidesPerView: "auto",
+                },
+                320: {
+                    slidesPerView: "auto",
+                },
+                480: {
+                    slidesPerView: "auto",
+                },
+                500: {
+                    slidesPerView: 2,
+                },
+                600: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 3,
+                },
+                950: {
+                    slidesPerView: 4,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+                1500: {
+                    slidesPerView: 5,
+                },
+                2100: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+    </script>
+</body>
+</html>

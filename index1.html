@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/css/scroll.css" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+           <h2>scroll</h2> 
+        </section>
+        <div class="container-items">
+
+        </div>
+        <script>
+            for (let index = 0; index < 60; index++) {
+                let box = document.createElement('div');
+                    box.classList.add('box');
+                    document.querySelector('.container-items').appendChild(box)
+            }
+            let randomColorBlock = document.querySelectorAll('.box');
+            function addColor() {
+                randomColorBlock.forEach(e => {
+                    e.style.background = randomColor();
+                });
+            }
+            function randomColor() {
+                let chars = "123456789abcdef";
+                    colorLength = 6,
+                    color = "";
+                for (let index = 1; index <= colorLength; index++) {                
+                    let randomColors = Math.floor(Math.random() * chars.length);
+                    color += chars.substring(randomColors, randomColors+1);
+                }
+                return "#"+color;
+            }
+            addColor();
+            let boxes = document.querySelectorAll('.box');
+            function scrollTrigger(){
+                boxes.forEach(item => {
+                    if(item.offsetTop < window.scrollY){
+                        item.classList.add('active');
+                    }else{
+                        item.classList.remove('active');
+                    }
+                });
+            }
+            window.addEventListener('scroll', scrollTrigger)
+        </script>
+    </body>
+</html>

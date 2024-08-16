@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            /*-------------------------------------------------------------
+            # Sección Notas de los Estados
+            --------------------------------------------------------------*/             
+            .section-graphics .principal-graphics{
+                width: 100%;
+                height: auto;
+                display: flex;
+                padding-bottom: 1rem;
+            }
+            .section-graphics .principal-graphics .image-note{
+                width: 100%;
+            }
+            .section-graphics .principal-graphics .image-note img{
+                width: 100%;
+                height: auto;
+                display: block;
+                max-width: 100%;
+                max-height: 350px;
+                object-fit: cover
+            }
+            .section-graphics .info-graphics{
+                width: 100%;
+                height: auto;
+                display: flex;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+            .section-graphics .info-graphics .item-info{
+                width: 100%;
+            }
+            .section-graphics .info-graphics .item-info .image-note img{
+                width: 100%;
+                height: auto;
+                display: block;
+                max-width: 100%;
+                max-height: 300px;
+                object-fit: cover
+            }
+            .section-graphics .container-graphics{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+                gap: 1rem;
+                width: 100%;
+                height: auto;
+            }
+            .section-graphics .container-graphics .item-graphics{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .section-graphics .container-graphics .item-graphics .image-note{
+                width: auto;
+                height: auto;
+            }
+            .section-graphics .container-graphics .item-graphics .image-note img{
+                width: 100%;
+                height: auto;
+                display: block;
+                max-width: 100%;
+                max-height: 180px;
+                object-fit: cover;
+            }
+            .section-graphics .container-graphics .item-graphics .image-note{
+                width: auto;
+                position: relative;
+            }
+            .section-graphics .container-graphics .item-graphics .image-note img{
+                width: 100%;
+                height: auto;
+                display: block;
+                max-width: 100%;
+                max-height: 180px;
+                object-fit: cover;
+            }
+            .section-graphics .container-graphics .item-graphics .image-note .title{
+                top: 0;
+                background: #f56296;
+                padding: 5px 1rem;
+                position: absolute;
+                width: auto;
+            }
+            .section-graphics .container-graphics .item-graphics .image-note .title h3{
+                color: #000;
+                text-transform: uppercase;
+            }
+            .section-graphics .container-graphics .item-graphics .text-note .info-note{
+                font-size: 1rem;
+                padding-bottom: 0.5rem;
+            }
+            .section-graphics .container-graphics .item-graphics .text-note .date{
+                font-size: 0.7rem;
+            }
+            @media (max-width: 650px){
+                .section-graphics .info-graphics{
+                    flex-wrap: wrap;
+                }   
+            }
+        </style>
+    </head>
+    <body>
+        <section class="section-graphics">
+            <div class="principal-graphics">
+                <div class="image-note">
+                    <img src="https://dummyimage.com/1650x700/ccc/fff" alt="" srcset="">
+                </div> 
+            </div>
+            <div class="info-graphics">
+                <div class="item-info">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1050x300/ccc/fff" alt="" srcset="">
+                    </div>                    
+                </div>
+                <div class="item-info">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1050x300/ccc/fff" alt="" srcset="">
+                    </div>                    
+                </div>
+            </div>
+            <div class="container-graphics">
+                <div class="item-graphics">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    </div>                    
+                </div>
+                <div class="item-graphics">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    </div>                  
+                </div>
+                <div class="item-graphics">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    </div>                  
+                </div>
+                <div class="item-graphics">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    </div>                  
+                </div>
+                <div class="item-graphics">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    </div>                  
+                </div>
+                <div class="item-graphics">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    </div>                  
+                </div>
+                <div class="item-graphics">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    </div>                  
+                </div>
+                <div class="item-graphics">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    </div>                  
+                </div>
+                <div class="item-graphics">
+                    <div class="image-note">
+                        <img src="https://dummyimage.com/1250x700/ccc/fff" alt="" srcset="">
+                    </div>                  
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

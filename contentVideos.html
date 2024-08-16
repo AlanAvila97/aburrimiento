@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .section-video .container-video{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            padding: 1rem;
+            background-color: #d0f3ee;
+            gap: 1rem;
+        }
+        .section-video .video{
+            width: 100%;
+            background-color: #000;
+        }
+        .section-video .content-videos{
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+        }
+        .section-video .content-videos .item-video{
+            width: 100%;
+            height: auto;
+        }
+        .section-video .content-videos .item-video img{
+            width: auto;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-video">
+        <div class="container-video">
+            <div class="video">
+            </div>
+            <div class="content-videos">
+                <a class="item-video">
+                    <img src="https://dummyimage.com/750x180/ccc/fff" alt="" srcset="">
+                </a>
+                <a class="item-video">
+                    <img src="https://dummyimage.com/750x180/ccc/fff" alt="" srcset="">
+                </a>
+                <a class="item-video">
+                    <img src="https://dummyimage.com/750x180/ccc/fff" alt="" srcset="">
+                </a>
+                <a class="item-video">
+                    <img src="https://dummyimage.com/750x180/ccc/fff" alt="" srcset="">
+                </a>
+                <a class="item-video">
+                    <img src="https://dummyimage.com/750x180/ccc/fff" alt="" srcset="">
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section-gallery-data .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .section-gallery-data .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section-gallery-data .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .section-gallery-data .swiper-button-next, 
+    .section-gallery-data .swiper-button-prev{
+        color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+    <section class="section-gallery-data">
+        <div class="swiper slide_gallery_data">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://demoac.site/wp-content/uploads/2024/08/BIG-DATA-WEB-04.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://demoac.site/wp-content/uploads/2024/08/BIG-DATA-WEB-03.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://demoac.site/wp-content/uploads/2024/08/BIG-DATA-WEB-02.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://demoac.site/wp-content/uploads/2024/08/BIG-DATA-WEB-01.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://demoac.site/wp-content/uploads/2024/08/BIG-DATA-WEB-07.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://demoac.site/wp-content/uploads/2024/08/BIG-DATA-WEB-06.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://demoac.site/wp-content/uploads/2024/08/BIG-DATA-WEB-05.jpg" alt="">
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    let swiper = new Swiper(".slide_gallery_data", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".slide_gallery_data .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".slide_gallery_data .swiper-button-next",
+        prevEl: ".slide_gallery_data .swiper-button-prev",
+      },
+      breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            310: {
+                slidesPerView: 1,
+            },
+            320: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            500: {
+                slidesPerView: 2,
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            640: {
+                slidesPerView: 2,
+            },
+            950: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+            1500: {
+                slidesPerView: 3,
+            },
+            2100: {
+                slidesPerView: 3,
+            },
+        },
+    });
+  </script>
+</body>
+
+</html>

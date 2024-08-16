@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .p-t-70{
+            padding-top: 70px;
+        }
+        .d-none{
+            display: none;
+        }
+        /*-------------------------------------------------------------
+        # Sección 
+        --------------------------------------------------------------*/  
+        .section-specials-notes .title-specials-notes{
+            color: #fff;
+            background-color: #ec5a8f;
+            background: #ec5a8f!important;
+            transform: none!important;
+            width: max-content;
+            padding: 0.7rem 2.5rem;
+        }   
+        .section-specials-notes .container-specials-notes{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            width: 100%;
+            height: auto;
+        }
+        .section-specials-notes .container-specials-notes .special-note{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+        .section-specials-notes .container-specials-notes .special-note img{
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-specials-notes .container-specials-notes .special-note h3 {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .section-specials-notes .container-specials-notes .special-note{
+            position: relative;
+        }
+        .section-specials-notes .container-specials-notes .special-note .sinopsis {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45%;
+            padding: 1rem;
+            background-color: #00000087;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            justify-content: space-evenly;
+        }
+        .section-specials-notes .container-specials-notes .special-note .sinopsis .date{
+            font-size: 0.7rem;
+            color: #fff;
+        }
+        .section-specials-notes .container-specials-notes .special-note img{
+            min-height: 400px;
+        }
+        /*-------------------------------------------------------------
+        # Sección 2
+        --------------------------------------------------------------*/  
+        .section-specials-notes-1{
+            padding: 30px 0px;
+        }
+        .section-specials-notes-1 .container-specials-notes{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            width: 100%;
+            height: auto;
+            padding: 0rem 1rem;
+        }
+        .section-specials-notes-1 .container-specials-notes .special-note{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            position: relative;
+        }
+        .section-specials-notes-1 .container-specials-notes .special-note img{
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-specials-notes-1 .container-specials-notes .special-note .sinopsis {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            justify-content: space-evenly;
+            padding-top: 1rem;
+        }
+        /*-------------------------------------------------------------
+        # Sección 3
+        --------------------------------------------------------------*/  
+        .section-specials-notes-3{
+            padding: 30px 0px;
+        }
+        .section-specials-notes-3 .container-specials-notes{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            width: 100%;
+            height: auto;
+            padding: 0rem 1rem;
+        }
+        .section-specials-notes-3 .container-specials-notes .special-note{
+            width: 100%;
+            height: auto;
+            text-decoration: none;
+            padding: 1rem;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+        .section-specials-notes-3 .container-specials-notes .special-note img{
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-specials-notes-3 .container-specials-notes .special-note .sinopsis {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            justify-content: space-evenly;
+            padding-top: 1rem;
+        }
+        /*-------------------------------------------------------------
+        # Sección 4
+        --------------------------------------------------------------*/  
+        .section-specials-notes-4{
+            padding: 30px 0px;
+        }
+        .section-specials-notes-4 .container-specials-notes{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            width: 100%;
+            height: auto;
+            padding: 0rem 1rem;
+        }
+        .section-specials-notes-4 .container-specials-notes .special-note{
+            width: 100%;
+            height: auto;
+            text-decoration: none;
+            position: relative;
+        }
+        .section-specials-notes-4 .container-specials-notes .special-note img{
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .section-specials-notes-4 .container-specials-notes .special-note .sinopsis {
+            background: #00000087;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            justify-content: space-evenly;
+            padding: 1rem;
+            margin: 0rem 1rem;
+            position: absolute;
+            bottom: -1rem;
+            width: auto;
+        }
+        .section-specials-notes-4 .container-specials-notes .special-note h3 {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .section-specials-notes-4 .container-specials-notes .special-note p {
+            color: #fff;
+            font-size: 0.8rem;
+        }
+        /*-------------------------------------------------------------
+        # Responsive
+        --------------------------------------------------------------*/    
+        @media (max-width: 1170px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note h3 {
+                color: #fff;
+                font-size: 1.1rem;
+            }
+            .section-specials-notes-1 .container-specials-notes .special-note h3,
+            .section-specials-notes-3 .container-specials-notes .special-note h3,
+            .section-specials-notes-4 .container-specials-notes .special-note h3 {
+                font-size: 1.1rem;
+            }
+        }
+        @media (max-width: 991px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note h3 {
+                font-size: 1.1rem;
+            }
+            .section-specials-notes-1 .container-specials-notes .special-note h3,
+            .section-specials-notes-3 .container-specials-notes .special-note h3{
+                font-size: 1.1rem;
+            }
+            .section-specials-notes-4 .container-specials-notes{
+                grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            }
+            .section-specials-notes-4 .container-specials-notes .special-note{
+                margin-bottom: 1rem;
+            }
+            .section-specials-notes-4 .container-specials-notes .special-note h3 {
+                font-size: 1rem;
+            }
+            .section-specials-notes-4 .container-specials-notes .special-note .sinopsis{
+                padding: 0.5rem;
+                margin: 0.5rem;
+                bottom: -2rem;
+            }
+        }
+        @media (max-width: 880px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note h3 {
+                font-size: 1.1rem;
+            }
+            .section-specials-notes .container-specials-notes .special-note .sinopsis{
+                padding: 10px;
+            }
+        }
+        @media (max-width: 760px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note h3 {
+                font-size: 1.1rem;
+            }
+        }
+        @media (max-width: 680px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/   
+            .section-specials-notes .container-specials-notes{
+                grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            }  
+            .section-specials-notes .container-specials-notes .special-note .sinopsis{
+                height: 40%;
+            }
+            .section-specials-notes .container-specials-notes .special-note h3{
+                font-size: 1.2rem;        
+            }     
+            .section-specials-notes-1 .container-specials-notes,
+            .section-specials-notes-3 .container-specials-notes{
+                grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            }   
+
+        }
+        @media (max-width: 620px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note h3{
+                font-size: 1.2rem;        
+            }
+        }
+        @media (max-width: 550px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes{
+                gap: 0.5rem;
+            }
+            .section-specials-notes .container-specials-notes .special-note .sinopsis h3 {
+                font-size: 1.2rem;
+            }            
+        }
+        @media (max-width: 480px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes{
+                gap: 5px;
+            }
+            .section-specials-notes .container-specials-notes .special-note .sinopsis h3{
+                font-size: 1.2rem;
+            }
+        }
+        @media (max-width: 430px){
+            /*-------------------------------------------------------------
+            # Sección información de lugares
+            --------------------------------------------------------------*/  
+            .section-specials-notes .container-specials-notes .special-note .sinopsis h3{
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-specials-notes">
+        <div class="container-specials-notes">
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="section-specials-notes-1">
+        <div class="container-specials-notes">
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="section-specials-notes-3">
+        <div class="container-specials-notes">
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="section-specials-notes-4 ">
+        <div class="container-specials-notes">
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+            <a class="special-note">
+                <img src="https://dummyimage.com/1250x900/ccc/fff" alt="" srcset="">
+                <div class="sinopsis">
+                    <h3 class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Possimus voluptates magnam voluptas voluptate id reiciendis
+                    </h3>
+                    <p class="date">
+                        29 Mayo, 2024
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

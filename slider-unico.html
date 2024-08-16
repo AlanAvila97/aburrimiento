@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .section-presidency-information .title-presidency-information{
+            color: #fff;
+            background-color: #70ad45;
+            background: #70ad45!important;
+            transform: none!important;
+            width: max-content;
+            padding: 0.7rem 2rem;
+        }   
+        .section-presidency-information .container-presidency-information{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(300px,1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .section-presidency-information .container-presidency-information .content-slider-infographic{
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;         
+        }
+        .section-presidency-information .container-presidency-information .content-slider-infographic .navigation{
+            width: 20%;
+            cursor: pointer;
+            background: #70ad45;
+        }
+        .section-presidency-information .container-presidency-information .content-slider-infographic .navigation img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-presidency-information .container-presidency-information .item-place{
+            width: 100%;
+            height: auto;
+        }
+        .section-presidency-information .container-presidency-information .item-place .swiper:hover .swiper-button-prev,
+        .section-presidency-information .container-presidency-information .item-place .swiper:hover .swiper-button-next{
+            transform: translate(0%, -50%);
+            -webkit-transform: translate(0%, -50%);
+            -moz-transform: translate(0%, -50%);
+            -ms-transform: translate(0%, -50%);
+            -o-transform: translate(0%, -50%);
+        }
+        .section-presidency-information .container-presidency-information .item-place .swiper-button-prev{
+            transform: translate(-200%, -50%);
+            transition: transform 0.2s ease-out;
+        }
+        .section-presidency-information .container-presidency-information .item-place .swiper-button-next{
+            transform: translate(200%, -50%);
+            transition: transform 0.2s ease-out;
+        }
+        .section-presidency-information .container-presidency-information .item-place .arrow-navigation{
+            background: #70ad45ab;
+            color: #fff;
+            padding: 3rem 1.5rem;
+        }
+        .section-presidency-information .container-presidency-information .item-place img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 991px){
+            .section-presidency-information .container-presidency-information .item-place .swiper-button-prev,
+            .section-presidency-information .container-presidency-information .item-place .swiper-button-next{
+                transform: translate(0%, -50%);
+                -webkit-transform: translate(0%, -50%);
+                -moz-transform: translate(0%, -50%);
+                -ms-transform: translate(0%, -50%);
+                -o-transform: translate(0%, -50%);
+            }
+            .section-presidency-information .container-presidency-information{
+                grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            }
+            .section-presidency-information .seccion-presidencia-1 .title-presidency-information h2{
+                font-size: 19px;
+            }
+            .contenedor-mexicanos-paris {
+                flex-direction: column;
+            }
+            .section-presidency-information .container-presidency-information .seccion-presidencia-2 .title-presidency-information{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-presidency-information">
+        <div class="container-presidency-information">
+            <div class="item-place content-slider-infographic">
+                <!-- <div class="navigation prev-navigation">
+                    <img src="https://canalonce.mx/REST/data/images/prev_noti_1.png" alt="">
+                </div> -->
+                <div class="swiper slider-infographic">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/06/Infografia-Paridad-de-genero-Paris-scaled.jpg" alt="">                            
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/06/Infografia-Paridad-de-genero-Paris-scaled.jpg" alt="">                            
+                        </div>
+                    </div>
+                    <div class="arrow-navigation swiper-button-next"></div>
+                    <div class="arrow-navigation swiper-button-prev"></div>
+                </div>
+                <!-- <div class="navigation next-navigation">
+                    <img src="https://canalonce.mx/REST/data/images/next_noti_1.png" alt="">
+                </div> -->
+            </div>
+            <div class="item-place">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/06/Infografia-Paridad-de-genero-Paris-scaled.jpg" alt="">
+            </div>
+            <div class="item-place">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/06/07.png" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
+    <script>
+        var swiper_slider_infographic = new Swiper(".slider-infographic", {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".slider-infographic .swiper-button-next",
+                prevEl: ".slider-infographic .swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
