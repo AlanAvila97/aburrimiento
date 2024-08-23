@@ -29,17 +29,15 @@ function contenedoresCategorias() {
           div.setAttribute("class", "container")
 
 
-
+          let titulo = resttitulos.replaceAll(' ', '-');
           div.innerHTML = `
-            <div class="swiper-container ${resttitulos}">
+            <div class="swiper-container ${titulo}">
             
-            <h1>${resttitulos}</h1>
-            <div id=${idcat} class="swiper-wrapper">
-            
-            
-            </div>
+              <h1>${resttitulos}</h1>
+              <div id=${idcat} class="swiper-wrapper">                      
+              </div>
             </div>            
-             `
+             `;
 
 
 
@@ -115,23 +113,23 @@ function obtenerCanales() {
        <h3>${namecaratula}</h3>
        
        `
+              sliderPrograms('Conversación')  
 
+              // var swipercoci = new Swiper(".Cocina", {
+              //   slidesPerView: 3.7,
+              //   spaceBetween: 10,
+              //   slidesPerGroup: 1,
+              //   loop: false,
+              //   loopFillGroupWithBlank: true,
+              //   keyboard: {
+              //     enabled: true
+              //   },
+              //   navigation: {
+              //     nextEl: '.Cocina .swiper-button-next',
+              //     prevEl: '.Cocina .swiper-button-prev ',
+              //      },
 
-              var swipercoci = new Swiper(".Cocina", {
-                slidesPerView: 3.7,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Cocina .swiper-button-next',
-                  prevEl: '.Cocina .swiper-button-prev ',
-                   },
-
-              });
+              // });
 
 
               container.appendChild(div)
@@ -181,22 +179,24 @@ function obtenerCanales() {
        <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
        <h3>${conversacion.name}</h3>
        `
-              var swiperconver = new Swiper(".swiper-container", {
-                slidesPerView: 3,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
+              // var swiperconver = new Swiper(".swiper-container", {
+              //   slidesPerView: 3,
+              //   spaceBetween: 10,
+              //   slidesPerGroup: 1,
+              //   loop: false,
+              //   loopFillGroupWithBlank: true,
 
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Conversación .swiper-button-next',
-                  prevEl: '.Conversación .swiper-button-prev ',
-                   },
+              //   keyboard: {
+              //     enabled: true
+              //   },
+              //   navigation: {
+              //     nextEl: '.Conversación .swiper-button-next',
+              //     prevEl: '.Conversación .swiper-button-prev ',
+              //      },
 
-              })
+              // })
+              sliderPrograms('Cocina')  
+
               container.appendChild(div)
 
             })//cierre de foreach Conversacion
@@ -585,7 +585,7 @@ function obtenerCanales() {
                  },
          
                }); */
-              container.appendChild(div)
+              // container.appendChild(div)
             })//cierre de foreach INFORMACION E INVESTIGACION
             break;
 
@@ -597,10 +597,11 @@ function obtenerCanales() {
               
               /* console.log(musica) */
               const container = document.getElementById(10);
+
               let caratula = musica.imageCH
               let imgN = musica.imageN
               let slugc = musica.slugc
-              let idcaratula = musica.id
+              let idcaratula = ''
               let namecaratula = musica.name
               const div = document.createElement("div")
               // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
@@ -689,11 +690,10 @@ function obtenerCanales() {
                   }
                 });
               })
-
               div.innerHTML = `
-         <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-         <h3>${namecaratula}</h3>
-         `
+              <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
+              <h3>${namecaratula}</h3>
+              `
               var swipernatu = new Swiper(".Naturaleza", {
                 slidesPerView: 3.7,
                 spaceBetween: 29,
@@ -721,7 +721,7 @@ function obtenerCanales() {
               let caratula = ninasninos.imageCH
               let imgN = ninasninos.imageN
               let slugc = ninasninos.slugc
-              let idcaratula = ninasninos.id
+              let idcaratula = ''
               let namecaratula = ninasninos.name
               const div = document.createElement("div")
               // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
@@ -754,7 +754,8 @@ function obtenerCanales() {
                  <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
                  <h3>${namecaratula}</h3>
                  `
-
+                 sliderPrograms('Niñas-y-Niños')
+                 
               container.appendChild(div)
             })//cierre de foreach niñas y niños
             break;
@@ -862,6 +863,8 @@ function obtenerCanales() {
                  <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
                  <h3>${namecaratula}</h3>
                  `
+                 sliderPrograms('PROGRAMAS-POLITÉCNICOS')
+                //  PROGRAMAS-POLITÉCNICOS
               /*    var swiprog = new Swiper(".swiper-container", {
                   slidesPerView: 3.7,
                   spaceBetween: 10,
@@ -887,7 +890,7 @@ function obtenerCanales() {
               let caratula = series.imageCH
               let imgN = series.imageN
               let slugc = series.slugc
-              let idcaratula = series.id
+              let idcaratula = ''
               let namecaratula = series.name
               const div = document.createElement("div")
               // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
@@ -997,7 +1000,7 @@ function obtenerCanales() {
                    },
 
               });
-              container.appendChild(div)
+              // container.appendChild(div)
             })//cierre de foreach sociedad
             break;
 
@@ -1174,8 +1177,48 @@ function reloadContent() {//FUNCION PARA REGRESAR AL HOME
   titulos2.append(contenidoplus)
 }
 
+function sliderPrograms(slider) {
+  const swiper_pgm = new Swiper("."+slider, {
+    // var swiperdigi = new Swiper(".Digital", {
+      slidesPerView: 3.7,
+      spaceBetween: 29,
+      slidesPerGroup: 1,
+      loop: false,
+      loopFillGroupWithBlank: true,
+      keyboard: {
+        enabled: true
+      },
+      navigation: {
+        nextEl: '.'+slider+' .swiper-button-next',
+        prevEl: '.'+slider+' .swiper-button-prev ',
+         },
 
-
+    });
+}
+/**
+  * @description Función que parsea una cadena eliminando acentos
+  * @param cadena Contiene la cadena con caracteres acentos
+  * @return {res} Retorna la cadena parseada
+*/
+function eliminarAcentos(cadena) {
+	var chars={
+		"á":"a", "é":"e", "í":"i", "ó":"o", "ú":"u",
+		"à":"a", "è":"e", "ì":"i", "ò":"o", "ù":"u", "ñ":"n",
+		"Á":"A", "É":"E", "Í":"I", "Ó":"O", "Ú":"U",
+		"À":"A", "È":"E", "Ì":"I", "Ò":"O", "Ù":"U", "Ñ":"N"};
+	var expr=/[áàéèíìóòúùñ]/ig;
+	var res=cadena.replace(expr,function(e){return chars[e]});
+	return res;
+}
+/**
+  * @description Función que parsea una cadena a minusculas, elimina caracteres especiales, espacios, acentos
+  * @param cadena Contiene la cadena con caracteres especiales, mayusculas, espacios, acentos
+  * @return {textParser} Retorna la cadena parseada
+*/
+function eliminarCaracteres(cadena){
+	var outString = cadena.replace(/[`~!¡@#$%^&*()_|+\=¿?;:'",.<>\{\}\[\]\\\/]/gi, '');
+	return outString;
+}
 
 
     
