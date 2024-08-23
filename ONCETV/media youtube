@@ -1,0 +1,18 @@
+     const videoData = {
+        "link": mediaYout
+      };
+    
+      const iframe = document.createElement('iframe');
+      iframe.width = '102%';
+      iframe.height = '124%';
+      iframe.src = `https://www.youtube.com/embed/${getVideoIdFromLink(videoData.link)}`;
+      iframe.allowFullScreen = true
+      iframe.allowScriptAccess = 'yes'
+    
+      contplay.appendChild(iframe);
+    
+      function getVideoIdFromLink(link) {
+        var regex = /^https?:\/\/(?:www\.)?youtu(?:be\.com\/(?:watch\?v=|embed\/)|\.be)\/([^&\s]+)/;
+        var match = link.match(regex);
+        return match && match[1];
+      }

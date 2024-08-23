@@ -1,0 +1,10 @@
+{
+  "id": "com.domain.app",
+  "version": "1.0.0",
+  "vendor": "Martin Gonzalez Flores",
+  "type": "web",
+  "main": "index.html",
+  "title": "ONCE",
+  "icon": "icon.png",
+  "largeIcon": "icononce.png"
+}

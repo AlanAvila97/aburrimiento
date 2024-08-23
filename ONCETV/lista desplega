@@ -1,0 +1,42 @@
+// LISTA DESPLEGABLE DE TEMPORADAS
+        /* const selectElement = document.getElementById(idec); */
+        /* const idCan=selectElement.getAttribute('id')//id del canal */
+        /* console.log(selectElement) */
+        /* console.log(temporada); */
+        /* 
+        if(temporada=='6'){
+            const tem6=[epiCanal]
+            tem6.forEach(temSEIS=>{
+              console.log(temSEIS);
+              
+              var option = document.createElement('option');
+              option.value=season
+              option.textContent =temporada
+              selectElement.appendChild(option); 
+            })
+           
+        } */
+
+        /* if(idCan == idec){ */
+
+
+
+        /* } */
+
+        //IMPRIMIR ELEMENTOS EN CONTENEDOR DE VIDEO-CONTAINER
+        /*         selectElement.addEventListener('change', (e) => {
+                  const selectedValue = e.target.value;
+                  
+        
+                if(selectedValue==season){
+                  
+                    contVideo.innerHTML = '';
+                  const element = document.createElement('div');
+                  element.innerHTML=`
+                  <div>${titlechanel}</div>
+                  ` 
+                  contVideo.appendChild(element);
+                }
+                     
+                        
+                      }); */

@@ -1,0 +1,145 @@
+html,
+      body {
+        height: 90%;
+        background-image: url(https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/images/once-mas.webp);
+        background-size: cover;
+        
+        
+      }
+      body{
+        color: #ffffff;
+        text-align: center;
+        padding: 2px;
+        /* font-size: 1rem; */
+        text-align: center;
+        /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+      }
+ h2{
+  color: #ffffff;
+  font-size: 28px;
+  font-family:Arial, Helvetica, sans-serif;
+  padding-bottom: 10px;
+}
+h1{
+  font-size: 90px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container .swiper-container .swiper-wrapper .swiper-slide{
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-size: 35px;
+}
+.container{
+  width: 100%;
+ 
+
+  
+}
+     .container .swiper-container {
+        
+        padding-bottom: 2rem;
+        width: 100%;
+        height: 34.5rem;
+      }
+      .container .swiper-wrapper{
+        width: 100%;
+        height: 29rem;
+      }
+      .container .swiper-container h1{
+        text-align: center;
+      }
+
+      .container .swiper-container .swiper-wrapper .swiper-slide{
+        /* background-color: #ffffff; */
+        width: 26rem;
+        height: 300px;
+        text-align: center;
+        
+        /* transition: 450ms;
+        &:hover { 
+          margin: 0 5px;
+          transform: scale(1.1);
+        } */
+      }
+        
+     .container .swiper-container .swiper-wrapper .swiper-slide img{
+          width: 100%;
+          height: 100%;
+        
+      }
+      img{
+        
+        width: 100%;
+        height: 340px;
+        align-items: center;
+ 
+        
+      }
+      button{
+        width: 9%;
+        height: 10rem;
+        background-color:#ffffff;
+        border-radius: 100%;
+        float: right;
+        
+      }
+      button h1{
+        font-size: 35px;
+        text-align: center;
+
+      }
+.video-container{
+  width: 35%;
+  height: 300px;
+  float: right;
+  overflow:auto;
+}
+.video-container  h2{
+  text-align: left;
+  font-size: 70px;
+  width: 500px;
+  
+}
+.video-container li{
+  padding: 2rem;
+  text-align: left;
+  font-size: 35px;
+  color: #ffffff;
+  
+}
+.video-container div{
+  text-align:left;
+  font-size: 30px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+#my-video{
+  width: 100.2%;
+  height: 122%;
+}
+
+iframe{
+/* width: 50%;
+height: 40%; */
+width: 100%;
+height: 100%;
+}
+
+#reloadindice{
+  
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius:0%
+}
+
+
+
+
+
+
+
+
+      

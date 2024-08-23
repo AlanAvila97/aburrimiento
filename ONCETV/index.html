@@ -1,0 +1,57 @@
+<!--
+Copyright (c) 2024 LG Electronics Inc.
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="spatial-navigation/stylefocus.css">
+	<script src="spatial-navigation/control.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<!-- <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+	<link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" /> -->
+	<!-- <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
+	<script src="https://vjs.zencdn.net/7.20.3/video.js"></script>
+ -->
+	<title>ONCE</title>
+
+
+</head>
+
+<script src="webOSTVjs-1.2.10/webOSTV.js" charset="utf-8"></script>
+<script src="webOSTVjs-1.2.10/webOSTV-dev.js" charset="utf-8"></script>
+<script type="text/javascript">
+	//sample code for calling LS2 API
+	webOS.service.request("luna://com.palm.systemservice", {
+		method: "clock/getTime",
+		parameters: {},
+		onSuccess: function (args) {
+			console.log("UTC:", args.utc);
+		},
+		onFailure: function (args) {
+			console.log("Failed to getTime");
+		}
+	});
+</script>
+
+<body>
+	
+
+	<!-- CARRUSEL -->
+	<div id="root">
+		
+		  
+	</div>
+
+	
+	<script  src="main.js"></script>
+	<script src="spatial-navigation/control.js"></script>
+</body>
+
+</html>

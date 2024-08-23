@@ -1,0 +1,39 @@
+   div.innerHTML=`
+      <h1>${titu}</h1>
+      
+      <video-js id="myPlayer" class="video-js vjs-default-skin" controls>
+			<source src="https://d2mqwgsb5fhf0p.cloudfront.net/905f422607b71d1d4aed5f1507850bdb/index.m3u8" type="application/x-mpegURL">
+		  </video-js>
+
+      `
+
+
+       fetch(json)
+  .then(response =>response.json())
+  .then(epis=>{
+    /* console.log(epis) */
+    epis.forEach(episodios=>{
+      /* console.log(episodios) */
+      const titu=episodios.title
+      const descrip=episodios.description
+      const vid=episodios.file
+      /* console.log(vid) */
+      const contain=document.createElement("video-js")
+      /* div.setAttribute("class","video-js") */
+      contain.id='myPlayer'
+      /* document.body.appendChild(contain); */
+      const player = videojs(contain, {
+        // Options for the player
+        techOrder: ['html5'],
+        sources: [{
+          src: vid,
+          /* type: 'video/mp4' */
+        }]
+      });
+      player.play(); // Play the video
+player.pause(); // Pause the video
+
+  
+      /* titulos.append(contain) */
+    })//cierre de forEach episodios
+  })//cierre de epis
