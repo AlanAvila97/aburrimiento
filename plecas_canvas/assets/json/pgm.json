@@ -1,0 +1,332 @@
+[
+    {
+        "id": "aprender-en-comunidad",
+        "text": "Aprender en Comunidad",     
+        "bg" : "#91c599"
+    },
+    {
+        "id": "amor-amistad",
+        "text": "a+",     
+        "bg" : "#F94649"
+    },
+    {
+        "id": "aca-los-paisanos",
+        "text": "Acá los paisanos",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "a-la-cachi-cachi-porra",
+        "text": "A La Cachi Cachi Porra",     
+        "bg" : "#9b3079"
+    },
+    {
+        "id": "aprender-a-envejecer",
+        "text": "Aprender a envejecer",     
+        "bg" : "#53969e"
+    },
+    {
+        "id": "aqui_toco_vivir",
+        "text": "Aquí Nos Tocó Vivir",     
+        "bg" : "#3e1708"
+    },
+    {
+        "id": "aventura_mexico_desconocido",
+        "text": "Aventura México desconocido",    
+        "bg" : "#abcc29"
+    },
+    {
+        "id": "chamuco_logo",
+        "text": "Chamuco TV",    
+        "bg" : "#e83324"
+    },
+    {
+        "id": "conciertos_ipn",
+        "text": "Conciertos IPN",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "especiales_ciudad_mexico",
+        "text": "Especiales La Ciudad de México",     
+        "bg" : "#3e4553"
+    },
+    {
+        "id": "futuro_nuestro_futuro",
+        "text": "Tu futuro, nuestro futuro",     
+        "bg" : "#7c7363"
+    },
+    {
+        "id": "historia_once",
+        "text": "Historia once",     
+        "bg" : "#6f1e46"
+    },
+    {
+        "id": "inclusion_radical",
+        "text": "Inclusión Radical",     
+        "bg" : "#dfd91f"
+    },
+    {
+        "id": "ingredientes_originales",
+        "text": "Ingredientes originales",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "itinerario",
+        "text": "Itinerario",     
+        "bg" : "#2e4e50"
+    },
+    {
+        "id": "largo_aliento",
+        "text": "Largo Aliento",     
+        "bg" : "#9bd2ff"
+    },
+    {
+        "id": "lenguas_resistencia",
+        "text": "Lenguas en Resistencia",     
+        "bg" : "#6E965A"
+    },
+    {
+        "id": "un_lugar_llamado_mexico",
+        "text": "Un lugar llamado México",     
+        "bg" : "#d5a169"
+    },
+    {
+        "id": "lugares_secretos",
+        "text": "Lugares Secretos",     
+        "bg" : "#4a1b14"
+    },
+    {
+        "id": "mexico_biocultural",
+        "text": "México Biocultural",     
+        "bg" : "#32a03c"
+    },
+    {
+        "id": "mexico_social",
+        "text": "México Social",     
+        "bg" : "#d8ae5e"
+    },
+    {
+        "id": "moneros",
+        "text": "Moneros",     
+        "bg" : "#852a57"
+    },
+    {
+        "id": "noche_boleros",
+        "text": "Noche, Boleros y Son",     
+        "bg" : "#ba9051"
+    },
+    {
+        "id": "oncelab",
+        "text": "Oncelab",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "operacion_mamut",
+        "text": "Operación mamut",     
+        "bg" : "#4b4526"
+    },
+    {
+        "id": "para_no_olvidar",
+        "text": "Para no olvidar",     
+        "bg" : "#EFA0EF"
+    },
+    {
+        "id": "paso_paso",
+        "text": "Paso a paso",     
+        "bg" : "#ea01b3"
+    },
+    {
+        "id": "perspectivas_historicas",
+        "text": "Perspectivas históricas",     
+        "bg" : "#c49d44"
+    },
+    {
+        "id": "punto_referencia",
+        "text": "Punto de referencia",     
+        "bg" : "#bababa"
+    },
+    {
+        "id": "relatos_mujeres",
+        "text": "Relatos Mujeres",     
+        "bg" : "#0e0d15"
+    },
+    {
+        "id": "ruta_ciencia",
+        "text": "La ruta de la ciencia",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "ruta_sabor",
+        "text": "La Ruta Del Sabor",     
+        "bg" : "#7ec0b9"
+    },
+    {
+        "id": "sacro_prrofano",
+        "text": "Sacro y Profano",     
+        "bg" : "#ffd580"
+    },
+    {
+        "id": "la_sazon_mercado",
+        "text": "La sazón de mi mercado",     
+        "bg" : "#f1ba17"
+    },
+    {
+        "id": "si_somos",
+        "text": "Sí somos",     
+        "bg" : "#A6E04B"
+    },
+    {
+        "id": "sin_margen",
+        "text": "Sin margen",     
+        "bg" : "#C0B080"
+    },
+    {
+        "id": "sin_muros",
+        "text": "Sin muros",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "tap",
+        "text": "Tap",     
+        "bg" : "#e5bb7a"
+    },
+    {
+        "id": "tu_cocina",
+        "text": "Tu cocina",     
+        "bg" : "#ef4036"
+    },
+    {
+        "id": "verdrag",
+        "text": "La VerDrag",     
+        "bg" : "#1e7b3e"
+    },
+    {
+        "id": "versiones_publicas",
+        "text": "Versiones Públicas",     
+        "bg" : "#01c5a1"
+    },
+    {
+        "id": "barra",
+        "text": "En la Barra",     
+        "bg" : "#263931"
+    },
+    {
+        "id": "calle_11",
+        "text": "Calle 11",     
+        "bg" : "#ca0051"
+    },
+    {
+        "id": "como_celebro",
+        "text": "Cómo Lo Celebro",     
+        "bg" : "#b79e42"
+    },
+    {
+        "id": "conmemoraciones",
+        "text": "Conmemoraciones",     
+        "bg" : "#ec9a62"
+    },
+    {
+        "id": "corazon_mexico",
+        "text": "En el corazón de México",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "cristianos_armas",
+        "text": "Cristianos en armas",     
+        "bg" : "#1a1a1e"
+    },
+    {
+        "id": "cronicas_relatos_mexico",
+        "text": "Crónicas Y Relatos De México",     
+        "bg" : "#74422b"
+    },
+    {
+        "id": "d_todo",
+        "text": "D Todo",     
+        "bg" : "#ef3b53"
+    },
+    {
+        "id": "desfiladero",
+        "text": "El Desfiladero",     
+        "bg" : "#39f4e8"
+    },
+    {
+        "id": "dialogos_confianza",
+        "text": "Diálogos en Confianza",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "diario_viaje",
+        "text": "Diario de Viaje",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "dinero_poder",
+        "text": "Dinero y Poder",    
+        "bg" : "#0b73d2"
+    },
+    {
+        "id": "entre_redes",
+        "text": "Entre Redes",     
+        "bg" : "#3836bc"
+    },
+    {
+        "id": "especiales_once",
+        "text": "Especiales del Once",     
+        "bg" : "#ef7930"
+    },
+    {
+        "id": "factor_ciencia",
+        "text": "Factor Ciencia",     
+        "bg" : "#241059"
+    },
+    {
+        "id": "foro_once",
+        "text": "Foro Once",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "futbol_americano",
+        "text": "Fútbol Americano",     
+        "bg" : "#461b89"
+    },
+    {
+        "id": "guinda_blanco",
+        "text": "Guinda y Blanco",     
+        "bg" : "#df7e01"
+    },
+    {
+        "id": "hagamos_suceda",
+        "text": "Hagamos que Suceda",     
+        "bg" : "#2dcd9e"
+    },
+    {
+        "id": "historia_neoliberalismo",
+        "text": "Historia del Neoliberalismo",     
+        "bg" : "#6e965a"
+    },
+    {
+        "id": "historia_pueblo_mexicano",
+        "text": "Historia del pueblo mexicano",     
+        "bg" : "#c9bd9a"
+    },
+    {
+        "id": "historia_vida",
+        "text": "Historias De Vida",     
+        "bg" : "#ffdb7d"
+    },
+    {
+        "id": "huelum",
+        "text": "Huélum",     
+        "bg" : "#eb017d"
+    },
+    {
+        "id": "libro_rojo",
+        "text": "El Libro Rojo",     
+        "bg" : "#cb0205"
+    },
+    {
+        "id": "mitolibrero",
+        "text": "Mitolibrero",
+        "bg": "#df7e01"     
+    }
+]
