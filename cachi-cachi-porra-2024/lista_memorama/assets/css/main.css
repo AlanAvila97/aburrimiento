@@ -1,0 +1,103 @@
+@font-face{ font-family: "Poppins-Regular"; src: url("../font/Poppins-Regular.ttf"); font-display: swap}
+/*-------------------------------------------------------------
+# 
+--------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+body{
+    margin: 0;
+    font-family: "Poppins-Regular"!important;
+    overflow: hidden;
+}
+#wrapper{
+    background-image: url();
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    z-index: 2;
+}
+#wrapper:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+#wrapper::after{
+    background: url(../images/wallpaper.png), center center;
+    background-size: inherit;
+    background-repeat: no-repeat;
+}
+.d-flex{
+    display: flex!important;
+}
+.d-block{
+    display: block!important;
+}
+.d-none{
+    display: none!important;
+}
+/*-------------------------------------------------------------
+# 
+--------------------------------------------------------------*/
+.section-list .container-list {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 0.5rem;
+    justify-items: center;
+}
+
+.section-list .container-list .item-list{
+    width: 75%;
+    height: 100%;
+    background-color: #f9f9f9;
+    border: 0.7rem solid #af188b;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+.section-list .container-list .item-list *{
+    font-weight: 600;
+}
+.section-list .container-list .item-list h1{
+    font-size: 2.2rem;
+    margin: 0;
+}
+.section-list .container-list .item-list span{
+    font-size: 2.5rem;
+}
+.content-desct-item{
+    width: 100%;
+    height: auto;
+}
+.title-item{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.content-desct-item h2{
+    font-size: 2rem;
+    margin: 0;
+}
+li.list-group-item.active.morado{
+    background: #AF188B;
+    border-color: #AF188B;
+}
+@media (max-width: 991px) {
+    .section-list .container-list .item-list{
+        width: 100%;
+    }
+    .modal-dialog {
+        max-width: 90%!important;
+    }
+}

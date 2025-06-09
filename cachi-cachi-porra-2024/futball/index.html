@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Fútbol</title>
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="./assets/css/main.css"/>
+  <link rel="stylesheet" href="./assets/css/confetti.css"/>
+</head>
+<body>
+  <style>
+  </style>
+  <main id="wrapper" class="bg-gato">
+    <section class="section-games" id="tictac">
+      <div class="container-games">
+        <div class="content-marcador">
+          <div id="" class="items-contenedor" data-status="1">
+            <div id="yard-1" class="set-img w-55" data-id="1"></div>
+            <div id="yard-2" class="set-img w-77" data-id="2"></div>
+            <div id="yard-3" class="set-img w-41" data-id="3"></div>
+            <div id="yard-4" class="set-img w-53" data-id="4"></div>
+            <div id="yard-5" class="set-img w-46" data-id="5"></div>
+            <div id="yard-6" class="set-img w-39" data-id="6"></div>
+            <div id="yard-7" class="set-img w-38" data-id="7"></div>
+            <div id="yard-8" class="set-img w-34" data-id="8"></div>
+            <div id="yard-9" class="set-img w-34" data-id="9"></div>
+            <div id="yard-10" class="set-img w-46" data-id="10"></div>
+            <div id="yard-11" class="set-img w-44" data-id="11"></div>
+            <div id="yard-12" class="set-img w-42" data-id="12"></div>
+            <div id="yard-13" class="set-img w-41" data-id="13"></div>
+            <div id="yard-14" class="set-img w-35" data-id="14"></div>
+            <div id="yard-15" class="set-img w-41" data-id="15"></div>
+            <div id="yard-16" class="set-img w-37" data-id="16"></div>
+            <div id="yard-17" class="set-img w-40" data-id="17"></div>
+            <div id="yard-18" class="set-img w-36" data-id="18"></div>
+            <div id="yard-19" class="set-img w-46" data-id="19"></div>
+            <div id="yard-20" class="set-img w-37" data-id="20"></div>
+            <div id="yard-21" class="set-img w-80" data-id="21"></div>
+            <!-- <div id="yard-22" class="set-img w-48" data-id="22"></div> -->
+          </div>
+          <div class="image-tablero">
+            <picture>
+              <img src="./assets/images/campo_sn_bg.png" alt="" srcset="">
+            </picture>
+          </div>          
+        </div>
+      </div>
+    </section>
+    <section class="section-btn">
+      <div class="content-btn">
+        <button id="game_clean" class="btn-clean">limpiar</button>
+        <button id="touchdown" onclick="accion()" class="btn-clean d-none">touchDown</button>
+        <div>
+          <button id="game_left" class="btn-clean ">Iniciar Izq</button>
+          <button id="game_right" class="btn-clean ">Iniciar Der</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="section-animation-touchDown preloader">
+    <div id="shape">
+      <!-- <img class="image" src="./assets/images/touch_down.png">
+      <span class="text">TouchDown</span> -->
+    </div>
+  </section>
+  <audio id="audio_touchdown" class=" d-none" controls >
+    <source src="./assets/audio/cachi_2024.mp4" type="audio/mp4">
+  </audio>
+  <script src="./assets/js/jquery-3.6.1.min.js"></script>
+  <script src="./assets/js/anime.min.js"></script>
+  <script src="./assets/js/tsparticles.confetti.bundle.min.js"></script>
+  <script src="./assets/js/confetti.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

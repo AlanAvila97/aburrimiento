@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .section-interviews{
+            background: #262626;
+            padding: 1rem;
+        }
+        .section-interviews .container-title-intervies{
+            display: flex;
+            width: 97.5%;   
+            padding-bottom: 1rem;
+        }
+        .section-interviews .container-title-intervies .title-intervies{
+            color: #d50b89;
+            margin-right: .5rem;
+            display: flex;
+            align-items: flex-end;
+        }
+        .section-interviews .container-title-intervies .title-intervies h2{
+            color: #d50b89;
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        .section-interviews .container-title-intervies .interactive-navigation{
+            border-bottom: 0.2rem solid #d50b89;        
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .section-interviews .container-title-intervies .interactive-navigation .navigation{
+            width: auto;
+            height: auto;
+            cursor: pointer;
+        }
+        .section-interviews .container-title-intervies .interactive-navigation svg,
+        .section-interviews .container-title-intervies .interactive-navigation img{
+            width: 35px;
+            height: 35px;
+        }
+        .section-interviews .container-interviews{
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;            
+        }        
+        .section-interviews .container-interviews .navigation{
+            width: auto;
+            cursor: pointer;
+        }
+        .section-interviews .container-interviews .navigation img{
+            width: auto;
+            height: auto;
+            max-height: 40px;
+            max-width: 40px;
+            object-fit: cover;
+        }
+        .section-interviews .container-interviews .swiper-interviews {
+            width: 100%;
+            height: 100%;
+        }
+        .section-interviews .container-interviews .swiper-interviews .swiper-slide .item-interviews{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+        .section-interviews .container-interviews .swiper-interviews .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-interviews .container-interviews .swiper-interviews .swiper-slide .image-intervies,
+        .section-interviews .container-interviews .swiper-interviews .swiper-slide .info-interviews{
+            width: 100%;
+            height: auto;
+        }
+        .section-interviews .container-interviews .swiper-interviews .swiper-slide .info-interviews p{
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        @media (max-width: 991px){   
+            .section-interviews .container-title-intervies .interactive-navigation{
+                border: none;
+            }
+            .section-interviews .container-title-intervies{
+                border-bottom: 0.2rem solid #d50b89;
+                padding-bottom: 0;
+                margin-bottom: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-interviews">
+        <article class="container-title-intervies">
+            <div class="title-intervies">
+                <h2>ENTREVISTAS</h2>
+            </div>
+            <div class="interactive-navigation">
+                <div class="navigation navigation-prev">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/fech-2.png" alt="">
+                </div>
+                <div class="navigation navigation-next">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/fecha-1.png" alt="">
+                </div>
+            </div>
+        </article>
+        <article class="container-interviews">
+            <div class="navigation navigation-prev">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/fech-2.png" alt="">
+            </div>
+            <div class="swiper swiper-interviews">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="item-interviews">
+                        <div class="image-intervies">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/LOS-PERICOS-REGRESAN-A-MEXICO-2-390x220.png" alt="">
+                        </div>
+                        <div class="info-interviews">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi provident, ratione</p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item-interviews">
+                        <div class="image-intervies">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/LOS-PERICOS-REGRESAN-A-MEXICO-2-390x220.png" alt="">
+                        </div>
+                        <div class="info-interviews">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi provident, ratione</p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item-interviews">
+                        <div class="image-intervies">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/LOS-PERICOS-REGRESAN-A-MEXICO-2-390x220.png" alt="">
+                        </div>
+                        <div class="info-interviews">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi provident, ratione</p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item-interviews">
+                        <div class="image-intervies">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/LOS-PERICOS-REGRESAN-A-MEXICO-2-390x220.png" alt="">
+                        </div>
+                        <div class="info-interviews">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi provident, ratione</p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item-interviews">
+                        <div class="image-intervies">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/LOS-PERICOS-REGRESAN-A-MEXICO-2-390x220.png" alt="">
+                        </div>
+                        <div class="info-interviews">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi provident, ratione</p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item-interviews">
+                        <div class="image-intervies">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/LOS-PERICOS-REGRESAN-A-MEXICO-2-390x220.png" alt="">
+                        </div>
+                        <div class="info-interviews">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi provident, ratione</p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item-interviews">
+                        <div class="image-intervies">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/LOS-PERICOS-REGRESAN-A-MEXICO-2-390x220.png" alt="">
+                        </div>
+                        <div class="info-interviews">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi provident, ratione</p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item-interviews">
+                        <div class="image-intervies">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/LOS-PERICOS-REGRESAN-A-MEXICO-2-390x220.png" alt="">
+                        </div>
+                        <div class="info-interviews">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi provident, ratione</p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item-interviews">
+                        <div class="image-intervies">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/LOS-PERICOS-REGRESAN-A-MEXICO-2-390x220.png" alt="">
+                        </div>
+                        <div class="info-interviews">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quasi provident, ratione</p>
+                        </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="navigation navigation-next">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/fecha-1.png" alt="">
+            </div>
+        </article>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // 
+        let swiper_interviews = new Swiper(".swiper-interviews", {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            loop: true,
+            navigation: {
+                nextEl: ".section-interviews .navigation-next svg",
+                prevEl: ".section-interviews .navigation-prev svg",
+            },
+            breakpoints: {
+                300: {
+                    slidesPerView: "auto",
+                },
+                310: {
+                    slidesPerView: "auto",
+                },
+                320: {
+                    slidesPerView: "auto",
+                },
+                480: {
+                    slidesPerView: "auto",
+                },
+                500: {
+                    slidesPerView: 2,
+                },
+                600: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 3,
+                },
+                950: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+                1500: {
+                    slidesPerView: 4,
+                },
+                2100: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+    </script>
+</body>
+</html>

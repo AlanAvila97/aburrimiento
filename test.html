@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"></script>
+        <style>
+          a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            margin: 10px 0;
+          }
+          h2 {
+            margin: 0;
+            font-size: 1.5em;
+          }
+          h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #555;
+          }
+        </style>
+        <h1>Notas Actualizadas</h1>
+        <div id="message"></div>
+        <script>
+          // Firebase Configuration
+          const firebaseConfig = {
+                apiKey: "AIzaSyBePg07t-vf2E_rkyJ2yYPqzl9EZjMuwGY",
+                authDomain: "nota-reciente.firebaseapp.com",
+                projectId: "nota-reciente",
+                storageBucket: "nota-reciente.firebaseapp.com",
+                messagingSenderId: "85023849707",
+                appId: "1:85023849707:web:68601d1322d24fbe9f52ae"
+            };
+      
+          // Initialize Firebase
+          const app = firebase.initializeApp(firebaseConfig);
+          const db = firebase.firestore(app);
+      
+          // Reference to the Firestore collection and a specific document
+          const docRef = db.collection('notas').doc('reciente'); // Cambia 'reciente' por el ID de tu documento.
+      
+          // Listen for real-time updates
+          docRef.onSnapshot((snapshot) => {
+            if (snapshot.exists) {
+              const data = snapshot.data();
+      
+              // Generate the link with content
+              const messageDiv = document.getElementById('message');
+              messageDiv.innerHTML = `
+                <a href="${data.link}" target="_blank" rel="noopener noreferrer">
+                  <h2>${data.nombre}</h2>
+                  <h5>${data.extracto}</h5>
+                </a>
+              `;
+      
+              // Optionally show an alert
+              alert(`Nueva nota: ${data.nombre}`);
+            } else {
+              console.log("El documento no existe en la colección 'notas'.");
+            }
+          });
+        </script>
+    </body>
+</html>

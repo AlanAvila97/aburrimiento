@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #595959;
+        }
+        .section-modal-video{
+            cursor: pointer;
+            display: flex; 
+            justify-content:center; 
+            align-items:center; 
+            height:100vh; 
+            width:100%; 
+            background: #00000078;
+            background-size: 100% 100%;
+            position:fixed; 
+            top:0; 
+            left:0; 
+            z-index:9999; 
+            transition:opacity 1.5s linear;    
+        }
+        .section-list-videos-entretenimiento{
+            padding: 1rem;
+        }
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 1rem;
+        }
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento .item-list-entretenimiento{
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            height: auto;
+        }
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento 
+        .item-list-entretenimiento .title-list,
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento 
+        .item-list-entretenimiento .video-list,
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento 
+        .item-list-entretenimiento .description-list{
+            width: auto;
+            height: auto;
+        }
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento .item-list-entretenimiento 
+        .title-list{ 
+            padding: 0.5rem 0rem;
+            border-bottom: 3px solid #fff;
+        }
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento .item-list-entretenimiento 
+        .title-list h2{
+            font-size: clamp(1rem, 1.7rem, 2.2rem);
+        }
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento .item-list-entretenimiento 
+        .video-list{
+            width: 300px;
+            height: 600px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento .item-list-entretenimiento 
+        .video-list video{
+            cursor: pointer;
+            border-radius: 1rem;
+            height: auto;
+            max-width: 100%;
+            max-height: 550px;
+            width: 100%;
+            object-fit: fill;
+        }
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento .item-list-entretenimiento 
+        .description-list {
+            border-bottom: 0.2rem solid #b05d93;
+        }
+        .section-list-videos-entretenimiento .container-list-videos-entretenimiento .item-list-entretenimiento
+        .description-list p{
+            color: #fff;
+            font-size: clamp(1.2rem, 1.3rem, 1.8rem);
+            margin-bottom: 0.7rem;
+        }
+        .section-list-videos-entretenimiento .container-title-videos-entretenimiento{
+            margin-bottom: 1.5rem;
+            border-bottom: 0.2rem solid #b05d93;
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+        .section-list-videos-entretenimiento .container-title-videos-entretenimiento:after{ 
+            content: "";
+            border-bottom: 0.7rem solid #b05d93;
+            width: 25%;
+            height: auto;
+            bottom: -0.7rem;
+            position: absolute;
+        }
+        .section-list-videos-entretenimiento .container-title-videos-entretenimiento h2 {
+            color: #fff;
+            font-size: clamp(1rem, 2rem, 3rem);
+            text-transform: uppercase;
+        }   
+        .section-list-videos-entretenimiento .container-button-view-more{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .section-list-videos-entretenimiento .container-button-view-more .btn_action_view{
+            cursor: pointer;
+            padding: 0.9rem 1.2rem;
+            font-size: 1.3rem;
+            border-radius: 0.5rem;
+            border: none;
+            background: #d2d73b;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0 0 6px #000000b3;
+        }
+        .section-modal-video .container-modal-video{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }       
+        .section-modal-video .container-modal-video .content-close{
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 2rem;
+            right: 0;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 1rem;
+        }    
+        .section-modal-video .container-modal-video .content-close svg{
+            width: 40px;
+            height: 40px;
+            fill: #d2d73b;
+            cursor: pointer;
+        }  
+        .section-modal-video .container-modal-video .content-video{
+            width: auto;
+            height: auto;
+        }     
+        .section-modal-video .container-modal-video .content-video video{
+            width: auto;
+            max-width: 300px;
+            height: auto;
+            max-height: 500px;
+            border-radius: 1rem;
+            border: 0.3rem solid #d2d73b;
+        }
+        .section-modal-video .container-modal-video .content-video h2{
+            color: #fff;
+            font-size: clamp(1rem, 2.5rem, 3rem);
+        }
+    </style>
+</head>
+<body>
+    <section class="section-list-videos-entretenimiento">
+        <div class="container-title-videos-entretenimiento">
+            <h2>La redacción recomienda</h2>
+        </div>
+        <div class="container-list-videos-entretenimiento">
+            <div class="item-list-entretenimiento">
+                <div class="video-list open_video" 
+                    data-link="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/03/VIANEY-ZARATE.mp4">
+                </div>
+                <div class="description-list">
+                    <p>description</p>
+                </div>
+            </div>
+            <div class="item-list-entretenimiento">
+                <div class="video-list open_video" 
+                    data-link="">
+                </div>
+                <div class="description-list">
+                    <p>description</p>
+                </div>
+            </div>
+            <div class="item-list-entretenimiento">
+                <div class="video-list open_video"
+                    data-link="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/03/VIANEY-ZARATE.mp4">
+                </div>
+                <div class="description-list">
+                    <p>description</p>
+                </div>
+            </div>
+            <div class="item-list-entretenimiento">
+                <div class="video-list open_video"
+                    data-link="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/03/VIANEY-ZARATE.mp4">
+                </div>
+                <div class="description-list">
+                    <p>description</p>
+                </div>
+            </div>
+            <div class="item-list-entretenimiento">
+                <div class="video-list open_video"
+                    data-link="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/03/VIANEY-ZARATE.mp4">
+                </div>
+                <div class="description-list">
+                    <p>description</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-button-view-more">
+            <button type="button" class="btn_action_view"> Ver Más </button>
+        </div>
+    </section>
+    <section class="section-modal-video" style="display: none;">
+        <div class="container-modal-video">
+            <div class="content-close">
+                <svg fill="#000000" version="1.1" 
+                    id="Capa_1" 
+                    class="open_video"
+                    xmlns="http://www.w3.org/2000/svg" 
+                    xmlns:xlink="http://www.w3.org/1999/xlink" 	    
+                    width="800px" height="800px" 
+                    viewBox="0 0 41.756 41.756" 
+                    xml:space="preserve">
+                    <g>
+                        <path d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465
+            c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071
+            C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343
+            c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="content-video">
+            </div>
+        </div>
+    </section>
+    <script src="https://canalonce.mx/js/jquery-3.6.1.min.js"></script>
+    <script>
+        const MODAL = $( ".section-modal-video" );
+        $("body").on("click", ".open_video", function(){
+            $(".section-pather-list-videos").attr("style", "position: relative; z-index: 10000;");
+            let link =  ($(this).attr("data-link") != undefined) ? $(this).attr("data-link") : false,
+                video = "<h2> Sin Video </h2>";
+            if(link){
+                video = `<video id="capsule_video" width="100%" height="auto" controls>
+                            <source src="${link}" 
+                                type="video/mp4">
+                        </video>`;
+            }else{
+                $(".section-pather-list-videos").attr("style", "")
+            }                    
+            $(".content-video").html(video);
+            MODAL.toggle();
+        });
+        $(document).keyup(function(e) {
+            if (e.key === "Escape" && MODAL.is(":visible")) {
+                MODAL.toggle();
+            }
+        });
+        $("body").on("click", ".btn_action_view", function(){
+            $(".item-list-entretenimiento").removeClass("next");
+            $(".item-list-entretenimiento.d-none").slice(0, 4).removeClass("d-none").addClass("next");
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".container-list-videos-entretenimiento .next :last-child").offset().top  - 40
+            }, 1000);                        
+            if ($(".item-list-entretenimiento.d-none").length === 0) {
+                $(this).hide();
+            }
+        });
+    </script>
+</body>
+</html>

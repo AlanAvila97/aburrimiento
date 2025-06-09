@@ -14,11 +14,10 @@ SPDX-License-Identifier: Apache-2.0
 	<link rel="stylesheet" href="spatial-navigation/stylefocus.css">
 	<script src="spatial-navigation/control.js"></script>
 	<link rel="stylesheet" href="style.css">
-	<!-- <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
-	<link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" /> -->
-	<!-- <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
-	<script src="https://vjs.zencdn.net/7.20.3/video.js"></script>
- -->
+	<link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
+	<script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+
 	<title>ONCE</title>
 
 
@@ -26,32 +25,65 @@ SPDX-License-Identifier: Apache-2.0
 
 <script src="webOSTVjs-1.2.10/webOSTV.js" charset="utf-8"></script>
 <script src="webOSTVjs-1.2.10/webOSTV-dev.js" charset="utf-8"></script>
-<script type="text/javascript">
-	//sample code for calling LS2 API
-	webOS.service.request("luna://com.palm.systemservice", {
-		method: "clock/getTime",
-		parameters: {},
-		onSuccess: function (args) {
-			console.log("UTC:", args.utc);
-		},
-		onFailure: function (args) {
-			console.log("Failed to getTime");
-		}
-	});
-</script>
 
 <body>
-	
-
 	<!-- CARRUSEL -->
+	<header>
+        <nav>
+            <ul class="menu">
+                <!-- <li class="menu-item" data-id="HOME">HOME</li> -->
+				 <button id="home">HOME</button>
+            </ul>
+			
+        </nav>
+    </header>
 	<div id="root">
 		
-		  
+		<div class="swiper swiperSup">
+			<div class="swiper-wrapper">
+			</div>
+			<div class="swiper-swiperSupag"></div>
+		  </div>
+		  <input type="search" placeholder="Buscar . . ." id="inputBusqueda"/>
+		  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+ 
+  <script>
+    var swiper = new Swiper(".swiperSup", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      /* pagination: {
+        el: ".swiper-swiperSupag",
+        clickable: true,
+      }, */
+      
+    });
+  </script>
+		
+		<div class="search" id="search"> 
+			<table class="search-tabla" id="searchTabla"> 
+			  <thead><tr><td></td></tr></thead> 
+			  <tbody id="tabla"></tbody> 
+			</table> 
+		  </div>
+			<div class="preloader">
+				<div class="loader"></div>
+			  </div>
+		
+
 	</div>
 
 	
-	<script  src="main.js"></script>
+	<script src="main.js"></script>
 	<script src="spatial-navigation/control.js"></script>
+	<script src="buscador.js"></script>
+	<!-- <script src="stylenav.js"></script> -->
 </body>
 
 </html>

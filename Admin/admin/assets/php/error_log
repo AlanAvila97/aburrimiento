@@ -1,0 +1,505 @@
+[19-Oct-2023 16:51:19 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos.php on line 45
+[23-Oct-2023 10:27:49 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[25-Oct-2023 06:16:48 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[25-Oct-2023 14:58:45 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php on line 10
+[25-Oct-2023 15:07:41 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php on line 10
+[25-Oct-2023 15:14:55 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php on line 10
+[25-Oct-2023 15:16:12 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php on line 10
+[25-Oct-2023 15:16:13 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php on line 10
+[25-Oct-2023 15:18:04 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php on line 11
+[25-Oct-2023 15:23:58 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php on line 11
+[25-Oct-2023 15:28:33 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php on line 11
+[25-Oct-2023 15:30:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/actualizar_usuarios.php on line 11
+[26-Oct-2023 16:44:06 America/Mexico_City] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 18
+[26-Oct-2023 16:44:06 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 18
+[26-Oct-2023 16:45:26 America/Mexico_City] PHP Warning:  imagewebp(ruta/1.jpg.webp): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 25
+[26-Oct-2023 16:45:26 America/Mexico_City] PHP Warning:  imagewebp(ruta/2.jpg.webp): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 26
+[26-Oct-2023 16:50:23 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 32
+[26-Oct-2023 16:51:19 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 32
+[26-Oct-2023 16:51:38 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 32
+[26-Oct-2023 17:19:26 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 48
+[26-Oct-2023 17:22:47 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php:49
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 49
+[27-Oct-2023 10:15:34 America/Mexico_City] PHP Warning:  file_put_contents(json/api.json): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/api.php on line 105
+[27-Oct-2023 10:37:06 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home/icsemmx/public_html/Admin/admin/assets/php/api_experiencias.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/api_experiencias.php on line 48
+[27-Oct-2023 10:37:17 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home/icsemmx/public_html/Admin/admin/assets/php/api_experiencias.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/api_experiencias.php on line 48
+[27-Oct-2023 10:37:39 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home/icsemmx/public_html/Admin/admin/assets/php/api_experiencias.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/api_experiencias.php on line 48
+[30-Oct-2023 12:03:29 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[30-Oct-2023 12:08:37 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[01-Nov-2023 03:14:37 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[03-Nov-2023 12:52:19 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[03-Nov-2023 12:54:05 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[05-Nov-2023 02:04:11 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[08-Nov-2023 00:09:26 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[14-Nov-2023 17:02:11 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:23 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:24 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:24 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:25 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:35 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:37 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:37 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:40 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:46 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:47 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:52 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:02:52 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:11 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:17 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:17 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:18 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:18 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:18 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:18 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:18 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:19 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:19 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:19 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:19 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:21 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:21 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:21 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:21 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:21 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:03:28 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:07:13 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:07:15 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:07:17 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:12:02 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[14-Nov-2023 17:12:31 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[15-Nov-2023 11:21:35 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[15-Nov-2023 11:21:35 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[15-Nov-2023 11:22:23 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[15-Nov-2023 11:22:23 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[27-Nov-2023 17:18:43 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[27-Nov-2023 17:18:43 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[27-Nov-2023 17:22:09 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[27-Nov-2023 17:22:09 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[27-Nov-2023 17:25:11 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[27-Nov-2023 17:25:11 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[28-Nov-2023 09:09:25 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:10:09 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:10:18 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:10:18 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:10:34 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:10:34 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:10:37 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:10:37 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:10:50 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:12 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:12 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:13 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:15 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:30 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:40 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:41 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:41 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:41 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:41 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:41 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:41 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:44 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:44 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:44 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:44 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:44 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:45 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:11:51 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:00 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:36 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:36 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:40 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:40 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:40 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:40 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:41 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:45 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:47 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:12:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:34 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:37 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:37 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:37 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:37 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:39 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:44 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:14:44 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:15:02 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:15:02 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:15:03 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:15:03 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:15:05 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:28 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:35 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:36 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:36 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:36 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:56 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:56 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:57 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:58:57 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 09:59:37 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:45 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:48 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:50 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:51 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:51 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:51 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:52 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:52 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:52 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:52 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:52 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:53 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:54 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:57 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:57 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:58 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:58 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 10:12:59 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[28-Nov-2023 11:57:17 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 11:57:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 11:57:27 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 11:57:27 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 11:59:31 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 11:59:35 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 11:59:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 11:59:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:00:44 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:00:55 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:02 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:10 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:10 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:10 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:10 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:10 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:12 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:26 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:31 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:32 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:32 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:32 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:33 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:34 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:55 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:56 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:56 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:56 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:57 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:01:57 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:09 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:19 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:19 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:32 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:42 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:02:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:07:27 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:07:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:07:44 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:07:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:07:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:07:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:07:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:07:52 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:10 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:10 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:10 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:11 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:12 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:12 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:24 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:38 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:39 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:08:53 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:00 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:00 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:01 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:01 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:01 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:02 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:12 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:21 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:22 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:22 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:22 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:09:22 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:10:30 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[28-Nov-2023 12:54:54 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:55:12 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:55:13 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:55:13 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:55:13 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:55:13 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:55:14 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:55:22 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:55:25 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 12:55:25 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 13:58:29 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 13:58:35 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[28-Nov-2023 14:23:56 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[29-Nov-2023 08:51:48 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:23 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:31 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:32 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:32 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:34 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:34 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:34 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:43 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:49 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:50 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:53 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:53 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:52:53 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:53:21 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:53:30 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:53:47 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:53:50 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:53:50 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:55:11 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:55:19 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:55:19 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:55:19 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:55:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:55:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 08:56:36 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[29-Nov-2023 08:56:45 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[29-Nov-2023 08:56:50 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[29-Nov-2023 08:56:50 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[29-Nov-2023 09:10:16 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[29-Nov-2023 09:10:25 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[29-Nov-2023 09:10:31 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[29-Nov-2023 09:13:20 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:24 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:30 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:40 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:47 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:47 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:47 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:53 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:55 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:55 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:13:57 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:14:12 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:14:23 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:14:23 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:14:23 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:14:23 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:14:24 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:14:24 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:14:32 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:14:32 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:31:08 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[29-Nov-2023 09:31:08 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[29-Nov-2023 09:32:01 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[29-Nov-2023 09:32:26 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:32:39 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:32:40 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 09:34:15 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 41
+[29-Nov-2023 10:05:36 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5
+[30-Nov-2023 09:59:29 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[30-Nov-2023 09:59:29 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[30-Nov-2023 12:05:05 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[30-Nov-2023 12:05:05 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[30-Nov-2023 16:19:14 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[30-Nov-2023 16:19:14 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[30-Nov-2023 16:19:14 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[30-Nov-2023 16:19:14 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[12-Dec-2023 15:22:24 America/Mexico_City] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/icsemmx/public_html/Admin/admin/assets/php/conect.php on line 6
+[12-Dec-2023 15:22:24 America/Mexico_City] PHP Warning:  mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/icsemmx/public_html/Admin/admin/assets/php/conect.php on line 6
+[14-Dec-2023 09:03:58 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:03:59 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpfoE3hE' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:03:59 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[14-Dec-2023 09:11:14 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:11:14 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phppWsAtU' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:11:14 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[14-Dec-2023 09:12:54 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:12:54 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpGQyQ2k' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:12:54 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[14-Dec-2023 09:52:13 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:52:13 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php5NV7ss' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:52:13 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[14-Dec-2023 09:56:35 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:56:35 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpRgYkQ8' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:56:35 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[14-Dec-2023 09:58:18 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:58:18 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpE0kUfR' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 09:58:18 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[14-Dec-2023 10:00:20 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 10:00:20 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpGz0kvH' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 10:00:20 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[14-Dec-2023 10:01:09 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 10:01:09 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phplJc7Ox' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 10:01:09 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[14-Dec-2023 12:24:05 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 12:24:05 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsqs7mB' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[14-Dec-2023 12:24:05 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[18-Dec-2023 10:59:03 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 10:59:03 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpP3Co1l' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 10:59:03 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[18-Dec-2023 11:00:04 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:00:04 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php4oYka8' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:00:04 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[18-Dec-2023 11:01:52 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:01:52 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsP0faL' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:01:52 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[18-Dec-2023 11:03:33 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:03:33 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpJCBnOm' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:03:34 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[18-Dec-2023 11:04:53 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:04:53 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php4iiFuf' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:04:53 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[18-Dec-2023 11:08:19 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:08:19 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpjGI3UK' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:08:19 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[18-Dec-2023 11:09:03 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:09:03 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpGCvSKS' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:09:03 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[18-Dec-2023 11:09:54 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:09:54 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phplOZzzv' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[18-Dec-2023 11:09:54 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[08-Jan-2024 09:21:07 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[08-Jan-2024 09:21:07 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpiuB4Aa' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[08-Jan-2024 09:21:07 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[08-Jan-2024 09:25:07 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 36
+[08-Jan-2024 09:25:07 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:08:12 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[01-Mar-2024 11:08:23 America/Mexico_City] PHP Fatal error:  Paletter image not supported by webp in /home/icsemmx/public_html/Admin/admin/assets/php/actualizarImagenContacto.php on line 29
+[01-Mar-2024 11:37:12 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:37:12 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpgq7LCd' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:37:12 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:37:46 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:37:46 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpPrR2xX' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:37:46 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:38:32 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: Success in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:38:32 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpB4FUJ3' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:38:32 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:38:57 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:38:57 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php18PnHC' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:38:57 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:39:32 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:39:32 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpSnhl2H' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:39:32 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:41:07 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:41:07 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpfgKvcU' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:41:07 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:41:58 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:41:58 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsGEZj8' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:41:58 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:42:36 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:42:36 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpxAKA9S' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:42:36 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:43:33 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:43:33 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpAPElgG' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:43:33 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[01-Mar-2024 11:44:06 America/Mexico_City] PHP Warning:  move_uploaded_file(uploads/LOGO.jpg): failed to open stream: No such file or directory in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:44:06 America/Mexico_City] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php6bsN7X' to 'uploads/LOGO.jpg' in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 27
+[01-Mar-2024 11:44:06 America/Mexico_City] PHP Warning:  imagecreatefromstring(): Empty string or invalid image in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[04-Mar-2024 13:51:34 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot pass parameter 7 by reference in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[04-Mar-2024 13:53:00 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot pass parameter 7 by reference in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[04-Mar-2024 13:54:49 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot pass parameter 7 by reference in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/icsemmx/public_html/Admin/admin/assets/php/crear_productos2.php on line 37
+[30-Apr-2025 11:45:17 America/Mexico_City] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/icsemmx/public_html/Admin/admin/assets/php/cerrar_sesion.php on line 5

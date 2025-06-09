@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .section-barra-lateral{
+            position: fixed;
+            width: 4rem;
+            height: 100vh;
+            z-index: 40;
+        }
+        .section-barra-lateral .content-barra-lateral{
+            background-color: #ffc000;
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            height: 100%;
+            justify-content: space-evenly;
+        }
+        .section-barra-lateral .content-barra-lateral .item-barra{
+            width: auto;
+            height: auto;
+        }
+        .section-barra-lateral .content-barra-lateral .item-barra img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            max-height: 40px;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-barra-lateral">
+        <div class="content-barra-lateral">
+            <a href="#" class="item-barra">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/mail.png" alt="" srcset="">
+            </a>
+            <a href="#" class="item-barra">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/llamada.png" 
+                alt="" srcset="">
+            </a>
+            <a href="#" class="item-barra">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/info.png" alt="" srcset="">
+            </a>
+            <a href="#" class="item-barra">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/calendario.png" 
+                alt="" srcset="">
+            </a>
+        </div>
+    </section>
+</body>
+</html>

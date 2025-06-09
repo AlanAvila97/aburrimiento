@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css' )}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css"
+    />
+    <title>MX+ - Infodemia</title>
+  </head>
+  <body onLoad="arranque()">
+    <h1>Análisis de la conversación en X/Twitter</h1>
+
+    <p>
+      En esta sección se muestran
+      <strong>análisis semanales de la conversación en X/Twitter</strong>.
+      Selecciona uno de los rangos de fechas disponibles en el menú para
+      desplegar la información. <br />
+      Con éste análisis podrás
+      <strong
+        >identificar los días y horas con mayor número de publicaciones</strong
+      >
+      , <strong>el tipo de publicaciones predominante</strong>, así como cúales
+      fueron <strong>las cuentas más activas</strong>, en relación al número de
+      publicaciones que realizaron. También podrás
+      <strong>identificar las etiquetas (o "hashtags") más utilizados</strong>
+      y comparar la proporción de publicaciones de cada tipo asociadas a cada
+      etiqueta, con lo que seráz capaz de
+      <strong
+        >identificar las etiquetas con una mayor proporción de amplificación de
+        contenido</strong
+      >
+      mediante reposteos (o "retweets") en comparación con la proporción de
+      contenido original mediante tweets. Así mismo, encontrarás una tabla con
+      una lista de las cuentas que, mediante un análisis de sus patrones de
+      comportamiento, identificamos que presentan un posible
+      <strong>comportamiento anómalo</strong>.<br />
+      Explora las distintas visualizaciones, interpreta y genera tus propias
+      conclusiones.
+    </p>
+
+    <div class="container">
+      <!-- Left column -->
+      <div class="left-column">
+        <!-- Form with a select element -->
+        <div>
+          <h2>Selecciona una semana</h2>
+          <form id="dataForm" onsubmit="event.preventDefault(); fetchData();">
+            <!-- <label for="dataSelect">Choose an option:</label> -->
+            <select id="dataSelect" name="dataSelect"></select>
+            <button type="submit">Buscar</button>
+          </form>
+        </div>
+
+        <div class="left_flex_item">
+          <h2>Información general</h2>
+          <div id="desc_gen"></div>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="visualization-grid">
+          <!-- Full width elements -->
+          <div class="vis-item full-width">
+            <h3>Comportamiento temporal</h3>
+            <canvas id="trend_fig_temp_tweet"></canvas>
+            <p>
+              La altura de las barras representa el número de publicaciones por
+              hora. Se muestran cada uno de los tipos de publicaciones. La
+              gráfica permite identificar los momentos (días y hora), en los que
+              hubo una mayor actividad en la plataforma.
+            </p>
+          </div>
+
+          <!-- Two column layout -->
+          <div class="vis-item half-width">
+            <h3>Número de publicaciones por tipo</h3>
+            <canvas id="trend_fig_tipo_tweet"></canvas>
+            <p>
+              La altura de las barras representa el número de publicaciones de
+              cada tipo. Esto nos permite identificar cuál fue la actividad
+              principal durante la semana, por ejemplo, amplificación de
+              contenido por medio de reposteos, o respuestas y citas a otras
+              publicaciones.
+            </p>
+          </div>
+
+          <div class="vis-item half-width"></div>
+          <h3>Número de publicaciones por cuenta</h3>
+          <table id="users_tweets"></table>
+          <p>
+            Esta tabla nos permite identificar a las cuentas más activas durante
+            la semana, por ejemplo, que cuentas realizaron una mayor difusión de
+            contenido mediante reposteos, o comentaron las publicaciones de
+            otras cuentas mediante citas y respuestas.<br />
+            Da click en el nombre de la cuenta para navegar a su perfil de
+            X/Twitter, y así analizar con más detalle el contenido que genera o
+            comparte cada una de ellas.
+          </p>
+        </div>
+
+        <!-- Scatterplot section -->
+        <div class="vis-item half-width">
+          <h3>Gráfica de dispersión de etiquetas</h3>
+          <div id="select_tw_type" class="scatter-controls">
+            <!-- Botones de radio para seleccionar eje X -->
+            <div class="select_x">
+              <span class="input-group-addon">Eje X</span>
+              <form id="form_x_data_opts">
+                <label>
+                  <input
+                    type="radio"
+                    name="x_data_opts"
+                    value="Tweet"
+                    checked="checked"
+                  />
+                  Tweet
+                </label>
+                <label>
+                  <input type="radio" name="x_data_opts" value="Retweet" />
+                  Reposteo
+                </label>
+                <label>
+                  <input type="radio" name="x_data_opts" value="Quote" />
+                  Cita
+                </label>
+                <label>
+                  <input type="radio" name="x_data_opts" value="Reply" />
+                  Respuesta
+                </label>
+              </form>
+            </div>
+
+            <!-- Botones de radio para seleccionar eje Y -->
+            <div class="select_x">
+              <span class="input-group-addon">Eje Y</span>
+              <form id="form_y_data_opts">
+                <label>
+                  <input type="radio" name="y_data_opts" value="Tweet" />
+                  Tweet
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="y_data_opts"
+                    value="Retweet"
+                    checked="checked"
+                  />
+                  Reposteo
+                </label>
+                <label>
+                  <input type="radio" name="y_data_opts" value="Quote" />
+                  Cita
+                </label>
+                <label>
+                  <input type="radio" name="y_data_opts" value="Reply" />
+                  Respuesta
+                </label>
+              </form>
+            </div>
+          </div>
+          <canvas id="scatterplot_hashtags"></canvas>
+          <p>
+            Cada círculo en la gráfica corresponde a una etiqueta, el tamaño es
+            proporcional al número de publicaciones asociadas a cada una de
+            ellas. Esta gráfica nos permite comparar la proporción de
+            publicaciones de cada tipo asociadas a cada etiqueta. Por ejemplo,
+            seleccionando en un eje "Tweet" y en el otro "Reposteo", podemos
+            identificar a las etiquetas que fueron utilizadas principalmente
+            para amplificar contenido con reposteos, en comparación con la
+            generación de contenido original con tweets.
+          </p>
+        </div>
+
+        <!-- Two column layout -->
+        <div class="vis-item half-width">
+          <h3>Etiquetas con mayor número de publicaciones</h3>
+          <canvas id="horizontal_bar_hashtags"></canvas>
+          <p>
+            La longitud de las barras es proporcional al número de publicaciones
+            (de cualquier tipo, reposteos, tweets, citas o respuestas). Esta
+            gráfica nos permite identificar a las etiquetas más utilizadas en
+            las publicaciones analizadas.
+          </p>
+        </div>
+
+        <div class="vis-item half-width">
+          <div class="info_title">
+            <h3>Cuentas con Comportamiento Anómalo</h3>
+          </div>
+          <table id="cuentas_anomalas"></table>
+          <p>
+            En esta tabla mostramos a las cuentas cuya actividad puede ser
+            clasificada como sospechosa de comportamiento anómalo. El análisis
+            incluye: el número de publicaciones realizadas en secuencias de
+            menos de 60 segundos, lo que puede ser un indicador de la
+            automatización de la cuenta para realizar publicaciones, el tipo de
+            publicación principal de la actividad de la cuenta, lo que nos
+            permite identificar si la cuenta se enfocó en la amplificación de
+            contenido mediante reposteos, o respuestas a alguna otra cuenta.
+            También mostramos la etiqueta más utilizada por la cuenta, con lo
+            que podemos observar los temas de interés y enfoque de la cuenta. Da
+            click en el nombre de la cuenta para navegar a su perfil de
+            X/Twitter, y así analizar con más detalle el contenido que genera o
+            comparte cada una de ellas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <script src="{{ url_for('static', filename='js_scripts/script_full.js') }}"></script>
+  </body>
+</html>

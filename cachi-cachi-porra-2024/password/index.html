@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://canalonce.mx/REST/data/favicon-96_96.png">
+    <link rel="stylesheet" href="./assets/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">  
+    <title>PISO CONTRASEÑA</title>
+</head>
+<body data-index="">
+  <main id="wrapper" class="bg-gato">
+    <section class="section section-games" id="tictac">
+      <div class="content-game">
+        <div class="container-info-game">
+          <div class="element-animation">
+            <span class="item-animate square-animation"></span>
+          </div>
+          <div class="info" data-status="0">  
+            <picture class="img-logo">
+              <source class="lazy img-fluid" srcset="https://once.fabricaapps.com/cachi-cachi-porra/assets/image/logo-cachi-cachi.png" type="image/webp" alt="Logo Once" loading="lazy">
+              <source class="lazy img-fluid" srcset="https://once.fabricaapps.com/cachi-cachi-porra/assets/image/logo-cachi-cachi.png" type="image/png" alt="Logo Once" loading="lazy">
+              <img class="lazy img-fluid" src="https://once.fabricaapps.com/cachi-cachi-porra/assets/image/logo-cachi-cachi.png" alt="Logo Once" loading="lazy">
+            </picture>
+            <!-- $('.content-game .container-info-game .info').append(img);             -->
+            <input id="WordEnglish" name="WordEnglish" class="input-word word-english d-none" type="text" value="" disabled >
+            <input id="WordSpanish" name="WordSpanish" class="input-word word-spanish d-none" type="text" value="" disabled >
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="content-hidden-answer">
+    </div>
+    <div class="content-btn">
+      <div>
+        <button data-action="3" class="btn-action">Mostrar</button>
+        <button data-action="2" class="btn-action">Siguiente</button>
+      </div>
+      <div>
+        <h1 id="HiddenWordSpanish" class="answer-hidden"></h1>
+      </div>
+      <div>
+        <button data-action="4" class="btn-action">Ocultar</button>
+        <button data-action="1" class="btn-action">Anterior</button>  
+      </div>      
+    </div>
+  </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--  -->
+
+<script src="./assets/js/script.js"></script>
+<script>
+
+</script>
+</html>

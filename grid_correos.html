@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-grid-five-colums{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(5,minmax(200px,1fr));
+            gap: 1rem;
+        }
+        .container-grid-five-colums .item-grid{
+            background-color: #000;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container-grid-five-colums .item-grid p{
+            font-size: clamp(1rem, 1.2rem, 3rem);
+            color: #fff;
+        }
+        @media (max-width: 1050px){
+            .container-grid-five-colums{
+                grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-grid-five-colums">
+        <a href="mailto:elcorreoquequieres@correo.com" class="item-grid">
+            <p>Aquí el texto que quieras</p>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=correo@mail.com&amp;su=Asunto&amp;body=Mensaje" class="item-grid">
+            <p>Enviar correo con Gmail</p>
+        </a>
+        <a href="https://outlook.live.com/mail/0/deeplink/compose?to=correo@mail.com&amp;subject=Asunto&amp;body=Mensaje" class="item-grid">
+            <p> Enviar correo con Outlook</p>
+        </a>
+        <a href="https://compose.mail.yahoo.com/?to=correo@mail.com&amp;subject=Asunto&amp;body=Mensaje" 
+           class="item-grid">
+            <p>Enviar correo con Yahoo</p>
+        </a>
+        <a href="mailto:correo@mail.com?subject=Asunto&amp;body=Mensaje" class="item-grid">
+            <p>Enviar correo</p>
+        </a>        
+    </div>
+</body>
+</html>

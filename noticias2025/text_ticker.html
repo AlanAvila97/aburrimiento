@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            background-color: #333; /* Dark gray background */
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            justify-content: center;
+            font-family: "Courier New", Courier, monospace;
+            color: white;
+        }
+        #typewriter .cursor {
+            width: 100%;
+            position: absolute;
+            background: #333333;
+            height: 100%;
+            margin-left: 0%;
+            animation: scroll_h 8s infinite;
+        }
+        #typewriter .cursor::after{
+            content: '_';
+            width: 100%;
+            height: 90%;
+            background: #333333;
+            display: flex;
+            justify-content: flex-start;
+            font-size: 2rem;
+            align-items: flex-end;
+            animation: blink 0.75s step-end infinite;
+        }
+        #typewriter {
+            font-size: 2em; 
+            display: flex;
+            position: relative;
+        }
+        #typewriter #text-target{
+            width: 100%;
+        }        
+        #typewriter:hover .cursor{
+            opacity: 0;
+            animation: opacity 2s;
+        }
+        @keyframes scroll_h {
+            0%{
+                margin-left: 0%;
+            }
+            100%{
+                margin-left: 105%;
+            }
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="typewriter">
+        <span id="text-target">IMSS busca realizar más de 2 millones de cirugías en 2025</span>
+        <span class="cursor"></span>
+    </div>
+    <script>
+        // let element = document.getElementById("text-target");
+        // let text = element.innerHTML;
+        // let speed = 150;
+        // let index = 0;
+        // let typingInterval;
+        // let repeatInterval;
+        // let isPaused = false; // Controla el estado de pausa
+
+        // const pauseTextAnimationTyping = () => {
+        //     isPaused = true;
+        //     element.innerHTML = text
+        //     clearTimeout(typingInterval);
+        // }
+        // const playTextAnimationTyping = () => {
+        //     isPaused = false;
+        //     element.innerHTML = '';
+        //     index = 0;
+        //     if (index < text.length) {
+        //         typingInterval = setTimeout(typeWriter, speed);
+        //     } else {
+        //         startAnimationCycle();
+        //     }
+        // }
+        // function typeWriter() {
+        //     if (index < text.length && !isPaused) {
+        //         element.innerHTML += text.charAt(index);
+        //         index++;
+        //         typingInterval = setTimeout(typeWriter, speed);
+        //     }
+        // }
+        // function startAnimationCycle() {
+        //     if (repeatInterval) clearInterval(repeatInterval);
+        //     typeWriter(); 
+        //     repeatInterval = setInterval(() => {
+        //         if (!isPaused) {
+        //             element.innerHTML = '';
+        //             index = 0;
+        //             typeWriter();
+        //         }
+        //     }, text.length * speed + 2000); 
+        // }
+        // // 
+        // element.addEventListener('mouseover', pauseTextAnimationTyping);
+        // element.addEventListener('mouseout', playTextAnimationTyping);
+        // // 
+        // document.addEventListener("DOMContentLoaded", function(event) {        
+        //     startAnimationCycle();
+        // });
+    </script>
+</body>
+</html>

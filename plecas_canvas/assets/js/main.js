@@ -23,7 +23,11 @@ async function fetchData(url) {
     }
 }
 /**
- * @description Función 
+ * @description Función que retrasa la activación de una función
+ * @param func Contiene la función que se necesita activar
+ * @param wait Tiempo que esperara la función para activarse
+ * @param immediate Hace que la funcion se active de inmediatamente la primera vez y despues espere al debounce
+ * 
 */ 
 const debounce = (func, wait, immediate = false) => {
     let timeout;
@@ -52,7 +56,7 @@ const eliminarCaracteres = (cadena) => {
     return outString;
 }
 /**
- * @description Función 
+* @description Función que muestra y activa la animación del preloader
 */ 
 const fadeInPreload = () => {
     addClassElement(body, 'body-overflow-hidden');
@@ -60,7 +64,8 @@ const fadeInPreload = () => {
     addClassElement(preload, 'fade-in-search');
 }
 /**
- * @description Función 
+* @description Función que oculta y desactiva la animación del preloader
+* @param timer Tiempo que esperara la función para ocultarse
 */ 
 const fadeOutPreload = (timer) => {
     setTimeout(() => {
@@ -70,7 +75,8 @@ const fadeOutPreload = (timer) => {
     }, timer);
 }
 /**
- * @description Función 
+* @description Función que valida la clase que asigna el font-weight del titulo o del body
+* @param element Elemento html
 */ 
 const validationClassFontWeight = (element) => {
     (element.classList.contains('font-weight-normal')) && removeClass(element, 'font-weight-normal');
@@ -78,7 +84,7 @@ const validationClassFontWeight = (element) => {
     (element.classList.contains('font-weight-bold')) && removeClass(element, 'font-weight-bold');
 }
 /**
- * @description Función 
+ * @description Función que cambia el font-weight del titulo o del body
 */ 
 const changeFontWeight = (e) => {
     let element, element_h2;
@@ -99,7 +105,7 @@ const changeFontWeight = (e) => {
     }
 }
 /**
- * @description Función 
+ * @description Función que cambia el tamaño de la fuente, recibira el valor en px y lo parseara a rem
 */ 
 const changeFontSize = (e) => {
     let rem = ( parseInt(e.target.value) / 16), element, elem_h2;
@@ -116,7 +122,7 @@ const changeFontSize = (e) => {
     }
 }
 /**
- * @description Función 
+ * @description Función que cambia el color del titulo o del body
 */ 
 const changeColorText = (e) => {
     let element, ele_h2;
@@ -133,7 +139,7 @@ const changeColorText = (e) => {
     }
 }
 /**
- * @description Función 
+ * @description Función asigna el texto del titulo a la imagen
 */ 
 const setTitleText = (e) => {
     let text = e.target.value,
@@ -141,7 +147,7 @@ const setTitleText = (e) => {
         elem_h2.innerHTML = text;
 }
 /**
- * @description Función 
+ * @description Función asigna el texto del body a la imagen
 */ 
 const setBodyText = (e) => {
     let text = e.target.value,
@@ -149,7 +155,8 @@ const setBodyText = (e) => {
         elem_h2.innerHTML = text;
 }
 /**
- * @description Función 
+ * @description Función que asigna un background-image a todos los elementos de la imagen, contentedor de titulo, contentedor de logo, contentedor de programa, contentedor de barra lateral del body
+ * @param bg Contiene el background-image en formato base64 
 */ 
 const setGeneralBackgrounds = (bg) => {
     let element_bg = [ 
@@ -170,7 +177,8 @@ const setGeneralBackgrounds = (bg) => {
     setValues('#font_color_background', '#df7e01');
 }
 /**
- * @description Función 
+* @description Función asigna un background sólido a todos los elementos de la imagen, contentedor de titulo, contentedor de logo, contentedor de programa, contentedor de barra lateral del body
+* @param color Contiene el bg en hexadecimal del programa ¿
 */ 
 const handleChangeBackground = (e, color) => {
     let element_bg = [ 
@@ -180,7 +188,7 @@ const handleChangeBackground = (e, color) => {
         '.section-mask .container-mask .info-mask .title-pgm .bar_lateral'
     ],
     bg = (color === '') ? e.target.value : color;
-    attr_style = (color === '') ? `background: ${bg}!important;` : `background:${bg}!important;`;
+    attr_style = `background:${bg}!important;`;
     // 
     element_bg.forEach(element => {
         let content = ( getQueryElement(element) != null ) ? true : false;
@@ -200,7 +208,14 @@ const handleChangeBackground = (e, color) => {
     addClassDnone('.btnDeleteBgElementsMask');
 }
 /**
- * @description Función 
+ * @description Función que oculta o muestra el bg de los elementos de la imagen, contentedor de titulo, contentedor de logo, contentedor de programa, contentedor de barra lateral del body
+* @param type Es el tipo de elemento al que se le retirara el bg 
+*   1 -> Contenedor del Logo 
+*   2 -> Contenedor del Programa izquierdo
+*   3 -> Contentedor del titulo
+*   4 -> Contentedor de barra lateral del body
+* @param attr_style Estilos del bg que se habian asignado al inicio
+* @param status Estatus del checkbox para ocultar o mostrar
 */ 
 const visibilityBackgrounds = (type, attr_style, status) => {
     let style;
@@ -238,7 +253,7 @@ const visibilityBackgrounds = (type, attr_style, status) => {
     }
 }
 /**
- * @description Función 
+ * @description Función que activa la visibilidad de los background de los elementos de la imagen
 */ 
 const handleVisibilityBackgrounds = (e) => {
     let bg = getQueryElement('.functions_backgrounds').dataset.bg;
@@ -256,13 +271,13 @@ const handleVisibilityBackgrounds = (e) => {
     }
 }
 /**
- * @description Función 
+ * @description Función que oculta la imagen que alerta que hace falta una imagen de fondo inicial
 */ 
 const handleHiddenAlert = () => {
     addClassDnone(contentAlertImage);
 }
 /**
- * @description Función 
+ * @description Función recarga los formularios de generación de imagenes
 */ 
 const handleReloadForm = () => {
   let status =  contentBtnReload.dataset.status;
@@ -293,7 +308,7 @@ const handleReloadForm = () => {
   addAllClass( getAllElement('.section-mask'), 'd-none' );
 }
 /**
- * @description Función 
+ * @description Función que subira un logo en formato base64, puede ser para el logo del programa o cambiar el logo del canal y la previsualiza en su respectivo contenedor
 */ 
 const handleUploadLogo = (e) => {
     let id_element = e.target.dataset.type,     
@@ -316,11 +331,10 @@ const handleUploadLogo = (e) => {
         element.click();
         if(id_element == 'imgLogoPrograms'){
             $('#logo_pgm_picker').val('0').trigger('change');
-
         }
 };
 /**
- * @description Función 
+ * @description Función que subira un logo en formato base64 para la generación la mascara princinpal, previsualizandola en el div 
 */ 
 const handleUploadImage = () => {
     let element = getQueryElement("#TableImage"); 
@@ -344,7 +358,7 @@ const handleUploadImage = () => {
         element.click();
 }
 /**
- * @description Función 
+ * @description Función que subira una imagen para el background en formato base64 para todos los elementos de la imagen
 */ 
 const handleUploadBackground = () => {
     let element = getQueryElement("#bgElementsMask"),

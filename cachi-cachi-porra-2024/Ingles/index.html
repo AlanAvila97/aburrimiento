@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://canalonce.mx/REST/data/favicon-96_96.png">
+    <!--  -->
+    <!-- <link rel="stylesheet" href="vendor/animate.css/animate.css" /> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css"/>
+    <link rel="stylesheet" href="./assets/css/animation-bg.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">  
+    <title>Gato</title>
+</head>
+<body data-index="">
+    <!--  -->
+    <main id="wrapper" class="bg-gato">
+      <section class="section section-games" id="tictac">
+        <div class="content-game" >
+          <div class="container-info-game">
+            <div class="element-animation">
+              <span class="item-animate"></span>
+            </div>
+            <div class="info">              
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="content-btn">
+        <div>          
+          <button data-action="3" class="btn-action">Mostrar</button>
+          <button data-action="2" class="btn-action">Siguiente</button>
+        </div>
+        <div>
+          <button data-action="1" class="btn-action">Anterior</button>
+        </div>
+      </div>
+    </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--  -->
+<script src="./assets/js/anime.min.js"></script>
+<script src="script.js"></script>
+<script>
+  if($(window).width() <= 991 ){
+    anime({
+      targets: ".item-animate",
+      translateY: [
+        { value: 0, duration: 1000 },
+        { value: 80, duration: 1000 },
+        { value: 0, duration: 1000 },
+      ],
+      easing: "linear",
+      autoplay: true,
+      direction: "alternate",
+      loop: true,
+    });
+  }else{
+    anime({
+      targets: ".item-animate",
+      translateY: [
+        { value: 0, duration: 1000 },
+        { value: 280, duration: 1000 },
+        { value: 0, duration: 1000 },
+      ],
+      easing: "linear",
+      autoplay: true,
+      direction: "alternate",
+      loop: true,
+    });
+  }
+</script>
+
+</html>

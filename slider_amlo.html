@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        #exodo-libros {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 0.5rem;
+        }
+        #exodo-libros .navigation{
+            width: auto;
+            cursor: pointer;
+        }
+        #exodo-libros .navigation img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        #exodo-libros .swiper{
+            height: 22rem !important;
+        }
+        .contenedor-libro{
+            display: flex;
+            flex-direction: column;
+        }
+        .contenedor-libro .imagen{
+            display: flex;
+            justify-content: center;
+        }
+        .contenedor-libro .imagen img{
+            width: 9rem;
+            height: 9rem;
+            border-radius: 10rem;
+        }
+        .imagen-play{
+            animation: jackInTheBox;
+            animation-duration: 22s;
+        }
+        .reproductor-libro audio{
+            width: -webkit-fill-available;
+        }
+        #exodo-libros .swiper-slide{
+            background-color: #cb5352;
+            border-radius: 1rem;
+        }
+    
+    </style>
+</head>
+<body>
+    
+
+    <section id="exodo-libros">
+        <div class="navigation navigation-prev">
+            <img src="https://canalonce.mx/REST/data/images/prev_noti.png" alt="">
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiperLibros">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img id="imagen-libro1" src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <br>
+                    <div class="titulo-libro">
+                        <h4>Del esplendor a la sombra. La república restaurada y el porfirismo</h4>
+                    </div>
+                    <br>
+                    <div class="reproductor-libro">
+                        <audio id="libro1" controls>
+                            <source src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/08/libro-muestra.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>Tabasco, víctima de un fraude</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>Los primeros pasos</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide"><div class="contenedor-libro">
+                <div class="imagen">
+                    <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                </div>
+                <div class="titulo-libro">
+                    <h4>Entre la historia y la esperanza</h4>
+                </div>
+                <div class="reproductor-libro">
+                    
+                </div>
+            </div></div>
+            <div class="swiper-slide"><div class="contenedor-libro">
+                <div class="imagen">
+                    <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                </div>
+                <div class="titulo-libro">
+                    <h4>Fobaproa, expediente abierto: reseña y archivo</h4>
+                </div>
+                <div class="reproductor-libro">
+                    
+                </div>
+            </div></div>
+            <div class="swiper-slide"><div class="contenedor-libro">
+                <div class="imagen">
+                    <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                </div>
+                <div class="titulo-libro">
+                    <h4>Un proyecto alternativo de nación: hacia un cambio verdadero</h4>
+                </div>
+                <div class="reproductor-libro">
+                    
+                </div>
+            </div></div>
+            <div class="swiper-slide"><div class="contenedor-libro">
+                <div class="imagen">
+                    <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                </div>
+                <div class="titulo-libro">
+                    <h4>La mafia nos robó la presidencia</h4>
+                </div>
+                <div class="reproductor-libro">
+                    
+                </div>
+            </div></div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>La gran tentación: el petróleo de México</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>Contra el desafuero: mi defensa jurídica</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>La mafia que se adueñó de México... y el 2012</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>No decir adiós a la esperanza</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>Neoporfirismo. Hoy como ayer</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>El poder en el trópico</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>2018 La salida. Decadencia y renacimiento de México</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>Oye, Trump</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>Hacia una economía moral</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>A la mitad del camino” (2021)</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+                        <h4>¡Es con ustedes!</h4>
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+        
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="contenedor-libro">
+                    <div class="imagen">
+                        <img src="https://m.media-amazon.com/images/I/81d4UbNR73L._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                    </div>
+                    <div class="titulo-libro">
+        
+                    </div>
+                    <div class="reproductor-libro">
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- End Swiper -->
+        <div class="navigation navigation-next">
+            <img src="https://canalonce.mx/REST/data/images/next_noti.png" alt="">
+        </div>
+    </section>
+    <script>
+        $(document).ready(function() {
+            let audio = $('#libro1');
+            let imagen = $('#imagen-libro1');
+
+            audio.on('play', function() {
+                console.log('reproduciendo');
+                imagen.addClass('imagen-play');
+            });
+
+            audio.on('pause ended', function() {
+                imagen.removeClass('imagen-play');
+            });
+        });
+        let swiper = new Swiper(".mySwiperLibros", {
+            cssMode: true,
+            spaceBetween: 10,
+            navigation: {
+            nextEl: ".navigation-next",
+            prevEl: ".navigation-prev",
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            },
+            breakpoints: {
+                        300: {
+                            slidesPerView: "auto",
+                        },
+                        310: {
+                            slidesPerView: "auto",
+                        },
+                        320: {
+                            slidesPerView: "auto",
+                        },
+                        480: {
+                            slidesPerView: "auto",
+                        },
+                        500: {
+                            slidesPerView: 2,
+                        },
+                        600: {
+                            slidesPerView: 2,
+                        },
+                        640: {
+                            slidesPerView: 4,
+                        },
+                        950: {
+                            slidesPerView: 6,
+                        },
+                        1200: {
+                            slidesPerView: 6,
+                        },
+                        1500: {
+                            slidesPerView: 6,
+                        },
+                        2100: {
+                            slidesPerView: 6,
+                        },
+                    },
+        });
+    </script>
+    
+</body>
+</html>

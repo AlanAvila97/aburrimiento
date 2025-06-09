@@ -1,0 +1,59 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.controls {
+  background: cyan;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 12px;
+  border-radius: 16px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.controls button {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #000;
+  width: fit-content;
+  padding: 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+}
+.controls button svg {
+  width: 35px;
+  height: 35px;
+}
+
+.mindmap-button {
+  cursor: pointer;
+}
+.mindmap-button rect, .mindmap-button path {
+  transition: fill 0.3s;
+}
+.mindmap-button:hover rect {
+  fill: cyan;
+}
+.mindmap-button:hover path {
+  fill: black;
+}
+
+.cat-1{
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.azul{
+  background-color: #00002B;
+}
+
+path {stroke: rgba(255, 255, 255, 0.273);}

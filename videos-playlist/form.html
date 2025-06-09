@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }   
+        .container-video{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-top: 2%;
+            margin-bottom: 3%;
+            align-items: center;
+            gap: 1rem;
+
+        }
+        .content-video{
+            height: 100%;
+            width: 100%;
+            max-width: 950px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form id="FormFirebase" class="section-container-video">
+            <div class="container-video">
+                <div class="title">
+                    <label for="LinkVideo">Link</label>
+                    <input type="text" id="LinkVideo" name="LinkVideo" placeholder="Ingresa link">
+                </div>
+                <div class="title">
+                    <label for="TypeVideo">Type video</label>
+                    <select id="TypeVideo" name="TypeVideo" placeholder="">
+                        <option value="application/x-mpegURL">M3u8</option>
+                        <option value="video/mp4">Mp4</option>
+                        <option value="video/youtube">Youtube</option>
+                    </select>
+                </div>
+                <div class="content-bnt">
+                    <button type="submit" class="previous">enviar</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>    
+    <script src='https://www.gstatic.com/firebasejs/5.9.3/firebase.js'></script>    
+    <script type="module" src="./assets/js/credentials.js"></script>
+    <script src="./assets/js/form.js"></script>
+</body>
+</html>

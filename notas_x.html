@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .section-note-timeline .container-note-timeline{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .section-note-timeline .container-note-timeline .content-item{
+            width: 100%;
+            height: auto;
+        }        
+        .separator-note{
+            width: 100%;
+            height: auto;
+        }
+        .separator-note img{
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 40px;
+            object-fit: contain;
+        }
+        .section-note-timeline .container-note-timeline .content-item .info-note{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .section-note-timeline .container-note-timeline .content-item .info-note .title-note,
+        .section-note-timeline .container-note-timeline .content-item .info-note .image-note{
+            width: 100%;
+            height: auto;
+        }
+        .section-note-timeline .container-note-timeline .content-item .info-note .title-note h2{
+            font-size: clamp(1rem, 1.5rem, 2rem);
+        }
+        .section-note-timeline .container-note-timeline .content-item .info-note .image-note img{
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 300px;
+            object-fit: cover;
+        }
+
+        /* From Uiverse.io by Yaya12085 */ 
+        .section-note-timeline .container-note-timeline .content-item .card {
+            --gray: rgba(229, 231, 235, 1);
+            width: 320px;
+            height: 10rem;
+            display: flex;
+            gap: 0.5rem;
+            border-radius: 1rem;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .section-note-timeline .container-note-timeline .content-item .card-1 {
+            width: 40%;
+            border-radius: 0.75rem;
+            background-color: var(--gray);
+            padding: 6px;
+        }
+        .section-note-timeline .container-note-timeline .content-item .card-1 img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            max-width: 140px;
+            max-height: 160px;
+            object-fit: cover;
+            border-radius: 0.75rem;
+        }
+        .section-note-timeline .container-note-timeline .content-item .right {
+            display: flex;
+            flex: 1 1 0%;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .section-note-timeline .container-note-timeline .content-item .card-2 {
+            height: auto;
+            width: 100%;
+            border-radius: 1rem;
+            background-color: var(--gray);
+            padding: 0.6rem;
+        }
+        .section-note-timeline .container-note-timeline .content-item .card-2 h2{
+            font-size: clamp(0.8rem, 0.9rem, 1.1rem);
+        }
+        .section-note-timeline .container-note-timeline .content-item .card-3 {
+            height: 100%;
+            width: 100%;
+            border-radius: 1rem;
+            background-color: var(--gray);
+            padding: 0.6rem;
+        }
+        .section-note-timeline .container-note-timeline .content-item .card-3 p{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            font-size: clamp(0.8rem, 0.5rem, 1rem);
+        }
+    </style>
+</head>
+<body>
+    <section class="section-note-timeline">
+        <div class="container-note-timeline">
+            <article class="content-item">
+                <div class="separator-note">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/LOGO_11_videos-removebg-preview-1.png" alt="">
+                </div>
+                <div class="info-note">
+                    <div class="title-note">
+                        <h2>titulo</h2>
+                    </div>
+                    <div class="image-note">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Los-Campesinos-746x420.jpg" 
+                             alt="">
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="section-note-timeline">
+        <div class="container-note-timeline">
+            <article class="content-item">
+                <div class="card">
+                    <div class="card-1">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Los-Campesinos-746x420.jpg" 
+                             alt="">
+                    </div>
+                    <div class="right">
+                        <div class="card-2">
+                            <h2>Bunbury y sus "Cuentas pendientes"</h2>
+                        </div>
+                        <div class="card-3">
+                            <p>
+                                En julio de 1995, como parte de un festival de radio, Los Estrambóticos debutaron en el Palacio de los Deportes.
+                            </p>
+                        </div>                        
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>

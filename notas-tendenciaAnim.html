@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .section-tendencias {
+            width: 100%;
+        }
+        .grid-notes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: clamp(1rem, 2vw, 2rem);
+        }
+        .item-note-trend {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item-note-trend img {
+            width: 100%;
+            display: block;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .item-note-trend img:hover {
+            opacity: 0.8;
+        }
+
+        .item-note-trend .post-title a {
+            display: inline;
+            color: #000;
+            background-color: transparent;
+            text-decoration: none;
+            transition: 0.15s;
+            outline: none;
+            background-image: linear-gradient(to bottom, #701d47 0%, #701d47 98%);
+            background-size: 0 1px;
+            background-repeat: no-repeat;
+            background-position: left 100%;
+        }
+        .item-note-trend .post-title a h2{
+            font-size: 1.1rem;
+        }
+        .item-note-trend .post-title a:hover {
+            background-size: 100% 2px;
+        }
+    </style>
+    <section class="section-tendencias">
+        <div class="grid-notes">
+            <div class="item-note-trend">
+                <a href="https://oncenoticias.digital/cultura/en-vivo-desde-el-met-de-nueva-york-mexico-presente-en-la-nueva-temporada/476234/">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EN-VIVO-MET-DE-NY-746x420.jpg"
+                        alt="">
+                </a>
+                <h2 class="post-title">
+                    <a href="https://oncenoticias.digital/cultura/en-vivo-desde-el-met-de-nueva-york-mexico-presente-en-la-nueva-temporada/476234/">
+                        “En vivo desde el MET de Nueva York”: México presente en la nueva temporada
+                    </a>
+                </h2>
+            </div>
+            <div class="item-note-trend">
+                <a href="https://oncenoticias.digital/entretenimiento/bad-bunny-rompe-record-en-venta-de-boletos-en-mexico/476189/">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Bad-Bunny-rompe-record-de-demanda-en-Mexico-746x420.png"
+                        alt="">
+                </a>
+                <h2 class="post-title">
+                    <a href="https://oncenoticias.digital/entretenimiento/bad-bunny-rompe-record-en-venta-de-boletos-en-mexico/476189/">
+                        Bad Bunny rompe récord en venta de boletos en México
+                    </a>
+                </h2>
+            </div>
+            <div class="item-note-trend">
+                <a href="https://oncenoticias.digital/internacional/franja-de-gaza-vuelve-a-estar-bajo-asedio-militar/476172/">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/1024759_Vigilia-por-Palestina-Libre-frente-SRE_web-746x420.jpg"
+                        alt="">
+                </a>
+                <h2 class="post-title">
+                    <a href="https://oncenoticias.digital/internacional/franja-de-gaza-vuelve-a-estar-bajo-asedio-militar/476172/">
+                        Franja de Gaza vuelve a estar bajo asedio militar
+                    </a>
+                </h2>
+            </div>
+            <div class="item-note-trend">
+                <a href="https://oncenoticias.digital/nacional/sheinbaum-defiende-eleccion-judicial-por-voto-popular/476151/">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Sheinbaum-defiende-eleccion-judicial-por-voto-popular-746x420.png"
+                        alt="">
+                </a>
+                <h2 class="post-title">
+                    <a href="https://oncenoticias.digital/nacional/sheinbaum-defiende-eleccion-judicial-por-voto-popular/476151/">
+                        Sheinbaum defiende elección judicial por voto popular
+                    </a>
+                </h2>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

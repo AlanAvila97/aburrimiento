@@ -1,0 +1,1178 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Americano</title>
+  <!-- <meta name="apple-mobile-web-app-title" content="CodePen"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111"> -->
+  <link rel="stylesheet" href="./assets/css/animation-bg.css"/>
+  <link rel="stylesheet" href="./assets/css/main.css"/>
+  <link rel="stylesheet" href="./assets/css/animejs.css"/>
+  <link rel="stylesheet" href="./assets/css/anime-theme.css"/>
+  <link rel="stylesheet" href="main.css" type="text/css">
+  </script>
+  </head>
+  <body class="bg-panel-ciencia" data-status="">
+    <!-- Bg A la cachi cachi porra  -->
+    <div class="container-bg">
+      <div class="container-circles-bg" style="z-index: 1;">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="blur-questions"></div>
+      </div>
+    </div>
+    <main id="wrapper" class="bg-panel-ciencia">
+      <section class="section section-games">
+        <div class="content-game">
+          <div class="rows">
+            <div class="row title container-title">
+              <div class="title title-categorie">
+                Corrida
+              </div>
+              <div class="title title-categorie">
+                Pase
+              </div>
+              <div class="title title-categorie">
+                Ave_Maria
+              </div>
+              <div class="title title-categorie">
+                Sorpresa
+              </div>
+              <div class="title title-categorie">
+                STL
+              </div>
+              <div class="title title-categorie">
+                Random
+              </div>
+            </div>
+       
+            <div class="row title" data-value="100">
+              <!-- <div class="cell" data-col="0" style="background: url(imagenes/fila-1-columna-1.jpg);background-position: center top;background-size: 100% auto;"> -->
+              <div class="cell cell-1" data-col="0">
+                <div class="circle circle-green">
+                  Click
+                </div>
+              </div>
+              <!-- <div class="cell cell-1" data-col="1" style="background: url(imagenes/fila-1-columna-2.jpg);background-position: center top;background-size: 100% auto;"> -->
+              <div class="cell cell-1" data-col="1">
+                <div class="circle circle-orange">
+                  Click
+                </div>
+              </div>
+              <!-- <div class="cell cell-1" data-col="2" style="background: url(imagenes/fila-1-columna-3.jpg);background-position: center top;background-size: 100% auto;"> -->
+              <div class="cell cell-1" data-col="2">
+                <div class="circle circle-pink">
+                  Click
+                </div>
+              </div>
+              <!-- <div class="cell cell-1" data-col="3" style="background: url(imagenes/fila-1-columna-4.jpg);background-position: center top;background-size: 100% auto;"> -->
+              <div class="cell cell-1" data-col="3">
+                <div class="circle circle-purple">
+                  Click
+                </div>
+              </div>
+              <!-- <div class="cell cell-1" data-col="4" style="background: url(imagenes/fila-1-columna-5.jpg);background-position: center top;background-size: 100% auto;"> -->
+              <div class="cell cell-1" data-col="4">
+                <div class="circle">
+                  1
+                </div>
+              </div>
+              <!-- <div class="cell cell-1" data-col="5" style="background: url(imagenes/fila-1-columna-6.jpg);background-position: center top;background-size: 100% auto;"> -->
+              <div class="cell cell-1" data-col="5">
+                <div class="circle">
+                  1
+                </div>
+              </div>
+            </div>
+          
+            <!-- <div class="row" data-value="400">
+              <div class="cell" data-col="0" style="background: url(imagenes/fila-4-columna-1.jpg);background-position: center top;background-size: 100% auto;">
+                4
+              </div>
+              <div class="cell" data-col="1" style="background: url(imagenes/fila-4-columna-2.jpg);background-position: center top;background-size: 100% auto;">
+                4
+              </div>
+              <div class="cell" data-col="2" style="background: url(imagenes/fila-4-columna-3.jpg);background-position: center top;background-size: 100% auto;">
+                4
+              </div>
+              <div class="cell" data-col="3" style="background: url(imagenes/fila-4-columna-4.jpg);background-position: center top;background-size: 100% auto;">
+                4
+              </div>
+              <div class="cell" data-col="4" style="background: url(imagenes/fila-4-columna-5.jpg);background-position: center top;background-size: 100% auto;">
+                4
+              </div>
+              <div class="cell" data-col="5" style="background: url(imagenes/fila-4-columna-6.jpg);background-position: center top;background-size: 100% auto;">
+                4
+              </div>
+            </div> -->
+        
+          <!-- <div class="row" data-value="500">
+            <div class="cell" data-col="0" style="background: url(imagenes/fila-5-columna-1.jpg);background-position: center top;background-size: 100% auto;">
+              5
+            </div>
+            <div class="cell" data-col="1" style="background: url(imagenes/fila-5-columna-2.jpg);background-position: center top;background-size: 100% auto;">
+              5
+            </div>
+            <div class="cell" data-col="2" style="background: url(imagenes/fila-5-columna-3.jpg);background-position: center top;background-size: 100% auto;">
+              5
+            </div>
+            <div class="cell" data-col="3" style="background: url(imagenes/fila-5-columna-4.jpg);background-position: center top;background-size: 100% auto;">
+              5
+            </div>
+            <div class="cell" data-col="4" style="background: url(imagenes/fila-5-columna-5.jpg);background-position: center top;background-size: 100% auto;">
+              5
+            </div>
+            <div class="cell" data-col="5" style="background: url(imagenes/fila-5-columna-6.jpg);background-position: center top;background-size: 100% auto;">
+              5
+            </div>
+          </div>
+        
+          <div class="row" data-value="600">
+            <div class="cell" data-col="0" style="background: url(imagenes/fila-6-columna-1.jpg);background-position: center top;background-size: 100% auto;">
+              6
+            </div>
+            <div class="cell" data-col="1" style="background: url(imagenes/fila-6-columna-2.jpg);background-position: center top;background-size: 100% auto;">
+              6
+            </div>
+            <div class="cell" data-col="2" style="background: url(imagenes/fila-6-columna-3.jpg);background-position: center top;background-size: 100% auto;">
+              6
+            </div>
+            <div class="cell" data-col="3" style="background: url(imagenes/fila-6-columna-4.jpg);background-position: center top;background-size: 100% auto;">
+              6
+            </div>
+            <div class="cell" data-col="4" style="background: url(imagenes/fila-6-columna-5.jpg);background-position: center top;background-size: 100% auto;">
+              6
+            </div>
+            <div class="cell" data-col="5" style="background: url(imagenes/fila-6-columna-6.jpg);background-position: center top;background-size: 100% auto;">
+              6
+            </div>
+          </div> -->
+            </div>
+            <!-- Lenguaje -->
+            <div class="topic code" data-topic="Corrida" data-value="100">      
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a1">
+                  <code>
+                    <button type="button" class="btn btn-success prueba_boton">Primary</button>
+                    <p>  class Foo {
+                            operator float() {return 3.14}
+                          };
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r1">
+                  What is a conversion operator?
+                </div>
+                <span id="rd1" class="d-none second-question question_gray"></span>
+              </div>
+            </div>
+            
+            <div class="topic code" data-topic="Matematicas" data-value="200">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a2">
+                  <code>
+                    <p>for(auto temp : collection) {
+                        std::cout &lt;&lt; temp &lt;&lt; "\n";
+                        }
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r2">
+                  What is the for:range iteration statement?
+                </div>
+                <span id="rd2" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic code" data-topic="Matematicas" data-value="300">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a3">
+                  <code>
+                    <p>enum class Color {red, blue, green, alpha};
+                </p>
+                  </code>
+                </div>
+                <div class="question" id="r3">
+                  What is an a class enum?
+                </div>
+                <span id="rd3" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic code" data-topic="Matematicas" data-value="400">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a4">
+                  <code>
+                    <p>  class Foo {
+                            Foo(const Bar &amp;aBar);
+                        };
+                </p>
+                  </code>
+                </div>
+                <div class="question" id="r4">
+                  What is a conversion constructor?
+                </div>
+                <span id="rd4" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic code" data-topic="Matematicas" data-value="500">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a5">
+                  <code>
+                    <p>      x = y ? : z;
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r5">
+                  What is the ternary operator? <br>(Shorthand for IF-THEN-ELSE)
+                </div>
+                <span id="rd5" class="d-none second-question"></span>
+              </div>            
+            </div>
+            
+            <div class="topic code" data-topic="Matematicas" data-value="600">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a6">
+                  <code>
+                    <p>int theInt = static_cast<int>(theFace);
+                      Hand&amp; theHand = const_cast<hand>(*this);
+                      Bar* theBar = dynamic_cast<bar*>(theFoo);
+                      </bar*></hand></int>
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r6">
+                  What are C++ cast operators?
+                </div>
+                <span id="rd6" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <!-- Templates -->
+            <div class="topic code" data-topic="Pase" data-value="100">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a7">
+                  <code>
+                    <p>template &lt;typename T&gt;
+                    void swap(T&amp; anArg1, T&amp; anArg2) {
+                      T temp=anArg1;
+                      anArg1=anArg2;
+                      anArg2=temp;
+                    }
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r7">
+                  What is a template function?<br>Compile-time polymorphism.
+                </div>
+                <span id="rd7" class="d-none second-question question_gray"></span>
+              </div>
+            </div>
+  
+            <div class="topic code" data-topic="Biologia" data-value="200">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a8">
+                  <code>
+                    <p>template &lt;typename T&gt;
+                    class Foo {
+                    };
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r8">
+                  What is a template class?<br>Compile-time polymorphism.
+                </div>
+                <span id="rd8" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Biologia" data-value="300">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a9">
+                  This occurs after template is used in code.
+                </div>
+                <div class="question" id="r9">
+                  When does compiler generate code from a template?
+                </div>
+                <span id="rd9" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic code" data-topic="Biologia" data-value="400">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a10">
+                  <code>
+                    <p>class Foo {
+                    public:
+                      template &lt;typename T&gt;
+                      void doSomething(const T&amp; anArg) {}
+                    };
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r10">
+                  What is a template method?<br>Compile-time polymorphism.
+                </div>
+                <span id="rd10" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Biologia" data-value="500">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>              
+                <div class="answer" id="a11">
+                  Template parameter(s)
+                </div>
+                <div class="question" id="r11">
+                  Type argument(s) passed to a template that specify that target type(s) for the generated code.
+                </div>
+                <span id="rd11" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic code" data-topic="Biologia" data-value="600">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a12">
+                  <ol>
+                    <li>Code bloat</li>
+                    <li>Error message complexity </li>
+                  </ol>
+                </div>
+                <div class="question" id="r12">
+                  What are the most common complaints about using templates?
+                </div>
+                <span id="rd12" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <!-- OOP -->
+            <div class="topic code" data-topic="Ave_Maria" data-value="100">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer " id="a13">
+                  <code>
+                    <p>class Foo {
+                        public:
+                          Foo(const Foo &amp;aFoo);
+                        };
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r13">
+                  What is a copy constructor?
+                </div>
+                <span id="rd13" class="d-none second-question question_gray"></span>
+              </div>                
+            </div>
+            
+            <div class="topic code" data-topic="Fisica" data-value="200">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer " id="a14">
+                  <code>
+                    <p>class Foo : public Bar, public Baz {
+              public:
+              };
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r14">
+                  What is multiple inheritance?
+                </div>
+                <span id="rd14" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Fisica" data-value="300">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a15">
+                  <ol>
+                    <li> IS-A </li>
+                    <li> HAS-A </li>
+                    <li> CONTAINS-A </li>
+                    <li> BECOMES-A </li>
+                  </ol>
+                </div>
+                <div class="question" id="r15">
+                  What are types of OOP relationships?
+                </div>
+                <span id="rd15" class="d-none second-question"></span>
+              </div>                
+            </div>  
+
+            <div class="topic code" data-topic="Fisica" data-value="400">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a16">
+                  <code>
+                    <p>foo();
+                        foo(const foo &amp;aFoo);
+                        ~foo();
+                        foo&amp; operator=(const foo &amp;aFoo);      
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r16">
+                  What is orthodox cannonical form?
+                </div>
+                <span id="rd16" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Fisica" data-value="500">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a17">
+                  <ull>
+                    <li> Encapsulation </li>
+                    <li> Inheritance </li>
+                    <li> Polymorphism </li>
+                    <li> Message Passing </li>
+                  </ull>
+                </div>
+                <div class="question" id="r17">
+                  What are the fundamental principles of OOP?
+                </div>
+                <span id="rd17" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic code" data-topic="Fisica" data-value="600">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a18">
+                  <code>
+                    <p>class MyClass  {
+                      public:
+                        virtual doSomething()=0;
+                    };
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r18">
+                  What is a pure virtual method?
+                </div>
+                <span id="rd18" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <!-- Idioms -->
+            <div class="topic" data-topic="Sorpresa" data-value="100">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a19">
+                  Modeling, collecting, aggregating, changing, storing, sharing
+                </div>
+                <div class="question" id="r19">
+                  Things we can do with data?
+                </div>
+                <span id="rd19" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Quimica" data-value="200">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a20">
+                  <ol>
+                    <li> Capacity </li>
+                    <li> Proximity </li>
+                    <li> Lifespan </li>
+                  </ol>
+                </div>
+                <div class="question" id="r20">
+                  What is the abstract data storage model?
+                </div>
+                <span id="rd20" class="d-none second-question"></span>
+              </div>                
+            </div>
+            
+            <div class="topic" data-topic="Quimica" data-value="300">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a21">
+                  <ol>
+                    <li> Monads </li>
+                    <li> Dyads (pointers) </li>
+                    <li> Aliases (references) </li>
+                  </ol>
+                </div>
+                <div class="question" id="r21">
+                  What are the 3 kinds of variables?
+                </div>
+                <span id="rd21" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Quimica" data-value="400">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a22">
+                  <ol>
+                    <li> Stack </li>
+                    <li> Heap </li>
+                    <li> Data section </li>
+                  </ol>
+                </div>
+                <div class="question" id="r22">
+                  Where is non-persistent application data stored?
+                </div>
+                <span id="rd22" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic code" data-topic="Quimica" data-value="500">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a23">
+                  <code>
+                    <p>class MyClass {
+                        public:
+                          void * operator new[] (size_t aSize) {
+                              return 0;
+                          }
+                          void  operator delete[] (void* aPtr) {
+                          }
+                        };            
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r23">
+                  What are the array new/delete operators in C++?
+                </div>
+                <span id="rd23" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic code" data-topic="Quimica" data-value="600">
+              <div class="answer" id="a24">
+                <code>
+                  <p>      const int* thePtr;
+                  int doSomething() const;
+                  </p>
+                </code>
+              </div>
+              <div class="question" id="r24">
+                What is a const pointer and a const method?
+              </div>
+                <span id="rd24" class="d-none second-question"></span>
+            </div>
+            
+            <!-- STL -->
+            <div class="topic code" data-topic="STL" data-value="100">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a25">
+                  <ol>
+                    <li> containers </li>
+                    <li> iterators </li>
+                    <li> algorithms </li>
+                    <li> functors </li>
+                  </ol>
+                </div>
+                <div class="question" id="r25">
+                  What are the key components of the STL?
+                </div>
+                <span id="rd25" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="STL" data-value="200">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a26">
+                  <ol>
+                    <li> std::cout </li>
+                    <li> std::cin </li>
+                    <li> std::ifstream </li>
+                    <li> std::ofstream </li>
+                    <li> std::stringstream </li>
+                  </ol>
+                </div>
+                <div class="question" id="r26">
+                  What are different types of streams?
+                </div>
+                <span id="rd26" class="d-none second-question"></span>
+              </div>               
+            </div>
+            
+            <div class="topic" data-topic="STL" data-value="300">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a27">
+                  <ol>
+                    <li> std::set </li>
+                    <li> std::multiset </li>
+                    <li> std::map </li>
+                    <li> std::multimap </li>
+                  </ol>
+                </div>
+                <div class="question" id="r27">
+                  What are associative containers in STL?
+                </div>
+                <span id="rd27" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="STL" data-value="400">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a28">
+                  <ol>
+                    <li> std::vector </li>
+                    <li> std::array </li>
+                    <li> std::deque </li>
+                    <li> std::list/forward_list </li>
+                  </ol>
+                </div>
+                <div class="question" id="r28">
+                  What are sequence containers in STL?
+                </div>
+                <span id="rd28" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="STL" data-value="500">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a29">
+                  <ol>
+                    <li> std::stack </li>
+                    <li> std::queue </li>
+                    <li> std::priority_queue </li>
+                  </ol>
+                </div>
+                <div class="question" id="r29">
+                  This are container adapters in STL?
+                </div>
+                <span id="rd29" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="STL" data-value="600">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a30">
+                  Hash table or binary tree
+                </div>
+                <div class="question" id="r30">
+                  What data structure is used internally by the std::map?
+                </div>
+                <span id="rd30" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <!-- Random -->
+            <div class="topic" data-topic="Random" data-value="100">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a31">
+                  A variable that occupies no space, and is an alias of another variable
+                </div>
+                <div class="question" id="r31">
+                  What is a reference?
+                </div>
+                <span id="rd31" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Random" data-value="200">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a32">
+                  <code>
+                    <p>class Foo {
+                      <em>
+                        Foo(const Bar&amp; aBar); 
+                        Foo(float aFloat);
+                      </em>
+                      };
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r32">
+                  What is a conversion constructor?
+                </div>
+                <span id="rd32" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Random" data-value="300">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a33">
+                  bjarne stroustrup
+                </div>
+                <div class="question" id="r33">
+                  Who invented C++?
+                </div>
+                <span id="rd33" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Random" data-value="400">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a34">
+                  Memory leak
+                </div>
+                <div class="question" id="r34">
+                  What is memory that was allocated on the heap but not deleted?
+                </div>
+                <span id="rd34" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Random" data-value="500">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a35">
+                  <code>
+                    <p>class Foo {
+                        public:
+                          static void doSomething();
+                        };
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r35">
+                  What is a class method?
+                </div>
+                <span id="rd35" class="d-none second-question"></span>
+              </div>
+            </div>
+            
+            <div class="topic" data-topic="Random" data-value="600">
+              <div class="question-container">
+                <div class="element-animation">
+                  <span class="item-animate"></span>
+                </div>
+                <div class="answer" id="a36">
+                  <code>
+                    <p>  bool (*theThing)(int)
+                    </p>
+                  </code>
+                </div>
+                <div class="question" id="r36">
+                  What is a function pointer?
+                </div>
+                <span id="rd30" class="d-none second-question"></span>
+              </div>
+            </div>
+        </div>        
+      </section>
+    </main>
+        
+        <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./assets/js/anime.min.js"></script>
+        <script id="rendered-js">
+          let numeros=[];
+          let numeros2=[];
+          let numeros3=[];
+          function numerosAleatoriosNoRepetidos(min, max, cantidad) {
+            if (min>max || cantidad>max-min) {return false;}
+            while (numeros.length<cantidad) {
+                const num=Math.floor((Math.random() * (max - min)) + min );
+                if (numeros.indexOf(num)==-1) {
+                    numeros.push(num);
+                }
+            }
+          }
+          function numerosAleatoriosNoRepetidos2(min, max, cantidad) {
+            if (min>max || cantidad>max-min) {return false;}
+            while (numeros2.length<cantidad) {
+                const num=Math.floor((Math.random() * (max - min)) + min );
+                if (numeros2.indexOf(num)==-1) {
+                    numeros2.push(num);
+                }
+            }
+          }
+          function numerosAleatoriosNoRepetidos3(min, max, cantidad) {
+            if (min>max || cantidad>max-min) {return false;}
+            while (numeros3.length<cantidad) {
+                const num=Math.floor((Math.random() * (max - min)) + min );
+                if (numeros3.indexOf(num)==-1) {
+                    numeros3.push(num);
+                }
+            }
+          }
+          
+          function randNum(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+          }
+          const categoriar1=[];
+          const categoriar2=[];
+          const categoriar3=[];
+          const categoria1=[];
+          const categoria2=[];
+          const categoria3=[];
+          const imagenes1=[];
+          const imagenes2=[];
+          const imagenes3=[];
+          const images1=[];
+          const images2=[];
+          const images3=[];
+          const respuestas1=[];
+          const respuestas2=[];
+          const respuestas3=[];
+          const respuestasr1=[];
+          const respuestasr2=[];
+          const respuestasr3=[];
+
+          var data = (function () { var json = null; $.ajax({ 'async': false,'global': false, 'url': 'https://admino.fabricaapps.com/rest/americano', 'dataType': "json", 'success': function (data) { json = data; } }); return json; })();
+          var long=data.length;
+          for (index=long-1; index>=0; index--) {
+            switch (data[index].categoria) {
+              case '1':
+                  let nuevaLongitud = categoria1.push(data[index].pregunta);
+                  let nuevaLongitud2 = respuestas1.push(data[index].respuesta);
+                  let nuevaLongitud7 = imagenes1.push(data[index].imagen);
+                break;
+              case '2':
+                  let nuevaLongitud3 = categoria2.push(data[index].pregunta);
+                  let nuevaLongitud4 = respuestas2.push(data[index].respuesta);
+                  let nuevaLongitud8 = imagenes2.push(data[index].imagen);
+                break;
+              case '3':
+                  let nuevaLongitud5 = categoria3.push(data[index].pregunta);
+                  let nuevaLongitud6 = respuestas3.push(data[index].respuesta);
+                  let nuevaLongitud9 = imagenes3.push(data[index].imagen);
+                break;
+            }
+            
+          }
+          numerosAleatoriosNoRepetidos(0,categoria1.length,categoria1.length);
+          numerosAleatoriosNoRepetidos2(0,categoria2.length,categoria2.length);
+          numerosAleatoriosNoRepetidos3(0,categoria3.length,categoria3.length)
+          for (let index = 0; index < numeros.length; index++) {
+            let nuevaLongitud = categoriar1.push(categoria1[numeros[index]]);
+            let nuevaLongitud2 = respuestasr1.push(respuestas1[numeros[index]]);
+            let nuevaLongitud3 = images1.push(imagenes1[numeros[index]]);
+          }
+          for (let index = 0; index < numeros2.length; index++) {
+            let nuevaLongitud = categoriar2.push(categoria2[numeros2[index]]);
+            let nuevaLongitud2 = respuestasr2.push(respuestas2[numeros2[index]]);
+            let nuevaLongitud3 = images2.push(imagenes2[numeros2[index]]);
+          }
+          for (let index = 0; index < numeros3.length; index++) {
+            let nuevaLongitud = categoriar3.push(categoria3[numeros3[index]]);
+            let nuevaLongitud2 = respuestasr3.push(respuestas3[numeros3[index]]);
+            let nuevaLongitud3 = images3.push(imagenes3[numeros3[index]]);
+          }
+          $(".cell").on("click", function (event) {
+            $(".answer").html("");
+            $(".question").html("");
+            $(".question_gray").html("");
+            var columna=$(this).attr("data-col");
+            switch (columna) {
+              case '0':
+                if (images1[0]==null) {
+                  $("#a1").append(categoriar1[0]);
+                  $("#r1").append(respuestasr1[0]);
+                  $("#rd1").append(respuestasr1[0]);
+                  categoriar1.shift();
+                  respuestasr1.shift();
+                  images1.shift();
+                }else{
+                  $("#a1").append("<code><img src='https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/americano/"+images1[0]+"' style='width: 400px;height: 300px;'><br><p>"+categoriar1[0]+"<br></p></code>");
+                  $("#r1").append(respuestasr1[0]);
+                  $("#rd1").append(respuestasr1[0]);
+                  categoriar1.shift();
+                  respuestasr1.shift();
+                  images1.shift();
+                }
+                break;
+              case '1':
+                if (images2[0]==null) {
+                  $("#a7").append(categoriar2[0]);
+                  $("#r7").append(respuestasr2[0]);
+                  $("#rd7").append(respuestasr2[0]);
+                  categoriar2.shift();
+                  respuestasr2.shift();
+                  images2.shift();
+                } else {
+                  $("#a7").append("<code><img src='https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/americano/"+images2[0]+"' style='width: 400px;height: 300px;'><br><p>"+categoriar2[0]+"<br></p></code>");
+                  $("#r7").append(respuestasr2[0]);
+                  $("#rd7").append(respuestasr2[0]);
+                  categoriar2.shift();
+                  respuestasr2.shift();
+                  images2.shift();
+                }
+                break;
+              case '2':
+                if (images3[0]==null) {
+                  $("#a13").append(categoriar3[0]);
+                  $("#r13").append(respuestasr3[0]);
+                  $("#rd13").append(respuestasr3[0]);
+                  categoriar3.shift();
+                  respuestasr3.shift();
+                  images3.shift();
+                } else {
+                  $("#a13").append("<code><img src='https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/americano/"+images3[0]+"' style='width: 400px;height: 300px;'><br><p>"+categoriar3[0]+"<br></p></code>");
+                  $("#r13").append(respuestasr3[0]);
+                  $("#rd13").append(respuestasr3[0]);
+                  categoriar3.shift();
+                  respuestasr3.shift();
+                  images3.shift();
+                }
+                  
+                break;
+              case '3':
+                  var nu=randNum(1,3);
+                  if (nu==1) {
+                    var pos=randNum(1,(categoriar1.length)-1);
+                    $("#a19").append(categoriar1[pos]);
+                    $("#r19").append(respuestasr1[pos]);
+                    $("#rd19").append(respuestasr1[pos]);
+                    categoriar1.splice(pos,1);
+                    respuestasr1.splice(pos,1);
+                  }
+                  if (nu==2) {
+                    var pos=randNum(1,(categoriar2.length)-1);
+                    $("#a19").append(categoriar2[pos]);
+                    $("#r19").append(respuestasr2[pos]);
+                    $("#rd19").append(respuestasr2[pos]);
+                    categoriar2.splice(pos,1);
+                    respuestasr2.splice(pos,1);
+
+                  }
+                  if (nu==3) {
+                    var pos=randNum(1,(categoriar3.length)-1);
+                    $("#a19").append(categoriar3[pos]);
+                    $("#r19").append(respuestasr3[pos]);
+                    $("#rd19").append(respuestasr3[pos]);
+                    categoriar3.splice(pos,1);
+                    respuestasr3.splice(pos,1);
+                  }
+                break;
+            
+              default:
+                break;
+            }
+            /*if (columna==0) {
+                      $("#a1").append(categoria1[0]);
+                      $("#r1").append(respuestas1[0]);
+                      categoria1.shift();
+                      respuestas1.shift();
+            }else{
+              if (columna==1) {
+                      $("#a7").append(categoria2[0]);
+                      $("#r7").append(respuestas2[0]);
+                      categoria2.shift();
+                      respuestas2.shift();
+              }else{
+                      $("#a13").append(categoria3[0]);
+                      $("#r13").append(respuestas3[0]);
+                      categoria3.shift();
+                      respuestas3.shift();
+              }
+            }
+            if (columna==3) {
+              var nu=randNum(1,3);
+              switch (nu) {
+                case 1:
+                      var l=categoria1.length;
+                      console.log(l);
+                  break;
+                case 2:
+                      var l=categoria2.length;
+                      console.log(l);
+                  break;
+                case 3:
+                      var l=categoria3.length;
+                      console.log(l);
+                  break;
+              
+                default:
+                  break;
+              }
+              
+            }*/
+            if (!$(this).hasClass("done")) {
+              var theCol = $(this).data("col");
+              var theCat = $(".row").children().eq(theCol);
+              // console.log("cat ", theCat);
+              var theVal = $(this).parent().data("value");
+              var theText = $.trim($(theCat).text());
+              var theTopic = $(`.topic[data-topic=${theText}][data-value=${theVal}]`);
+              // 
+              $(theTopic).attr('style', "display:block;");
+              $('.rows').attr('style', "display:none;");
+              $('.question-container').attr('style', "display:flex;");
+              $('.container-bg').attr('style', "display:block;");
+              $('.blur-questions').attr('style', "display:block;");
+              // 
+              $(theTopic).find('.question').attr("style", "display:none;");
+              $(theTopic).find('.second-question').removeClass('d-none');
+              // 
+              $(theTopic).addClass("show answer");
+              //$(this).addClass("done");
+              //$(this).find('.circle').html("");    
+              $("body").attr('data-status', 1);
+
+            }
+          });
+          // 
+          $(document).keyup(function(event) {
+            if($("body").attr('data-status') == '1'){
+              if (event.which === 13) {
+                $(".topic.show.answer").click();
+                $("body").attr('data-status', 2);
+              }
+            }else if($("body").attr('data-status') == '2'){
+              $(".topic.show.question").click();
+              $("body").attr('data-status', '');
+            }
+          });
+          // 
+          $("body").on("click", ".topic.show.answer", function (event) {
+            $(this).toggleClass("answer question");
+            $(this).find('.answer').attr("style", "display:none;");            
+            $(this).find('.question').attr("style", "display:block;");
+            $(this).find('.second-question').addClass('d-none');          
+          });
+        
+          $("body").on("click", ".topic.show.question", function (event) {
+            $('.rows').attr('style', "display:grid;");
+            $('.blur-questions').attr('style', "display:none;");
+
+            $('.container-bg').attr('style', "display:none;");
+            $('.question-container').attr('style', "display:none;");
+            $(this).removeClass("show question");
+            $(this).attr('style', "");  
+            $(this).find('.answer').attr("style", ""); 
+
+          });
+          function randNum(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+          }
+          anime({
+              targets: ".item-animate",
+              translateY: [
+                { value: 0, duration: 1000 },
+                { value: 250, duration: 1000 },
+                { value: 0, duration: 1000 },
+              ],
+              easing: "linear",
+              autoplay: true,
+              direction: "alternate",
+              loop: true,
+          });
+        //# sourceURL=pen.js
+        </script>
+        <script>
+             /* $(".answer").html("");
+              $(".question").html("");
+              $.getJSON("https://admino.fabricaapps.com/rest/jeopardyn",function (data) {
+                $.each(data, function () { 
+                   if (this.imagen==null) {
+                    if (this.tipo_pregunta=="2") {
+                      $("#a"+this.id).append(this.pregunta+"<br>");
+                      $("#r"+this.id).append(this.correcta);
+                    }else{
+                      $("#a"+this.id).append(this.pregunta+"<br>A-"+this.a+"<br>B-"+this.b+"<br>C-"+this.c);
+                      $("#r"+this.id).append(this.correcta);
+                    }
+                   }else{
+                      if (this.tipo_pregunta=="2") {
+                        $("#a"+this.id).append("<code><img src='https://canaloncetv.s3.amazonaws.com/REST/data/jeopardy/"+this.imagen+"'><br><p>"+this.pregunta+"<br></p></code>");
+                        $("#r"+this.id).append(this.correcta);
+                      }else{
+                        $("#a"+this.id).append("<code><img src='https://canaloncetv.s3.amazonaws.com/REST/data/jeopardy/"+this.imagen+"'><br><p>A-"+this.a+"<br>B-"+this.b+"<br>C-"+this.c+"</p></code>");
+                        $("#r"+this.id).append(this.correcta);
+                      }
+                   }
+                });
+                }
+              );
+              $("body").on("click",".prueba_boton",function(){
+                console.log("boton presionado");
+          });*/
+          
+            </script>
+  </body>
+</html>

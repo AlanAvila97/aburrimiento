@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "pregunta": "¿Cuál es la distancia estandar entre el objetivo  y el arquero en los juego Olímpicos?",
+        "respuesta": "Respuesta 1",
+        "imagen": "hagamos_clic_miniatura.jpg"
+    },
+    {
+        "id": "2",
+        "pregunta": "Pregunta 2",
+        "respuesta": "Respuesta 2",
+        "imagen": "hagamos_clic_miniatura.jpg"
+    },
+    {
+        "id": "3",
+        "pregunta": "Pregunta 3",
+        "respuesta": "Respuesta 3",
+        "imagen": "hagamos_clic_miniatura.jpg"
+    },
+    {
+        "id": "4",
+        "pregunta": "Pregunta 4",
+        "respuesta": "Respuesta 4",
+        "imagen": "hagamos_clic_miniatura.jpg"
+    },
+    {
+        "id": "5",
+        "pregunta": "Pregunta 5",
+        "respuesta": "Respuesta 5",
+        "imagen": "hagamos_clic_miniatura.jpg"
+    }
+]

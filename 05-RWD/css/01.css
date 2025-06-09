@@ -1,0 +1,111 @@
+/* .oferta{
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.precio{
+    font-size: 6rem;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .oferta{
+        width: 30rem;
+    }
+    .precio{
+        font-size: 2rem;
+    }
+} */
+
+/* Movile First */
+/* .oferta{
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+}
+.precio{
+    font-size: 4rem;
+    margin: 0;
+}
+@media (min-width: 600px) {
+    .oferta{
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+    .precio{
+        font-size: 2rem;
+    }
+}
+@media (min-width: 800px) {
+    .oferta{
+        max-width: 60rem;
+    }
+} */
+/* Desktop First */
+/* .oferta{
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.precio{
+    font-size: 4rem;
+    margin: 0;
+}
+@media (max-width: 600px) {
+    
+} */
+/* Doble media */
+/* .oferta{
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+}
+.precio{
+    font-size: 6rem;
+    margin: 0;
+}
+@media (min-width: 600px) and (max-width: 800px), (min-width: 1200px) {
+    .oferta{
+        background-color: yellow;
+    }
+} */
+/* shorthand */
+/* @media (min-width: 991px){ 
+    
+} */
+
+.contenedor-responsive{
+    background-color: #fff;
+    /* width: 90%;
+    max-width: 1000px; */
+    width: min(90%, 1000px);
+    height: 400px;
+    margin: 0 auto;
+}
+/*  */
+@media (min-width: 768px){ 
+    .tres-columnas-flex{
+        display: flex;
+        gap: 1rem;
+    }
+    .tres-columnas-flex .columna{
+        flex: 1;
+    }
+}
+/*  */
+@media (min-width: 768px){ 
+    .tres-columnas-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+/*  */
+img{
+    height: auto;
+    max-width: 100%;
+}

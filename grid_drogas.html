@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-enterate .container-grid-three-colums{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3,minmax(300px,1fr));
+            gap: 1rem;
+        }
+        .section-enterate .container-grid-three-colums .item-grid-three-colums{
+            background-color: #000;
+            width: 100%;
+            height: auto;         
+            position: relative;   
+            text-decoration: none;
+        }
+        .section-enterate .container-grid-three-colums .item-grid-three-colums img{
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-width: 100%;
+        }        
+        .section-enterate .container-grid-three-colums .item-grid-three-colums .overlay-info{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+            transition: bottom 0.3s;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.75));
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            padding: 1rem;
+        }
+        .section-enterate .container-grid-three-colums .item-grid-three-colums:hover .overlay-info{
+            opacity: 0.9;
+        }
+        .section-enterate .container-grid-three-colums .item-grid-three-colums .overlay-info h2{
+            color: #fff;
+            font-size: clamp(0.8rem, 1.2rem, 1.8rem);
+            font-weight: 600;
+        }
+        .section-enterate .container-grid-three-colums .item-grid-three-colums .overlay-info p{
+            color: #fff;
+            font-size: clamp(0.8rem, 1.2rem, 1.8rem);
+        }
+    </style>
+</head>
+<body>
+    <section class="section-enterate">
+        <div class="container-grid-three-colums">
+            <a href="#" class="item-grid-three-colums">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/02/super-bowl-aguilas-920x554.jpg" alt="" srcset="">
+                <div class="overlay-info">
+                    <p class="overlay-date">febrero 10, 2025</p>
+                    <h2 class="overlay-title">Momentos icónicos del Super Bowl LIX</h2>
+                </div>
+            </a>
+            <a href="#" class="item-grid-three-colums">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/02/super-bowl-aguilas-920x554.jpg" alt="" srcset="">
+                <div class="overlay-info">
+                    <p class="overlay-date">febrero 10, 2025</p>
+                    <h2 class="overlay-title">Momentos icónicos del Super Bowl LIX</h2>
+                </div>
+            </a>
+            <a href="#" class="item-grid-three-colums">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/02/super-bowl-aguilas-920x554.jpg" alt="" srcset="">
+                <div class="overlay-info">
+                    <p class="overlay-date">febrero 10, 2025</p>
+                    <h2 class="overlay-title">Momentos icónicos del Super Bowl LIX</h2>
+                </div>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

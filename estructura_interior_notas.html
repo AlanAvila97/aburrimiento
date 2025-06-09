@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .section-notice-inside .container-notice-inside{
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 25% 1fr 25%;
+                gap: 0.2rem;
+            }
+            .section-notice-inside .container-notice-inside .item-notice-inside{
+                display: flex;
+                flex-direction: column;
+                gap: 0.2rem;
+                height: auto;
+                width: 100%;
+            }
+            .section-notice-inside .container-notice-inside .item-notice-inside .info-notice-inside{
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .section-notice-inside .container-notice-inside .item-notice-inside .info-notice-inside img{
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            .section-notice-inside .container-notice-inside .item-notice-inside .info-notice-inside .overlay-text{
+                background-color: #0000003b;
+                position: absolute;
+                bottom: 0;
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                padding: 0.7rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .section-notice-inside .container-notice-inside .item-notice-inside .info-notice-inside .overlay-text small,
+            .section-notice-inside .container-notice-inside .item-notice-inside .info-notice-inside .overlay-text p,
+            .section-notice-inside .container-notice-inside .item-notice-inside .info-notice-inside .overlay-text h3{
+                color: #fff;
+            }
+            .section-notice-inside .container-notice-inside .item-notice-inside .info-notice-inside .overlay-text small{
+                font-size: clamp(0.5rem, 0.9rem, 1rem);
+                background: #c51350;
+                width: fit-content;
+                padding: 0.2rem 0.3rem;
+                border-radius: .2rem;
+            }
+            .section-notice-inside .container-notice-inside .item-notice-inside .info-notice-inside .overlay-text p{
+                font-size: clamp(0.9rem, 1.1rem , 1.4rem);
+                margin-bottom: 0.5rem;
+            }
+            .section-notice-inside .container-notice-inside .item-notice-inside .info-notice-inside .overlay-text h3{
+                font-size: clamp(0.9rem, 1.1rem , 1.5rem);
+            }
+            .section-notice-inside .container-notice-inside .left-notice-inside img,
+            .section-notice-inside .container-notice-inside .right-notice-inside img{
+                max-height: 232px;
+            }
+            .section-notice-inside .container-notice-inside .center-notice-inside img{
+                max-height: 100%;
+            }
+            .section-notice-inside .container-notice-inside .center-notice-inside{
+                background-color: #000;
+            }
+            @media (max-width: 780px){ 
+                .section-notice-inside .container-notice-inside{
+                    grid-template-columns: 1fr ;
+                }
+                .section-notice-inside .container-notice-inside .item-notice-inside{
+                    flex-direction: row;
+                }
+            }
+            @media (max-width: 480px){ 
+                .section-notice-inside .container-notice-inside .item-notice-inside{
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="section-notice-inside">
+            <div class="container-notice-inside">
+                <div class="item-notice-inside left-notice-inside">
+                    <a href="" class="info-notice-inside">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/06/Mas-de-15-mil-personas-se-han-registrado-en-el-concurso-Mexico-Canta--920x554.jpg" alt="">
+                        <div class="overlay-text">
+                            <small>Nacional</small>
+                            <div class="text-notice-inside">
+                                <p>junio 6, 2025</p>
+                                <h3>11 millones de personas en México salieron de la pobreza en sexenio de AMLO</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="info-notice-inside">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/06/Mas-de-15-mil-personas-se-han-registrado-en-el-concurso-Mexico-Canta--920x554.jpg" alt="">
+                        <div class="overlay-text">
+                            <small class="category-notice-inside">Nacional</small>
+                            <div class="text-notice-inside">
+                                <p>junio 6, 2025</p>
+                                <h3>11 millones de personas en México salieron de la pobreza en sexenio de AMLO</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-notice-inside center-notice-inside">
+                    <a href="" class="info-notice-inside">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/06/ARTE-ORIGINAL-920x554.png" alt="">
+                        <div class="overlay-text">
+                            <small class="category-notice-inside">Nacional</small>
+                            <div class="text-notice-inside">
+                                <p>junio 6, 2025</p>
+                                <h3>11 millones de personas en México salieron de la pobreza en sexenio de AMLO</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item-notice-inside right-notice-inside">
+                    <a href="" class="info-notice-inside">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/06/Mas-de-15-mil-personas-se-han-registrado-en-el-concurso-Mexico-Canta--920x554.jpg" alt="">
+                        <div class="overlay-text">
+                            <small class="category-notice-inside">Nacional</small>
+                            <div class="text-notice-inside">
+                                <p>junio 6, 2025</p>
+                                <h3>11 millones de personas en México salieron de la pobreza en sexenio de AMLO</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="info-notice-inside">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/06/Mas-de-15-mil-personas-se-han-registrado-en-el-concurso-Mexico-Canta--920x554.jpg" alt="">
+                        <div class="overlay-text">
+                            <small class="category-notice-inside">Nacional</small>
+                            <div class="text-notice-inside">
+                                <p>junio 6, 2025</p>
+                                <h3>11 millones de personas en México salieron de la pobreza en sexenio de AMLO</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

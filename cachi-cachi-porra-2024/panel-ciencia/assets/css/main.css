@@ -1,0 +1,437 @@
+@font-face{ font-family: "Poppins-Regular"; src: url("../font/Poppins-Regular.ttf"); font-display: swap}
+/*-------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins-Regular"!important;
+}
+body{
+    margin: 0;
+    font-family: "Poppins-Regular"!important;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+}
+.capital-letter{
+    text-transform: uppercase;
+}
+#wrapper{
+    background-image: url();
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    z-index: 2;
+}
+#wrapper:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.d-none{
+    display: none!important;
+}
+/*-------------------------------------------------------------
+# Backgrounds
+--------------------------------------------------------------*/
+#wrapper.bg-tic-tac-toe::after{
+    background: url(https://once.fabricaapps.com/image/Bg-Tic-Tac-Toe.png), center center;
+    background-size: inherit;
+    background-repeat: no-repeat;
+}
+#wrapper.bg-panel-ciencia::after{
+    background: url(../image/Panel_Ciencia_Art.png), center center;
+    /* background: url(../image/Bg-Tic-Tac-Toe.png), center center; */
+    background-size: inherit;
+    background-repeat: no-repeat;
+}
+body.bg-panel-ciencia::after{
+    background: url(https://once.fabricaapps.com/image/Panel_Ciencia_Art.png), center center;
+    /* background: url(../image/Bg-Tic-Tac-Toe.png), center center; */
+    background-size: inherit;
+    background-repeat: no-repeat;
+}
+#wrapper.bg-roulette::after{
+    background: url(https://once.fabricaapps.com/image/Roulette.png), center center;
+    /* background: url(https://once.fabricaapps.com/image/Bg-Tic-Tac-Toe.png), center center; */
+    background-size: inherit;
+    background-repeat: no-repeat;
+}
+#wrapper.bg-quiz::after{
+    background: url(https://once.fabricaapps.com/image/Bailamos.png), center center;
+    /* background: url(../image/Bg-Tic-Tac-Toe.png), center center; */
+    background-size: inherit;
+    background-repeat: no-repeat;
+}
+/*-------------------------------------------------------------
+# Fullscreen
+--------------------------------------------------------------*/
+.btn-fullscreen{
+    position: absolute;
+    top: 0;
+    width: 10%;
+    padding: 1%;
+    z-index: 999;
+}
+.btn-fullscreen img{
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+    display: block;
+}
+.btn-fullscreen img.quit{
+    display: none;
+}
+/*-------------------------------------------------------------
+# 
+--------------------------------------------------------------*/
+.pt-md-100{
+    padding-top: 100px;
+}
+.container-padding{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.d-flex{
+    display: flex;
+}
+.d-none{
+    display: none!important;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+/*-------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    width: 100%;
+    height: 70px;
+    transition: all 0.5s;
+    z-index: 997;
+    /* background: linear-gradient( 269deg, #c92048 -1%, #c81f47 3%, #8a1e44 64%, #792042 100%)!important; */
+    background: #af188b;
+    box-shadow: 0px 1px 4px 0px rgb(255 255 255 / 87%);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+#header .container-header{
+    display: grid;
+    grid-template-columns: 200px 1fr 70px;
+    padding-left: 0%!important;
+    padding-right: 0%!important;
+    margin-left: 0%!important;
+    margin-right: 0%!important;
+    width: 100%;
+	height: 100%;
+}
+#header .container-header .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#header .container-header .logo a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+#header .container-header .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#header .container-header .home a{
+    text-decoration: none;
+    color: #fff;
+    padding: 13%;
+}
+#header .container-header .home a img{
+    filter: invert(1);
+    width: 80%;
+}
+/*-------------------------------------------------------------
+# Section Cards Games
+--------------------------------------------------------------*/
+.section-games .container-games{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section-games .container-elements-games{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.section-games .container-games{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 30%;
+}
+.section-games .container-games .card-games{
+    position: relative;  
+    width: 320px;
+    height: 450px;
+    margin: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    border-bottom-left-radius: 160px;
+    border-bottom-right-radius: 160px;
+    box-shadow: 0 15px 0 #fff,
+                inset 0 -15px rgba(255 ,255 ,255 , 0.25), 
+                0 45px 0 rgba(0 ,0 ,0 , 0.15);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 3;
+}
+.section-games .container-games .card-games::before{
+    content: '';
+    position: absolute;
+    left: -40%;
+    width: 100%;
+    height: 150%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2));
+    transform: rotate(35deg);
+    pointer-events: none;
+    filter: blur(5px);
+}
+.section-games .container-games .game-1{
+    background: linear-gradient(to bottom, #ff2ae0, #645bf6);
+}
+.section-games .container-games .game-2 {
+    background: linear-gradient(to bottom, #f2b2e6, #eb035d);
+}
+.section-games .container-games .game-3 {
+    background: linear-gradient(to bottom, #af188b, #500e4b);
+}
+.section-games .container-games .game-4 {
+    background: linear-gradient(to bottom, #fe6f2e, #ff2f2f);
+}
+.section-games .container-games .game-5 {
+    background: linear-gradient(to bottom, #fa71cb, #6f174a);
+}
+.section-games .container-games .game-6 {
+    background: linear-gradient(to bottom, #fe7a81, #e869ea);
+}
+.section-games .container-games .card-games .icon-games{
+    position: relative;
+    width: 140px;
+    height: 120px;
+    background: #500e4b;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 10px 0 rgba(0 ,0 ,0 , 0.1),
+                inset 0 -8px #fff;
+    display: flex;
+    justify-content: center;            
+    z-index: 1000;
+}
+.section-games .container-games .card-games .icon-games::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-right-radius: 50px;
+    box-shadow: 15px -15px 0 15px #500e4b;
+    z-index: -1;
+}
+.section-games .container-games .card-games .icon-games::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-left-radius: 50px;
+    box-shadow: -15px -15px 0 15px #500e4b;
+    z-index: -1;
+}
+.section-games .container-games .card-games .icon-games img{
+    filter: invert(1);
+    width: auto;
+    height: 69%;
+    margin-top: 10px;
+}
+.section-games .container-games .card-games:nth-child(1) .icon-games img{
+    margin-top: 4px;
+}
+.section-games .container-games .card-games:hover .icon-games img{
+    animation: flipHover 5s linear infinite;
+    -webkit-animation: flipHover 4s linear infinite;
+}
+@keyframes flipHover {
+    from {
+        transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+        animation-timing-function: ease-out;
+        -webkit-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+        -moz-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+        -ms-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+        -o-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+}    
+    40% {
+        transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -190deg);
+        animation-timing-function: ease-out;
+        -webkit-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -190deg);
+        -moz-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -190deg);
+        -ms-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -190deg);
+        -o-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -190deg);
+}
+    50% {
+        transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -170deg);
+        animation-timing-function: ease-in;
+        -webkit-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -170deg);
+        -moz-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -170deg);
+        -ms-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -170deg);
+        -o-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -170deg);
+}
+    80% {
+        transform: perspective(1000px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        animation-timing-function: ease-in;
+        -webkit-transform: perspective(1000px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -moz-transform: perspective(1000px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -ms-transform: perspective(1000px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -o-transform: perspective(1000px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    }           
+    to {
+        transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        animation-timing-function: ease-in;
+        -webkit-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -moz-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -ms-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        -o-transform: perspective(1000px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    }
+}
+
+
+.section-games .container-games .card-games .content-games{
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    padding-top: 140px;
+    text-align: center;
+}
+.section-games .container-games .card-games .content-games h2{
+    font-size: 1.75em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.section-games .container-games .card-games .content-games p{
+    color: #fff;
+    line-height: 1.5em;
+}
+/*-------------------------------------------------------------
+# Marcador
+--------------------------------------------------------------*/
+.section-games .container-marker{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-games .card-marker{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0px 15px 9px rgb(0 0 0 / 39%);
+    margin: 3%;
+}
+.section-games .card-marker .flag-marker{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.section-games .card-marker .flag-marker::before{
+    content: 'Marcador';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background: linear-gradient(45deg, #ff8ff4, #ff00ea);
+    transform: rotate(-45deg) translateY(-20px);            
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-shadow: -3px 1px 2px #000000d1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.section-games .card-marker .flag-marker::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #981c78;
+    z-index: 0;
+    box-shadow: 140px -140px #981c78;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){
+    .section-games .container-elements-games{
+        justify-content: center;
+    }
+    .section-games .container-games{
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
+    .section-games .container-marker{
+        display: none;
+    }
+    /* .section-games .container-games .games{
+        width: 90%;
+    } */
+}
+@media (max-width: 350px){
+    .section-games .container-games .card-games{
+        width: 280px;
+    }
+}

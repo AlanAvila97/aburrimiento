@@ -1,19 +1,60 @@
 html,
       body {
-        height: 90%;
+        height: 100%;
         background-image: url(https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/images/once-mas.webp);
         background-size: cover;
-        
-        
-      }
-      body{
+        padding-top: 0%;
+        scrollbar-width: none;
+        /* overflow: hidden; */
         color: #ffffff;
         text-align: center;
         padding: 2px;
-        /* font-size: 1rem; */
         text-align: center;
         /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
       }
+
+      
+   
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/images/once-mas.webp);
+  background-size: cover;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #cf3568;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+/* FIN DE Estilos para el preloader */
+
  h2{
   color: #ffffff;
   font-size: 28px;
@@ -33,9 +74,7 @@ h1{
 }
 .container{
   width: 100%;
- 
-
-  
+  padding-top: 5rem;  
 }
      .container .swiper-container {
         
@@ -56,17 +95,12 @@ h1{
         width: 26rem;
         height: 300px;
         text-align: center;
-        
-        /* transition: 450ms;
-        &:hover { 
-          margin: 0 5px;
-          transform: scale(1.1);
-        } */
       }
         
      .container .swiper-container .swiper-wrapper .swiper-slide img{
           width: 100%;
           height: 100%;
+          
         
       }
       img{
@@ -77,24 +111,16 @@ h1{
  
         
       }
-      button{
-        width: 9%;
-        height: 10rem;
-        background-color:#ffffff;
-        border-radius: 100%;
-        float: right;
-        
-      }
-      button h1{
-        font-size: 35px;
-        text-align: center;
-
-      }
+     
 .video-container{
   width: 35%;
-  height: 300px;
+  height: 600px;
   float: right;
-  overflow:auto;
+  overflow:hidden;
+  /* scrollbar-width: none;  */
+  
+  
+
 }
 .video-container  h2{
   text-align: left;
@@ -115,31 +141,219 @@ h1{
   font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-#my-video{
-  width: 100.2%;
-  height: 122%;
+.contenedor-episodios h1{
+  text-align:center;
+  margin-bottom: 2px;
 }
 
-iframe{
-/* width: 50%;
-height: 40%; */
-width: 100%;
-height: 100%;
+
+
+#video-iframe{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none
 }
 
-#reloadindice{
+
+
+
+.swiper-slide:focus{
+  /* background-color: #ccc; */
+  margin: 0px 12px;
   
-  font-size: 35px;
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  border-radius:0%
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  transition: 500ms;
+
+}
+/* Estilos para el preloader */
+#preloader {
+  /* display: flex; */
+  /* width: 100%;
+  height: 100%; */
+  justify-content: center;
+  align-items: center;
 }
 
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #ccc;
+  border-top: 10px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
+/* .video-js.vjs-has-started.vjs-using-native-controls .vjs-tech {
+  display: none;
+} */
+.desc{
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+.texto {
+  position: absolute;
+  top: 38rem;
+  left: 0;
+  width: 55%;
+  text-align:justify;
+  font-size: 30px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
+#boton-1{
+  width: 150px;
+  height: 150px;
+}
+#boton-2{
+  width: 150px;
+  height: 150px;
+}
+#overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Cambiamos la opacidad del fondo a 0.8 */
+  display: none;
+}
 
+#overlay-container button {
+  width: 350px;
+  height: 220px;
+  margin-right: 10px;
+  position: relative;
+  font-size: 40px;
+  font-family:Arial, Helvetica, sans-serif;
+  top: 50%;
+  z-index: 1;
+  
+  background-image: linear-gradient(to right, #f6e58d, #d3436e);
+  color: #333; /* Agregamos un color de texto oscuro a los botones 
+  padding: 10px; /* Agregamos un padding a los botones */
+  border: none; /* Quitamos el borde de los botones */
+  border-radius: 5px; /* Agregamos un radio de curvatura a los botones */
+  cursor: pointer; /* Cambiamos el cursor a una mano para indicar que es un botón */
+}
+#inputBusqueda{
+  width: 27rem;
+  height: 4rem;
+  border-radius: 38px;
+  float: right;
+  font-size: 26px;
+  font-family: fangsong;
+  
+}
+.filtro{
+  display: none;
+}
 
+.swiperSup {
+  width: 100%;
+  height: 70%;
+  padding-top: 1rem;
+}
+.swiperSup img{
+  width: 100%;
+  height: 20rem;
+}
 
+/* SIDEBAR STYLE */
+header {
+  /* background-color: #333; */
+  padding: 10px 0;
+}
 
-      
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-family: fantasy;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+nav a:focus {
+  background-color: #575757;
+  display:block;
+  z-index: 2;
+}
+
+/* .submenu {
+  display: none;
+  width: 13rem;
+  text-align: left;
+  position: absolute;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+  top: 100%; Muestra el submenu justo debajo del item 
+  left: 0;
+  z-index: 2;
+  
+}
+
+.menu-item:focus + .submenu,
+.menu-item:hover + .submenu {
+  display: block;
+}
+
+.submenu li {
+  color: white;
+  margin: 5px 0;
+}
+ */
+ .tarjeta {
+ /*  background-color: white;*/
+  border: 1px solid #ccc; 
+  display: inline-block;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: 18rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 8px;
+}
+.tarjeta:focus{
+  animation: lights 1s infinite alternate;
+}
+@keyframes lights {
+  0% {
+      box-shadow: 0 0 5px #ffffff, 0 0 10px #007bff, 0 0 20px #007bff;
+  }
+  100% {
+      box-shadow: 0 0 20px #ffffff, 0 0 30px #007bff, 0 0 40px #007bff;
+  }
+}

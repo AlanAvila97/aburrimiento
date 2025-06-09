@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 69% 29%;
+            gap: 1rem;
+            padding-top: 1rem;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .notes-sheinbaum{
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .notes-sheinbaum .item-note{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .notes-sheinbaum .item-note .info-note h3{
+            font-size: 1rem;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .notes-sheinbaum .image-note{
+            width: 100%;
+            height: auto;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .notes-sheinbaum .image-note img{
+            width: 100%;
+            height: 250px;
+            max-width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .current-notes-sheinbaum{
+            width: 100%;
+            height: auto;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .current-notes-sheinbaum .title-current-notes{
+            width: fit-content;
+            padding: 0.7rem 1.5rem;
+            position: relative;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .current-notes-sheinbaum .title-current-notes::before{
+            background-color: #a31f4e !important;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: skew(-20deg) translateX(6px);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .current-notes-sheinbaum .title-current-notes h2{
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .right-place-sheinbaum{
+            width: 100%;
+            height: auto;
+        }
+        .section-structure-sheinbaum .container-structure-sheinbaum .right-place-sheinbaum img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 991px){
+            .section-structure-sheinbaum .container-structure-sheinbaum{
+                grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
+            }
+        }
+        @media (max-width: 650px){
+            .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .notes-sheinbaum{
+                flex-direction: column;
+            }
+            .section-structure-sheinbaum .container-structure-sheinbaum .left-place-sheinbaum .notes-sheinbaum .image-note img{
+                height: auto;
+                max-height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section-structure-sheinbaum">
+        <div class="container-structure-sheinbaum">
+            <div class="left-place-sheinbaum">
+                <div class="notes-sheinbaum">
+                    <div class="item-note">
+                        <div class="image-note">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/09/960102_Afectaciones-microsismos-4_web-1.jpg" alt="">
+                        </div>
+                        <div class="info-note">
+                            <h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, eos quae pariatur architecto aliquid quos expedita. 
+                                Assumenda odit nemo, est, laboriosam numquam commodi provident nihil minima, tempore blanditiis officia quasi.
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="item-note">
+                        <div class="image-note">
+                            <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/09/960102_Afectaciones-microsismos-4_web-1.jpg" alt="">
+                        </div>
+                        <div class="info-note">
+                            <h3>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, eos quae pariatur architecto aliquid quos expedita. 
+                                Assumenda odit nemo, est, laboriosam numquam commodi provident nihil minima, tempore blanditiis officia quasi.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="current-notes-sheinbaum">
+                    <div class="title-current-notes">
+                        <h2>Ultimas Noticias</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="right-place-sheinbaum">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/09/Infografias-Sheinbaum-web-1-scaled.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

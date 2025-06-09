@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .root_page{
+            width: 100%;
+            height: 100%;
+            display: grid;    
+            grid-template-areas: "sidebar contenido";
+            grid-template-columns: 4rem 1fr;
+            margin-top: 70px;
+        }
+        .root_page .header a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .root_page .sidebar-drugs{
+            grid-area: sidebar;
+            height: 100vh;
+            width: 100%;
+            background: #ccc;
+            position: relative;
+        }
+        .root_page .body-drugs{
+            grid-area: contenido;
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+        }
+        /*-------------------------------------------------------------
+        # 
+        --------------------------------------------------------------*/
+        .section-barra-lateral{
+            position: sticky;
+            width: 4rem;
+            height: 100vh;
+            z-index: 40;
+            top: 0px;
+        }
+        .section-barra-lateral .content-barra-lateral{
+            background-color: #ffc000;
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            height: 100%;
+            justify-content: space-evenly;
+        }
+        .section-barra-lateral .content-barra-lateral .item-barra{
+            width: auto;
+            height: auto;
+        }
+        .section-barra-lateral .content-barra-lateral .item-barra img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            max-height: 40px;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container-header">
+            <div class="content-menu-hamburguer">
+                <input type="checkbox" class="menu-btn" id="openSidebarMenu">
+                <div id="sidebarMenu">
+                    <div class="container-menu scroll-menu">
+                    </div>
+                </div>
+            </div>
+            <a href="#home">
+                <picture>
+                    <source class="lazy img-fluid" 
+                    srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/logo_prueba.png" 
+                    type="image/webp">
+                    <source class="lazy img-fluid" 
+                    srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/logo_prueba.png" 
+                    type="image/png"> 
+                    <img class="img-fluid lazy" 
+                    src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/logo_prueba.png" alt="Logo 
+                    Once" width="139" height="45">
+                </picture>
+            </a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+    <main class="root_page">
+        <aside class="sidebar-drugs">
+            <section class="section-barra-lateral">
+                <div class="content-barra-lateral">
+                    <a href="#" class="item-barra">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/mail.png" 
+                        alt="" srcset="">
+                    </a>
+                    <a href="#" class="item-barra">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/llamada.png" 
+                        alt="" srcset="">
+                    </a>
+                    <a href="#" class="item-barra">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/info.png" 
+                        alt="" srcset="">
+                    </a>
+                    <a href="#" class="item-barra">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/04/calendario.png" 
+                        alt="" srcset="">
+                    </a>
+                </div>
+            </section>
+        </aside>
+        <section class="body-drugs">
+        </section>
+    </main>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").style.top = "0";
+            } else {
+                document.getElementById("header").style.top = "-75px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/video-js.min.css" type="text/css" media="none" onload="if(media!='all')media='all'">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }   
+        .container-video{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-top: 2%;
+            margin-bottom: 3%;
+            align-items: center;
+            gap: 1rem;
+
+        }
+        .content-video{
+            height: 100%;
+            width: 100%;
+            max-width: 950px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="section-container-video">
+            <div class="container-video">
+                <div class="title">
+                    <h2>video</h2>
+                </div>
+                <div class="content-video">
+                    
+                    <video id="VideoPlayer" class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
+                           autoplay controls data-setup='{"fluid": true}' poster="" muted
+                           height="500">
+                    </video>
+                </div>
+                <div class="content-bnt">
+                    <button class="previous">set</button>
+                    <button class="next">update</button>
+                    <button class="jump">Play Third</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script src='https://www.gstatic.com/firebasejs/5.9.3/firebase.js'></script>
+    <script src="./assets/js/videojs/video.min.js"></script>
+    <script src="./assets/js/videojs/Youtube.min.js"></script>
+    <script src='./assets/js/videojs/videojs-http-source-selector.js'></script>
+    <script src='./assets/js/videojs/videojs-contrib-quality-levels.min.js'></script>
+    <script src="./assets/js/videojs/videojs-landscape-fullscreen.min.js"></script>
+    <script src="./assets/js/videojs/videojs-vimeo.umd.js"></script>
+    <script src="./assets/js/videojs/videojs.hotkeys.min.js"></script>
+    <script src="./assets/js/videojs/videojs-playlist.js"></script>
+    <script type="module" src="./assets/js/credentials.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container-notes-inter-valle {
+            width: 100%;
+            display: flex;
+            gap: 2rem
+        }
+
+        .container-notes-inter-valle .item-note-interValle {
+            display: flex;
+            gap: clamp(1rem, 3vw, 2rem);
+            height: 100%;
+
+        }
+
+        .container-notes-inter-valle .item-note-interValle img {
+            width: clamp(280px, 40vw, 390px);
+            height: clamp(160px, 22vw, 220px);
+            display: block;
+            max-width: 390px;
+            object-fit: cover;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .container-notes-inter-valle .item-note-interValle img:hover {
+            opacity: 0.8;
+        }
+
+        .container-notes-inter-valle .item-note-interValle .post-title {
+            text-align: left;
+            padding: 5px;
+            font-size: clamp(1rem, 2vw, 1.4rem);
+        }
+
+        .container-notes-inter-valle .item-note-interValle .post-title a {
+            display: inline;
+            color: #000;
+            background-color: transparent;
+            text-decoration: none;
+            transition: 0.15s;
+            outline: none;
+            background-image: linear-gradient(to bottom, #701d47 0%, #701d47 98%);
+            background-size: 0 1px;
+            background-repeat: no-repeat;
+            background-position: left 100%;
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+        }
+
+        .container-notes-inter-valle .item-note-interValle .post-title a:hover {
+            background-size: 100% 2px;
+        }
+
+        .international,
+        .valle {
+            display: flex;
+            flex: 1 1 100%;
+            flex-direction: column;
+            gap: clamp(1rem, 2vw, 2rem);
+            padding: clamp(1rem, 3vw, 2rem);
+        }
+@media (max-width: 750px){
+    .container-notes-inter-valle {
+            display: flex;
+            flex-direction: column;
+        }
+}
+@media (max-width: 991px){
+    .container-notes-inter-valle {
+            padding: 1rem;
+        }
+}
+       
+    </style>
+    <section class="container-notes-inter-valle">
+        <div class="international">
+            <div class="item-note-interValle">
+                <a href="">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Lideres-de-la-Union-Europea-390x220.jpg"
+                        alt="">
+                </a>
+                <h2 class="post-title">
+                    <a href="">Líderes de la Unión Europea discuten sobre la guerra Ucrania-Rusia</a>
+                </h2>
+            </div>
+            <div class="item-note-interValle">
+                <a href="">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/URSULA-VON-DER-LEYEN-390x220.jpg"
+                        alt="">
+                </a>
+                <h2 class="post-title">
+                    <a href="">Unión Europea analiza nuevas sanciones contra Rusia</a>
+                </h2>
+            </div>
+        </div>
+        <div class="valle">
+            <div class="item-note-interValle">
+                <a href="">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/radiacion-UV-en-CDMX-746x420.jpg"
+                        alt="">
+                </a>
+                <h2 class="post-title">
+                    <a href="">¡Protégete de la radiación UV! Bloqueador y gorra son indispensables</a>
+                </h2>
+            </div>
+            <div class="item-note-interValle">
+                <a href="">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Emiten-recomendaciones-para-proteger-a-adultos-mayores-de-delitos-ciberneticos-1-2-390x220.jpg"
+                        alt="">
+                </a>
+                <h2 class="post-title">
+                    <a href="">¿Cómo proteger a adultos mayores de delitos cibernéticos?</a>
+                </h2>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

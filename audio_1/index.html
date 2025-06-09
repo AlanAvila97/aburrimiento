@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./shikwasa/css/style.css" rel="stylesheet">
+    <style>
+        .shk-artist {
+            color        : #be995f;
+            font-weight  : 500;
+            text-overflow: clip
+        }
+        .section-reproductor-radio{
+            position: fixed;
+            bottom: 4rem;
+            right: 1rem;
+            z-index: 99;
+        }
+        .section-reproductor-radio .shk-player{
+            border-radius: 0.5rem;
+        }
+        .section-reproductor-radio .shk-artist {
+            color        : #fff;
+            font-weight  : 500;
+            text-overflow: clip
+        }
+        .section-reproductor-radio .shk-cover{
+            background-position: center;
+            background-size: contain;
+        }
+        .section-reproductor-radio .shk-controls_extra{
+            padding: 0;
+        }
+        .section-reproductor-radio .container-reproductor-radio{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }        
+        .section-reproductor-radio .container-reproductor-radio .btn_close_radio{
+            width: auto;
+            height: auto;
+            opacity: 0;
+            transition: opacity .2s linear;
+        }
+        .section-reproductor-radio .container-reproductor-radio:hover .btn_close_radio{
+            opacity: 1;
+            transition: opacity .2s linear;
+        }
+        .section-reproductor-radio .container-reproductor-radio .btn_close_radio .btn_play{
+            border: 0.2px solid #00000038;
+            background: #D6A44C;
+            border-radius: 50%;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        .section-reproductor-radio .container-reproductor-radio .btn_close_radio .btn_play svg{
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+            width: 15px;
+            height: 15px;
+            filter: drop-shadow(2px 0px 5px #fff);
+        }
+        .section-reproductor-radio .container-reproductor-radio .btn_close_radio .btn_play #btn_maximize{
+            display: none;
+        }
+        .section-reproductor-radio .container-reproductor-radio .rep_radio{
+            width: auto;
+            height: auto;
+        }          
+        .section-reproductor-radio .container-reproductor-radio .btn_play_radio{
+            position: fixed;
+            display: none;
+            justify-content: end;
+            z-index: 99;
+            bottom: 4rem;
+            right: 0.77rem;
+        }
+        .section-reproductor-radio .container-reproductor-radio .btn_play_radio .btn_play {
+            padding: 0.5rem;
+            color: #fff;
+            background: transparent;
+        }        
+        .section-reproductor-radio .container-reproductor-radio .btn_play_radio .btn_play img{
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            width: 180px;
+            filter: drop-shadow(2px 0px 5px #fff);
+        }
+
+        .section-reproductor-radio .shk-title, 
+        .section-reproductor-radio .shk-title_wrap[data-overflow] .shk-title_inner:after{
+            font-size: 1rem;
+        }
+        .section-reproductor-radio .shk-cover{
+            height: 70px;
+            width: 70px;
+            margin-right: 0;
+        } 
+        .shk-text {
+            display: none;
+        }                        
+        @media (min-width: 640px) {
+            .shk-player{
+                height: auto;
+            }
+            .shk-body {
+                flex-direction: column;
+                gap: 0.2rem;
+                align-items: center;
+            }
+            .shk[data-fixed-type=auto] {
+                bottom: 0;
+                left: 0;
+                position: relative!important;
+                width: 100%;
+            }
+            .shk-cover {
+                display: block;
+            }
+            .shk-text {
+                flex: 0 0 auto;
+                text-align: center;
+                width: 100%;
+            }
+            .shk-main {
+                align-items: center;
+                flex-direction: column;
+                max-width: none;
+                padding: 0;
+                width: 100%;
+            }
+            .shk-player {
+                padding: 10px 6px;
+            }
+        }                    
+        @media (max-width: 640px) {
+            .shk-player{
+                height: auto;
+            }
+            .shk-body {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            .shk[data-fixed-type=auto] {
+                bottom: 0;
+                left: 0;
+                position: relative!important;
+                width: 100%;
+            }
+            .shk-cover {
+                display: block;
+            }
+        }      
+        @media (max-width: 550px) {
+            #text-html-widget-69{
+                margin-bottom: 1rem;
+            }
+            .section-reproductor-radio .container-reproductor-radio .btn_play_radio{
+                display: flex;
+            }
+            .section-reproductor-radio .container-reproductor-radio .rep_radio,
+            .section-reproductor-radio .container-reproductor-radio:hover .btn_close_radio{
+                display: none;
+            }
+        }
+        @media (max-width: 340px) {
+            .shk-player {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+    <section id="section_rep_radio" class="section-reproductor-radio">
+        <article class="container-reproductor-radio">
+            <div id="btn_close_radio" class="btn_close_radio" data-status="1">
+                <button class="btn_play" title="Botón Acción Reproductor" aria-label="Botón Acción Reproductor">
+                    <svg
+                        id="btn_minimize" 
+                        aria-labelledby="Minimizar Reproductor"
+                        fill="#000000" 
+                        version="1.1" 
+                        class="open_video"
+                        xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink" 	    
+                        width="15px" 
+                        height="15px" 
+                        viewBox="0 0 41.756 41.756" 
+                        xml:space="preserve">
+                        <g>
+                            <path d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465
+                c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071
+                C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343
+                c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/>
+                        </g>
+                    </svg>
+
+                    <svg 
+                        id="btn_maximize"
+                        aria-labelledby="Maximizar Reproductor"
+                        width="15px" 
+                        height="15px" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 10L20 4M20 4H15.5M20 4V8.5M4 4L10 10M4 4V8.5M4 4H8.5M14 14L20 20M20 20V15.5M20 20H15.5M10 14L4 20M4 20H8.5M4 20L4 15.5" 
+                        stroke="#000000" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"/>
+                        </svg>
+                </button>
+            </div>
+            <div class="rep_radio"></div>
+            <div id="btn_play_radio" class="btn_play_radio" data-status="0">
+                <button class="btn_play">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/play-small_radio.png" 
+                        alt="" srcset="" width="30" height="30">
+                </button>
+            </div>
+        </article>                
+    </section>
+    <h1>asaasasassa</h1>
+<body>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script src="./shikwasa/js/shikwasa.min.js"></script>    
+    <script src="./main.js"></script>
+</body>
+</html>

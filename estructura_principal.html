@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }  
+        .section-principal-notes .container-principal-notes{
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 30%;
+            gap: 1rem;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 30%;
+            gap: 0.3rem;
+        }
+        .section-principal-notes .container-principal-notes img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .item-left-notes,
+        .section-principal-notes .container-principal-notes .left-principal-notes .item-right-notes{
+            cursor: pointer;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .item-note img{
+            height: 100%;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .item-note{
+            position: relative;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .overlay-text{
+            background-color: #00000087;
+            position: absolute;
+            bottom: 0;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            padding: 0.7rem;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .overlay-text h3{
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .item-left-notes .item-note{
+            width: 100%;
+            height: 100%;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .item-right-notes{
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .item-right-notes .item-note{
+            width: auto;
+            height: 50%;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .item-right-notes .item-note h3{
+            font-size: 1.2rem;
+        }
+        .section-principal-notes .container-principal-notes .left-principal-notes .item-right-notes .item-note img{
+            height: 100%;
+        }
+        .section-principal-notes .container-principal-notes .right-principal-notes{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }        
+        .section-principal-notes .container-principal-notes .right-principal-notes .item-new-note{
+            width: auto;
+            height: 65%;
+            cursor: pointer;
+        }
+        .section-principal-notes .container-principal-notes .right-principal-notes .item-new-note img{
+            max-height: 250px;
+        }
+        .section-principal-notes .container-principal-notes .right-principal-notes .item-new-note h3{
+            font-size: 1.2rem;
+        }
+        .section-principal-notes .container-principal-notes .right-principal-notes .video-new-note{
+            display: grid;
+            grid-template-columns: 1fr 45%;
+            gap: 0.5rem;
+            height: 34%;
+        }
+        .section-principal-notes .container-principal-notes .right-principal-notes .video-new-note img{
+            height: 100%;
+        }
+        .section-principal-notes .container-principal-notes .right-principal-notes .video-new-note .icon-play-video-note img{
+            height: auto;
+            width: auto;
+            max-width: 30px;
+        }
+        .section-principal-notes .container-principal-notes .right-principal-notes .image-new-note{
+            width: auto;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-principal-notes .container-principal-notes .right-principal-notes .image-new-note .overlay-play{
+            width: 100%;
+            height: 100%;
+            background: #46464645;
+            position: absolute;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            top: 0;
+        }
+        @media (max-width: 991px){
+            .section-principal-notes .container-principal-notes{
+                grid-template-columns: 1fr;
+            }
+            .section-principal-notes .container-principal-notes .right-principal-notes{
+                flex-direction: row;
+            }
+            .section-principal-notes .container-principal-notes .right-principal-notes .video-new-note{
+                grid-template-columns: 1fr;
+            }
+            .section-principal-notes .container-principal-notes .right-principal-notes .item-new-note{
+                height: auto;
+            }
+        }
+        @media (max-width: 700px){
+            .section-principal-notes .container-principal-notes .left-principal-notes{
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px){
+            .section-principal-notes .container-principal-notes .right-principal-notes{
+                flex-direction: column;
+            }
+            .section-principal-notes .container-principal-notes .left-principal-notes .overlay-text h3,
+            .section-principal-notes .container-principal-notes .left-principal-notes .item-right-notes .item-note h3,
+            .section-principal-notes .container-principal-notes .right-principal-notes .item-new-note h3{
+                font-size: 1.3rem;
+            }
+        }
+        /* #00000087 */
+    </style>
+</head>
+<body>
+    <section class="section-principal-notes">
+        <div class="container-principal-notes">
+            <article class="left-principal-notes">
+                <a class="item-left-notes">
+                    <div class="big-item item-note">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/CASAS.jpg" alt="">
+                        <div class="overlay-text">
+                            <h3>Programa de Vivienda: Así otorgarán un millón de casas en el sexenio</h3>
+                        </div>
+                    </div>
+                </a>
+                <a class="item-right-notes">
+                    <div class="small-item item-note">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/PARO-746x420.jpg" alt="">
+                        <div class="overlay-text">
+                            <h3>Programa de Vivienda: Así otorgarán un millón de casas en el sexenio</h3>
+                        </div>
+                    </div>
+                    <div class="small-item item-note">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/PARO-746x420.jpg" alt="">
+                        <div class="overlay-text">
+                            <h3>Programa de Vivienda: Así otorgarán un millón de casas en el sexenio</h3>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="right-principal-notes">
+                <a class="item-new-note">
+                    <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/PARO-746x420.jpg" alt="">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                </a>
+                <a class="item-new-note video-new-note">
+                    <div class="image-new-note">
+                        <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/10/PARO-746x420.jpg" alt="">
+                        <div class="overlay-play">
+                            <svg 
+                                version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                width="40" height="40" viewBox="0 0 64.000000 64.000000"
+                                preserveAspectRatio="xMidYMid meet">
+                                <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+                                    fill="#fcff00" stroke="none">
+                                    <path d="M0 320 l0 -320 320 0 320 0 0 320 0 320 -320 0 -320 0 0 -320z m610
+                                    240 l0 -50 -290 0 -290 0 0 50 0 50 290 0 290 0 0 -50z m0 -240 l0 -160 -290
+                                    0 -290 0 0 160 0 160 290 0 290 0 0 -160z m0 -240 l0 -50 -290 0 -290 0 0 50
+                                    0 50 290 0 290 0 0 -50z"/>
+                                    <path d="M80 560 l0 -40 40 0 40 0 0 40 0 40 -40 0 -40 0 0 -40z m50 0 c0 -5
+                                    -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z"/>
+                                    <path d="M210 560 l0 -40 40 0 40 0 0 40 0 40 -40 0 -40 0 0 -40z m60 0 c0 -5
+                                    -7 -10 -15 -10 -8 0 -15 5 -15 10 0 6 7 10 15 10 8 0 15 -4 15 -10z"/>
+                                    <path d="M350 560 l0 -40 40 0 40 0 0 40 0 40 -40 0 -40 0 0 -40z m50 0 c0 -5
+                                    -7 -10 -15 -10 -8 0 -15 5 -15 10 0 6 7 10 15 10 8 0 15 -4 15 -10z"/>
+                                    <path d="M480 560 l0 -40 40 0 40 0 0 40 0 40 -40 0 -40 0 0 -40z m50 0 c0 -5
+                                    -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z"/>
+                                    <path d="M250 320 l0 -99 80 46 c44 26 80 50 80 53 0 3 -36 27 -80 53 l-80 46
+                                    0 -99z m73 25 c20 -10 37 -21 37 -24 0 -6 -75 -51 -84 -51 -4 0 -6 23 -6 51 0
+                                    28 3 49 8 47 4 -2 24 -12 45 -23z"/>
+                                    <path d="M80 80 l0 -40 40 0 40 0 0 40 0 40 -40 0 -40 0 0 -40z m50 0 c0 -5
+                                    -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z"/>
+                                    <path d="M210 80 l0 -40 40 0 40 0 0 40 0 40 -40 0 -40 0 0 -40z m60 0 c0 -5
+                                    -7 -10 -15 -10 -8 0 -15 5 -15 10 0 6 7 10 15 10 8 0 15 -4 15 -10z"/>
+                                    <path d="M350 80 l0 -40 40 0 40 0 0 40 0 40 -40 0 -40 0 0 -40z m50 0 c0 -5
+                                    -7 -10 -15 -10 -8 0 -15 5 -15 10 0 6 7 10 15 10 8 0 15 -4 15 -10z"/>
+                                    <path d="M480 80 l0 -40 40 0 40 0 0 40 0 40 -40 0 -40 0 0 -40z m50 0 c0 -5
+                                    -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z"/>
+                                </g>
+                           </svg>                           
+                        </div>
+                    </div>
+                    <h3>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </h3>
+                </a>
+            </article>
+        </div>
+    </section>
+</body>
+</html>

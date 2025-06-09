@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }        
+        .section_stycky .container_stycky{
+            display: flex;
+            padding: 1rem;
+            gap: 1rem;
+            height: 500px;
+        }
+        .section_stycky .container_stycky .item{
+            width: 250px;
+            height: 50px;
+            background-color: #000;
+        }
+        .section_stycky .container_stycky .item:first-child{
+            position: sticky;
+            top: 20px;
+        }     
+        .section_stycky .test{
+            width: 500px;
+            height: 800px;
+            background-color: red;
+        }
+
+        .header {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #navbar_once {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #navbar_once a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #navbar_once a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #navbar_once a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .content_sticky_once {
+            padding: 16px;
+            height: 800px;
+        }
+
+        .sticky_once {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky_once + .content_sticky_once {
+            padding-top: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <section class="section_stycky">
+        <div class="container_stycky">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="test"></div>
+    </section> -->
+    
+    <div class="header">
+        <h2>Scroll Down</h2>
+        <p>Scroll down to see the sticky effect.</p>
+    </div>
+  
+    <div id="navbar_once">
+        <a class="active" href="javascript:void(0)">Home</a>
+        <a href="javascript:void(0)">News</a>
+        <a href="javascript:void(0)">Contact</a>
+    </div>
+  
+  <div class="content_sticky_once">
+    <h3>Sticky Navigation Example</h3>
+    <p>The navbar will stick to the top when you reach its scroll position.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  </div>
+  
+  <script>
+    window.onscroll = function() {scrollMenuAmloOnce()};
+    
+    let navbar = document.getElementById("navbar_once");
+    let sticky = $('#menu-exodo ').offset();
+    
+    function scrollMenuAmloOnce() {
+        if (document.body.scrollTop > sticky.top || document.documentElement.scrollTop > sticky.top) {          
+            navbar.classList.add("sticky_once")
+        } else {            
+            navbar.classList.remove("sticky_once");
+        }
+    }
+  </script>
+</body>
+</html>

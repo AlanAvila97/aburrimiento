@@ -1,0 +1,8 @@
+node_modules
+.cache
+dist
+public
+
+cypress/screenshots
+cypress/videos
+cypress/downloads

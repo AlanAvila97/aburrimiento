@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .title-partys{
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 1rem;
+        }
+        .title-partys .ctm-title-label  h2{
+            color: #701d47;
+        }
+        .title-partys .ctm-title-line {
+                border-bottom: 3px solid #701d47;
+                margin: 0;
+        }
+        .section-slider-partys{
+            
+        }
+        .section-slider-partys .container-slider-partys .swiper-partys {
+            width: 100%;
+            height: 100%;
+        }
+        .section-slider-partys .container-slider-partys{
+            width: 100%;
+            height: auto
+        }
+        .section-slider-partys .container-slider-partys .swiper-partys .swiper-button-next:after, 
+        .section-slider-partys .container-slider-partys .swiper-partys .swiper-button-prev:after{
+            color: #701d47;
+        }
+        .section-slider-partys .container-slider-partys .item-slider-partys{
+            width: 100%;
+            height: auto;           
+            display: flex;
+            justify-content: center;
+            color: #000; 
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .section-slider-partys .container-slider-partys .item-slider-partys img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 991px){
+        }
+    </style>
+</head>
+<body>
+    <div class="ctm-section-title title-partys">
+        <div class="ctm-title-label">
+            <h2 class="titulo-tension">
+                ONCE NOTICIAS TV
+            </h2>
+        </div>  
+        <div class="ctm-title-line"></div>              
+    </div>
+    <section class="section-slider-partys">
+        <div class="container-slider-partys">
+            <div class="swiper swiper-partys">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys">
+                            <img src="https://dummyimage.com/900x1200/5a9bd5/fff" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys">
+                            <img src="https://dummyimage.com/900x1200/5a9bd5/fff" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys">
+                            <img src="https://dummyimage.com/900x1200/5a9bd5/fff" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys">
+                            <img src="https://dummyimage.com/900x1200/5a9bd5/fff" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys">
+                            <img src="https://dummyimage.com/900x1200/5a9bd5/fff" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // 
+        let swiper_interviews = new Swiper(".swiper-partys", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-partys .swiper-button-next",
+                prevEl: ".swiper-partys .swiper-button-prev",
+            },
+            breakpoints: {
+                300: {
+                    slidesPerView: "auto",
+                },
+                310: {
+                    slidesPerView: "auto",
+                },
+                320: {
+                    slidesPerView: "auto",
+                },
+                480: {
+                    slidesPerView: "auto",
+                },
+                500: {
+                    slidesPerView: 2,
+                },
+                600: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 3,
+                },
+                950: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+                1500: {
+                    slidesPerView: 4,
+                },
+                2100: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+    </script>
+</body>
+</html>

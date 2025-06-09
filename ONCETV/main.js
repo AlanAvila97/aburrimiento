@@ -3,1236 +3,1143 @@ document.addEventListener('DOMContentLoaded', obtenerCanales);
 
 const subti = "https://canaloncetv.s3.amazonaws.com/REST/data/mdb/carouselesapp.json?cache=6";
 const canales = "https://canaloncetv.s3.amazonaws.com/REST/data/mdb/channels.json"
-const titulos = document.querySelector("#root");
-const titulos2 = document.querySelector("body");
+const root = document.querySelector("#root");
+const body = document.querySelector("body");
+
+var a = [];
+a.push(JSON.parse(localStorage.getItem('session')));
+/* localStorage.clear(); */
+console.log(a);
+let enFuncionPrincipal = false;
 
 
 
+
+
+/* document.getElementById('preloader').style.display = 'block'; */
 function contenedoresCategorias() {
+  /* let enFuncionPrincipal = true; */
   fetch(subti)
-    .then(response => response.json())   //datos obtenidos en json  
+    .then(response => response.json()) //datos obtenidos en json  
     .then(subtitulos => {
+      /* console.log(subtitulos); */
+
       subtitulos.forEach(element => {
-        
+
         const categ = element[2].carousel.carousel
-        
+
         /* console.table(categ) */
 
-        categ.forEach(titcat => {// carrusel de categorias 
+        categ.forEach(titcat => { // carrusel de categorias 
 
           const resttitulos = titcat.name // variable que almacena los nombres de las categorias 
-          const idcat = titcat.id_cat// variable que almacena el id de cada categoria
-          
-
+          const idcat = titcat.id_cat // variable que almacena el id de cada categoria
 
           const div = document.createElement('div')
           div.setAttribute("class", "container")
 
-
           let titulo = resttitulos.replaceAll(' ', '-');
+          let tituloespecial = eliminarAcentos(titulo);
+
           div.innerHTML = `
-            <div class="swiper-container ${titulo}">
-            
-              <h1>${resttitulos}</h1>
-              <div id=${idcat} class="swiper-wrapper">                      
-              </div>
-            </div>            
+          <h1>${resttitulos}</h1>
+            <div class="swiper-container ${tituloespecial}">
+                <div id=${idcat} class="swiper-wrapper" data-categoria=${tituloespecial}></div>
+            </div>
+                    
              `;
+          root.appendChild(div)
 
 
+          //Menu HEADER
+          var headnav = document.createElement("button");
+              headnav.setAttribute("class","menu-item")
+              headnav.setAttribute("id",titcat.id_cat)
+          var menu = document.querySelector(".menu");
+          /* console.log(menu); */
+          /* headnav.innerHTML = `
+          
+          <div class="submenu" data-id=${titcat.id_cat}></div>
+          `; */
+          
+          headnav.innerHTML = `
+          ${titcat.name}
+          `;
 
-          titulos.appendChild(div)// se 
+          //FIN DE MENU NAV
+          
+          var cat_id = titcat.id
+          headnav.setAttribute("tabindex", "-1")
+          menu.appendChild(headnav)
+
+        }) // CIERRE DE TICAT/CARRUSEL DE CATEGORIAS
 
 
+      }); // CIERRE DE element ForEach
+     
+      
+    }) // CIERRE DE subtitulos
+} //CIERRE DE FUNCION OBTENERSUBTITULOS
 
-
-
-        })// CIERRE DE TICAT
-      });// CIERRE DE element
-    })// CIERRE DE subtitulos
-}//CIERRE DE FUNCION OBTENERSUBTITULOS
-
-
+let html = '<h2>sasa</h2>';
 function obtenerCanales() {
   fetch(canales)
     .then(resp => resp.json())
     .then(chanel => {
+
+
+      //document.getElementById('preloader').style.display = 'none';
+
+      var preloader = document.querySelector(".preloader");
+      preloader.classList.add("fade-out");
+      setTimeout(function () {
+        preloader.style.display = "none";
+      }, 500);
+      //TITULOS PARA SUBMENU DE NAV
+
+
+      var subnav2 = document.querySelectorAll("nav .menu button"); //VARIABLE DE ELEMENTOS DEL SUBMENU DE HEADER
+      
+      
+      
+      var id_contenedores = document.querySelectorAll(".container .swiper-container .swiper-wrapper")
+      /* console.log(id_contenedores); */
+
       chanel.forEach(chan => {
 
-        const idcategorias = chan.category
-/* console.log(chan);
- */
-        switch (idcategorias) {
+        /* console.log(subnav2); */
+        //SWIPER AUTOPLAY
+        var slideauto = document.createElement("div");
+        var swiperautoplay = document.querySelector(".swiperSup .swiper-wrapper");
 
-          case '15':// CATEGORIA COCINA
-            const catCocina = [chan];
-            catCocina.forEach(cocina => {
-              let caratula = cocina.imageCH
-              let imgN = cocina.imageN
-              let slugc = cocina.slugc
-              let idcaratula = cocina.id
-              let namecaratula = cocina.name
-              
-
-
-              const container = document.getElementById(15);
-
-              const div = document.createElement("div")
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              
-
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  /* console.log(descrip); */
-                  
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-
-              div.innerHTML = `
+        slideauto.setAttribute("class", "swiper-slide");
+        slideauto.setAttribute("tabindex", "-1")
+        slideauto.setAttribute("data-slugc", chan.slugc)
+        slideauto.setAttribute("data-name", chan.name)
+        slideauto.setAttribute("data-imageN", chan.imageN)
+        slideauto.setAttribute("data-description", chan.description)
+        slideauto.innerHTML = `
       
-       <img  data-slugc=${slugc} data-id=${idcaratula} id="${idcaratula}" data-name="${namecaratula}" data-imageN="${imgN}" src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-       <h3>${namecaratula}</h3>
+        <img  data-slugc=${chan.slugc} data-name="${chan.name}" data-imageN="${chan.imageN}" src="https://canalonce.mx/REST/data/miniaturas/${chan.imageCH}">
+        
+        `;
+        swiperautoplay.appendChild(slideauto); // FIN DE SWIPER AUTOPLAY
+
+        const idcategorias = chan.category //VARIABLE DE ID DE CATEGORIAS 
+
+        
+
+        id_contenedores.forEach(id_cont => {
+          var id_container = id_cont.id
+
+          if (id_container == idcategorias) { //CONDICION PARA SELECCIONAR ID DEL CARRUSEL E INSERTAR SUS RESPECTIVOS CANALES
+
+            var class_swiper = id_cont.dataset.categoria;
+            const div_cont = document.createElement("div");
+            div_cont.setAttribute("class", "swiper-slide");
+            div_cont.setAttribute("tabindex", "-1");
+            div_cont.setAttribute("data-slugc", chan.slugc);
+            div_cont.setAttribute("data-name", chan.name);
+            div_cont.setAttribute("data-imageN", chan.imageN);
+            div_cont.setAttribute("data-description", chan.description);
+
+            div_cont.innerHTML = `
+       <img  data-slugc=${chan.slugc} data-name="${chan.name}" data-imageN="${chan.imageN}" src="https://canalonce.mx/REST/data/miniaturas/${chan.imageCH}">
+       <h3>${chan.name}</h3>
        
        `
-              sliderPrograms('Conversación')  
-
-              // var swipercoci = new Swiper(".Cocina", {
-              //   slidesPerView: 3.7,
-              //   spaceBetween: 10,
-              //   slidesPerGroup: 1,
-              //   loop: false,
-              //   loopFillGroupWithBlank: true,
-              //   keyboard: {
-              //     enabled: true
-              //   },
-              //   navigation: {
-              //     nextEl: '.Cocina .swiper-button-next',
-              //     prevEl: '.Cocina .swiper-button-prev ',
-              //      },
-
-              // });
-
-
-              container.appendChild(div)
-
-            })//cierre de foreach cocina
-            break;
-
-          case '11':// CATEGORIA CONVERSACION
-            const catConversacion = [chan]
-            catConversacion.forEach(conversacion => {
-
-              let caratula = conversacion.imageCH
-              let imgN = conversacion.imageN
-              let slugc = conversacion.slugc
-              let idcaratula = conversacion.id
-              let namecaratula = conversacion.name
-              
-
-
-              const container = document.getElementById(11);
-
-              const div = document.createElement("div")
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              
-
-              var im = document.querySelectorAll(".swiper-slide")
-              im.forEach(evecli => {
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-              div.innerHTML = `
-       
-       <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-       <h3>${conversacion.name}</h3>
-       `
-              // var swiperconver = new Swiper(".swiper-container", {
-              //   slidesPerView: 3,
-              //   spaceBetween: 10,
-              //   slidesPerGroup: 1,
-              //   loop: false,
-              //   loopFillGroupWithBlank: true,
-
-              //   keyboard: {
-              //     enabled: true
-              //   },
-              //   navigation: {
-              //     nextEl: '.Conversación .swiper-button-next',
-              //     prevEl: '.Conversación .swiper-button-prev ',
-              //      },
-
-              // })
-              sliderPrograms('Cocina')  
-
-              container.appendChild(div)
-
-            })//cierre de foreach Conversacion
-            break;
-
-          case '13':// CATEGORIA CULTURA
-            const catCultura = [chan]
-            catCultura.forEach(cultura => {
-              /* console.log(cultura) */
-              let caratula = cultura.imageCH
-              let imgN = cultura.imageN
-              let slugc = cultura.slugc
-              let idcaratula = cultura.id
-              let namecaratula = cultura.name
-              
-
-              //
-              const container = document.getElementById(13);
-
-              const div = document.createElement("div")
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-              div.innerHTML = `
-       
-       <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-       <h3 id="${idcaratula}">${namecaratula}</h3>
-       
-       `
-              var swipercultu = new Swiper(".Cultura", {
-                slidesPerView: 3.7,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: ".swiper-button-next",
-                  prevEl: ".swiper-button-prev",
-                },
-                navigation: {
-                  nextEl: '.Cultura .swiper-button-next',
-                  prevEl: '.Cultura .swiper-button-prev ',
-                   },
-
-              });
-              
-              container.appendChild(div)
-            })//cierre de foreach cultura
-            break;
-
-          case '14':// CATEGORIA DEPORTE
-            const catDeporte = [chan]
-            /* console.log(chan) */
-            catDeporte.forEach(deporte => {
-              let caratula = deporte.imageCH
-              let imgN = deporte.imageN
-              let slugc = deporte.slugc
-              let idcaratula = deporte.id
-              let namecaratula = deporte.name
-              let description=deporte.description
-
-              /* console.log(deporte.name) */
-              const container = document.getElementById(14);
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              div.setAttribute("description",description)
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-
-              div.innerHTML = `
-       
-       <a href="#"><img src="https://canalonce.mx/REST/data/miniaturas/${caratula}"></a>
-       <h3>${namecaratula}</h3>
-       
-       `
-              var swiperdepo = new Swiper(".Deporte", {
-                slidesPerView: 3.7,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Deporte .swiper-button-next',
-                  prevEl: '.Deporte .swiper-button-prev ',
-                   },
-
-              });
-              container.appendChild(div)
-            })//cierre de foreach deporte
-            break;
-
-          case '23':// CATEGORIA DIGITAL
-            const catDigital = [chan]
-            catDigital.forEach(digital => {
-
-              /* console.log(catDigital) */
-              const container = document.getElementById(23);
-              let caratula = digital.imageCH
-              let imgN = digital.imageN
-              let slugc = digital.slugc
-              let idcaratula = digital.id
-              let namecaratula = digital.name
-
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-              div.innerHTML = `
-       <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-       <h3>${namecaratula}</h3>
-       `
-              var swiperdigi = new Swiper(".Digital", {
-                slidesPerView: 3.7,
-                spaceBetween: 29,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Digital .swiper-button-next',
-                  prevEl: '.Digital .swiper-button-prev ',
-                   },
-
-              });
-              container.appendChild(div)
-            })//cierre de foreach digital
-            break;
-
-          case '2':// CATEGORIA ENTRETENIMIENTO
-            const catEntretenimiento = [chan]
-            catEntretenimiento.forEach(entretenimiento => {
-              /* console.log(catDigital) */
-              const container = document.getElementById(2);
-              let caratula = entretenimiento.imageCH
-              let imgN = entretenimiento.imageN
-              let slugc = entretenimiento.slugc
-              let idcaratula = entretenimiento.id
-              let namecaratula = entretenimiento.name
-              
-
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              
-
-              
-              
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-              div.innerHTML = `
-       <a href="#"><img src="https://canalonce.mx/REST/data/miniaturas/${caratula}"></a>
-       <h3>${namecaratula}</h3>
-       `
-              var swiperentre = new Swiper(".Entretenimiento", {
-                slidesPerView: 3.7,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Entretenimiento .swiper-button-next',
-                  prevEl: '.Entretenimiento .swiper-button-prev ',
-                   },
-
-              });
-              container.appendChild(div)
-            })//cierre de foreach entretenimiento
-            break;
-
-
-          case '6':// CATEGORIA HISTORIA
-            const catHistoria = [chan]
-            /* console.log(catHistoria) */
-            catHistoria.forEach(hist => {
-              
-              /* console.log(hist) */
-
-              const container = document.getElementById(6);
-              let caratula = hist.imageCH
-              let imgN = hist.imageN
-              let slugc = hist.slugc
-              let idcaratula = hist.id
-              let namecaratula = hist.name
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-              div.innerHTML = `
-         <a href="#"><img src="https://canalonce.mx/REST/data/miniaturas/${caratula}"></a>
-         <h3>${namecaratula}</h3>
-         `
-              var swiperhist = new Swiper(".Historia", {
-                slidesPerView: 3.7,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Historia .swiper-button-next',
-                  prevEl: '.Historia .swiper-button-prev ',
-                   },
-
-              });
-              container.appendChild(div)
-            })//cierre de foreach historia
-            break;
-
-          case '17':// CATEGORIA INFORMACION E INVESTIGACION
-            const catInformacionI = [chan]
-            /* console.log(catInformacionI) */
-            catInformacionI.forEach(informacioni => {
-              
-              /* console.log(informacioni.name) */
-              const container = document.getElementById(17);
-              let caratula = informacioni.imageCH
-              let imgN = informacioni.imageN
-              let slugc = informacioni.slugc
-              let idcaratula = informacioni.id
-              let namecaratula = informacioni.name
-
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-              div.innerHTML = `
-               <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-               <h3>${namecaratula}</h3>
-               `
-
-            /*     var swiperinfo = new Swiper(".swiper-container", {
-                 slidesPerView: 3.7,
-                 spaceBetween: 10,
-                 slidesPerGroup: 1,
-                 loop: false,
-                 loopFillGroupWithBlank: true,
-                 keyboard: {
-                   enabled: true
-                 },
+            /* sliderPrograms('swiper-container') */
+            id_cont.appendChild(div_cont)
+            sliderPrograms(class_swiper)
+          }
          
-               }); */
-              // container.appendChild(div)
-            })//cierre de foreach INFORMACION E INVESTIGACION
-            break;
+        }) //CIERRE DE forEach DE id_cont
 
-
-          case '10':// CATEGORIA MUSICA
-            const catMusica = [chan]
-            /* console.log(catMusica) */
-            catMusica.forEach(musica => {
-              
-              /* console.log(musica) */
-              const container = document.getElementById(10);
-
-              let caratula = musica.imageCH
-              let imgN = musica.imageN
-              let slugc = musica.slugc
-              let idcaratula = ''
-              let namecaratula = musica.name
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-              div.innerHTML = `
-         <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-         <h3>${namecaratula}</h3>
-         `
-              var swipermus = new Swiper(".Música", {
-                slidesPerView: 3.7,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Música .swiper-button-next',
-                  prevEl: '.Música .swiper-button-prev ',
-                   },
-
-              });
-              container.appendChild(div)
-            })//cierre de foreach musica
-            break;
-
-          case '12':// CATEGORIA NATURALEZA
-            const catNaturaleza = [chan]
-
-            catNaturaleza.forEach(naturaleza => {
-              /* console.log(naturaleza) */
-              const container = document.getElementById(12);
-              let caratula = naturaleza.imageCH
-              let imgN = naturaleza.imageN
-              let slugc = naturaleza.slugc
-              let idcaratula = naturaleza.id
-              let namecaratula = naturaleza.name
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-              div.innerHTML = `
-              <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-              <h3>${namecaratula}</h3>
-              `
-              var swipernatu = new Swiper(".Naturaleza", {
-                slidesPerView: 3.7,
-                spaceBetween: 29,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Naturaleza .swiper-button-next',
-                  prevEl: '.Naturaleza .swiper-button-prev ',
-                   },
-
-              });
-              container.appendChild(div)
-            })//cierre de foreach naturaleza
-            break;
-
-          case '9': //CATEGORIA NIÑAS Y NIÑOS
-            const catNinasninos = [chan]
-            /* console.log(catNinasninos) */
-            catNinasninos.forEach(ninasninos => {
-              const container = document.getElementById(9);
-              let caratula = ninasninos.imageCH
-              let imgN = ninasninos.imageN
-              let slugc = ninasninos.slugc
-              let idcaratula = ''
-              let namecaratula = ninasninos.name
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-              div.innerHTML = `
-                 <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-                 <h3>${namecaratula}</h3>
-                 `
-                 sliderPrograms('Niñas-y-Niños')
-                 
-              container.appendChild(div)
-            })//cierre de foreach niñas y niños
-            break;
+        console.log();
+        subnav2.forEach(eventonav => {//ELEMENTOS DE MENU DE NAVEGACION
+          /* console.log(eventonav); */
           
-            case '5':// CATEGORIA OPINION
-            const catOpinion = [chan]
-            /* console.log(catOpinion) */
-            catOpinion.forEach(opinion => {
-              const container = document.getElementById(5);
-              let caratula = opinion.imageCH
-              let imgN = opinion.imageN
-              let slugc = opinion.slugc
-              let idcaratula = opinion.id
-              let namecaratula = opinion.name
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-              div.innerHTML = `
-                 
-                 <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-                 <h3>${namecaratula}</h3>
-                 
-                 `
-              var swiperopi = new Swiper(".Opinión", {
-                slidesPerView: 3.7,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Opinión .swiper-button-next',
-                  prevEl: '.Opinión .swiper-button-prev ',
-                   },
-
-              });
-              container.appendChild(div)
-            })//cierre de foreach opinion
-            break;
-
-          case '7':// CATEGORIA PROGRAMAS POLITECNICOS
-            const catProgpoli = [chan]
-            /* console.log(caProgpoli) */
-            catProgpoli.forEach(programaspoli => {
-              const container = document.getElementById(7);
-              let caratula = programaspoli.imageCH
-              let imgN = programaspoli.imageN
-              let slugc = programaspoli.slugc
-              let idcaratula = programaspoli.id
-              let namecaratula = programaspoli.name
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
-
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-              div.innerHTML = `
-                 <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-                 <h3>${namecaratula}</h3>
-                 `
-                 sliderPrograms('PROGRAMAS-POLITÉCNICOS')
-                //  PROGRAMAS-POLITÉCNICOS
-              /*    var swiprog = new Swiper(".swiper-container", {
-                  slidesPerView: 3.7,
-                  spaceBetween: 10,
-                  slidesPerGroup: 1,
-                  loop: false,
-                  loopFillGroupWithBlank: true,
-                  keyboard: {
-                    enabled: true
-                  },
-  
-                }); */
-              container.appendChild(div)
-            })//cierre de foreach programas politecnicos
-            break;
-
-          case '22':// CATEGORIA SERIES
-            const catSeries = [chan]
-            
-            catSeries.forEach(series => {
-              /* console.log(series); */
+            var Id_navel = eventonav.id //ID DE ELEMENTOS DEL MENU DE NAVEGACION
+            /* console.log(Id_navel); */
+            var b_nav=document.getElementById(Id_navel)
+            /* console.log(b_nav); */
+            b_nav.addEventListener('keyup', (e) => { //BOTON DE NAVEGACION
               
-              const container = document.getElementById(22);
-              let caratula = series.imageCH
-              let imgN = series.imageN
-              let slugc = series.slugc
-              let idcaratula = ''
-              let namecaratula = series.name
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
+              if (e.keyCode === 13) {
+                /* root.innerHTML=""; */
+                // Código a ejecutar cuando se presiona la tecla Enter
+                if(Id_navel == idcategorias){
+          //         root.innerHTML="";
+          //       var caratulas=document.createElement("div")
+                
+                
+          //       caratulas.className = "tarjeta";
+          //       caratulas.setAttribute("tabindex", "-1");
+          //       caratulas.setAttribute("data-slugc", chan.slugc);
+          //       caratulas.setAttribute("data-name", chan.name);
+          //       caratulas.setAttribute("data-imageN", chan.imageN);
+          //       caratulas.setAttribute("data-description", chan.description);
+          //       caratulas.innerHTML = `
+          //       <img src="https://canalonce.mx/REST/data/miniaturas/${chan.imageCH}" alt="${chan.name}">
+          //       <h3>${chan.name}</h3>
+           
+          //  `
+          //  console.log(chan.name);
+                
+          //       root.appendChild(caratulas) 
+                
+                }
+                var cards= document.querySelectorAll(".tarjeta")
+            /* console.log(cards); */
+            cards.forEach(card => {
 
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-
-              div.innerHTML = `
-                 <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-                 <h3>${namecaratula}</h3>
-                 `
-              var swiperser = new Swiper(".SERIES", {
-                slidesPerView: 3.2,
-                spaceBetween: 29,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.SERIES .swiper-button-next',
-                  prevEl: '.SERIES .swiper-button-prev ',
-                   },
-
+              //AGREGAR EVENTO "ENTER" A LOS BOTONES DE HEADER
+              card.addEventListener('keyup', (e) => {
+                let idec = card.getAttribute('data-id')
+                let nombre = card.getAttribute('data-name')
+                let imagen = card.getAttribute('data-imageN')
+                let slugc = card.getAttribute('data-slugc')
+                let descrip = card.getAttribute('data-description')
+      
+      
+                if (e.keyCode === 13) {
+                  // Código a ejecutar cuando se presiona la tecla Enter
+                  obtenerEpisodios(idec, nombre, imagen, slugc, descrip);
+      
+                }
               });
-              container.appendChild(div)
             })
-            break;
+              }
+            });
+            
+            
+            
+          })//ELEMENTOS DE MENU DE NAVEGACION
 
-          case '3':// CATEGORIA SOCIEDAD
-            const catSociedad = [chan]
+      }) //cierre de chan
+      
+      let buttons_nav =  document.querySelectorAll('.menu-item');
 
-            catSociedad.forEach(sociedad => {
+      buttons_nav.forEach(btn => {
+        btn.addEventListener('keyup', (e) => setProgramsButtons(chanel, e) );
+      });
+      
 
-              const container = document.getElementById(3);
-              let caratula = sociedad.imageCH
-              let imgN = sociedad.imageN
-              let slugc = sociedad.slugc
-              let idcaratula = sociedad.id
-              let namecaratula = sociedad.name
-              const div = document.createElement("div")
-              // SE AGREGA LOS ATRIBUTOS AL ELMENTO DIV QUE SE CREA EN EL CONTENEDOR
-              div.setAttribute("class", "swiper-slide")
-              div.setAttribute("tabindex", "-1")
-              div.setAttribute("data-id", idcaratula)
-              div.setAttribute("data-slugc", slugc)
-              div.setAttribute("data-name", namecaratula)
-              div.setAttribute("data-imageN", imgN)
-              div.setAttribute("id", idcaratula)
-              //SELECCIONA LA CLASE DE SWIPER-SLIDE PARA AGREGAR EVENTO
-              var enterevent = document.querySelectorAll(".swiper-slide")
-              enterevent.forEach(evecli => {
+      var entereventSlide = document.querySelectorAll(".swiper-slide") //VARIABLE QUE SELECCIONA Y ALMACENA TODOS LOS SLIDE
+      entereventSlide.forEach(evecli => {
 
-                //AGREGAR EVENTO "ENTER" A LOS SLIDE 
-                evecli.addEventListener('keyup', (e) => {
-                  let idec = evecli.getAttribute('data-id')
-                  let nombre = evecli.getAttribute('data-name')
-                  let imagen = evecli.getAttribute('data-imageN')
-                  let slugc = evecli.getAttribute('data-slugc')
-                  if (e.keyCode === 13) {
-
-                    obtenerEpisodios(idec, nombre, imagen, slugc);
-                    // Código a ejecutar cuando se presiona la tecla Enter
-                  }
-                });
-              })
-
-              div.innerHTML = `
-                 <img src="https://canalonce.mx/REST/data/miniaturas/${caratula}">
-                 <h3>${namecaratula}</h3>
-                 `
-              var swipersoci = new Swiper(".Sociedad", {
-                slidesPerView: 3.7,
-                spaceBetween: 10,
-                slidesPerGroup: 1,
-                loop: false,
-                loopFillGroupWithBlank: true,
-                keyboard: {
-                  enabled: true
-                },
-                navigation: {
-                  nextEl: '.Sociedad .swiper-button-next',
-                  prevEl: '.Sociedad .swiper-button-prev ',
-                   },
-
-              });
-              // container.appendChild(div)
-            })//cierre de foreach sociedad
-            break;
-
-        }//cierre de switch
-
-      })//cierre de chan
-    })//cierre chanel
+        //AGREGAR EVENTO "ENTER" A LOS SLIDE 
+        evecli.addEventListener('keyup', (e) => {
+          let idec = evecli.getAttribute('data-id')
+          let nombre = evecli.getAttribute('data-name')
+          let imagen = evecli.getAttribute('data-imageN')
+          let slugc = evecli.getAttribute('data-slugc')
+          let descrip = evecli.getAttribute('data-description')
 
 
-}//cierre de funcion obtenerCanales
-let contenidoplus = document.querySelector("div")//variable que almacena los carruseles del home
+          if (e.keyCode === 13) {
+            // Código a ejecutar cuando se presiona la tecla Enter
+            obtenerEpisodios(idec, nombre, imagen, slugc, descrip);
 
-/* console.log(cont) */
+          }
+        });
+      })            
+      //EVENTO AL SELECCIONAR Y DAR ENTER EN UN CANAL DEL SUBMENU SE ACCEDA A LOS EPISODIOS
+      var subitem_nav=document.querySelectorAll(".submenu li")
+      /* console.log(item_nav); */
+      subitem_nav.forEach(subitem=>{
+        /* console.log(subitem); */
+        subitem.addEventListener('keyup', (e) => {
+          let idec = subitem.getAttribute('data-id')
+          let nombre = subitem.getAttribute('data-name')
+          let imagen = subitem.getAttribute('data-imageN')
+          let slugc = subitem.getAttribute('data-slugc')
+          let descrip = subitem.getAttribute('data-description')
 
-function obtenerEpisodios(idec, nombre, imagen, slugc) {//OBTENER EPISODIOS
 
-  /* console.log(idec) */
+          if (e.keyCode === 13) {
+            // Código a ejecutar cuando se presiona la tecla Enter
+            obtenerEpisodios(idec, nombre, imagen, slugc, descrip);
+
+          }
+        });
+        
+      })//FIN EVENTO AL SELECCIONAR Y DAR ENTER EN UN CANAL DEL SUBMENU SE ACCEDA A LOS EPISODIOS
+    }) //cierre chanel
+
+}
+function setProgramsButtons(data, e) {
+  if(e.keyCode === 13){
+    root.innerHTML="";              
+    data.forEach((chan, index, i) => {
+      if(e.target.id === chan.category){
+        console.log(e.target.id);
+        var caratulas = document.createElement("div");
+            caratulas.className = "tarjeta";
+            caratulas.innerHTML = '<img src="https://canalonce.mx/REST/data/miniaturas/'+chan.imageCH+'" alt="'+chan.name+'">'+
+                                  '<h3>'+chan.name+'</h3>';
+        console.log(caratulas);
+        root.appendChild(caratulas);
+      }
+    });
+    //     console.log(caratulas);    
+    // setProgramsButtons()
+  }
+}
+//cierre de funcion obtenerCanales
+let contenidoplus = document.querySelector("div") //variable que almacena los carruseles del home
+
+
+
+function obtenerEpisodios(idec, nombre, imagen, slugc, descrip) { //OBTENER EPISODIOS
+  window.addEventListener("keydown", function (inEvent) { //SE AGREGA EVENTO AL BOTON DE BACK PARA REGRESAR AL HOME
+    if (window.event) {
+      keycode = inEvent.keyCode;
+    } else if (e.which) {
+      keycode = inEvent.which;
+    }
+    switch (keycode) {
+      case 461:
+        reloadContent();
+        console.log("HOME");
+
+        break;
+
+    }
+  });
+
   let jsonepi = slugc + ".json"
   let urepisodio = "https://canaloncetv.s3.amazonaws.com/REST/data/mdb/episodes/desktop/" + jsonepi
+
   let epcont = document.querySelector("body")
-  let clean = document.querySelector("div").remove(this)
   let div = document.createElement("div")
-  div.setAttribute("class","contenedor-episodios")
-
-
+  div.setAttribute("class", "contenedor-episodios")
+  div.setAttribute("id", "contenedor-episodios")
 
 
   div.innerHTML = `
-    <button id="reload"><h1>ATRAS</h1></button>
+  <div id="contmenu-episodios">
+  <div id="overlay-container" style="display: none;">
+        <button id="boton-1">Continuar</button>
+        <button id="boton-2">Reproducir</button>
+  </div>
       <h1>${nombre}</h1>
       
+      <div class="desc">
       <img  src="https://canalonce.mx/REST/data/normal/${imagen}" style="width: 55%; height: 60%; float:left;">
+      <div class="texto">${descrip}</div>
+
+     
             <h2>EPISODIOS</h2>
-            <div class="video-container">
-              
-           </div>
-
+      
+         <div class="video-container"></div>
+    <div class="preloader">
+				<div class="loader"></div>
+			  </div>
+      </div
+  </div>
       `
-
+  epcont.innerHTML = "";
 
   epcont.append(div);
 
+
+  /* console.log(urepisodio); */
+
   //contenedor de episodios 
   fetch(urepisodio)
-    /* console.log(urepisodio) */
     .then(response => response.json())
     .then(episodio => {
-      /* console.log(episodio) */
-      episodio.forEach(epiCanal => {//INICIO DE CONTENEDOR DE EPISODIOS
+      //ARRAY DE EPISODIOS DE MENU
+      let vdaArray = []; //array donde se almacena los VIDEO_ID de los episodios que se encuentran en el menu del canal seleccionado
 
+      /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+      //PRELOADER
+      var preloader = document.querySelector(".preloader");
+      preloader.classList.add("fade-out");
+      setTimeout(function () {
+        preloader.style.display = "none";
+      }, 500);
+      // FIN DE PRELOADER
+      /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+      episodio.forEach(epiCanal => { //INICIO DE CONTENEDOR DE EPISODIOS
         let contVideo = document.querySelector(".video-container")
-        let temporada = epiCanal.seasonn
-        let season = epiCanal.season
         let titlechanel = epiCanal.title
         let linkfile = epiCanal.file
         let linkYout = epiCanal.vda
         let idCanal = epiCanal.id
         let div = document.createElement("li")
         div.setAttribute("tabindex", "0")
-        div.setAttribute("file", linkfile)
         div.setAttribute("vda", linkYout)
-        div.setAttribute("id",idCanal)
+        div.setAttribute("id", idCanal)
+        div.setAttribute("file", linkfile)
         div.textContent = titlechanel
 
+
         contVideo.appendChild(div)
-        
-        
-        
+
+
+
+
         //SELECCIONA EL DIV QUE SE ENCUENTRA EN EL VIDEO-CONTAINER PARA AGREGAR EVENTO
-        //prueb event
         var eveclic2 = document.getElementById(idCanal)
         eveclic2.addEventListener('keyup', (e) => {
           if (e.keyCode === 13) {
 
-            let mediafile = eveclic2.getAttribute('file')
             let mediaYout = eveclic2.getAttribute('vda')
-            let episelect =eveclic2.getAttribute("id")
-            playerMedia(mediafile, mediaYout);
+            let mediafile = eveclic2.getAttribute("file")
+            let episelect = eveclic2.getAttribute("id")
+            /* console.log(episelect); */
 
-            // Código a ejecutar cuando se presiona la tecla Enter
-          }
-        });
 
-        function playerMedia(mediafile, mediaYout) {
+            const overlayContainer = document.getElementById('overlay-container');
+            overlayContainer.style.display = 'block';
+            var contin = document.getElementById("boton-1");
+            var repro = document.getElementById("boton-2");
+
+
+            repro.addEventListener('keyup', (e) => { //BOTON REPRO MANDA A LLAMAR LA FUNCION DE REPRODUCIR EPISODIO DESDE EL INICIO
+              if (e.keyCode === 13) {
+                // Código a ejecutar cuando se presiona la tecla Enter
+                playerMedia(mediafile, mediaYout, vdaArray);
+              }
+            });
+            contin.addEventListener('keyup', (e) => { //BOTTON CONIN MANDA A LLAMAR LA FUNCION DE CONTINUAR VIENDO EPISODIO DESDE SU ULTIMA REPRODCUCION
+              if (e.keyCode === 13) {
+                // Código a ejecutar cuando se presiona la tecla Enter
+                playerMediacontinuacion(mediafile, mediaYout, episelect);
+              }
+            });
+
+
+
+
+          } //Cierre de eventto de enter 13
+        }); //Cierre de eveclic2
+
+
+        //FUNCION PLAYERMEDIA
+        function playerMedia(mediafile, mediaYout, episelectf) {
           let contplay = document.querySelector("body")
-          var video = document.createElement('contplayer')
-            /* console.log(mediafile); */
-            
+          var url_especial = eliminarDominioUrl(mediaYout);
+          let url_especial_of = url_especial + "?enablejsapi=1&rel=0&modestbranding=1&showinfo=0"
+          let url_of = "https://www.youtube.com/embed/" + url_especial_of;
+          console.log(mediaYout);
+          console.log(url_of);
+
+          // Variables para controlar el estado
+          /* let enFuncionPrincipal = false; */
+          // COMPROBAR LA URL
+          if (startURL(mediaYout)) { //REPRODUCTOR M3U8
+
+            // Verificar si el elemento de video ya existe en el body
+            const existingVideo = document.getElementById('my-video');
+
+            if (!existingVideo) {
+              console.log("La URL comienza con 'https://d'");
+              /* console.log(mediaYout); */
+
+              // Crear un elemento de video
+              const video = document.createElement('video');
+              video.id = 'my-video';
+              video.classList.add('video-js');
 
 
-          //VIDEO FILE
-/*           video.innerHTML = `
-            <video id="my-video" class="video-js"
-            controls
-            preload="auto"
-            width="640"
-            height="264"
-            autoPlay="true">
-            <source src="${mediafile}" type="application/x-mpegURL">
-            </video>
-            `;
-          contplay.appendChild(video);
-          var player = videojs('my-video');
-          player.play(); // Play the video
-          player.pause(); // Pause the video
 
-          console.log(urepisodio); */
-          //IFRAME YOUTUBE
-                    const videoData = {
-                      "link": mediaYout
-                    };
-          
-                    const iframe = document.createElement('iframe');
-                    iframe.src = `https://www.youtube.com/embed/${getVideoIdFromLink(videoData.link)}`;
-                    iframe.setAttribute("allowFullScreen", "true")
-                    iframe.setAttribute("allowScriptAccess", "false")
-                    iframe.setAttribute("autoplay", "true")
-                    iframe.setAttribute("muted", "true")
+              contplay.innerHTML = "";
+              contplay.innerHTML = `
+              <div class="preloader">
+				          <div class="loader"></div>
+			        </div>
+              `;
+              contplay.appendChild(video);
+              var preloader = document.querySelector(".preloader");
+              preloader.classList.add("fade-out");
+              setTimeout(function () {
+                preloader.style.display = "none";
+              }, 500);
 
-                    var bt=document.createElement('button')
-                    bt.setAttribute("id","reloadindice")
-                    bt.textContent="episodios"
-                    contplay.innerHTML = "";
-                    contplay.appendChild(iframe);
-                    contplay.appendChild(bt);
-                    
-                    iframe.addEventListener('scroll', function (event) {
-                      // Your event handler code here
-                    }, { passive: true });
-          
-                    function getVideoIdFromLink(link) {
-                      var regex = /^https?:\/\/(?:www\.)?youtu(?:be\.com\/(?:watch\?v=|embed\/)|\.be)\/([^&\s]+)/;
-                      var match = link.match(regex);
-                      return match && match[1];
+              //SE ALMACENAN LOS EPISODIOS DEL CANAL
+              console.log(Id_episodios);
+              Id_episodios.forEach(epiVda => {
+                const url = epiVda.getAttribute('vda'); //SE ALMACENA EL ATRIBUTO DE LA URL DE LOS EPISODIOS DEL MENU
+                /* var urlVda = eliminarDominioUrl(url); // SE ELIMINA EL DOMINIO DE LA URL DEL EPISODIO Y SOLO SE GUARDA EL ID_VIDEO */
+
+                vdaArray.push(url); //SE ALMACENA LOS ID_VIDEO EN EL ARRAY "vdaArray"
+              });
+              //CIERRE DE ALMACENAR LOS EPISODIOS DEL CANL
+
+              const player = videojs('my-video', {
+                controls: true,
+                autoplay: 'any',
+                keyboard: true,
+                sources: [{
+                  src: mediaYout,
+                  type: 'application/x-mpegURL'
+                }]
+
+              });
+              /* console.log(vdaArray); */
+
+
+              var currentEpisodeIndex = 0;
+              // Iniciar en pantalla completa
+              player.on('ready', function () {
+                video.requestFullscreen();
+
+
+              });
+              // Evento que se dispara cuando el video termina
+              player.on('ended', function () {
+                currentEpisodeIndex++;
+                if (currentEpisodeIndex < vdaArray.length) {
+                  player.src({
+                    type: 'application/x-mpegURL',
+                    src: vdaArray[currentEpisodeIndex]
+                  });
+                  player.play();
+                } else {
+                  console.log('No hay más episodios para reproducir.');
+                  /* player.dispose(); */
+                }
+              });
+
+              window.addEventListener("keydown", function (inEvent) { //EVENTOS DE BOTONES DEL CONTROL EN LA VISTA DEL REPRODCUTOR
+                switch (keycode) {
+                  case 461: //BOTON BACK DESDE VISTA DE PLAYER
+                    console.log("BOTON BACK videojs");
+                    player.dispose();
+                    reloadepisodios();
+                    const overlayContainer = document.getElementById('overlay-container');
+                    overlayContainer.style.display = 'none';
+                    break;
+                  case 13:
+                    if (player.paused()) {
+                      player.play();
+                    } else {
+                      player.pause();
                     }
-                    var btonepiso=document.getElementById("reloadindice")
-                        btonepiso.addEventListener('keyup', (e) => {
-                          if (e.keyCode === 13)
-                          reloadepisodios();
-                        });
-                         
+                    break;
+                  case 37: //Left
+                    console.log("Rebobinar video");
+                    var playertimel = player.currentTime();
+                    player.currentTime(playertimel - 10);
+                    break;
 
-        }//CIERRE DE PLAYER 
+                  case 39: //Right
+                    console.log("Adelantar video");
+                    var playertimer = player.currentTime();
+                    player.currentTime(playertimer + 10);
+                    break;
 
-        
+                    // BOTONES DE MEDIOS DE REPRODUCCION
+                  case 415: //BOTON PLAY
+                    player.play();
+                    console.log("PLAY");
+                    break;
+
+                  case 19: //PAUSA
+                    player.pause();
+                    console.log("PAUSE");
+                    break;
+
+                  case 412: //REBOBINAR
+                    console.log("Rebobinar video");
+                    var playertimel = player.currentTime();
+                    player.currentTime(playertimel - 10);
+                    break;
+
+                  case 417: //ADELANTAR
+                    console.log("Adelantar video");
+                    var playertimer = player.currentTime();
+                    player.currentTime(playertimer + 10);
+                    break;
+                }
+              });
+
+            } //CIERRE DE  Verificar si el elemento de video ya existe en el body
+
+          } else { //REPRODUCTOR YOUTUBE
 
 
-        //AGREGAR AL BOTON  EL EVENTO ENTER
-        var botreload = document.getElementById("reload")
-        botreload.setAttribute("tabindex", "0")
-        botreload.addEventListener('keyup', (e) => {
-          if (e.keyCode === 13)
-          reloadContent();
-        });
+            const vidyou = document.createElement('div');
+
+            vidyou.innerHTML = `
+                  <iframe 
+                  id="video-iframe" 
+                  src=""
+                  frameborder="0"
+                  allowFullScreen>
+                  allow="seekto">
+                  </iframe>
+                  `
+            contplay.innerHTML = " ";
+            contplay.innerHTML = `
+                    <div class="preloader">
+                        <div class="loader"></div>
+                    </div>
+                    `;
+            contplay.appendChild(vidyou);
+
+            var iframe = document.getElementById('video-iframe');
+            iframe.src = url_of //url del episodio
+
+            const buttons = document.getElementById('buttons');
+            onYouTubeIframeAPIReady(url_of) //SE MANDA A LLAMAR LA FUNCION QUE INICIALIZA EL PLAYER IFRAME
+
+            //CODIGO PARA DESAPARECER EL PRELOADER CUANDO CARGUE COMPLETAMENTE EL DOM
+            var preloader = document.querySelector(".preloader");
+            preloader.classList.add("fade-out");
+            setTimeout(function () {
+              preloader.style.display = "none";
+            }, 500);
+            //FIN DE CODIGO PARA DESAPARECER EL PRELOADER CUANDO CARGUE COMPLETAMENTE EL DOM
+            //
+            // Variables para controlar el estado
+
+            //EVENTO DE BOTON BACK EN VENTANA DE PLAYER
+            window.addEventListener("keydown", function (inEvent) {
+              if (window.event) {
+                keycode = inEvent.keyCode;
+              } else if (e.which) {
+                keycode = inEvent.which;
+              }
+              let buttonPressed = 0;
+              switch (keycode) {
+                case 461: //BOTON BACK DESDE VISTA DE PLAYER
+                  console.log("BOTON BACK");
+                  reloadContent();
+                  /* enFuncionPrincipal = false; */
+                  const overlayContainer = document.getElementById('overlay-container');
+                  overlayContainer.style.display = 'none';
+
+
+                  break;
+
+                case 13: //BOTON OK
+                  console.log("HOLA 13");
+                  playpauseVi()
+                  break;
+
+                case 37: //Left
+                  console.log("Rebobinar video");
+                  player.seekTo(player.getCurrentTime() - 10);
+                  break;
+
+                case 39: //Right
+                  console.log("Adelantar video");
+                  player.seekTo(player.getCurrentTime() + 10);
+                  break;
+
+                  // BOTONES DE MEDIOS DE REPRODUCCION
+                case 415: //BOTON PLAY
+                  player.playVideo();
+                  console.log("PLAY");
+                  break;
+
+                case 19: //PAUSA
+                  player.pauseVideo();
+                  console.log("PAUSE");
+                  break;
+
+                case 412: //REBOBINAR
+                  console.log("Rebobinar video");
+                  player.seekTo(player.getCurrentTime() - 10);
+                  break;
+
+                case 417: //ADELANTAR
+                  console.log("Adelantar video");
+                  player.seekTo(player.getCurrentTime() + 10);
+                  break;
+              }
+            });
+          }
+          //
+          // Get the YouTube iframe element
+
+          //FUNCION PARA INICIALIAR IFRAME 
+
+          var currentIndex = 0;
+          let idvideo2 = eliminarDominioUrl(mediaYout);
+          let posicion = vdaArray.indexOf(idvideo2);
+
+          function onYouTubeIframeAPIReady(videoId, url_of) {
+            player = new YT.Player('video-iframe', {
+              videoId: vdaArray[currentIndex],
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
+          }
+
+
+          function onPlayerReady(event) { //activar video PLAY VIDEO
+            player.playVideo();
+
+          }
+
+          function SaveDataToLocalStorage(data) {
+            var a = [];
+            // Parse the serialized data back into an aray of objects
+            a = JSON.parse(localStorage.getItem('session')) || [];
+            // Push the new data (whether it be an object or anything else) onto the array
+            a.push(data);
+            localStorage.setItem('session', JSON.stringify(a));
+          }
+
+          function onPlayerStateChange(event) {
+
+            /* if (event.data === 2) { // playing */
+            if (event.data === YT.PlayerState.PAUSED) {
+              // Crear un objeto JSON para almacenar el estado de cada iframe
+              lastPosition = player.getCurrentTime(); //se obtenie el valor del player
+
+              //
+
+              let idvideo = eliminarDominioUrl(mediaYout);
+              const storedState2 = localStorage.getItem('session'); //se obtenie el array almacenado en localstorage
+              if (storedState2 !== null) {
+
+                const state2 = JSON.parse(storedState2);
+                const selectedObject2 = state2.filter(valor => valor.videoId === idvideo); //SE FILTRA EL JSON Y BUSCA EL ID ESPECIFICO ENTRE TODOS LOS OBJETOS DEL ARRAY
+                console.log("update");
+
+                if (selectedObject2.length > 0) {
+
+                  console.log(`El objeto con ID:${idvideo} existe`);
+
+                } else {
+                  console.log(`No se encontro un objeto con ID ${idvideo}`);
+                  SaveDataToLocalStorage({
+                    "videoId": idvideo,
+                    "currentTime": lastPosition
+                  });
+                }
+
+                /* console.log(selectedObject2); */
+              } else {
+                SaveDataToLocalStorage({
+                  "videoId": url_especial,
+                  "currentTime": lastPosition
+                });
+                console.log("save local");
+              }
+              //
+            }
+
+
+            // Función para cargar el reproductor de video
+            if (event.data === 0) { //AL FINALIZAR REPRODUCE EL PRROXIMO EPISODIO AUTOMATICAMENTE
+              console.log(vdaArray);
+
+              // Reproducir el próximo video_id del iframe
+              currentIndex++;
+              posicion++;
+
+              if (currentIndex < vdaArray.length) {
+
+                console.log(posicion);
+                player.loadVideoById(vdaArray[posicion]);
+              } else {
+
+                reloadepisodios()
+              }
+
+            }
+
+          }
 
 
 
-      })//cierre de epiCanal
-    })//cierre de episodio
 
+          function playpauseVi() { //FUNCION PARA PAUSAR Y DAR PLAY 
+            if (player.getPlayerState() === 1) {
+              player.pauseVideo(); //PAUSAR VIDEO
+            } else {
+              player.playVideo(); //REPRRODUCIR VIDEO
+            }
+          }
+
+          function playpauseVideojs() { //FUNCION PARA PAUSAR Y DAR PLAY 
+            if (player.getPlayerState() === 1) {
+              player.pause(); //PAUSAR VIDEO
+            } else {
+              player.play(); //REPRRODUCIR VIDEO
+            }
+          }
+
+
+        } //CIERRE DE PLAYER 
+
+        //PLAYER CONTINUAR
+        function playerMediacontinuacion(mediafile, mediaYout, episelect) {
+          let contplay = document.querySelector("body")
+          // COMPROBAR LA URL
+          if (startURL(mediaYout)) { //REPRODUCTOR M3U8
+
+            // Verificar si el elemento de video ya existe en el body
+            const existingVideo = document.getElementById('my-video');
+
+            if (!existingVideo) {
+              console.log("La URL comienza con 'https://d'");
+              console.log(mediaYout);
+
+              // Crear un elemento de video
+              const video = document.createElement('video');
+              video.id = 'my-video';
+              video.classList.add('video-js');
+
+
+
+              contplay.innerHTML = "";
+              contplay.innerHTML = `
+              <div class="preloader">
+				          <div class="loader"></div>
+			        </div>
+              `;
+              contplay.appendChild(video);
+              var preloader = document.querySelector(".preloader");
+              preloader.classList.add("fade-out");
+              setTimeout(function () {
+                preloader.style.display = "none";
+              }, 500);
+
+              const player = videojs('my-video', {
+                controls: true,
+                autoplay: 'any',
+                keyboard: true,
+                sources: [{
+                  src: mediaYout,
+                  type: 'application/x-mpegURL'
+                }]
+
+              });
+              // Iniciar en pantalla completa
+              player.on('ready', function () {
+                video.requestFullscreen();
+              });
+              //BOTON BACK EN PLAYER M3U8
+              window.addEventListener("keydown", function (inEvent) {
+                switch (keycode) {
+                  case 461: //BOTON BACK DESDE VISTA DE PLAYER
+                    console.log("BOTON BACK videojs");
+                    /* var removevideojs=this.document.getElementById("my-video").remove(this) */
+                    player.dispose();
+                    /* const overlayContainer = document.getElementById('overlay-container');
+                    overlayContainer.style.display = 'none'; */
+                    break;
+                }
+              });
+
+            } //CIERRE DE  Verificar si el elemento de video ya existe en el body
+
+          } else { //REPRODUCTOR YOUTUBE
+
+            //IFRAME YOUTUBE
+            let url_especial = eliminarDominioUrl(mediaYout);
+            let url_especial_of = url_especial + "?enablejsapi=1&rel=0&modestbranding=1&showinfo=0"
+            let url_of = "https://www.youtube.com/embed/" + url_especial_of;
+
+            const vidyou = document.createElement('div');
+
+
+            vidyou.innerHTML = `
+                  <iframe 
+                  id="video-iframe" 
+                  src=""
+                  frameborder="0"
+                  allowFullScreen>
+                  allow="seekto">
+                  </iframe>
+                  `
+            contplay.innerHTML = " ";
+            contplay.innerHTML = `
+                    <div class="preloader">
+                        <div class="loader"></div>
+                    </div>
+                    `;
+            contplay.appendChild(vidyou);
+            var iframe = document.getElementById('video-iframe');
+            iframe.src = url_of //url del episodio
+
+            onYouTubeIframeAPIReady(url_especial) //SE MANDA A LLAMAR LA FUNCION QUE INICIALIZA EL PLAYER IFRAME
+
+            //CODIGO PARA DESAPARECER EL PRELOADER CUANDO CARGUE COMPLETAMENTE EL DOM
+            var preloader = document.querySelector(".preloader");
+            preloader.classList.add("fade-out");
+            setTimeout(function () {
+              preloader.style.display = "none";
+            }, 500);
+            //FIN DE CODIGO PARA DESAPARECER EL PRELOADER CUANDO CARGUE COMPLETAMENTE EL DOM
+
+            //EVENTO DE BOTON BACK EN VENTANA DE PLAYER
+            window.addEventListener("keydown", function (inEvent) {
+              if (window.event) {
+                keycode = inEvent.keyCode;
+              } else if (e.which) {
+                keycode = inEvent.which;
+              }
+              let buttonPressed = 0;
+              switch (keycode) {
+                case 461: //BOTON BACK DESDE VISTA DE PLAYER
+                  console.log("BOTON BACK");
+                  reloadepisodios();
+                  const overlayContainer = document.getElementById('overlay-container');
+                  overlayContainer.style.display = 'none';
+                  break;
+
+                case 13: //BOTON OK
+                  console.log("HOLA 13");
+                  playpauseVi()
+                  break;
+
+                case 37: //Left
+                  console.log("Rebobinar video");
+                  player.seekTo(player.getCurrentTime() - 10);
+                  break;
+
+                case 39: //Right
+                  console.log("Adelantar video");
+                  player.seekTo(player.getCurrentTime() + 10);
+                  break;
+
+                  // BOTONES DE MEDIOS DE REPRODUCCION
+                case 415: //BOTON PLAY
+                  player.playVideo();
+                  console.log("PLAY");
+                  break;
+
+                case 19: //PAUSA
+                  player.pauseVideo();
+                  console.log("PAUSE");
+                  break;
+
+                case 412: //REBOBINAR
+                  console.log("Rebobinar video");
+                  player.seekTo(player.getCurrentTime() - 10);
+                  break;
+
+                case 417: //ADELANTAR
+                  console.log("Adelantar video");
+                  player.seekTo(player.getCurrentTime() + 10);
+                  break;
+              }
+            });
+
+          }
+          //
+          // Get the YouTube iframe element
+
+          //FUNCION PARA INICIALIAR IFRAME 
+          var lastPosition = 0;
+
+          function onYouTubeIframeAPIReady(url_especial, url_of) {
+            player = new YT.Player('video-iframe', {
+              videoId: url_of,
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
+          }
+
+
+          function onPlayerReady(event) { //activar video PLAY VIDEO
+            let idvideo = eliminarDominioUrl(mediaYout);
+            const storedState = localStorage.getItem('session'); //se obtenie el array almacenado en localstorage
+            const state = JSON.parse(storedState);
+            const selectedObject = state.filter(obj => obj.videoId === idvideo); //SE FILTRA EL JSON Y BUSCA EL ID ESPECIFICO ENTRE TODOS LOS OBJETOS DEL ARRAY
+            console.log(selectedObject);
+
+            if (selectedObject.length > 0) {
+              console.log(`El ojeto seleccionado su ID es: ${idvideo} - tiempo almacenado: ${selectedObject[0].currentTime}`);
+
+              const time_save = selectedObject[0].currentTime // VARIABLE QUE SE LE ASIGNA EL VALOR DEL TIEMPO GUARDADO DEL EPISODIO 
+
+              player.seekTo(time_save); //SE ACTIVA EL PLAYER DEL IFRAME HACIENDO USO DEL TIEMPO QUE SE TIENE ALMACENADO EN LOCALSTORAGE
+            } else {
+              console.log(`No se encontró un objeto con ID ${idvideo}`);
+            }
+
+
+
+          }
+
+          function SaveDataToLocalStorage(data) {
+            var a = [];
+            // Parse the serialized data back into an aray of objects
+            a = JSON.parse(localStorage.getItem('session')) || [];
+            // Push the new data (whether it be an object or anything else) onto the array
+            a.push(data);
+            localStorage.setItem('session', JSON.stringify(a));
+          }
+
+          function onPlayerStateChange(event) {
+            if (event.data === 2) { // paused
+              let url_especial = eliminarDominioUrl(mediaYout);
+              lastPosition = player.getCurrentTime();
+              SaveDataToLocalStorage({
+                "videoId": url_especial,
+                "currentTime": lastPosition
+              });
+
+            }
+          }
+          //fin funcion continuar video
+
+
+
+
+          function playpauseVi() { //FUNCION PARA PAUSAR Y DAR PLAY 
+            if (player.getPlayerState() === 1) {
+              player.pauseVideo(); //PAUSAR VIDEO
+            } else {
+              player.playVideo(); //REPRRODUCIR VIDEO
+            }
+          }
+
+
+
+        }
+        //FIN PLAYER CONTINUAR
+      }) //cierre de epiCanal
+
+      var Id_episodios = document.querySelectorAll(".video-container li") //SE ALMACENA LOS TITULOS DEL MENU DE EPISODIOS EN LA VARIABLE
+
+      Id_episodios.forEach(epiVda => {
+        const url = epiVda.getAttribute('vda'); //SE ALMACENA EL ATRIBUTO DE LA URL DE LOS EPISODIOS DEL MENU
+        var urlVda = eliminarDominioUrl(url); // SE ELIMINA EL DOMINIO DE LA URL DEL EPISODIO Y SOLO SE GUARDA EL ID_VIDEO
+
+        vdaArray.push(urlVda); //SE ALMACENA LOS ID_VIDEO EN EL ARRAY "vdaArray"
+      });
+
+    }) //cierre de episodio
+  function mostrarBotones(playerMedia) {
+    const overlayContainer = document.getElementById('overlay-container');
+    overlayContainer.style.display = 'block';
+
+    var contin = document.getElementById("boton-1") /* .style.display = "block" */ ;
+    var repro = document.getElementById("boton-2") /* .style.display = "block" */ ;
+
+
+  }
   //FUNCION PARA REGRESAR CON EL BOTON AL MENU DE EPISODIOS
-  var menuepisodios = document.querySelector(".contenedor-episodios")//VARIABLE QUE ALMACENA EL MENU DE EPISODIOS
-    function reloadepisodios(){
-      titulos2.innerHTML=""
-      titulos2.appendChild(menuepisodios)
-    }
-    
-}//cierre de funcion obtenerEpisodios
+  var menuepisodios = document.querySelector(".contenedor-episodios") //VARIABLE QUE ALMACENA EL MENU DE EPISODIOS
+
+  function reloadepisodios() {
+
+    const lim = document.querySelector("div").remove(this)
+    body.appendChild(menuepisodios);
+
+  }
+
+} //cierre de funcion obtenerEpisodios
 
 
-
-function reloadContent() {//FUNCION PARA REGRESAR AL HOME
-  let clean = document.querySelector("div").remove(this)
-  titulos2.append(contenidoplus)
+//FUNCION PARA REGRESAR AL HOME
+function reloadContent() {
+  body.innerHTML = ""
+  body.append(contenidoplus)
 }
+//
 
+
+
+//FUNCION PARA INICIALIZAR SWIPER DE CARRUSELES
 function sliderPrograms(slider) {
-  const swiper_pgm = new Swiper("."+slider, {
+  const swiper_pgm = new Swiper("." + slider, {
     // var swiperdigi = new Swiper(".Digital", {
-      slidesPerView: 3.7,
-      spaceBetween: 29,
-      slidesPerGroup: 1,
-      loop: false,
-      loopFillGroupWithBlank: true,
-      keyboard: {
-        enabled: true
-      },
-      navigation: {
-        nextEl: '.'+slider+' .swiper-button-next',
-        prevEl: '.'+slider+' .swiper-button-prev ',
-         },
+    slidesPerView: 3.7,
+    spaceBetween: 15,
+    slidesPerGroup: 3,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
 
-    });
+    },
+    navigation: {
+      nextEl: '.' + slider + ' .swiper-button-next',
+      prevEl: '.' + slider + ' .swiper-button-prev ',
+    },
+
+    /*    pagination: {
+         el: '.' + slider + '.swiper-pagination',
+       }, */
+
+  });
 }
+//
+
 /**
-  * @description Función que parsea una cadena eliminando acentos
-  * @param cadena Contiene la cadena con caracteres acentos
-  * @return {res} Retorna la cadena parseada
-*/
+ * @description Función que parsea una cadena eliminando acentos
+ * @param cadena Contiene la cadena con caracteres acentos
+ * @return {res} Retorna la cadena parseada
+ */
 function eliminarAcentos(cadena) {
-	var chars={
-		"á":"a", "é":"e", "í":"i", "ó":"o", "ú":"u",
-		"à":"a", "è":"e", "ì":"i", "ò":"o", "ù":"u", "ñ":"n",
-		"Á":"A", "É":"E", "Í":"I", "Ó":"O", "Ú":"U",
-		"À":"A", "È":"E", "Ì":"I", "Ò":"O", "Ù":"U", "Ñ":"N"};
-	var expr=/[áàéèíìóòúùñ]/ig;
-	var res=cadena.replace(expr,function(e){return chars[e]});
-	return res;
+  var chars = {
+    "á": "a",
+    "é": "e",
+    "í": "i",
+    "ó": "o",
+    "ú": "u",
+    "à": "a",
+    "è": "e",
+    "ì": "i",
+    "ò": "o",
+    "ù": "u",
+    "ñ": "n",
+    "Á": "A",
+    "É": "E",
+    "Í": "I",
+    "Ó": "O",
+    "Ú": "U",
+    "À": "A",
+    "È": "E",
+    "Ì": "I",
+    "Ò": "O",
+    "Ù": "U",
+    "Ñ": "N"
+  };
+  var expr = /[áàéèíìóòúùñ]/ig;
+  var res = cadena.replace(expr, function (e) {
+    return chars[e]
+  });
+  return res;
 }
 /**
-  * @description Función que parsea una cadena a minusculas, elimina caracteres especiales, espacios, acentos
-  * @param cadena Contiene la cadena con caracteres especiales, mayusculas, espacios, acentos
-  * @return {textParser} Retorna la cadena parseada
-*/
-function eliminarCaracteres(cadena){
-	var outString = cadena.replace(/[`~!¡@#$%^&*()_|+\=¿?;:'",.<>\{\}\[\]\\\/]/gi, '');
-	return outString;
+ * @description Función que parsea una cadena a minusculas, elimina caracteres especiales, espacios, acentos
+ * @param cadena Contiene la cadena con caracteres especiales, mayusculas, espacios, acentos
+ * @return {textParser} Retorna la cadena parseada
+ */
+/* function eliminarCaracteres(cadena){
+  var outString = cadena.replace(/[`~!¡@#$%^&*()_|+\=¿?;:'",.<>\{\}\[\]\\\/]/gi, '');
+  return outString;
+} */
+
+//FUNCION PARA eliminar el dominio de youtube del url del episodio
+function eliminarDominioUrl(url) {
+  const urlRelativa = url.replace(/^https?:\/\/youtu\.be\//, '');
+  return urlRelativa;
+}
+//FUNCION PARA VERIFICAR QUE TIPO DE URL ES
+function startURL(url) {
+  return url.startsWith("https://d");
+
 }
 
+function startURLwatch(url) {
+  return url.startsWith("https://youtu.be/watch?v=");
 
-    
+}
 
+function eliminarDominioUrlwathc(url) {
+  /* const urlwatch = url.replace(/^https?:\/\/youtu\.be\/watch/, ''); */
+  const urlwatch = url.replace("https://youtu.be/watch?v=", '');
+  return urlwatch;
 
-
-
-
-
-
-
-
-
-
-
-
-
+}

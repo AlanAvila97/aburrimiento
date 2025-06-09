@@ -1,0 +1,788 @@
+<html lang="en"><head>
+
+    <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+  <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  
+  
+    <title>CodePen - Jeopardy, ECE17, SP22</title>
+    
+    
+    
+    
+  <style>
+  body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+  }
+  
+  .rows {
+    position: fixed;
+    z-index: 10;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-auto-columns: 1fr;
+    grid-templates-rows: repeat(5, 1fr);
+  }
+  .rows > .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .rows > .row > div {
+    display: grid;
+    background-image: linear-gradient(to right top, #ffffff, #d9cce6, #c097c5, #ae5f9a, #9b1667);
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #444;
+    font-size: calc(9px + (100vw * 0.02));
+    font-family: sans-serif;
+    color: HSLA(54, 95%, 68%, 1);
+    user-select: none;
+    text-shadow: 1px 1px 2px #222;
+  }
+  .rows > .row > div.done {
+    color: transparent;
+    text-shadow: none;
+  }
+  .rows > .row > div.cell:hover {
+    background-image: linear-gradient(to right top, #ffffff, #d9cce6, #c097c5, #ae5f9a, #9b1667);
+  }
+  .rows > .row > div.title {
+    color: black;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background: white;
+  }
+  
+  .topic {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-image: linear-gradient(to right top, #ffffff, #d9cce6, #c097c5, #ae5f9a, #9b1667);
+    justify-content: center;
+    align-content: center;
+    font-size: 3rem;
+    color: white;
+    font-family: sans-serif;
+  }
+  .topic.show {
+    width: 100vw;
+    height: 100vh;
+    text-shadow: 1px 1px 2px #222;
+    z-index: 20;
+  }
+  .topic.show > div {
+    display: none;
+  }
+  .topic.show.code {
+    background: #222;
+  }
+  .topic.show.answer {
+    background: #BEBEBE;
+  }
+  .topic.show.answer .answer {
+    padding: 5rem;
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+  .topic.show.question {
+    background: #BEBEBE;
+  }
+  .topic.show.question .question {
+    padding: 4rem 8rem;
+    line-height: 1.5;
+    width: auto;
+    height: auto;
+    display: flex;
+  }
+  
+  code {
+    color: #fafafa;
+    font-family: Consolas;
+  }
+  code em {
+    color: #9B1667;
+  }
+  </style>
+  
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+    <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+  
+  
+  </head>
+  
+  <body translate="no">
+    <div class="rows">
+    <div class="row title">
+      <div class="title">
+        Matematicas
+      </div>
+      <div class="title">
+        Biologia
+      </div>
+      <div class="title">
+        Fisica
+      </div>
+      <div class="title">
+        Quimica
+      </div>
+      <div class="title">
+        STL
+      </div>
+    </div>
+  
+    <div class="row title" data-value="100">
+      <div class="cell" data-col="0" style="background: url(imagenes2/fila-1-columna-1.jpg);background-position: center top;background-size: 100% auto;">
+        1
+      </div>
+      <div class="cell" data-col="1" style="background: url(imagenes2/fila-1-columna-2.jpg);background-position: center top;background-size: 100% auto;">
+        1
+      </div>
+      <div class="cell" data-col="2" style="background: url(imagenes2/fila-1-columna-3.jpg);background-position: center top;background-size: 100% auto;">
+        1
+      </div>
+      <div class="cell" data-col="3" style="background: url(imagenes2/fila-1-columna-4.jpg);background-position: center top;background-size: 100% auto;">
+        1
+      </div>
+      <div class="cell" data-col="4" style="background: url(imagenes2/fila-1-columna-5.jpg);background-position: center top;background-size: 100% auto;">
+        1
+      </div>
+    </div>
+  
+    <div class="row" data-value="200">
+      <div class="cell" data-col="0" style="background: url(imagenes2/fila-2-columna-1.jpg);background-position: center top;background-size: 100% auto;">
+        2
+      </div>
+      <div class="cell" data-col="1" style="background: url(imagenes2/fila-2-columna-2.jpg);background-position: center top;background-size: 100% auto;">
+        2
+      </div>
+      <div class="cell" data-col="2" style="background: url(imagenes2/fila-2-columna-3.jpg);background-position: center top;background-size: 100% auto;">
+        2
+      </div>
+      <div class="cell" data-col="3" style="background: url(imagenes2/fila-2-columna-4.jpg);background-position: center top;background-size: 100% auto;">
+        2
+      </div>
+      <div class="cell" data-col="4" style="background: url(imagenes2/fila-2-columna-5.jpg);background-position: center top;background-size: 100% auto;">
+        2
+      </div>
+    </div>
+  
+    <div class="row" data-value="300">
+      <div class="cell" data-col="0" style="background: url(imagenes2/fila-3-columna-1.jpg);background-position: center top;background-size: 100% auto;">
+        3
+      </div>
+      <div class="cell" data-col="1" style="background: url(imagenes2/fila-3-columna-2.jpg);background-position: center top;background-size: 100% auto;">
+        3
+      </div>
+      <div class="cell" data-col="2" style="background: url(imagenes2/fila-3-columna-3.jpg);background-position: center top;background-size: 100% auto;">
+        3
+      </div>
+      <div class="cell" data-col="3" style="background: url(imagenes2/fila-3-columna-4.jpg);background-position: center top;background-size: 100% auto;">
+        3
+      </div>
+      <div class="cell" data-col="4" style="background: url(imagenes2/fila-3-columna-5.jpg);background-position: center top;background-size: 100% auto;">
+        3
+      </div>
+    </div>
+  
+    <div class="row" data-value="400">
+      <div class="cell" data-col="0" style="background: url(imagenes2/fila-4-columna-1.jpg);background-position: center top;background-size: 100% auto;">
+        4
+      </div>
+      <div class="cell" data-col="1" style="background: url(imagenes2/fila-4-columna-2.jpg);background-position: center top;background-size: 100% auto;">
+        4
+      </div>
+      <div class="cell" data-col="2" style="background: url(imagenes2/fila-4-columna-3.jpg);background-position: center top;background-size: 100% auto;">
+        4
+      </div>
+      <div class="cell" data-col="3" style="background: url(imagenes2/fila-4-columna-4.jpg);background-position: center top;background-size: 100% auto;">
+        4
+      </div>
+      <div class="cell" data-col="4" style="background: url(imagenes2/fila-4-columna-5.jpg);background-position: center top;background-size: 100% auto;">
+        4
+      </div>
+    </div>
+  
+    <div class="row" data-value="500">
+      <div class="cell" data-col="0" style="background: url(imagenes2/fila-5-columna-1.jpg);background-position: center top;background-size: 100% auto;">
+        5
+      </div>
+      <div class="cell" data-col="1" style="background: url(imagenes2/fila-5-columna-2.jpg);background-position: center top;background-size: 100% auto;">
+        5
+      </div>
+      <div class="cell" data-col="2" style="background: url(imagenes2/fila-5-columna-3.jpg);background-position: center top;background-size: 100% auto;">
+        5
+      </div>
+      <div class="cell" data-col="3" style="background: url(imagenes2/fila-5-columna-4.jpg);background-position: center top;background-size: 100% auto;">
+        5
+      </div>
+      <div class="cell" data-col="4" style="background: url(imagenes2/fila-5-columna-5.jpg);background-position: center top;background-size: 100% auto;">
+        5
+      </div>
+    </div>
+  
+    <div class="row" data-value="600">
+      <div class="cell" data-col="0" style="background: url(imagenes2/fila-6-columna-1.jpg);background-position: center top;background-size: 100% auto;">
+        6
+      </div>
+      <div class="cell" data-col="1" style="background: url(imagenes2/fila-6-columna-2.jpg);background-position: center top;background-size: 100% auto;">
+        6
+      </div>
+      <div class="cell" data-col="2" style="background: url(imagenes2/fila-6-columna-3.jpg);background-position: center top;background-size: 100% auto;">
+        6
+      </div>
+      <div class="cell" data-col="3" style="background: url(imagenes2/fila-6-columna-4.jpg);background-position: center top;background-size: 100% auto;">
+        6
+      </div>
+      <div class="cell" data-col="4" style="background: url(imagenes2/fila-6-columna-5.jpg);background-position: center top;background-size: 100% auto;">
+        6
+      </div>
+    </div>
+  </div>
+  
+  <!-- Lenguaje -->
+  <div class="topic code" data-topic="Matematicas" data-value="100">
+    <div class="answer" id="a1">
+      <code>
+        <img src="https://economipedia.com/wp-content/uploads/formula-general.png" alt="Logotipo de la Universidad Carlos III de Madrid">
+        <pre>  class Foo {
+     operator float() {return 3.14}
+   };
+    </pre>
+      </code>
+    </div>
+    <div class="question" id="r1">
+      What is a conversion operator?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Matematicas" data-value="200">
+    <div class="answer" id="a2">
+      <code>
+        <pre>for(auto temp : collection) {
+    std::cout &lt;&lt; temp &lt;&lt; "\n";
+  }
+        </pre>
+      </code>
+    </div>
+    <div class="question" id="r2">
+      What is the for:range iteration statement?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Matematicas" data-value="300">
+    <div class="answer" id="a3">
+      <code>
+        <pre>enum class Color {red, blue, green, alpha};
+    </pre>
+      </code>
+    </div>
+    <div class="question" id="r3">
+      What is an a class enum?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Matematicas" data-value="400">
+    <div class="answer" id="a4">
+      <code>
+        <pre>  class Foo {
+       Foo(const Bar &amp;aBar);
+   };
+    </pre>
+      </code>
+    </div>
+    <div class="question" id="r4">
+      What is a conversion constructor?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Matematicas" data-value="500">
+    <div class="answer" id="a5">
+      <code>
+        <pre>      x = y ? : z;
+        </pre>
+      </code>
+    </div>
+    <div class="question" id="r5">
+      What is the ternary operator? <br>(Shorthand for IF-THEN-ELSE)
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Matematicas" data-value="600">
+    <div class="answer" id="a6">
+      <code>
+        <pre>int theInt = static_cast<int>(theFace);
+  Hand&amp; theHand = const_cast<hand>(*this);
+  Bar* theBar = dynamic_cast<bar*>(theFoo);
+      </bar*></hand></int></pre>
+      </code>
+    </div>
+    <div class="question" id="r6">
+      What are C++ cast operators?
+    </div>
+  </div>
+  
+  <!-- Templates -->
+  <div class="topic code" data-topic="Biologia" data-value="100">
+    <div class="answer" id="a7">
+      <code>
+        <pre>template &lt;typename T&gt;
+  void swap(T&amp; anArg1, T&amp; anArg2) {
+    T temp=anArg1;
+    anArg1=anArg2;
+    anArg2=temp;
+  }
+  </pre>
+      </code>
+    </div>
+    <div class="question" id="r7">
+      What is a template function?<br>Compile-time polymorphism.
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Biologia" data-value="200">
+    <div class="answer" id="a8">
+      <code>
+        <pre>template &lt;typename T&gt;
+  class Foo {
+  };
+  </pre>
+      </code>
+    </div>
+    <div class="question" id="r8">
+      What is a template class?<br>Compile-time polymorphism.
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Biologia" data-value="300">
+    <div class="answer" id="a9">
+      This occurs after template is used in code.
+    </div>
+    <div class="question" id="r9">
+      When does compiler generate code from a template?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Biologia" data-value="400">
+    <div class="answer" id="a10">
+      <code>
+        <pre>class Foo {
+  public:
+    template &lt;typename T&gt;
+    void doSomething(const T&amp; anArg) {}
+  };
+  </pre>
+      </code>
+    </div>
+    <div class="question" id="r10">
+      What is a template method?<br>Compile-time polymorphism.
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Biologia" data-value="500">
+    <div class="answer" id="a11">
+      Template parameter(s)
+    </div>
+    <div class="question" id="r11">
+      Type argument(s) passed to a template that specify that target type(s) for the generated code.
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Biologia" data-value="600">
+    <div class="answer" id="a12">
+      <ol>
+        <li>Code bloat</li>
+        <li>Error message complexity </li>
+      </ol>
+    </div>
+    <div class="question" id="r12">
+      What are the most common complaints about using templates?
+    </div>
+  </div>
+  
+  <!-- OOP -->
+  <div class="topic code" data-topic="Fisica" data-value="100">
+    <div class="answer " id="a13">
+      <code>
+        <pre>class Foo {
+  public:
+    Foo(const Foo &amp;aFoo);
+  };
+        </pre>
+      </code>
+    </div>
+    <div class="question" id="r13">
+      What is a copy constructor?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Fisica" data-value="200">
+    <div class="answer " id="a14">
+      <code>
+        <pre>class Foo : public Bar, public Baz {
+  public:
+  };
+        </pre>
+      </code>
+    </div>
+    <div class="question" id="r14">
+      What is multiple inheritance?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Fisica" data-value="300">
+    <div class="answer" id="a15">
+      <ol>
+        <li> IS-A </li>
+        <li> HAS-A </li>
+        <li> CONTAINS-A </li>
+        <li> BECOMES-A </li>
+      </ol>
+    </div>
+    <div class="question" id="r15">
+      What are types of OOP relationships?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Fisica" data-value="400">
+    <div class="answer" id="a16">
+      <code>
+        <pre>foo();
+  foo(const foo &amp;aFoo);
+  ~foo();
+  foo&amp; operator=(const foo &amp;aFoo);      
+        </pre>
+      </code>
+    </div>
+    <div class="question" id="r16">
+      What is orthodox cannonical form?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Fisica" data-value="500">
+    <div class="answer" id="a17">
+      <ull>
+        <li> Encapsulation </li>
+        <li> Inheritance </li>
+        <li> Polymorphism </li>
+        <li> Message Passing </li>
+      </ull>
+    </div>
+    <div class="question" id="r17">
+      What are the fundamental principles of OOP?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Fisica" data-value="600">
+    <div class="answer" id="a18">
+      <code>
+        <pre>class MyClass  {
+    public:
+      virtual doSomething()=0;
+  };
+  </pre>
+      </code>
+    </div>
+    <div class="question" id="r18">
+      What is a pure virtual method?
+    </div>
+  </div>
+  
+  <!-- Idioms -->
+  <div class="topic" data-topic="Quimica" data-value="100">
+    <div class="answer" id="a19">
+      Modeling, collecting, aggregating, changing, storing, sharing
+    </div>
+    <div class="question" id="r19">
+      Things we can do with data?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Quimica" data-value="200">
+    <div class="answer" id="a20">
+      <ol>
+        <li> Capacity </li>
+        <li> Proximity </li>
+        <li> Lifespan </li>
+      </ol>
+    </div>
+    <div class="question" id="r20">
+      What is the abstract data storage model?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Quimica" data-value="300">
+    <div class="answer" id="a21">
+      <ol>
+        <li> Monads </li>
+        <li> Dyads (pointers) </li>
+        <li> Aliases (references) </li>
+      </ol>
+    </div>
+    <div class="question" id="r21">
+      What are the 3 kinds of variables?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Quimica" data-value="400">
+    <div class="answer" id="a22">
+      <ol>
+        <li> Stack </li>
+        <li> Heap </li>
+        <li> Data section </li>
+      </ol>
+    </div>
+    <div class="question" id="r22">
+      Where is non-persistent application data stored?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Quimica" data-value="500">
+    <div class="answer" id="a23">
+      <code>
+        <pre>class MyClass {
+  public:
+     void * operator new[] (size_t aSize) {
+        return 0;
+     }
+     void  operator delete[] (void* aPtr) {
+     }
+  };
+  
+  </pre>
+      </code>
+    </div>
+    <div class="question" id="r23">
+      What are the array new/delete operators in C++?
+    </div>
+  </div>
+  
+  <div class="topic code" data-topic="Quimica" data-value="600">
+    <div class="answer" id="a24">
+      <code>
+        <pre>      const int* thePtr;
+        int doSomething() const;
+        </pre>
+      </code>
+    </div>
+    <div class="question" id="r24">
+      What is a const pointer and a const method?
+    </div>
+  </div>
+  
+  <!-- STL -->
+  <div class="topic code" data-topic="STL" data-value="100">
+    <div class="answer" id="a25">
+      <ol>
+        <li> containers </li>
+        <li> iterators </li>
+        <li> algorithms </li>
+        <li> functors </li>
+      </ol>
+    </div>
+    <div class="question" id="r25">
+      What are the key components of the STL?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="STL" data-value="200">
+    <div class="answer" id="a26">
+      <ol>
+        <li> std::cout </li>
+        <li> std::cin </li>
+        <li> std::ifstream </li>
+        <li> std::ofstream </li>
+        <li> std::stringstream </li>
+      </ol>
+    </div>
+    <div class="question" id="r26">
+      What are different types of streams?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="STL" data-value="300">
+    <div class="answer" id="a27">
+      <ol>
+        <li> std::set </li>
+        <li> std::multiset </li>
+        <li> std::map </li>
+        <li> std::multimap </li>
+      </ol>
+    </div>
+    <div class="question" id="r27">
+      What are associative containers in STL?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="STL" data-value="400">
+    <div class="answer" id="a28">
+      <ol>
+        <li> std::vector </li>
+        <li> std::array </li>
+        <li> std::deque </li>
+        <li> std::list/forward_list </li>
+      </ol>
+    </div>
+    <div class="question" id="r28">
+      What are sequence containers in STL?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="STL" data-value="500">
+    <div class="answer" id="a29">
+      <ol>
+        <li> std::stack </li>
+        <li> std::queue </li>
+        <li> std::priority_queue </li>
+      </ol>
+    </div>
+    <div class="question" id="r29">
+      This are container adapters in STL?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="STL" data-value="600">
+    <div class="answer" id="a30">
+      Hash table or binary tree
+    </div>
+    <div class="question" id="r30">
+      What data structure is used internally by the std::map?
+    </div>
+  </div>
+  
+  <!-- Random -->
+  <div class="topic" data-topic="Random" data-value="100">
+    <div class="answer" id="a31">
+      A variable that occupies no space, and is an alias of another variable
+    </div>
+    <div class="question" id="r31">
+      What is a reference?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Random" data-value="200">
+    <div class="answer" id="a32">
+      <code>
+        <pre>class Foo {
+  <em>
+    Foo(const Bar&amp; aBar); 
+    Foo(float aFloat);
+  </em>
+  };
+  </pre>
+      </code>
+    </div>
+    <div class="question" id="r32">
+      What is a conversion constructor?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Random" data-value="300">
+    <div class="answer" id="a33">
+      bjarne stroustrup
+    </div>
+    <div class="question" id="r33">
+      Who invented C++?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Random" data-value="400">
+    <div class="answer" id="a34">
+      Memory leak
+    </div>
+    <div class="question" id="r34">
+      What is memory that was allocated on the heap but not deleted?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Random" data-value="500">
+    <div class="answer" id="a35">
+      <code>
+        <pre>class Foo {
+  public:
+    static void doSomething();
+  };
+  </pre>
+      </code>
+    </div>
+    <div class="question" id="r35">
+      What is a class method?
+    </div>
+  </div>
+  
+  <div class="topic" data-topic="Random" data-value="600">
+    <div class="answer" id="a36">
+      <code>
+        <pre>  bool (*theThing)(int)
+   </pre>
+      </code>
+    </div>
+    <div class="question" id="r36">
+      What is a function pointer?
+    </div>
+  </div>
+      <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script id="rendered-js">
+  $(".cell").on("click", function (event) {
+    if (!$(this).hasClass("done")) {
+      var theCol = $(this).data("col");
+      var theCat = $(".row").children().eq(theCol);
+      console.log("cat ", theCat);
+      var theVal = $(this).parent().data("value");
+      var theText = $.trim($(theCat).text());
+      var theTopic = $(`.topic[data-topic=${theText}][data-value=${theVal}]`);
+      $(theTopic).addClass("show answer");
+      // $(this).addClass("done");
+    }
+  });
+  
+  $("body").on("click", ".topic.show.answer", function (event) {
+    $(this).toggleClass("answer question");
+  });
+  
+  $("body").on("click", ".topic.show.question", function (event) {
+    $(this).removeClass("show question");
+  });
+  //# sourceURL=pen.js
+      </script>
+      <script>
+        $(".answer").html("");
+        $(".question").html("");
+        $.getJSON("https://admino.fabricaapps.com/rest/jeopardyn",function (data) {
+            $.each(data, function () { 
+              if (this.tipo_pregunta==="2") {
+                $("#a"+this.id).append("<code><img src='https://canalonce.mx/REST/data/miniaturas/"+this.pregunta+"'><br><pre>"+this.a+"<br>"+this.b+"<br>"+this.c+"</pre></code>");
+                $("#r"+this.id).append(this.correcta);
+              }else{
+                $("#a"+this.id).append(this.pregunta+"<br>"+this.a+"<br>"+this.b+"<br>"+this.c);
+                $("#r"+this.id).append(this.correcta);
+              }
+            });
+          }
+        );
+      </script>
+  
+    
+  
+  
+  
+  
+   
+  </body></html>

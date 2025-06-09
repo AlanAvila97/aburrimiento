@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Roboto:300,400,700');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        }
+
+        .timeline {
+        margin: 30px;
+        position: relative;
+        }
+        .timeline li {
+        display: flex;
+        line-height: 1;
+        }
+
+        .timeline--date {
+        flex: 0 0 150px;
+        color: #999;
+        font-family: "Droid Serif", serif;
+        font-size: 90%;
+        text-align: right;
+        margin-right: 50px;
+        }
+
+        .timeline--circle {
+        flex: 0 0 50px;
+        position: relative;
+        text-align: center;
+        /*For vertical line*/
+        }
+        .timeline--circle:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background: #222;
+        margin: auto;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        }
+        .timeline--circle i {
+        transition: all 0.4s ease-in-out;
+        position: relative;
+        display: inline-block;
+        background: #222;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        boz-sizing: border-box;
+        z-index: 3;
+        }
+
+        .timeline--description {
+        margin-left: 50px;
+        padding-bottom: 100px;
+        }
+
+        /*For the first timeline item*/
+        .timeline li:first-child .timeline--date,
+        .timeline li:first-child .timeline--description {
+        margin-top: 15px;
+        }
+        .timeline li:first-child .timeline--circle:before {
+        margin-top: 15px;
+        }
+        .timeline li:first-child .timeline--circle:after {
+        content: "";
+        background: transparent;
+        box-sizing: border-box;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #e9e9e9;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 50%;
+        z-index: 1;
+        }
+        .timeline li:first-child i {
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        }
+        .timeline li:first-child i:after {
+        content: "";
+        background: orange;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        }
+
+        /*Now let us start do the hover effects*/
+        .timeline li:hover .timeline--date {
+        color: #555;
+        }
+        .timeline li:hover .timeline--circle i {
+        transform: scale(4);
+        }
+        .timeline li:hover .timeline--description {
+        color: orange;
+        }
+
+        .timeline li:first-child:hover .timeline--circle i {
+        transform: none;
+        background: #222;
+        }
+        .timeline li:first-child:hover .timeline--circle:after {
+        border-color: #222;
+        }
+    </style>
+</head>
+<body>
+    <ul class="timeline timeline-vertical">
+  
+        <li>
+          <span class="timeline--date">19 Jan 1990</span>
+          <div class="timeline--circle">        <i></i>
+          </div>
+          <div class="timeline--description">
+            I was born in Semarang.
+          </div>
+        </li>
+        
+         <li>
+          <span class="timeline--date">8 Okt 2012</span>
+              <div class="timeline--circle">        <i></i>
+          </div>
+          <div class="timeline--description">
+            Graduated from university. <br/> Start work.
+          </div>
+        </li>
+        
+         <li>
+          <span class="timeline--date">28 Feb 2015</span>
+             <div class="timeline--circle">        <i></i>
+          </div>
+          <div class="timeline--description">
+            Founded a startup company. <br/>Struggle since.
+          </div>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Permanent+Marker&display=swap');
+
+#shape{
+  cursor: pointer;
+  text-align: center;
+  color:#000;
+  display: block;  
+  position: fixed;
+    top: 200px;
+    left: 39%;
+    background: #fff;
+    width: 280px;
+    height: 250px;
+    border-radius: 50%;
+    padding-top: 40px;
+}
+.text{
+  text-align: center;
+  color:#000;
+  font-weight: 400;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+
+}
+
+#shape img {
+  width: 150px;
+  height: 130px;
+  display: block;
+  margin:auto;
+  
+}

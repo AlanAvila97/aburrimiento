@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="fontawesome-free/css/all.min.css"></noscript>
+    <title>Gato</title>
+</head>
+<body>
+    <div class="formulario">
+        <h1>Gato</h1>
+        <br>
+        <input type="text" id="clave">
+        <br>
+        <button type="button" class="btn btn-primary creategame">Ingresar</button>
+        <button type="button" class="btn btn-default joingame" id="joingame">Aleatorio</button>
+    </div>
+    <div class="status">
+        <h3>Sala llena, intenta con otro</h3>
+    </div>
+    <div class="tablero">
+        <h3 id="codigotab"></h3>
+        <div class="tab" id="tab">
+            <div class="checker" id="checker-1-1" data-id="1-1"></div>
+            <div class="checker" id="checker-1-2" data-id="1-2"></div>
+            <div class="checker" id="checker-1-3" data-id="1-3"></div>
+            <div class="checker" id="checker-2-1" data-id="2-1"></div>
+            <div class="checker" id="checker-2-2" data-id="2-2"></div>
+            <div class="checker" id="checker-2-3" data-id="2-3"></div>
+            <div class="checker" id="checker-3-1" data-id="3-1"></div>
+            <div class="checker" id="checker-3-2" data-id="3-2"></div>
+            <div class="checker" id="checker-3-3" data-id="3-3"></div>
+        </div>
+        <div class="turno-mensaje"></div>
+        <input type="text" id="usuario">
+        <input type="text" id="figura">
+        <input type="text" id="tiro">
+        <input type="text" id="turno">
+        <br><br>
+        <div id="task2">
+            <button class="btn btn-primary subir-jugada" id="subir-jugada">Subir jugada</button>
+            <button class="btn btn-primary borrar-jugada" id="borrar-jugada">borrar jugada</button>
+            <button class="btn btn-primary borrar" id="borrar" style="bottom: 0;position: fixed;">Limpiar</button>
+            <button class="btn btn-primary actualizar-turno" id="libre-turno" data-id="7k3xyzRahpD4NCFV4KGP" data-turno="libre">libre</button>
+            <button class="btn btn-primary actualizar-turno" id="cruz" data-id="7k3xyzRahpD4NCFV4KGP" data-turno="cross">❌</button>
+            <button class="btn btn-primary actualizar-turno" id="bola" data-id="7k3xyzRahpD4NCFV4KGP" data-turno="circle">⭕️</button>
+        </div>
+    </div>
+</body>
+<script>
+    $('.formulario').toggle(false);
+    $(".status").toggle(false);
+    $("#usuario").toggle(false);
+    $("#codigotab").toggle(false);
+    $(".turno-mensaje").toggle(false);
+    $("#figura").toggle(false);
+    $("#libre-turno").toggle(false);
+    $("#cruz").toggle(false);
+    $("#bola").toggle(false);
+    $("#tiro").toggle(false);
+    $("#turno").toggle(false);
+    $(".subir-jugada").toggle(false);
+    $(".borrar-jugada").toggle(false);
+    $(".joingame").on('click', function() {
+        random();
+    });
+    function llenar_d() {
+        $(".turno-mensaje").toggle(true);
+        var URLactual = window.location;
+        const newStr = URLactual.search.slice(1)
+        console.log(newStr);
+        switch (newStr) {
+            case '1':
+                $('#codigotab').html('Tic Tac Toe');
+                $('#usuario').val('admin');
+                $('#figura').val('clear');
+                $('#libre-turno').click();
+                setTimeout(function(){
+                    //$('.turno-mensaje').append('<h1>Administrador</h1>');
+                    $('#borrar').click();
+                },500);
+                break;
+            case '2':
+                $("#task2").toggle(false);  
+                $('#codigotab').html('Tic Tac Toe');
+                $('#usuario').val('1');
+                $('#figura').val('cross');
+                setTimeout(function(){
+                    //$('.turno-mensaje').append('<h1>❌</h1>');
+                },500);
+                break;
+            case '3':
+                $("#task2").toggle(false);
+                $('#codigotab').html('Tic Tac Toe');
+                $('#usuario').val('2');
+                $('#figura').val('circle');
+                setTimeout(function(){
+                    //$('.turno-mensaje').append('<h1>⭕️</h1>');
+                },500);
+                
+                break;
+        }
+    }
+    $(".borrar").on('click', function() {
+		var elementos=$(".checker>h1").length;
+		var nombres=$('div.checker').children('h1');
+		for(var i=0;i<elementos;i++){
+		var j=i+1;
+		console.log("elemento eliminado:"+nombres[i]['dataset']['ic']);
+		eliminar(nombres[i]['dataset']['ic']);
+		}
+    });
+    $(".checker").on('click', function() {
+        var bot=document.getElementById('subir-jugada');
+        var juego=document.getElementById('codigotab').textContent;
+        var figura=$('#figura').val();
+        var turno=$('#turno').val();
+        var id=$(this).attr("data-id");
+        bot.setAttribute('data-forma',figura);
+        bot.setAttribute('data-juego',juego);
+        bot.setAttribute('data-posicion',id);
+        $('#tiro').val(id);
+        if (turno=='libre') {
+                switch (figura) {
+                case 'clear':
+                    if($("#checker-"+id).html()==""){
+                        console.log("Esta vacio");
+                    }else{
+                        var id2=$(this).attr("data-ic");
+                        var bot2=document.getElementById('borrar-jugada');
+                        bot2.setAttribute('data-ic',id2);
+                        bot2.click();
+                    }
+                    break;
+                case 'cross':
+                    if($("#checker-"+id).html()==""){
+                        $("#checker-"+id).append('<h1>❌</h1>');
+                        bot.click();
+                    }else{
+                        console.log("Contiene algo");
+                    }
+                    break;
+                case 'circle':
+                    if($("#checker-"+id).html()==""){
+                        $("#checker-"+id).append('<h1>⭕️</h1>');
+                        bot.click();
+                    }else{
+                        console.log("Contiene algo");
+                    }
+                    break;
+            
+                default:
+                    break;
+            }
+            console.log(id);    
+        }else{
+            switch (figura) {
+            case 'clear':
+                if($("#checker-"+id).html()==""){
+                    console.log("Esta vacio");
+                }else{
+                    var id2=$(this).attr("data-ic");
+                    var bot2=document.getElementById('borrar-jugada');
+                    bot2.setAttribute('data-ic',id2);
+                    bot2.click();
+                }
+                break;
+            case 'cross':
+                if($("#checker-"+id).html()==""&&turno==figura){
+                    $("#checker-"+id).append('<h1>❌</h1>');
+                    bot.click();
+                }else{
+                    console.log("Contiene algo");
+                }
+                break;
+            case 'circle':
+                if($("#checker-"+id).html()==""&&turno==figura){
+                    $("#checker-"+id).append('<h1>⭕️</h1>');
+                    bot.click();
+                }else{
+                    console.log("Contiene algo");
+                }
+                break;
+            default:
+                break;
+        }
+        console.log(id);
+        }
+        
+    });
+    $(".creategame").on('click', function() {
+        var clave=$('#clave').val();
+        unirse(clave);
+    });
+    function random() {
+    var randCode=Math.random().toString(36).substring(2, 5).toUpperCase();
+    $('#clave').val(randCode);
+    }
+    function llenar_datos(codigo,tipo) {
+        $.getJSON("https://admino.fabricaapps.com/programav/show?parametro=14&codigo="+codigo+"&tipo="+tipo,function (data) {
+                $.each(data, function () { 
+                    $('#codigotab').html(this.clave);
+                    $('#usuario').val(this.tipo);
+                    $('#figura').val(this.figura);
+                });
+            }
+        );
+    }
+    function eliminar(id) {
+        var bot2=document.getElementById('borrar-jugada');
+        bot2.setAttribute('data-ic',id);
+        bot2.click();
+    }
+    function unirse(codigo) {
+		var data = (function () { var json = null; $.ajax({ 'async': false,'global': false, 'url': 'https://admino.fabricaapps.com/programav/show?parametro=12&codigo='+codigo, 'dataType': "json", 'success': function (data) { json = data; } }); return json; })();
+        console.log(data.length);
+        switch (data.length) {
+            case 0:
+                $('#libre-turno').click();
+                $(".actualizar-turno").toggle(true);
+                $(".formulario").toggle(false);
+                $(".tablero").toggle(true);
+                $(".status").toggle(false);
+                var tipo='admin';
+                var figura='clear';
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://admino.fabricaapps.com/programav/show?parametro=13',
+                    data: {codigo:codigo, tipo:tipo, figura:figura},
+                    success: function(respuesta) {
+                        llenar_datos(codigo,tipo);
+                        $('#borrar').click();
+                    }
+                });   
+                return false;
+                break;
+            case 1:
+                $(".actualizar-turno").toggle(false);
+                $(".formulario").toggle(false);
+                $(".tablero").toggle(true);
+                $(".status").toggle(false);
+                $(".borrar").toggle(false);
+                var tipo='1';
+                var figura='cross';
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://admino.fabricaapps.com/programav/show?parametro=13',
+                    data: {codigo:codigo, tipo:tipo, figura:figura},
+                    success: function(respuesta) {
+                        llenar_datos(codigo,tipo);
+                    }
+                });
+                break;
+            case 2:
+                $(".actualizar-turno").toggle(false);
+                $(".formulario").toggle(false);
+                $(".tablero").toggle(true);
+                $(".status").toggle(false);
+                $(".borrar").toggle(false);
+                var tipo='2';
+                var figura='circle';
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://admino.fabricaapps.com/programav/show?parametro=13',
+                    data: {codigo:codigo, tipo:tipo, figura:figura},
+                    success: function(respuesta) {
+                        llenar_datos(codigo,tipo);
+                    }
+                });
+                break;
+            default:
+                $(".actualizar-turno").toggle(false);
+                $(".formulario").toggle(false);
+                $(".tablero").toggle(false);
+                $(".status").toggle(true);
+                $(".borrar").toggle(false);
+                break;
+        }
+        
+    }
+    window.onload=llenar_d;
+</script>
+<script src="firebase/index.js" type="module"></script>
+</html>

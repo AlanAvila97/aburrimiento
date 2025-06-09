@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .tendencias {
+            width: 100%;
+        }
+
+        .grid-notes {
+            display: grid;
+            /* grid-template-columns: repeat(4, 1fr); */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: clamp(1rem, 2vw, 2rem);
+        }
+
+        .item-note-trend {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item-note-trend img {
+            width: 100%;
+            display: block;
+        }
+        .item-note-trend .post-title a{
+            font-size: 20px;
+            color: #000;
+            text-decoration: none;   
+        }
+    </style>
+    <section class="tendencias">
+        <div class="grid-notes">
+            <div class="item-note-trend">
+                <a href="">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CRUZ-AZUL-Y-AMERICA-390x220.png"
+                    alt="">
+                </a>
+                <h2 class="post-title"><a href="">Titulo de nota</a></h2>
+            </div>
+            <div class="item-note-trend">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Los-Campesinos-390x220.jpg"
+                    alt="">
+                <h2 class="post-title"><a href="">Titulo de nota</a></h2>
+            </div>
+            <div class="item-note-trend">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Full-Circle-390x220.png"
+                    alt="">
+                <h2 class="post-title"><a href="">Titulo de nota</a></h2>
+            </div>
+            <div class="item-note-trend">
+                <img src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Karla-Maya-390x220.jpg"
+                    alt="">
+                <h2 class="post-title"><a href="">Titulo de nota</a></h2>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

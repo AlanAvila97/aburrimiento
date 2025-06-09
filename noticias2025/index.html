@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style_home.css">
+    <link rel="stylesheet" href="./single.css">
+    <link rel="stylesheet" href="./helpers.css">
+    <link rel="stylesheet" href="./widgets.css">
+    <style>
+        #typewriter .cursor {
+            width: 100%;
+            position: absolute;
+            background: #2c2e32;
+            height: 100%;
+            margin-left: 0%;
+            animation: scroll_h 8s infinite;
+        }
+        #typewriter .cursor::after{
+            content: '_';
+            width: 100%;
+            height: 90%;
+            background: #2c2e32;
+            display: flex;
+            justify-content: flex-start;
+            font-size: 2rem;
+            align-items: flex-end;
+            animation: blink 0.75s step-end infinite;
+        }
+        #typewriter {
+            display: flex;
+            position: relative;
+            padding-left: 1rem;
+            width: auto;
+        }
+        #typewriter p{            
+            font-size: 1rem;
+        }
+        #typewriter #text-target{
+            width: 100%;
+        }        
+        #typewriter:hover .cursor{
+            opacity: 0;
+            animation: opacity 2s;
+        }
+        @keyframes scroll_h {
+            0%{
+                margin-left: 0%;
+            }
+            100%{
+                margin-left: 105%;
+            }
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="theme-header" 
+        class="theme-header header-layout-4 header-layout-1 main-nav-dark main-nav-default-dark main-nav-below no-stream-item top-nav-active top-nav-dark top-nav-default-dark top-nav-above has-shadow has-normal-width-logo mobile-header-centered"> 
+        <nav id="top-nav" class="has-date-breaking-components top-nav header-nav has-breaking-news" 
+            aria-label="Secondary Navigation"> 
+            <div class="container"> 
+                <div class="topbar-wrapper"> 
+                    <div class="topbar-today-date tie-icon"> 
+                        martes, 13 mayo, 2025 
+                    </div> 
+                    <div class="tie-alignleft"> 
+                        <div class="breaking controls-is-active"> 
+                            <span class="breaking-title"> 
+                                <span class="tie-icon-bolt breaking-icon" aria-hidden="true"></span> 
+                                <span class="breaking-title-text">Últimas Noticias</span> 
+                            </span> 
+                            <div id="ticker-wrapper-1747158817077" 
+                                class="ticker-wrapper has-js ticker-dir-left">
+                                <div id="typewriter" class="ticker">        
+                                    <a id="text-target" 
+                                    href="salud/imss-busca-realizar-mas-de-2-millones-de-cirugias-en-2025/473942/">IMSS busca realizar más de 2 millones de cirugías en 2025</a> 
+                                    <span class="cursor">_</span>
+                                </div>
+                                <ul id="ticker-controls-1747158817077" 
+                                    class="breaking-news-nav slider-arrow-nav ">
+                                    <li id="prev-1747158817077" class="jnt-prev controls"></li>
+                                    <li id="next-1747158817077" class="jnt-next controls"></li>
+                                </ul>
+                            </div> 
+                        </div> 
+                    </div> 
+                    <div class="tie-alignright"> 
+                        <ul class="components"> 
+                            <li class="social-icons-item">
+                                <a class="social-link social-custom-link custom-link-1-social-icon custom-social-img" 
+                                rel="external noopener nofollow" target="_blank" href="//twitter.com/OnceNoticiasTV">
+                                <span class="tie-social-icon social-icon-img social-icon-img-1"></span>
+                                <span class="screen-reader-text">x</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a class="social-link whatsapp-social-icon" rel="external noopener nofollow" 
+                                target="_blank" href="//whatsapp.com/channel/0029VaKdOdMKQuJRN1OuSJ0F">
+                                <span class="tie-social-icon tie-icon-whatsapp"></span>
+                                <span class="screen-reader-text">WhatsApp</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a class="social-link tiktok-social-icon" rel="external noopener nofollow" 
+                                target="_blank" href="//www.tiktok.com/@oncenoticias.digital">
+                                <span class="tie-social-icon tie-icon-tiktok"></span>
+                                <span class="screen-reader-text">TikTok</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a class="social-link instagram-social-icon" rel="external noopener nofollow" 
+                                target="_blank" href="//www.instagram.com/oncenoticias.digital/">
+                                <span class="tie-social-icon tie-icon-instagram"></span>
+                                <span class="screen-reader-text">Instagram</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a class="social-link youtube-social-icon" rel="external noopener nofollow" 
+                                target="_blank" href="//www.youtube.com/channel/UCM4vf-nmAxPq8Do0Xi3qXkg">
+                                <span class="tie-social-icon tie-icon-youtube"></span>
+                                <span class="screen-reader-text">YouTube</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a class="social-link facebook-social-icon" rel="external noopener nofollow" 
+                                target="_blank" href="//www.facebook.com/OnceNoticiasTV">
+                                <span class="tie-social-icon tie-icon-facebook"></span>
+                                <span class="screen-reader-text">Facebook</span>
+                                </a>
+                            </li> 
+                        </ul> 
+                    </div> 
+                </div> 
+            </div> 
+        </nav> 
+        <div class="main-nav-wrapper"> 
+            <nav id="main-nav" data-skin="search-in-main-nav" class="main-nav header-nav live-search-parent" 
+                style="line-height:207px" aria-label="Primary Navigation"> 
+                <div class="container"> 
+                    <div class="main-menu-wrapper"> 
+                        <div id="mobile-header-components-area_1" class="mobile-header-components">
+                            <ul class="components">
+                                <li class="mobile-component_menu custom-menu-link">
+                                    <a href="#" id="mobile-menu-icon">
+                                        <span class="tie-mobile-menu-icon nav-icon is-layout-2"></span>
+                                        <span class="screen-reader-text">Menu</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> 
+                        <div class="header-layout-1-logo" style="width:567px"> 
+                            <div id="logo" class="image-logo" style="margin-top: 1px; margin-bottom: 1px;"> 
+                                <a title="Once Noticias" href="/"> 
+                                    <picture class="tie-logo-default tie-logo-picture"> 
+                                        <source class="tie-logo-source-default tie-logo-source" 
+                                            data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/logo.png" media="(max-width:991px)" 
+                                            srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/logo.png"> 
+                                        <source class="tie-logo-source-default tie-logo-source" 
+                                            data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/logo-noticas_20_01.png" 
+                                            srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/logo-noticas_20_01.png"> 
+                                        <img class="tie-logo-img-default tie-logo-img lazy loaded" 
+                                            src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/logo-noticas_20_01.png" 
+                                            data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/logo-noticas_20_01.png" 
+                                            alt="Once Noticias" width="567" height="205" 
+                                            style="max-height:205px; width: auto;" 
+                                            data-was-processed="true"> 
+                                    </picture> 
+                                    <h1 class="h1-off">Once Noticias</h1> 
+                                </a> 
+                            </div> 
+                        </div> 
+                        <div id="mobile-header-components-area_2" class="mobile-header-components">
+                            <ul class="components">
+                                <li class="mobile-component_search custom-menu-link"> 
+                                    <a href="#" class="tie-search-trigger-mobile"> 
+                                        <span class="tie-icon-search tie-search-icon" aria-hidden="true"></span> 
+                                        <span class="screen-reader-text">Buscar</span> 
+                                    </a> 
+                                </li> 
+                                <li class="mobile-component_skin custom-menu-link"> 
+                                    <a href="#" class="change-skin" title="Switch skin"> 
+                                        <span class="tie-icon-moon change-skin-icon" aria-hidden="true"></span> 
+                                        <span class="screen-reader-text">Switch skin</span> 
+                                    </a> 
+                                </li>
+                            </ul>
+                        </div> 
+                        <div id="menu-components-wrap"> 
+                            <style> 
+                                .header-layout-4 #menu-components-wrap .main-menu-wrap{ 
+                                    display: flex !important; 
+                                    flex-direction: column !important; 
+                                } 
+                                #contenido-menumodif { 
+                                    display: flex !important; 
+                                    float: none !important; 
+                                    padding: 1rem 0 10px; 
+                                    gap: 4rem; 
+                                    margin-left: 14px; 
+                                } 
+                                .submenuper { 
+                                    padding: 1rem 0.7rem!important; 
+                                } 
+                                .menu-tiny-label{ 
+                                    margin-left: 1rem; 
+                                    padding: 0.8rem; 
+                                } 
+                                #menu-tielabs-main-menu{ 
+                                    width: auto; 
+                                } 
+                                #menu-item-290124mod a img{ 
+                                    width: 130px; 
+                                    height: 60px; 
+                                } 
+                                #menu-item-290124mod a img:hover{ 
+                                    opacity: 0.7;
+                                } 
+                                #menu-item-290124mod2 a img{ 
+                                    width: 130px; 
+                                    height: 60px; 
+                                } 
+                                #menu-item-290124mod2 a img:hover{ 
+                                    opacity: 0.7; 
+                                } 
+                                @media (min-width: 992px){ 
+                                    #contenido-menumodif .menu-item-has-children>a:before, 
+                                    #contenido-menumodif .mega-menu>a:before { 
+                                        border-top: 4px solid #ffffff00; 
+                                        transition: border 0.15s; 
+                                    } 
+                                } 
+                                @media (max-width: 1099px) { 
+                                    #contenido-menumodif { 
+                                        gap: 1rem !important; 
+                                        margin-left:5px; 
+                                    } 
+                                    #main-nav .main-menu > ul > li > a{ 
+                                        margin-right: auto; 
+                                    } 
+                                } 
+                                #contenido-menumodif .components>li>a{ 
+                                    width: auto !important; 
+                                }
+                                .submenuper{ 
+                                    background-color:white; 
+                                    border-radius:10px;
+                                    padding: 6px 0.5rem; 
+                                    color: #d91e69; 
+                                } 
+                                .submenuper:hover{
+                                    background-color:#d91e69; 
+                                    color: white; 
+                                } 
+                                .menu-sub-content li:hover{ 
+                                    background-color:#d91e69; 
+                                    color: white; 
+                                } 
+                                .menu-sub-content a:hover{ 
+                                    background-color:#d91e69 !important; 
+                                    color: white; 
+                                } 
+                                .menu-sub-content li a:hover{ 
+                                    color: white !important; 
+                                } 
+                                .menu-sub-content li a span{ 
+                                    padding-right: 5px !important; 
+                                } 
+                            </style> 
+                            <div class="main-menu main-menu-wrap tie-alignleft"> 
+                                <nav> 
+                                    <ul id="contenido-menumodif" class="components"> 
+                                        <li id="menu-item-176778mod" 
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-176778 menu-item-has-icon"> 
+                                            <a href="en-vivo/" style="width: auto;"> 
+                                                <span aria-hidden="true"></span> 
+                                                <h4 class="submenuper">TV 
+                                                    <small class="menu-tiny-label" 
+                                                        style="background-color: #0a0000; color: #ffffff">
+                                                        EN VIVO
+                                                    </small>
+                                                </h4>
+                                            </a> 
+                                            <ul class="sub-menu menu-sub-content"> 
+                                                <li id="menu-item-176811" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176811"> 
+                                                    <a href="en-vivo/"> 
+                                                        <span aria-hidden="true" class="tie-menu-icon fas fa-play"></span> 
+                                                        En Vivo
+                                                    </a> 
+                                                </li> 
+                                                <li id="menu-item-176779" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176779"> 
+                                                    <a href="noticiario-matutino-playlist/"> 
+                                                        <span aria-hidden="true" class="tie-menu-icon fas fa-arrow-right">
+                                                        </span>
+                                                        Noticiario Matutino
+                                                    </a> 
+                                                </li> 
+                                                <li id="menu-item-176781" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176781"> 
+                                                    <a href="noticiario-meridiano-playlist/"> 
+                                                        <span aria-hidden="true" class="tie-menu-icon fas fa-arrow-right">
+                                                        </span>
+                                                        Noticiario Meridiano
+                                                    </a> 
+                                                </li> 
+                                                <li id="menu-item-176782" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176782"> 
+                                                    <a href="once-lab/"> 
+                                                        <span aria-hidden="true" class="tie-menu-icon fas fa-arrow-right">
+                                                        </span>
+                                                        Once Lab
+                                                    </a> 
+                                                </li> 
+                                                <li id="menu-item-176783" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176783"> 
+                                                    <a href="noticiario-nocturno-playlist/"> 
+                                                        <span aria-hidden="true" class="tie-menu-icon fas fa-arrow-right">
+                                                        </span>
+                                                        Noticiario Nocturno
+                                                    </a> 
+                                                </li> 
+                                                <li id="menu-item-176784" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176784"> 
+                                                    <a href="noticiario-dominical-playlist/"> 
+                                                        <span aria-hidden="true" class="tie-menu-icon fas fa-arrow-right">
+                                                        </span>
+                                                        Noticiario Dominical
+                                                    </a> 
+                                                </li>
+                                            </ul> 
+                                        </li> 
+                                        <li id="menu-item-290124mod" 
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-290124"> 
+                                            <a href="entretenimiento/" style="width: auto;">
+                                                <img class="lazy loaded" src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/BOTONES-130X60-8-2.png" 
+                                                    data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/BOTONES-130X60-8-2.png" 
+                                                    alt="" 
+                                                    data-was-processed="true">
+                                            </a> 
+                                        </li> 
+                                        <li id="menu-item-290124mod2" 
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-290124"> 
+                                            <a href="once-lab/" style="width: auto;">
+                                                <img class="lazy loaded" src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/BOTONES-130X60-7.png" 
+                                                    data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/01/BOTONES-130X60-7.png" 
+                                                    alt="" data-was-processed="true">
+                                            </a> 
+                                        </li> 
+                                    </ul> 
+                                </nav> 
+                                <div id="main-nav-menu" class="main-menu header-menu">
+                                    <ul id="menu-tielabs-main-menu" class="menu">
+                                        <li id="menu-item-1118" 
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1118 mega-menu mega-cat mega-menu-posts " 
+                                            data-id="28">
+                                            <a href="secciones/nacional/">Nacional</a> 
+                                            <div class="mega-menu-block menu-sub-content"> 
+                                                <div class="mega-menu-content"> 
+                                                    <div class="mega-cat-wrapper"> 
+                                                        <ul class="mega-cat-sub-categories cats-vertical"> 
+                                                            <li class="mega-all-link">
+                                                                <a href="secciones/nacional/" 
+                                                                class="is-active is-loaded mega-sub-cat" 
+                                                                data-id="28">
+                                                                    Todo
+                                                                </a>
+                                                            </li> 
+                                                            <li class="mega-sub-cat-60782">
+                                                                <a href="secciones/nacional/mananeras-del-pueblo/" 
+                                                                class="mega-sub-cat" data-id="60782">
+                                                                    Mañaneras del Pueblo
+                                                                </a>
+                                                            </li> 
+                                                        </ul> 
+                                                        <div class="mega-cat-content mega-cat-sub-exists vertical-posts"> 
+                                                            <div class="mega-ajax-content mega-cat-posts-container clearfix"> 
+                                                            </div> 
+                                                        </div> 
+                                                    </div> 
+                                                </div> 
+                                            </div> 
+                                        </li> 
+                                        <li id="menu-item-1119" 
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1119 mega-menu mega-cat mega-menu-posts " 
+                                            data-id="23">
+                                            <a href="secciones/internacional/">Internacional</a> 
+                                            <div class="mega-menu-block menu-sub-content"> 
+                                                <div class="mega-menu-content"> 
+                                                    <div class="mega-cat-wrapper"> 
+                                                        <div class="mega-cat-content horizontal-posts"> 
+                                                            <div class="mega-ajax-content mega-cat-posts-container clearfix">                                                  
+                                                            </div> 
+                                                        </div> 
+                                                    </div> 
+                                                </div> 
+                                            </div> 
+                                        </li> 
+                                        <li id="menu-item-1453" 
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1453 mega-menu mega-cat mega-menu-posts " 
+                                            data-id="34">
+                                            <a href="secciones/cultura/">
+                                                Cultura
+                                            </a> 
+                                            <div class="mega-menu-block menu-sub-content"> 
+                                                <div class="mega-menu-content"> 
+                                                    <div class="mega-cat-wrapper"> 
+                                                        <div class="mega-cat-content horizontal-posts"> 
+                                                            <div class="mega-ajax-content mega-cat-posts-container clearfix">          
+                                                            </div> 
+                                                        </div> 
+                                                    </div> 
+                                                </div> 
+                                            </div> 
+                                        </li> 
+                                        <li id="menu-item-1120" 
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1120 mega-menu mega-cat mega-menu-posts " 
+                                            data-id="29">
+                                            <a href="secciones/salud/">
+                                                Salud
+                                            </a> 
+                                            <div class="mega-menu-block menu-sub-content"> 
+                                                <div class="mega-menu-content"> 
+                                                    <div class="mega-cat-wrapper"> 
+                                                        <div class="mega-cat-content horizontal-posts"> 
+                                                            <div class="mega-ajax-content mega-cat-posts-container clearfix">  
+                                                            </div> 
+                                                        </div> 
+                                                    </div> 
+                                                </div> 
+                                            </div> 
+                                        </li> 
+                                        <li id="menu-item-434882" 
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-434882 mega-menu mega-cat mega-menu-posts " 
+                                            data-id="26">
+                                            <a href="secciones/deportes/">
+                                                Deportes
+                                            </a> 
+                                            <div class="mega-menu-block menu-sub-content"> 
+                                                <div class="mega-menu-content"> 
+                                                    <div class="mega-cat-wrapper"> 
+                                                        <div class="mega-cat-content horizontal-posts"> 
+                                                            <div class="mega-ajax-content mega-cat-posts-container clearfix">
+                                                            </div> 
+                                                        </div> 
+                                                    </div> 
+                                                </div> 
+                                            </div> 
+                                        </li> 
+                                        <li id="menu-item-1121" 
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1121 mega-menu mega-cat mega-menu-posts is-loaded" 
+                                            data-id="30">
+                                            <a href="secciones/valle-de-mexico/">
+                                                Valle de&nbsp;México
+                                            </a> 
+                                            <div class="mega-menu-block menu-sub-content"> 
+                                                <div class="mega-menu-content"> 
+                                                    <div class="mega-cat-wrapper"> 
+                                                        <div class="mega-cat-content horizontal-posts"> 
+                                                            <div class="mega-ajax-content mega-cat-posts-container clearfix"> 
+                                                                <div class="megamenu-loaded-ajax" id="loaded-30" 
+                                                                    data-id="30" data-icon="undefined" data-current="1">
+                                                                    <div class="mega-menu-post tie-standard tie-animate-slideInUp" 
+                                                                        style="animation-delay: 0.1s">
+                                                                        <div class="post-thumbnail">
+                                                                            <a class="post-thumb" 
+                                                                                href="https://oncenoticias.digital/valle-de-mexico/te-llego-una-oferta-laboral-con-salario-inimaginable-cuidado-puede-ser-fraude/473859/">
+                                                                                <img width="390" height="220"      src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/ciber-delitos-390x220.jpg" 
+                                                                                class="attachment-jannah-image-large size-jannah-image-large wp-post-image" 
+                                                                                alt="¿Te llegó una oferta laboral con salario inimaginable? ¡Cuidado! Puede ser fraude" 
+                                                                                decoding="async" loading="lazy"                                                                                srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/ciber-delitos-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/ciber-delitos-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/ciber-delitos-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/ciber-delitos-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/ciber-delitos-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/ciber-delitos.jpg 1200w" sizes="(max-width: 390px) 100vw, 390px">				                                                </a>
+                                                                        </div><!-- .post-thumbnail /-->
+                                                                        <div class="post-details">
+                                                                            <h3 class="post-box-title"> 
+                                                                                <a class="mega-menu-link" 
+                                                                            href="https://oncenoticias.digital/valle-de-mexico/te-llego-una-oferta-laboral-con-salario-inimaginable-cuidado-puede-ser-fraude/473859/">
+                                                                            ¿Te llegó una oferta laboral con salario inimaginable? ¡Cuidado! Puede ser fraude
+                                                                                </a>
+                                                                            </h3>
+                                                                            <div class="post-meta clearfix">
+                                                                                <span class="date meta-item tie-icon">
+                                                                                    mayo 12, 2025
+                                                                                </span>
+                                                                            </div><!-- .post-meta -->	
+                                                                        </div> 
+                                                                    </div>
+                                                                    <div class="mega-menu-post tie-standard tie-animate-slideInUp"  style="animation-delay: 0.2s">	
+                                                                        <div class="post-thumbnail"> 
+                                                                            <a class="post-thumb" 
+                                                                            href="https://oncenoticias.digital/valle-de-mexico/ruta-11-del-trolebus-elevado-beneficiara-a-3-millones-de-personas/473800/"> 
+                                                                            <img width="390" height="220" 
+                                                                            src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/1031729_Trolebus-Elevado-Chalco_web-1-390x220.jpg" 
+                                                                            class="attachment-jannah-image-large size-jannah-image-large wp-post-image"    
+                                                                            alt="" decoding="async" loading="lazy" srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/1031729_Trolebus-Elevado-Chalco_web-1-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/1031729_Trolebus-Elevado-Chalco_web-1-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/1031729_Trolebus-Elevado-Chalco_web-1-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/1031729_Trolebus-Elevado-Chalco_web-1-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/1031729_Trolebus-Elevado-Chalco_web-1-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/1031729_Trolebus-Elevado-Chalco_web-1.jpg 1200w" sizes="(max-width: 390px) 100vw, 390px">				
+                                                                            </a>
+                                                                        </div> 
+                                                                        <div class="post-details"> 
+                                                                            <h3 class="post-box-title"> 
+                                                                                <a class="mega-menu-link" 
+                                                                                href="https://oncenoticias.digital/valle-de-mexico/ruta-11-del-trolebus-elevado-beneficiara-a-3-millones-de-personas/473800/">
+                                                                                    Ruta 11 del Trolebús elevado beneficiará a 3 millones de personas
+                                                                                </a> 
+                                                                            </h3> 
+                                                                            <div class="post-meta clearfix">
+                                                                                <span class="date meta-item tie-icon">
+                                                                                    mayo 12, 2025
+                                                                                </span>
+                                                                            </div>
+                                                                        </div> 
+                                                                    </div> 
+                                                                    <div class="mega-menu-post tie-standard tie-animate-slideInUp" style="animation-delay: 0.3s"> 
+                                                                        <div class="post-thumbnail"> 
+                                                                            <a class="post-thumb" 
+                                                                            href="https://oncenoticias.digital/valle-de-mexico/comerciantes-con-discapacidad-visual-se-manifiestan-en-cdmx/473650/"> 
+                                                                                <img width="390" height="220" src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/manifestacion-cdmx-debiles-visuales-390x220.jpg" 
+                                                                                    class="attachment-jannah-image-large size-jannah-image-large wp-post-image" 
+                                                                                    alt="Comerciantes con discapacidad visual se manifiestan en CDMX" 
+                                                                                    decoding="async" loading="lazy" srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/manifestacion-cdmx-debiles-visuales-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/manifestacion-cdmx-debiles-visuales-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/manifestacion-cdmx-debiles-visuales-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/manifestacion-cdmx-debiles-visuales-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/manifestacion-cdmx-debiles-visuales-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/manifestacion-cdmx-debiles-visuales.jpg 1200w" sizes="(max-width: 390px) 100vw, 390px">				
+                                                                            </a> 
+                                                                        </div><!-- .post-thumbnail /--> 
+                                                                        <div class="post-details"> 
+                                                                            <h3 class="post-box-title"> 
+                                                                                <a class="mega-menu-link" 
+                                                                                href="https://oncenoticias.digital/valle-de-mexico/comerciantes-con-discapacidad-visual-se-manifiestan-en-cdmx/473650/">
+                                                                                Comerciantes con discapacidad visual se manifiestan en CDMX  
+                                                                                </a> 
+                                                                            </h3> 
+                                                                            <div class="post-meta clearfix">
+                                                                                <span class="date meta-item tie-icon">
+                                                                                    mayo 12, 2025
+                                                                                </span>
+                                                                            </div><!-- .post-meta -->	
+                                                                        </div> 
+                                                                    </div> 
+                                                                    <div class="mega-menu-post tie-standard tie-animate-slideInUp" style="animation-delay: 0.4s">
+                                                                        <div class="post-thumbnail"> 
+                                                                            <a class="post-thumb" href="https://oncenoticias.digital/valle-de-mexico/anuncian-renovacion-de-2-mil-785-escuelas-en-cdmx/473560/"> 
+                                                                                <img width="390" height="220" src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLARA-BRUGADA-ESCUELAS-390x220.jpeg" 
+                                                                                    class="attachment-jannah-image-large size-jannah-image-large wp-post-image" 
+                                                                                    alt="" decoding="async" loading="lazy" srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLARA-BRUGADA-ESCUELAS-390x220.jpeg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLARA-BRUGADA-ESCUELAS-300x169.jpeg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLARA-BRUGADA-ESCUELAS-1024x576.jpeg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLARA-BRUGADA-ESCUELAS-768x432.jpeg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLARA-BRUGADA-ESCUELAS-746x420.jpeg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLARA-BRUGADA-ESCUELAS.jpeg 1200w" 
+                                                                                    sizes="(max-width: 390px) 100vw, 390px">
+                                                                            </a>
+                                                                        </div><!-- .post-thumbnail /--> 
+                                                                        <div class="post-details"> 
+                                                                            <h3 class="post-box-title"> 
+                                                                                <a class="mega-menu-link" 
+                                                                                href="https://oncenoticias.digital/valle-de-mexico/anuncian-renovacion-de-2-mil-785-escuelas-en-cdmx/473560/">
+                                                                                Anuncian renovación de 2 mil 785 escuelas en CDMX
+                                                                                </a> 
+                                                                            </h3> 
+                                                                            <div class="post-meta clearfix">
+                                                                                <span class="date meta-item tie-icon">
+                                                                                    mayo 12, 2025
+                                                                                </span>
+                                                                            </div><!-- .post-meta -->	
+                                                                        </div> 
+                                                                    </div> 
+                                                                    <div class="mega-menu-post tie-standard tie-animate-slideInUp" style="animation-delay: 0.5s">
+                                                                        <div class="post-thumbnail"> 
+                                                                            <a class="post-thumb" href="https://oncenoticias.digital/valle-de-mexico/exposicion-orquideas-y-sus-polinizadores-llega-al-parque-yecahuizotl-en-iztapalapa/473548/"> 
+                                                                                <img width="390" height="220" 
+                                                                            src="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/exposicion-Orquideas-y-sus-polinizadores-390x220.jpg" 
+                                                                                    class="attachment-jannah-image-large size-jannah-image-large wp-post-image" 
+                                                                                    alt="Exposición “Orquídeas y sus polinizadores” en el Parque Yecahuizotl en Iztapalapa" 
+                                                                                    decoding="async" loading="lazy" srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/exposicion-Orquideas-y-sus-polinizadores-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/exposicion-Orquideas-y-sus-polinizadores-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/exposicion-Orquideas-y-sus-polinizadores-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/exposicion-Orquideas-y-sus-polinizadores-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/exposicion-Orquideas-y-sus-polinizadores-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/exposicion-Orquideas-y-sus-polinizadores.jpg 1200w" 
+                                                                                    sizes="(max-width: 390px) 100vw, 390px">				
+                                                                            </a>
+                                                                        </div><!-- .post-thumbnail /-->
+                                                                        <div class="post-details"> 
+                                                                            <h3 class="post-box-title"> 
+                                                                                <a class="mega-menu-link" 
+                                                                                href="https://oncenoticias.digital/valle-de-mexico/exposicion-orquideas-y-sus-polinizadores-llega-al-parque-yecahuizotl-en-iztapalapa/473548/">
+                                                                                Exposición “Orquídeas y sus polinizadores” llega al Parque Yecahuizotl en Iztapalapa
+                                                                                </a> 
+                                                                            </h3> 
+                                                                            <div class="post-meta clearfix">
+                                                                                <span class="date meta-item tie-icon">
+                                                                                    mayo 12, 2025
+                                                                                </span>
+                                                                            </div><!-- .post-meta -->	
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div> 
+                                                        </div> 
+                                                    </div> 
+                                                </div> 
+                                            </div> 
+                                        </li> 
+                                        <li id="menu-item-176778" 
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-176778" 
+                                            style="display: none;">
+                                            <a href="en-vivo/">
+                                                TV
+                                            </a> 
+                                            <ul class="sub-menu menu-sub-content"> 
+                                                <li id="menu-item-176811" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176811">
+                                                    <a href="en-vivo/">
+                                                        En Vivo
+                                                    </a>
+                                                </li> 
+                                                <li id="menu-item-176779" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176779">
+                                                    <a href="noticiario-matutino-playlist/">
+                                                        Noticiario Matutino
+                                                    </a>
+                                                </li> 
+                                                <li id="menu-item-176781" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176781">
+                                                    <a href="noticiario-meridiano-playlist/">
+                                                        Noticiario Meridiano
+                                                    </a>
+                                                </li> 
+                                                <li id="menu-item-319025" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319025">
+                                                    <a href="punto-de-referencia/">
+                                                        Punto de Referencia
+                                                    </a>
+                                                </li> 
+                                                <li id="menu-item-176783" 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176783">
+                                                    <a href="noticiario-sabatino-playlist/">
+                                                        Noticiario Sabatino
+                                                    </a>
+                                                </li> 
+                                                <li id="menu-item-418787" 
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-418787">
+                                                    <a href="//www.youtube.com/playlist?list=PLJBPOftUgNZlTcmvyHbBQRlCLgJ49PQKb">
+                                                        Mesa de Análisis
+                                                    </a>
+                                                </li> 
+                                            </ul> 
+                                        </li> 
+                                        <li id="menu-item-290123" 
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-290123" 
+                                            style="display: none;">
+                                            <a href="#">
+                                                Barra de noticias <br> digital
+                                            </a> 
+                                            <ul class="sub-menu menu-sub-content"> 
+                                                <li id="menu-item-290124" 
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290124">
+                                                    <a href="el-noti/">
+                                                        El Noti del Once
+                                                    </a>
+                                                </li> 
+                                                <li id="menu-item-290125" 
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290125">
+                                                    <a href="//www.youtube.com/playlist?list=PLJBPOftUgNZnOb7y-NrI3SX1hW950i0eS">
+                                                        El Desfiladero
+                                                    </a>
+                                                </li>
+                                                <li id="menu-item-290126" 
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290126">
+                                                    <a href="//www.youtube.com/playlist?list=PLJBPOftUgNZlFPKiyWtZrdG-yUocNQlWH">
+                                                        Contra VS
+                                                    </a>
+                                                </li> 
+                                                <li id="menu-item-290127" 
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290127">
+                                                    <a href="//www.youtube.com/playlist?list=PLJBPOftUgNZmB_SXPC9Zv_PG3hT1x34WP">
+                                                        La Verdrag
+                                                    </a>
+                                                </li> 
+                                            </ul> 
+                                        </li> 
+                                    </ul>
+                                </div> 
+                            </div> 
+                            <ul class="components"> 
+                                <li class="search-bar menu-item custom-menu-link" aria-label="Search"> 
+                                    <form method="get" id="search" action="/"> 
+                                        <input id="search-input" class="is-ajax-search" 
+                                            inputmode="search" type="text" name="s" 
+                                            title="Buscar" placeholder="Buscar" autocomplete="off"> 
+                                        <button id="search-submit" type="submit"> 
+                                            <span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+                                            <span class="screen-reader-text">Buscar</span> 
+                                        </button> 
+                                    </form> 
+                                </li> 
+                                <li class="skin-icon menu-item custom-menu-link"> 
+                                    <a href="#" class="change-skin" title="Switch skin"> 
+                                        <span class="tie-icon-moon change-skin-icon" aria-hidden="true"></span> 
+                                        <span class="screen-reader-text">Switch skin</span> 
+                                    </a> 
+                                </li> 
+                                <li class="side-aside-nav-icon menu-item custom-menu-link"> 
+                                    <a href="#"> 
+                                        <span class="tie-icon-navicon" aria-hidden="true"></span> 
+                                        <span class="screen-reader-text">Sidebar</span> 
+                                    </a> 
+                                </li> 
+                            </ul> 
+                        </div> 
+                    </div> 
+                </div> 
+            </nav> 
+        </div> 
+    </header>
+    <footer id="footer" class="site-footer dark-skin dark-widgetized-area"> 
+        <div id="footer-widgets-container"> 
+            <div class="container"> 
+                <div class="footer-widget-area "> 
+                    <div class="tie-row"> 
+                        <div class="tie-col-md-3 normal-side"> 
+                            <div id="media_image-7"
+                                class="container-wrapper widget widget_media_image">
+                                <div class="widget-title the-global-title has-block-head-4">
+                                    <div
+                                        class="the-subtitle">Ubicación
+                                        <span class="widget-title-icon tie-icon"></span>
+                                    </div>
+                                </div>
+                                <img width="567"
+                                    height="205"
+                                    src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2023/06/LOGO-nuevo.webp"
+                                    data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2023/06/LOGO-nuevo.webp"
+                                    class="image wp-image-252552 attachment-full size-full lazy loaded" alt
+                                    decoding="async" style="max-width: 100%; height: auto;"
+                                    data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2023/06/LOGO-nuevo.webp 567w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2023/06/LOGO-nuevo-300x108.webp 300w"
+                                    data-sizes="(max-width: 567px) 100vw, 567px"
+                                    sizes="(max-width: 567px) 100vw, 567px"
+                                    srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2023/06/LOGO-nuevo.webp 567w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2023/06/LOGO-nuevo-300x108.webp 300w"
+                                    data-was-processed="true">
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="text-html-widget-2" class="container-wrapper widget text-html">
+                                <div>
+                                    <h4 style="margin-top:10px;">Instituto Politécnico Nacional</h4> 
+                                    Prolongación Carpio 475, col. Casco de Sto. Tomás, C.P. 11340, 
+                                    Ciudad de México Contacto con la Audiencia: 55 5166 4000. Conmutador: 
+                                    55535611
+                                </div>
+                                <div class="clearfix"></div>
+                            </div> 
+                        </div> 
+                        <div class="tie-col-md-3 normal-side"> 
+                            <div id="posts-list-widget-2" class="container-wrapper widget posts-list">
+                                <div class="widget-title the-global-title has-block-head-4">
+                                    <div class="the-subtitle">
+                                        Últimas notas actualizadas
+                                        <span class="widget-title-icon tie-icon"></span>
+                                    </div>
+                                </div>
+                                <div class="widget-posts-list-wrapper">
+                                    <div class="widget-posts-list-container posts-pictures-widget">
+                                        <div class="tie-row widget-posts-wrapper"> 
+                                            <div class="widget-single-post-item tie-col-xs-4 tie-standard"> 
+                                                <a aria-label="Trump se reúne con presidente de Siria tras levantar sanciones"
+                                                    href="internacional/trump-se-reune-con-presidente-de-siria-tras-levantar-sanciones/474448/"
+                                                    class="post-thumb">
+                                                    <img width="390" height="220"
+                                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-390x220.jpg"
+                                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-390x220.jpg"
+                                                        class="attachment-jannah-image-large size-jannah-image-large wp-post-image lazy loaded"
+                                                        alt decoding="async"
+                                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA.jpg 1200w"
+                                                        data-sizes="(max-width: 390px) 100vw, 390px"
+                                                        sizes="(max-width: 390px) 100vw, 390px"
+                                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/TRUMP-SIRIA.jpg 1200w"
+                                                        data-was-processed="true">
+                                                </a> 
+                                            </div> 
+                                            <div class="widget-single-post-item tie-col-xs-4 tie-standard"> 
+                                                <a aria-label="Ley de telecomunicaciones busca conectar a todo México: Agencia Digital"
+                                                    href="nacional/ley-de-telecomunicaciones-busca-conectar-a-todo-mexico-agencia-de-transformacion-digital/474454/"
+                                                    class="post-thumb">
+                                                    <img width="390" height="220"
+                                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/3967cea6-a8b3-43f2-b60e-500f245b5f16-390x220.jpg"
+                                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/3967cea6-a8b3-43f2-b60e-500f245b5f16-390x220.jpg"
+                                                        class="attachment-jannah-image-large size-jannah-image-large wp-post-image lazy loaded"
+                                                        alt decoding="async"
+                                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/3967cea6-a8b3-43f2-b60e-500f245b5f16-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/3967cea6-a8b3-43f2-b60e-500f245b5f16-746x420.jpg 746w"
+                                                        data-sizes="(max-width: 390px) 100vw, 390px"
+                                                        sizes="(max-width: 390px) 100vw, 390px"
+                                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/3967cea6-a8b3-43f2-b60e-500f245b5f16-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/3967cea6-a8b3-43f2-b60e-500f245b5f16-746x420.jpg 746w"
+                                                        data-was-processed="true">
+                                                </a> 
+                                            </div> 
+                                            <div class="widget-single-post-item tie-col-xs-4 tie-standard"> 
+                                                <a aria-label="Colombia se suma a programa comercial “Ruta de la Seda” de China"
+                                                    href="internacional/colombia-se-suma-a-programa-comercial-ruta-de-la-seda-de-china/474442/"
+                                                    class="post-thumb">
+                                                    <img width="390" height="220"
+                                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--390x220.jpg"
+                                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--390x220.jpg"
+                                                        class="attachment-jannah-image-large size-jannah-image-large wp-post-image lazy loaded"
+                                                        alt decoding="async"
+                                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA-.jpg 1200w"
+                                                        data-sizes="(max-width: 390px) 100vw, 390px"
+                                                        sizes="(max-width: 390px) 100vw, 390px"
+                                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA--746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CHINA-Y-COLOMBIA-.jpg 1200w"
+                                                        data-was-processed="true">
+                                                </a> 
+                                            </div> 
+                                            <div class="widget-single-post-item tie-col-xs-4 tie-standard"> 
+                                                <a  aria-label="Gonzalo Celorio recibe la Medalla Vasconcelos"
+                                                    href="cultura/gonzalo-celorio-recibe-la-medalla-vasconcelos/474444/"
+                                                    class="post-thumb">
+                                                    <img width="390" height="220"
+                                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/916638_Diccionario-de-mexicanismos_web-390x220.jpg"
+                                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/916638_Diccionario-de-mexicanismos_web-390x220.jpg"
+                                                        class="attachment-jannah-image-large size-jannah-image-large wp-post-image lazy loaded"
+                                                        alt decoding="async"
+                                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/916638_Diccionario-de-mexicanismos_web-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/916638_Diccionario-de-mexicanismos_web-746x420.jpg 746w"
+                                                        data-sizes="(max-width: 390px) 100vw, 390px"
+                                                        sizes="(max-width: 390px) 100vw, 390px"
+                                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/916638_Diccionario-de-mexicanismos_web-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/916638_Diccionario-de-mexicanismos_web-746x420.jpg 746w"
+                                                        data-was-processed="true">
+                                                </a> 
+                                            </div> 
+                                            <div class="widget-single-post-item tie-col-xs-4 tie-standard"> 
+                                                <a  aria-label="Papa León XIV se ofrece como mediador para poner fin a las guerras"
+                                                    href="internacional/papa-leon-xiv-se-ofrece-como-mediador-para-poner-fin-a-las-guerras/474435/"
+                                                    class="post-thumb">
+                                                    <img width="390" height="220"
+                                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-390x220.jpg"
+                                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-390x220.jpg"
+                                                        class="attachment-jannah-image-large size-jannah-image-large wp-post-image lazy loaded"
+                                                        alt decoding="async"
+                                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV.jpg 1200w"
+                                                        data-sizes="(max-width: 390px) 100vw, 390px"
+                                                        sizes="(max-width: 390px) 100vw, 390px"
+                                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/PAPA-LEON-XIV.jpg 1200w"
+                                                        data-was-processed="true">
+                                                </a> 
+                                            </div> 
+                                            <div class="widget-single-post-item tie-col-xs-4 tie-standard"> 
+                                                <a  aria-label="De guerrillero a presidente… Así es el legado de Pepe Mujica"
+                                                    href="internacional/de-guerrillero-a-presidente-asi-es-el-legado-de-pepe-mujica/474412/"
+                                                    class="post-thumb">
+                                                    <img width="390" height="220"
+                                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-390x220.jpg"
+                                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-390x220.jpg"
+                                                        class="attachment-jannah-image-large size-jannah-image-large wp-post-image lazy loaded"
+                                                        alt="Las frases más icónicas del expresidente de Uruguay, José Mujica"
+                                                        decoding="async"
+                                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay.jpg 1200w"
+                                                        data-sizes="(max-width: 390px) 100vw, 390px"
+                                                        sizes="(max-width: 390px) 100vw, 390px"
+                                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-fallece-Uruguay.jpg 1200w"
+                                                        data-was-processed="true">
+                                                </a> 
+                                            </div> 
+                                            <div class="widget-single-post-item tie-col-xs-4 tie-standard"> 
+                                                <a  aria-label="Economía mexicana no está en recesión: Hacienda"
+                                                    href="economia/economia-mexicana-no-esta-en-recesion-hacienda/474399/"
+                                                    class="post-thumb">
+                                                    <img width="390" height="220"
+                                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-390x220.jpg"
+                                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-390x220.jpg"
+                                                        class="attachment-jannah-image-large size-jannah-image-large wp-post-image lazy loaded"
+                                                        alt decoding="async"
+                                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA.jpg 1199w"
+                                                        data-sizes="(max-width: 390px) 100vw, 390px"
+                                                        sizes="(max-width: 390px) 100vw, 390px"
+                                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/EDGAR-AMADOR-ZAMORA.jpg 1199w"
+                                                        data-was-processed="true">
+                                                </a> 
+                                            </div> 
+                                            <div class="widget-single-post-item tie-col-xs-4 tie-standard"> 
+                                                <a  aria-label="“Mujica siempre quiso una América Latina unida”: Julieta Sierra"
+                                                    href="internacional/mujica-siempre-quiso-una-america-latina-unida-julieta-sierra/474379/"
+                                                    class="post-thumb">
+                                                    <img width="390" height="220"
+                                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-390x220.jpg"
+                                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-390x220.jpg"
+                                                        class="attachment-jannah-image-large size-jannah-image-large wp-post-image lazy loaded"
+                                                        alt="&quot;Pepe es una celebración a la vida&quot;, diputada del movimiento de izquierda en Uruguay"
+                                                        decoding="async"
+                                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica.jpg 1200w"
+                                                        data-sizes="(max-width: 390px) 100vw, 390px"
+                                                        sizes="(max-width: 390px) 100vw, 390px"
+                                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-390x220.jpg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-300x169.jpg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-1024x576.jpg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-768x432.jpg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica-746x420.jpg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/Jose-Mujica.jpg 1200w"
+                                                        data-was-processed="true">
+                                                </a> 
+                                            </div> 
+                                            <div class="widget-single-post-item tie-col-xs-4 tie-standard"> 
+                                                <a  aria-label="Sheinbaum explica paso a paso cómo votar el 1 de junio"
+                                                    href="nacional/sheinbaum-explica-paso-a-paso-como-votar-el-1-de-junio/474378/"
+                                                    class="post-thumb">
+                                                    <img width="390" height="220"
+                                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-390x220.jpeg"
+                                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-390x220.jpeg"
+                                                        class="attachment-jannah-image-large size-jannah-image-large wp-post-image lazy loaded"
+                                                        alt decoding="async"
+                                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-390x220.jpeg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-300x169.jpeg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-1024x576.jpeg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-768x432.jpeg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-746x420.jpeg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS.jpeg 1200w"
+                                                        data-sizes="(max-width: 390px) 100vw, 390px"
+                                                        sizes="(max-width: 390px) 100vw, 390px"
+                                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-390x220.jpeg 390w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-300x169.jpeg 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-1024x576.jpeg 1024w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-768x432.jpeg 768w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS-746x420.jpeg 746w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2025/05/CLAUDIA-SHEINBAUM-BOLETAS.jpeg 1200w"
+                                                        data-was-processed="true">
+                                                </a> 
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="text-html-widget-3" class="container-wrapper widget text-html">
+                                <div>
+                                    DR©XEIPN Canal Once, Ciudad de México, 2021. Todos los derechos reservados.
+                                </div>
+                                <div class="clearfix"></div>
+                            </div> 
+                        </div> 
+                        <div class="tie-col-md-3 normal-side"> 
+                            <div id="media_image-8" class="container-wrapper widget widget_media_image">
+                                <div class="widget-title the-global-title has-block-head-4">
+                                    <div class="the-subtitle">
+                                        Aplicaciones
+                                        <span class="widget-title-icon tie-icon"></span>
+                                    </div>
+                                </div>
+                                <a href="//play.google.com/store/apps/details?id=com.elonce.oncenoticias&amp;hl=es_MX">
+                                    <img
+                                        width="300" height="116"
+                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/google-play-badge-300x116.png"
+                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/google-play-badge-300x116.png"
+                                        class="image wp-image-172099 attachment-medium size-medium lazy loaded"
+                                        alt="Google play store" decoding="async"
+                                        style="max-width: 100%; height: auto;"
+                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/google-play-badge-300x116.png 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/google-play-badge.png 646w"
+                                        data-sizes="(max-width: 300px) 100vw, 300px"
+                                        sizes="(max-width: 300px) 100vw, 300px"
+                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/google-play-badge-300x116.png 300w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/google-play-badge.png 646w"
+                                        data-was-processed="true">
+                                </a>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="media_image-9" class="container-wrapper widget widget_media_image">
+                                <a href="//apps.apple.com/mx/app/once-noticias-prestigio/id1597508747">
+                                    <img
+                                        width="500" height="170"
+                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/app-store-badge.png"
+                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/app-store-badge.png"
+                                        class="image wp-image-172101 attachment-full size-full lazy loaded"
+                                        alt="App Store" decoding="async" style="max-width: 100%; height: auto;"
+                                        data-srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/app-store-badge.png 500w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/app-store-badge-300x102.png 300w"
+                                        data-sizes="(max-width: 500px) 100vw, 500px"
+                                        sizes="(max-width: 500px) 100vw, 500px"
+                                        srcset="https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/app-store-badge.png 500w, https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/app-store-badge-300x102.png 300w"
+                                        data-was-processed="true">
+                                </a>
+                                <div class="clearfix"></div>
+                            </div> 
+                        </div> 
+                        <div class="tie-col-md-3 normal-side"> 
+                            <div id="custom_html-3" class="widget_text container-wrapper widget widget_custom_html">
+                                <div class="textwidget custom-html-widget">
+                                    <img width="240" height="300"
+                                        src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/iphoneapp.png"
+                                        data-src="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2022/10/iphoneapp.png"
+                                        class="image wp-image-102531 attachment-medium size-medium lazy loaded" 
+                                        alt="" style="max-width: 100%; height: auto;" data-was-processed="true">
+                                </div>
+                                <div class="clearfix"></div>
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <div id="site-info" class="site-info site-info-layout-2"> 
+            <div class="container"> 
+                <div class="tie-row"> 
+                    <div class="tie-col-md-12"> 
+                        <div class="copyright-text copyright-text-first">
+                            <a href="wp-content/uploads/2022/03/Aviso_Integral_NewsLetter.pdf"
+                                target="https://oncenoticias.digital/wp-content/uploads/2022/03/Aviso_Integral_NewsLetter.pdf"
+                                rel="nofollow noopener">
+                                AVISO DE PRIVACIDAD INTEGRAL NEWSLETTER | 
+                            </a> 
+                            <a  href="politicas-de-privacidad-y-proteccion-de-datos-personales/"
+                                target="https://oncenoticias.digital/politicas-de-privacidad-y-proteccion-de-datos-personales/"
+                                rel="nofollow noopener">
+                                Derechos reservados © XEIPN Canal Once, Once Noticias,
+                                Ciudad de México 2025. Todos los derechos reservados. Aviso legal. 
+                            </a>
+                        </div>
+                        <ul class="social-icons">
+                            <li class="social-icons-item">
+                                <a class="social-link facebook-social-icon" rel="external noopener nofollow"        
+                                    target="_blank" href="//www.facebook.com/OnceNoticiasTV">
+                                    <span class="tie-social-icon tie-icon-facebook"></span>
+                                    <span class="screen-reader-text">Facebook</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a class="social-link youtube-social-icon"
+                                    rel="external noopener nofollow" target="_blank"
+                                    href="//www.youtube.com/channel/UCM4vf-nmAxPq8Do0Xi3qXkg">
+                                    <span class="tie-social-icon tie-icon-youtube"></span>
+                                    <span class="screen-reader-text">YouTube</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a class="social-link instagram-social-icon"
+                                    rel="external noopener nofollow" target="_blank"
+                                    href="//www.instagram.com/oncenoticias.digital/">
+                                    <span class="tie-social-icon tie-icon-instagram"></span>
+                                    <span class="screen-reader-text">Instagram</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a class="social-link tiktok-social-icon"
+                                    rel="external noopener nofollow" target="_blank"
+                                    href="//www.tiktok.com/@oncenoticias.digital">
+                                    <span class="tie-social-icon tie-icon-tiktok"></span>
+                                    <span class="screen-reader-text">TikTok</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a class="social-link whatsapp-social-icon"
+                                    rel="external noopener nofollow" target="_blank"
+                                    href="//whatsapp.com/channel/0029VaKdOdMKQuJRN1OuSJ0F">
+                                    <span class="tie-social-icon tie-icon-whatsapp"></span>
+                                    <span class="screen-reader-text">WhatsApp</span>
+                                </a>
+                            </li>
+                            <li class="social-icons-item">
+                                <a  class="social-link social-custom-link custom-link-1-social-icon custom-social-img"
+                                    rel="external noopener nofollow" target="_blank"
+                                    href="//twitter.com/OnceNoticiasTV">
+                                    <span class="tie-social-icon social-icon-img social-icon-img-1"></span>
+                                    <span class="screen-reader-text">x</span>
+                                </a>
+                            </li>
+                        </ul> 
+                    </div> 
+                </div> 
+            </div>
+        </div> 
+    </footer>
+    <script>
+        // let element = document.getElementById("text-target");
+        // let text = element.innerHTML;
+        // let speed = 100;
+        // let index = 0;
+        // let typingInterval;
+        // let repeatInterval;
+        // let isPaused = false; // Controla el estado de pausa
+
+        // const pauseTextAnimationTyping = () => {
+        //     isPaused = true;
+        //     element.innerHTML = text
+        //     clearTimeout(typingInterval);
+        // }
+        // const playTextAnimationTyping = () => {
+        //     isPaused = false;
+        //     element.innerHTML = '';
+        //     index = 0;
+        //     if (index < text.length) {
+        //         typingInterval = setTimeout(typeWriter, speed);
+        //     } else {
+        //         startAnimationCycle();
+        //     }
+        // }
+        // function typeWriter() {
+
+        //     if (index < text.length && !isPaused) {
+        //         element.innerHTML += text.charAt(index);
+        //         index++;
+        //         typingInterval = setTimeout(typeWriter, speed);
+        //     }
+        // }
+        // function startAnimationCycle() {
+        //     if (repeatInterval) clearInterval(repeatInterval);
+        //     element.innerHTML = '';
+
+        //     typeWriter(); 
+        //     repeatInterval = setInterval(() => {
+        //         if (!isPaused) {
+        //             element.innerHTML = '';
+        //             index = 0;
+        //             typeWriter();
+        //         }
+        //     }, text.length * speed + 1800); 
+        // }
+        // // 
+        // element.addEventListener('mouseover', pauseTextAnimationTyping);
+        // element.addEventListener('mouseout', playTextAnimationTyping);
+        // // 
+        // document.addEventListener("DOMContentLoaded", function(event) {        
+        //     startAnimationCycle();
+        // });
+    </script>
+</body>
+</html>

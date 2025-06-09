@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .section-avisos-privacidad{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+            .section-avisos-privacidad:first-child{
+
+            }
+            .section-avisos-privacidad .bg_btn {
+                width: auto;
+                height: auto;
+                --color: url('https://canalonce.mx/REST/data/images/bg_amarillo_onn.png');
+                background-image: var(--color);
+                background-size: cover;
+            }
+            .section-avisos-privacidad .btn-onn{
+                border: none;
+                padding: 1.5rem;
+                border-radius: 0.5rem;
+                color: #6d1d81;
+                max-width: 210px;
+                text-align: center;
+                text-decoration: none;
+            }
+            .section-avisos-privacidad .btn-onn h2{
+                font-family: 'Raleway', sans-serif;
+                font-size: clamp(1rem, 1.2rem, 2rem);
+                font-weight: 900;
+            }
+            @media (max-width: 650px){ 
+                .section-avisos-privacidad{
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="section-avisos-privacidad">
+            <a href="https://canalonce.mx/REST/data/images/aviso-de-privacidad-integral-para-participantes-en-los-contenidos-de-onn-junio-2024.pdf" class="bg_btn btn-onn" target="_blank">
+                <h2>
+                    Aviso Privacidad Participantes
+                </h2>
+            </a>
+            <a href="https://canalonce.mx/REST/data/images/aviso-de-privacidad-simplificado-para-participantes-en-los-contenidos-de-onn-junio-2024.pdf" class="bg_btn btn-onn" target="_blank">
+                <h2>
+                    Aviso Privacidad Simplificado
+                </h2>
+            </a>
+        </section>
+    </body>
+</html>

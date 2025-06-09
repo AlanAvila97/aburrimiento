@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .section-list-spotify-2 .container-list-spotify{
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: 1fr 15%;
+                gap: 0.5rem;
+            }
+            .section-list-spotify-2 .container-list-spotify .list-spotify{
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 1rem;
+            }
+            .section-list-spotify-2 .container-list-spotify .item-list-spotify .image-audio {
+                width: auto;
+                height: 100%;
+            }
+            .section-list-spotify-2 .container-list-spotify .item-list-spotify{
+                width: 100%;
+                height: auto;
+            }
+            .section-list-spotify-2 .container-list-spotify .item-list-spotify .image-audio img{
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                display: block;
+                object-fit: contain;
+            }
+            .section-list-spotify-2 .container-list-spotify .action-spotify{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .section-list-spotify-2 .container-list-spotify .action-spotify .redirect_spotify{
+                background: black;
+                color: #fff;
+                cursor: pointer;
+                padding: 1.5rem 2rem;
+                border-radius: 0.5rem;
+                font-size: 2rem;
+            }
+            @media (max-width: 991px){
+                .section-list-spotify-2 .container-list-spotify{
+                    grid-template-columns: 1fr;
+                } 
+                .section-list-spotify-2 .container-list-spotify .list-spotify{
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="section-list-spotify-2">
+            <div class="container-list-spotify">
+                <div class="list-spotify">
+                    <article class="item-list-spotify">
+                        <iframe style="border-radius: 12px;" src="https://open.spotify.com/embed/show/0RjrXVjw3FhNlO7saEPoSF?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="allowfullscreen"></iframe>                        
+                    </article>
+                    <article class="item-list-spotify">
+                        <iframe style="border-radius: 12px;" src="https://open.spotify.com/embed/episode/3PQowmYREgqsTsOW66aVKX?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="allowfullscreen"></iframe>                        
+                    </article>
+                    <article class="item-list-spotify">
+                        <iframe style="border-radius: 12px;" src="https://open.spotify.com/embed/episode/3PQowmYREgqsTsOW66aVKX?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="allowfullscreen"></iframe>                        
+                    </article>
+                </div>
+                <div class="action-spotify">
+                    <a class="redirect_spotify">
+                        +
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+    </body>
+</html>

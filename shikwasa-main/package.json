@@ -1,0 +1,58 @@
+{
+  "name": "shikwasa",
+  "version": "2.2.1",
+  "description": "A web audio player born for podcasts. With chapters, playback speed and forward/backward controls, it is best paired with your podcasting website.",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/shikwasa.cjs.js",
+  "module": "./dist/shikwasa.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/shikwasa.es.js",
+      "require": "./dist/shikwasa.cjs.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^1.8.2",
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.17",
+    "cypress": "^10.7.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "postcss": "^8.4.6",
+    "vite": "^2.9.8"
+  },
+  "scripts": {
+    "start": "vite",
+    "start:ci": "TARGET=ci npm start",
+    "start:demo": "npm run build&&TARGET=demo npm start",
+    "build": "TARGET=lib vite build",
+    "build:demo": "TARGET=demo vite build",
+    "preview:demo": "TARGET=demo vite preview",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint --fix src",
+    "test:open": "npx cypress open",
+    "test:ci": "npx cypress run"
+  },
+  "author": "Jessie Ji <jessunix+shikwasa@gmail.com> (https://jessieji.com)",
+  "keywords": [
+    "podcast",
+    "audio",
+    "player",
+    "html5audio",
+    "shikwasa",
+    "playback",
+    "chapter"
+  ],
+  "license": "MIT",
+  "repository": "github:jessuni/shikwasa",
+  "browserslist": [
+    ">0.2%",
+    "not ie <= 8"
+  ]
+}
