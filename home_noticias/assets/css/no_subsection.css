@@ -52,22 +52,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Bloque superior */
-.ns-featured {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.ns-featured img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-}
-
-
 .ns-title {
     display: flex;
     gap: 12px;
@@ -119,44 +103,6 @@ body {
     line-height: 1.3;
 }
 
-
-/* Al momento */
-.ns-moment-list {
-    display: grid;
-    gap: 14px;
-    padding: 5%;
-    margin-bottom: 34px;
-}
-
-.ns-moment-item {
-    display: grid;
-    grid-template-columns: 1fr 1.20fr;
-    gap: 100px;
-    align-items: center;
-}
-
-.ns-moment-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
-
-.ns-moment-item h3 {
-    margin: 0 0 8px;
-    font-size: 2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-.ns-moment-item p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.3;
-}
-
-
 /* Recientes */
 .recent-zone {
     margin-top: 16px;
@@ -202,13 +148,6 @@ body {
 
 /* Responsive */
 @media (max-width: 991px) {
-    .ns-featured {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .ns-featured article:first-child {
-        grid-column: 1 / -1;
-    }
 
     .ns-moment-item {
         grid-template-columns: 1fr;
@@ -230,16 +169,10 @@ body {
         font-size: 1.7rem;
     }
 
-    .ns-featured,
     .recent-grid {
         grid-template-columns: 1fr;
     }
 
-    .ns-featured article:first-child {
-        grid-column: auto;
-    }
-
-    .ns-featured img,
     .ns-moment-item img,
     .recent-card img {
        height: 180px;

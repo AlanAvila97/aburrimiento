@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/culture.css">
+    <link rel="stylesheet" href="./assets/css/section-images-grid.css">
+    <link rel="stylesheet" href="./assets/css/section-content-grid.css">
 </head>
 
 <body>
@@ -37,89 +39,37 @@
                 <header class="culture-header">
                     <h1>Cultura</h1>
                     <i class="live-dot fa-solid fa-edit"></i>
-                </header>		
-                <!-- Destacadas -->
-                <section class="hero-grid mt-5 container" aria-label="Destacadas">
-                    <article>
-                        <img src="https://dummyimage.com/760x430/ccc/fff" alt="Destacada principal">
-                    </article>
-                    <div class="hero-right">
-                        <article>
-                            <img src="https://dummyimage.com/430x210/ccc/fff" alt="Destacada secundaria 1">
-                        </article>
-                        <article>
-                            <img src="https://dummyimage.com/430x210/ccc/fff" alt="Destacada secundaria 2">
-                        </article>
-                    </div>
-                </section>
-                <!-- Contenido principal + Lo mas visto -->
+                </header>
+               <?php $images = [ 
+                "https://dummyimage.com/860x420/ccc/fff&text=Principal",
+                "https://dummyimage.com/420x205/ccc/fff&text=Secundaria+1",
+                "https://dummyimage.com/420x205/ccc/fff&text=Secundaria+2", ]; 
+               include('./partials/components/section-images-grid.php'); ?>
+                
+               <!-- Contenido principal + Lo mas visto -->
                 <section class="main-content container section-notices section-important-notes px-4 px-md-3 pt-3 pt-mb-3 pb-3 pb-mb-4">
                     <div>
-                        <!-- Expresiones Artisticas -->
-                        <div class="editorial-group">
-                            <div class="title-notes text-center w-100 mb-md-4">
-                                <h2 class="h1 text-uppercase fw-bold border-bottom border-2 border-after-start">
-                                    Expresiones Artísticas
-                                </h2>
-                            </div>
+                       <!-- Expresiones Artisticas -->
+                      <?php 
+                        $title = "Expresiones Artísticas";
+                        $image = "https://dummyimage.com/420x210/ccc/fff"; 
+                        $principalContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam";
+                        $subtitle1 = "Título Título Título";
+                        $summary1 = "Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario";
+                        $subtitle2 = "Título Título Título";
+                        $summary2 = "Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario";
+                       include('./partials/components/section-content-grid.php'); ?>
 
-                            <article class="lead-block mt-4 row-gap-3">
-                                <figure class="thumb m-0">
-                                    <img src="https://dummyimage.com/420x210/ccc/fff" alt="Memoria e identidad principal">
-                                    <figcaption class="lead-caption pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit, sed diam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    </figcaption>
-                                    <div class="separator-red"></div>
-                                </figure>
-
-                                <div class="lead-copy">
-                                    <div>
-                                        <h4 class="fw-bold text-uppercase">Título Título Título</h4>
-                                        <p>Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario
-                                            Sumario Sumario</p>
-                                    </div>
-                                    <div class="separator-red"></div>
-                                    <div>
-                                        <h4 class="fw-bold text-uppercase">Título Título Título</h4>
-                                        <p>Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario
-                                            Sumario Sumario</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-
-                        <!-- Memoria e Identidad -->
-                        <div class="editorial-group">
-                            <div class="title-notes text-center w-100 mb-md-4">
-                                <h2 class="h1 text-uppercase fw-bold border-bottom border-2 border-after-start">
-                                    Memoria e Identidad
-                                </h2>
-                            </div>
-
-                            <article class="lead-block mt-4 row-gap-3">
-                                <figure class="thumb m-0">
-                                    <img src="https://dummyimage.com/420x210/ccc/fff" alt="Memoria e identidad principal">
-                                    <figcaption class="lead-caption pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit, sed diam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    </figcaption>
-                                    <div class="separator-red"></div>
-                                </figure>
-
-                                <div class="lead-copy">
-                                    <div>
-                                        <h4 class="fw-bold text-uppercase">Título Título Título</h4>
-                                        <p>Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario
-                                            Sumario Sumario</p>
-                                    </div>
-                                    <div class="separator-red"></div>
-                                    <div>
-                                        <h4 class="fw-bold text-uppercase">Título Título Título</h4>
-                                        <p>Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario
-                                            Sumario Sumario</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
+                    <!-- Memoria e Identidad -->
+                      <?php 
+                        $title = "Memoria e Identidad";
+                        $image = "https://dummyimage.com/420x210/ccc/fff"; 
+                        $principalContent = "jhkkjuhgkj thjfdtknorj ijrounbrog  origorn infolsns kfeéflkes  nognoldrsgndsrl nodgnodrgnol    olnolgdsrg";
+                        $subtitle1 = "Título2 Título2 Título2";
+                        $summary1 = "Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2";
+                        $subtitle2 = "Título2 Título2 Título2";
+                        $summary2 = "Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2";
+                       include('./partials/components/section-content-grid.php'); ?>
                     </div>
 
                     <aside class="most-seen" aria-label="Lo más visto">
@@ -138,6 +88,7 @@
                         </ol>
                     </aside>
                 </section>
+
                 <!-- Lo mas reciente -->
                 <section class="section-notices container section-last-notes px-4 px-md-2 py-4 py-md-3">
                     <article class="container">

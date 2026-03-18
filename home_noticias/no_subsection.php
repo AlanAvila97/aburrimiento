@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/section-columns.css">
+    <link rel="stylesheet" href="./assets/css/section-images-carrousel.css">
     <link rel="stylesheet" href="./assets/css/no_subsection.css">
 </head>
 
@@ -39,55 +41,31 @@
                     <h1>Plantilla Sin Subsecciones</h1>
                     <i class="ns-live-dot fa-solid fa-edit"></i>
                 </header>
-                <!-- Bloque superior -->
-                <section class="container ns-featured" aria-label="Notas destacadas">
-                    <article>
-                        <img src="https://dummyimage.com/560x220/ccc/fff" alt="Destacada principal">
-                    </article>
-                    <article>
-                        <img src="https://dummyimage.com/560x220/ccc/fff" alt="Destacada secundaria 1">
-                    </article>
-                    <article>
-                        <img src="https://dummyimage.com/560x220/ccc/fff" alt="Destacada secundaria 2">
-                    </article>
-                </section>
-                <!-- Al momento -->
-                <section class="container section-notices section-last-notes">
-                    <article class="container">
-                        <div class="title-notes text-center w-50">
-                            <h2 class="h2 text-uppercase fw-bold border-bottom border-2 border-after-start">
-                                Al Momento
-                            </h2>
-                        </div>
 
-                        <div class="ns-moment-list">
-                            <article class="ns-moment-item">
-                                <img src="https://dummyimage.com/320x210/ccc/fff" alt="Nota al momento 1">
-                                <div>
-                                    <h4 class="fw-bold text-uppercase">Título Título Título</h4>
-                                    <p>Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario
-                                        Sumario</p>
-                                </div>
-                            </article>
-                            <article class="ns-moment-item">
-                                <img src="https://dummyimage.com/320x210/ccc/fff" alt="Nota al momento 2">
-                                <div>
-                                    <h4 class="fw-bold text-uppercase">Título Título Título</h4>
-                                    <p>Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario
-                                        Sumario</p>
-                                </div>
-                            </article>
-                            <article class="ns-moment-item">
-                                <img src="https://dummyimage.com/320x210/ccc/fff" alt="Nota al momento 3">
-                                <div>
-                                    <h4 class="fw-bold text-uppercase">Título Título Título</h4>
-                                    <p>Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario
-                                        Sumario</p>
-                                </div>
-                            </article>
-                        </div>
-                    </article>
-                </section>
+                <!-- Bloque superior -->
+                <?php 
+                        $numColms = 3;
+                        $title = "Notas destacadas";
+                        $images = [
+                            "https://dummyimage.com/560x220/ccc/fff",
+                            "https://dummyimage.com/560x220/ccc/fff",
+                            "https://dummyimage.com/560x220/ccc/fff",
+                        ];
+                         include('./partials/components/section-images-carrousel.php'); ?>
+
+                
+
+                <!-- Al Momento -->
+                       <?php 
+                        $numColms = 3;
+                        $title = "Al Momento";
+                        $items = [ 
+                            ["img" => "https://dummyimage.com/320x210/ccc/fff", "alt" => "Nota 1", "titulo" => "Titulo 1", "sumario" => "Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1"],
+                            ["img" => "https://dummyimage.com/320x210/ccc/fff", "alt" => "Nota 2", "titulo" => "Titulo 2", "sumario" => "Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2"],
+                            ["img" => "https://dummyimage.com/320x210/ccc/fff", "alt" => "Nota 3", "titulo" => "Titulo 3", "sumario" => "Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3"],
+                             ];
+                         include('./partials/components/section-columns.php'); ?>
+
                 <!-- Lo mas reciente -->
                 <section class="container section-notices section-last-notes">
                     <article class="container">
