@@ -772,14 +772,6 @@
     }
 }
 
-.entry a,.dark-skin .entry a {
-    color: var(--brand-color)
-}
-
-.entry a:hover,.dark-skin .entry a:hover {
-    color: var(--dark-brand-color)
-}
-
 .entry a.button {
     color: var(--bright-color);
     vertical-align: inherit

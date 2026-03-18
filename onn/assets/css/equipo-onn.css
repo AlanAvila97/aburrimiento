@@ -1,0 +1,79 @@
+:root{
+    --bs-footer-page: transparent;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-equipo-onn::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/fondo_contacto.png);
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-equipo-onn .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/Banner-Equipo-On.jpg);
+    background-color: rgb(47, 32, 5, 48%);    
+    background-attachment: initial;
+    background-size: cover;
+}
+body.bg-equipo-onn .section-banner .container-title-banner{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#texto_principal.section-content-center{
+    margin-top: 8em;
+    margin-bottom: 0em;
+}
+/*-------------------------------------------------------------
+# Section Content Grid Two Columns
+--------------------------------------------------------------*/
+#grid-premios .items-grid{
+    cursor: pointer;
+    padding: 2rem;
+}
+
+/*-------------------------------------------------------------
+# Seccion Modal
+-------------------------------------------------------------*/
+#modalEquipo .modal-content{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/fondo_EQUIPO_ONN_POP_UP.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#modalEquipo .modal-header .btn-close{
+    filter: invert(1);
+    opacity: 1;
+}
+#modalEquipo .modal-body .container-image{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    margin: 2rem 0rem;
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer{
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Section Content Banner Image
+    --------------------------------------------------------------*/
+    body.bg-equipo-onn .section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Center
+    --------------------------------------------------------------*/
+    #texto_principal.section-content-center{
+        margin-top: 2em;
+    }
+}

@@ -1,0 +1,109 @@
+/*-------------------------------------------------------------
+# CSS GLOBAL
+-------------------------------------------------------------*/
+@font-face { 
+    font-family: 'Barlow-Regular'; 
+    font-style: normal; 
+    font-weight: normal; 
+    src: local('Barlow-Regular'), 
+         url('../fonts/Barlow-Regular.ttf'); 
+    font-display: swap
+}
+@font-face { 
+    font-family: 'Barlow-Bold'; 
+    font-style: normal; 
+    font-weight: bold; 
+    src: local('Barlow-Bold'), 
+         url('../fonts/Barlow-Bold.ttf'); 
+    font-display: swap
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow-Regular", Tahoma, sans-serif;
+}
+h1,
+h2,
+h3{
+    font-family: "Barlow-Bold", Tahoma, sans-serif;
+}
+:root{
+    --torch-red-500: #fb2444;
+    --gallery-100: #efefef;
+    --wild-sand: #f4f4f4;
+}
+.img-responsive{
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+.text-elipsis-vertical{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.bg-categories{
+    background-color: #f1f7f9;
+}
+.pt-70{
+    padding-top: 70px;
+}
+/*-------------------------------------------------------------
+# Estilos titulos secciones
+-------------------------------------------------------------*/
+.section-notices .title-notes h2{
+    border-color: #bcbcbc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+    position: relative;
+}
+.section-notices .title-notes h2::after{
+    content: '';
+    background: var(--torch-red-500);
+    top: 95%;
+    position: absolute;
+    width: 100px;
+    height: 5px;
+}
+.section-notices .title-notes .border-after-start::after{
+    left: 0;
+}
+.section-notices .title-notes .border-after-end::after{
+    right: 0;
+}
+.section-notices .item-interview{
+    cursor: pointer;
+}
+@media (max-width: 991px){ 
+    .section-notices .title-notes{
+        width: 100%!important;
+    }
+}
+/*-------------------------------------------------------------
+# Estilos grid imagen y texto abajo
+-------------------------------------------------------------*/
+.section-notices .content-items-news{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+.section-notices .content-items-news .item-news{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000;
+}
+.section-notices .content-items-news .item-news .img-new img{
+    height: 100%;
+}
+@media (max-width: 780px){ 
+    .section-notices .content-items-news{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

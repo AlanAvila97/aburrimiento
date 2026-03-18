@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop PDF</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">	
+    <!--  -->
+    <link rel="stylesheet" href="./assets/css/drag-and-drop.css">
+</head>
+<body>
+    <div class="container">
+        <div class="drop-zone" id="dropZone">
+            <div class="drop-zone-icon">📄</div>
+            <h3>Arrastra tus archivos PDF aquí</h3>
+            <p>o haz clic para seleccionar archivos</p>
+            <label class="browse-btn">
+                Examinar archivos
+                <input type="file" id="fileInput" accept=".pdf" multiple>
+            </label>
+        </div>
+        <div class="error-message" id="errorMessage"></div>
+        <div class="file-list" id="fileList"></div>
+        <button class="upload-btn" id="uploadBtn">Subir archivos</button>
+    </div>
+    <!-- Bootstrap -->
+    <script src="./assets/vendor/bootstrap/js/popper.min.js"></script>
+	<script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--  -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/drag-and-drop.js"></script>
+</body>
+</html>

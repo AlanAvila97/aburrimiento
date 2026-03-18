@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <div id="tree"></div>
+        <script src="./assets/js/orgchart.js"></script>
+        <script>
+            let chart = new OrgChart("#tree", {
+                // options
+                nodeBinding: {
+                    field_0: "name"
+                },
+                nodes: [
+                    { id: 1, name: "Amber McKenzie" },
+                    { id: 2, pid: 1, name: "Ava Field" },
+                    { id: 3, pid: 1, name: "Peter Stevens" }
+                ]  
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">	
+    <!-- Shikwasa -->
+    <link rel="stylesheet" href="./assets/vendor/shikwasa/css/style.css">	
+    <!--  -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/header.css">      
+    <link rel="stylesheet" href="./assets/css/footer.css">     
+    <link rel="stylesheet" href="./assets/css/radio-musica.css">     
+    <style>
+    </style> 
+</head>
+<body class="bg-radio-musica">
+    <div id="wrapper" >
+        <header class="header header-once">
+            <div class="container-header">
+                <div class="logo">
+                    <a href="./" aria-label="Redirección a página principal">                    
+                        <picture>
+                            <source class="lazy img-fluid" srcset="./assets/img/logo_onn.svg" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/logo_onn.svg" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy" src="./assets/img/logo_onn.svg" alt="Logo Once" width="139" height="45">
+                        </picture>
+                    </a>
+                </div><!-- End div logo -->
+                <div class="sections-nav ">
+                    <a href="./aconpamiento.html" class="btn btn-bg-onn">
+                        Madres, padres, docentes y cuidadores
+                    </a>
+                    <a href="./descargables.html" class="btn btn-bg-onn">
+                        Descargable
+                    </a>
+                    <a href="./radio-musica.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                        <i class="fa fa-circle"></i>
+                        Radio y música
+                    </a>
+                    <a href="./veo_online.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                        <i class="fa fa-circle"></i>
+                        Veo ONNline
+                    </a>
+                </div><!-- End div seccion nav -->            
+                <div class="content-menu-hamburguer">
+                    <input type="checkbox" class="menu-btn" id="openSidebarMenu">
+                    <div id="sidebarMenu">
+                        <div class="container-menu scroll-menu">
+                            <a href="./aconpamiento.html" class="btn btn-bg-onn">
+                                Madres, padres, docentes y cuidadores
+                            </a>
+                            <a href="./descargables.html" class="btn btn-bg-onn">
+                                Descargable
+                            </a>
+                            <a href="./radio-musica.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa fa-circle"></i>
+                                Radio y música
+                            </a>
+                            <a href="./veo_online.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa fa-circle"></i>
+                                Veo ONNline
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End div container header -->
+        </header>
+        <main>
+            <section class="section-content-center section-banner">
+                <div class="container w-60 container-title-banner text-center">
+                    <h1 class="text-light fw-light text-uppercase fs-1xl">Radio y música</h1>
+                </div>
+            </section>
+            <section id="texto_principal" class="section-content-center">
+                <div class="container w-60 container-title-onn py-4 text-center">
+                    <h2 class="text-light font-lilitaone h1 mt-5 fs-1xl">
+                        ¡Para escuchar!
+                    </h2>
+                    <p class="text-light h2 mt-3 mb-5 fw-light">
+                        Una sección para descansar los ojos y activar los oídos
+                    </p>
+                    <div class="container-iframe">                        
+                    </div>
+                </div>
+            </section>
+            <section id="musica_para_mi" class="section-content-center">
+                <div class="container w-60 container-title-onn py-4 text-center">
+                    <h2 class="text-light font-lilitaone h1 mb-4 fs-1xl">                        
+                        Radio
+                    </h2>
+                    <p id="text-bg" class="text-light h2 fw-light">
+                        Escucha nuestra programación de ONN Radio y dale Play.                        
+                    </p>
+                </div>
+            </section>
+            <section id="reproductor" class="section-reproductor">
+                <div class="banner-overlay">
+                    <picture class="w-100 h-100 d-block my-5">
+                        <source class="lazy img-fluid" 
+                            srcset="./assets/img/fondo_muneco_radio_musica_movile.png" type="image/png" 
+                            media="(max-width: 991px)">
+                        <source class="lazy img-fluid" 
+                            srcset="./assets/img/fondo_muneco_radio_musica.png" 
+                            type="image/png"> 
+                        <img class="img-fluid lazy img-fluid-responsive" 
+                            src="./assets/img/fondo_muneco_radio_musica.png" alt="Logo Once" 
+                            width="139" height="320">
+                    </picture>
+                </div>
+                <div class="container w-60 container-reproductor-onn py-4 text-center d-flex justify-content-center align-items-center">       
+                    <div class="reproductor">
+                        <div class="player-podcast d-none"></div>
+                        <div class="info-reproductor">
+                            <p id="date-podcast" class="author-rep text-light fs-3 mb-0">01/05/2025</p>
+                            <h1 id="title-podcast" class="text-light font-lilitaone h1 fs-1xl">
+                            </h1>
+                            <p id="author-podcast" class="author-rep text-light fs-2 mb-0"></p>
+                            <p id="time-podcast" class="time-rep text-light fs-3 mb-0">
+                                <span class="timer">00:00 </span> / <span class="duration"></span>
+                            </p>
+                        </div>
+                        <div class="controls-reproductor">
+                            <div class="control-prev">
+                                <picture class="w-100 h-100 d-block">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/prev_play.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/prev_play.png" 
+                                        type="image/png"> 
+                                    <img class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/prev_play.png" alt="Logo Once" 
+                                        width="139" height="320"
+                                        data-prev="">
+                                </picture>
+                            </div>
+                            <div id="icon_principal_podcast" class="control-play">
+                                <picture class="w-100 h-100 d-block">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/play_icon.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/play_icon.png" 
+                                        type="image/png"> 
+                                    <img id="btn_play_podcast"
+                                        class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/play_icon.png" alt="Logo Once" 
+                                        width="139" height="320"
+                                        data-status="0"
+                                        data-id="icon_principal_podcast">
+                                </picture>
+                            </div>
+                            <div class="control-next">
+                                <picture class="w-100 h-100 d-block">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/next_play.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/next_play.png" 
+                                        type="image/png"> 
+                                    <img class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/next_play.png" alt="Logo Once" 
+                                        width="139" height="320"
+                                        data-next="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>             
+                </div>
+            </section>
+            <section id="play_list_radio" class="section-content-center">
+                <div class="container w-60 container-play_list py-4 text-center">
+                    <h2 class="text-light font-lilitaone h1 mb-4 fs-1xl">
+                        Música para ti
+                    </h2>
+                    <p id="text-bg" class="text-light h2 fw-light">
+                        Aquí puedes escuchar playlists con lo mejor de la música original de Once Niñas y Niños.
+                    </p>
+                    <div id="" class="current-item-list">
+                        <div class="player-songs d-none"></div>
+                        <div class="image-song">
+                            <picture>
+                                <source 
+                                    class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/cover_play_rep.png" type="image/webp">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/cover_play_rep.png" 
+                                    type="image/png"> 
+                                <img class="img-fluid lazy img-fluid-responsive" 
+                                    src="https://onceninasyninos.tv/wp-content/uploads/2025/08/cover_play_rep.png" alt="Logo Once" width="139" 
+                                    height="320">
+                            </picture>
+                            <div id="icon_principal_song" class="floating-btn">
+                                <picture class="d-block">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/play_icon.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/play_icon.png" 
+                                        type="image/png"> 
+                                    <img id="btn_play_song" 
+                                        class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/play_icon.png" alt="Logo Once" width="139" 
+                                        height="320"
+                                        data-status="0"
+                                        data-id="icon_principal_song">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="info-song">
+                            <h1 id="title-principal-song" class="text-light font-lilitaone h1 fs-1">                                
+                            </h1>
+                            <p id="author-principal-song" class="author-rep text-light fs-2 mb-0"></p>
+                            <p id="time-principal-song" class="time-rep text-light fs-3 mb-0">
+                                <span class="timer">00:00 </span> / <span class="duration"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="content-play-list">
+                        <div class="play-list scroll-section">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container container-footer container-footer-full gap-3">
+                <div class="footer-navigation-web d-flex justify-content-center align-items-center gap-4">
+                    <a type="button" class=" text-light">
+                        <picture class="w-100 h-100 d-block">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" alt="Logo plataforma" width="139" height="45">
+                        </picture>
+                    </a>
+                    <a type="button" class=" text-light">
+                        <picture class="w-100 h-100 d-block">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-IPN-182_1.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-IPN-182_1.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/LOGO-IPN-182_1.png" alt="Logo plataforma" width="139" height="45">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Lite Youtube -->
+    <script type="module" src="./assets/vendor/lite-youtube/js/lite-youtube.min.js"></script>
+    <!-- Momentjs -->
+    <script src="./assets/vendor/moment/moment.js"></script>
+    <script src="./assets/vendor/moment/moment-with-locales.js"></script>
+    <script src="./assets/vendor/moment/moment-timezone-with-data.min.js"></script>
+    <!-- Shikwasa -->
+    <script type="module" src="./assets/vendor/shikwasa/js/shikwasa.min.js"></script>
+    <!--  -->
+    <script src="./assets/js/actions-main.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script defer src="./assets/js/radio-musica.js"></script>
+</body>
+</html>

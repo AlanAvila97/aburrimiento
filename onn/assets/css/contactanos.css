@@ -1,0 +1,63 @@
+:root{
+    --bs-footer-page: transparent;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-contactanos::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/fondo_contacto.png);
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-contactanos .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/Banner-Contáctanos.jpg);
+    background-color: rgb(47, 32, 5, 48%);    
+    background-attachment: local;
+    background-size: cover;
+}
+body.bg-contactanos .section-banner .container-title-banner{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#texto_principal.section-content-center,
+#texto_final.section-content-center{
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+/*-------------------------------------------------------------
+# Section Content Columns
+--------------------------------------------------------------*/
+.section-columns-info h2::before{
+    content: '\2022';
+    margin-right: 0.2rem;
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer{
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Section Content Banner Image
+    --------------------------------------------------------------*/
+    body.bg-contactanos .section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Footer
+    -------------------------------------------------------------*/
+    .footer{
+        padding-top: 1rem;
+        padding-bottom: 5rem;
+    }
+}

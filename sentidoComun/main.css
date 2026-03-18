@@ -1,0 +1,301 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-BG.webp);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background: #000;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: url(https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-BG.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px) {
+    .container,
+    .container-sm {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1320px;
+    }
+}
+.section-sentido-comun {
+    padding: 0rem 1rem;
+    width: 100%;
+    margin: 2rem 0rem;
+}
+section.alignfull.section-sentido-comun * {
+    box-sizing: border-box;
+}
+.section-sentido-comun .container-sentido-comun{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 470px 1fr;
+    gap: 1rem;
+    align-items: start;
+    max-height: 690px;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun.column-text{
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text h2,
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text h3,
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text p{
+    color: #fff;
+    margin: 0;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text h2,
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text h3{
+    /* text-transform: uppercase; */
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.title h2{
+    font-size: clamp(1rem, 2rem, 2.5rem);
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.text .content-image{
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.text .content-image img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    min-height: 200px;
+    max-height: 200px;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.text .content-image .overlay-item{
+    background-color: #000000c7;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.text .content-image .overlay-item:hover h3,
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.text .content-image .overlay-item:hover p{
+    color: #c43226;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.text h3{
+    font-size: clamp(1rem, 1.078rem, 1.1rem);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.text p{
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile.text:hover h3,
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile.text:hover h4,
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile.text:hover p,
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile.text:hover small{
+    color: #c43226!important;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile.text h3{
+    padding-top: 5px;
+    font-size: clamp(1rem, 1.5rem, 2rem);
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile.text small{
+    color: #ffffff;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: clamp(0.5rem, 0.9rem, 1.5rem);
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile .info{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0.5rem;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile .info .img-profile{
+    width: 100%;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile .info .img-profile img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile .info .text-profile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile .info .text-profile h4{
+    color: #fff;
+    font-size: clamp(1rem, 1.4rem, 2rem);
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun .item-profile .info .text-profile p{
+    font-size: clamp(0.7rem, 1rem, 1.8rem);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun.column-image{
+    max-height: 100%;
+    height: 100%;
+    padding: 5px;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun.column-image picture{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.section-sentido-comun .container-sentido-comun .column-sentido-comun.column-image picture img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+}
+@media (min-width: 1180px){ 
+    .section-sentido-comun .container-sentido-comun .column-sentido-comun.column-text{
+        padding-top: 0;
+    }
+    .section-sentido-comun .container-sentido-comun .column-sentido-comun.column-image{
+        padding: 0;
+    }
+}
+@media (max-width: 1015px){ 
+    .section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.title h2{
+        font-size: clamp(1rem, 1.5rem, 2rem);
+    }
+}
+@media (max-width: 991px){ 
+    .section-sentido-comun{
+        width: 100%;
+    }
+    
+    .section-sentido-comun .container-sentido-comun{
+        grid-template-columns: 1fr 380px 1fr;
+        gap: 0rem;
+        height: auto;
+    }
+    .section-sentido-comun .container-sentido-comun .column-sentido-comun{
+        height: 100%!important;
+    }
+    .section-sentido-comun .container-sentido-comun .column-sentido-comun.column-image{
+        background: transparent;
+        justify-content: center;
+    }
+}
+@media (max-width: 880px){     
+    .section-sentido-comun{
+        margin-bottom: 1rem;
+    }
+    .section-sentido-comun .container-sentido-comun{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-height: fit-content;
+    }
+    .section-sentido-comun .container-sentido-comun .column-sentido-comun:nth-child(1){
+        order: 2;
+    }
+    .section-sentido-comun .container-sentido-comun .column-sentido-comun:nth-child(2){
+        order: 1;
+    }
+    .section-sentido-comun .container-sentido-comun .column-sentido-comun:nth-child(3){
+        order: 3;
+    } 
+    .section-sentido-comun .container-sentido-comun .column-sentido-comun .item-text.text .content-image img{
+        min-height: 300px;
+        max-height: 300px;
+    }
+}

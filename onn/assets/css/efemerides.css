@@ -1,0 +1,93 @@
+:root{
+    --bs-footer-page: transparent;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-efemerides::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/banner_acompanamiento.png);
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-efemerides .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/Banner-calendario.jpg);
+    background-attachment: local;
+    background-size: cover;
+}
+body.bg-efemerides .section-banner .container-title-banner{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Section Content Months Slider
+--------------------------------------------------------------*/
+#slider_meses.section-months-slider{
+    margin-top: 8em;
+    margin-bottom: 1em;
+}
+#slider_meses.section-months-slider .container-months-slider{
+    gap: 1rem;
+}
+.section-months-slider .swiper {
+    width: 100%;
+    height: 100%;
+}
+.section-months-slider .swiper-slide {
+    text-align: center;
+}
+.section-months-slider .swiper-slide .item-months{
+    width: 100%;
+    height: 420px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.section-months-slider .content-navigation.navigation-prev{
+    transform: rotate(180deg);
+}
+/*-------------------------------------------------------------
+# Seccion Modal
+-------------------------------------------------------------*/
+#modalEfemerides .modal-body .container-image{
+    width: 100%;
+    height: auto;
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer{
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Section Content Banner Image
+    --------------------------------------------------------------*/
+    body.bg-efemerides .section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Months Slider
+    --------------------------------------------------------------*/
+    #slider_meses.section-months-slider{
+        margin-top: 2rem;
+    }
+    #slider_meses.section-months-slider .container-months-slider{
+        gap: 0.5rem;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Footer
+    -------------------------------------------------------------*/
+    .footer{
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+}

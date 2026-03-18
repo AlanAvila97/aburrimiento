@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Audio Player</title>
+    <link rel="preload" href="./assets/css/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/fontawesome/css/all.min.css"></noscript>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+        }    
+        .section-reproductores .container-reproductores{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .audio-container {
+            width: 100%;
+            padding: 0px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 0px 10px 0px #0000004d;
+        }
+        .audio-container .content-info-audio{
+            padding: 1.5rem 1rem;
+            display: grid;
+            grid-template-columns: 30% 1fr 25%;
+            justify-items: center;
+            align-items: center;
+            gap: 1rem;
+        }    
+        .hidden-player {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+        }
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .audio-controls button {
+            cursor: pointer;
+            border-color: none;
+            border-radius: 0.3rem;
+            background: rgba(0,27,46,1);
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }        
+        .audio-controls button i{
+            color: #bbb;
+            font-size: 0.7rem;
+        }
+        .audio-controls button:disabled {
+            background: #cecece6e;
+            box-shadow: inset 0px 0px 5px 2px #5c5a5a;
+            border-color: #5c5a5a8f;
+        }
+        .audio-controls button:disabled i{
+            color: rgba(0,27,46,1);
+        }
+        .progressBar {            
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            border-radius: 10px 10px 0rem 0rem;
+            cursor: pointer;
+            height: 10px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .progressBar div {
+            height: 100%;
+            background-color: rgba(175,29,77,1);
+            width: 0%;
+        }
+        /* .progressBar {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progressBar div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #007bff;
+            width: 0%;
+            transition: width 0.2s ease;
+            border-radius: 4px;
+        } */
+        .audio-container .logo-audio{
+            width: 100%;
+            height: auto;
+        }
+        .audio-container .logo-audio picture{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .audio-container .logo-audio picture img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            object-fit: contain;
+            box-shadow: 0px 0px 3px 3px #00000024;
+            border-radius: 5px;
+        }
+        .audio-container .info-audio{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-reproductores">
+        <div class="container-reproductores">
+            <!-- <div class="audio-container" data-id="VIDEO_ID_1">
+                <div id="progressBar">
+                    <div></div>
+                </div>
+                <div class="content-info-audio">
+                    <div class="logo-audio">
+                        <picture>
+                            <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg" type="image/webp">
+                            <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg" type="image/png"> 
+                            <img class="img-fluid lazy" src="https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg" alt="Logo once+" width="139" height="30">
+                        </picture>
+                    </div>
+                    <div class="info-audio">
+                        <h2>title</h2>
+                        <div id="timeDisplay">0:00 / 0:00</div>
+                    </div>
+                    <div class="audio-controls">
+                        <button id="play">
+                            <i class="fa-solid fa-play"></i>                    
+                        </button>
+                        <button id="pause">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                    <div class="hidden-player"></div>
+                </div>
+            </div>
+            <div class="audio-container" data-id="VIDEO_ID_2">
+                <div id="progressBar">
+                    <div></div>
+                </div>
+                <div class="content-info-audio">
+                    <div class="logo-audio">
+                        <picture>
+                            <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg" type="image/webp">
+                            <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg" type="image/png"> 
+                            <img class="img-fluid lazy" src="https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg" alt="Logo once+" width="139" height="30">
+                        </picture>
+                    </div>
+                    <div class="info-audio">
+                        <h2>title</h2>
+                        <div id="timeDisplay">0:00 / 0:00</div>
+                    </div>
+                    <div class="audio-controls">
+                        <button id="play">
+                            <i class="fa-solid fa-play"></i>                    
+                        </button>
+                        <button id="pause">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                    <div class="hidden-player"></div>
+                </div>
+            </div>
+            <div class="audio-container" data-id="VIDEO_ID_3">
+                <div id="progressBar">
+                    <div></div>
+                </div>
+                <div class="content-info-audio">
+                    <div class="logo-audio">
+                        <picture>
+                            <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg" type="image/webp">
+                            <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg" type="image/png"> 
+                            <img class="img-fluid lazy" src="https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg" alt="Logo once+" width="139" height="30">
+                        </picture>
+                    </div>
+                    <div class="info-audio">
+                        <h2>title</h2>
+                        <div id="timeDisplay">0:00 / 0:00</div>
+                    </div>
+                    <div class="audio-controls">
+                        <button id="play">
+                            <i class="fa-solid fa-play"></i>                    
+                        </button>
+                        <button id="pause">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                    </div>
+                    <div class="hidden-player"></div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <script>
+        const CONTAINER_REPRODUCTORES = document.querySelector('.container-reproductores');
+        const URL_MINIATURAS = 'https://canalonce.mx/REST/data/miniaturas/';
+        let players = {};
+        let timers = {};
+        let activePlayerId = null;
+
+        async function fetchData(url) {
+            try {
+                const res = await fetch(url)
+                const data = await res.json()
+                return data;
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        const parserVideoId = (url) => {
+            if (!url) return [null, null];
+            return url.split('https://youtu.be/');
+        }
+
+        async function parseoDataEpisodes(slug) {
+            try {
+                let data = await fetchData(`https://canaloncetv.s3.amazonaws.com/REST/data/mdb/episodes/desktop/${slug}.json`);
+                if (!data || data.length === 0) {
+                    console.error(`No hay datos para ${slug}`);
+                    return null;
+                }
+                let last_data = data.pop();
+                if (!last_data.vda) {
+                    console.error(`No hay URL de video para ${slug}`);
+                    return null;
+                }
+                let id_video = parserVideoId(last_data.vda);
+                return id_video[1];
+            } catch (error) {
+                console.error(`Error en parseoDataEpisodes para ${slug}:`, error);
+                return null;
+            }
+        }
+
+        async function initialitationReproductorPGM() {
+            let html = '';
+            const data_pgm_slugc = [
+                { 'slug': 'dialogos-en-confianza' },
+                { 'slug': 'aprender-a-envejecer' },
+                { 'slug': 'la-verdrag' },
+            ]
+            
+            let channels = await fetchData('https://canaloncetv.s3.amazonaws.com/REST/data/mdb/channels.json');
+            if (!channels) {
+                console.error('No se pudieron cargar los canales');
+                return;
+            }
+            
+            const data_pgm = channels.filter(itemExterno => 
+                data_pgm_slugc.find(itemLocal => itemLocal.slug === itemExterno.slugc)
+            );
+            
+            const data_pgm_actualizado = await Promise.all( 
+                data_pgm.map(async (element) => {                
+                    try {
+                        let episodes = await parseoDataEpisodes(element.slugc);
+                        return {
+                            ...element,
+                            vda: episodes
+                        };
+                    } catch (error) {
+                        console.error(`Error procesando ${element.slugc}:`, error);
+                        return {
+                            ...element,
+                            vda: null, 
+                            error: true
+                        };
+                    }
+                })
+            );
+            
+            data_pgm_actualizado.forEach((element, index) => {
+                // 
+                if (!element.vda) {
+                    console.warn(`Saltando ${element.slugc} - no hay video ID`);
+                    return;
+                }
+                
+                let id_video = element.vda;
+                let img_webp = (element.imagenw == null) ? element.imageCH : element.imageWCH;
+
+                html += `<div class="audio-container" data-id="${id_video}">
+                            <div class="progressBar">
+                                <div></div>
+                            </div>
+                            <div class="content-info-audio">
+                                <div class="logo-audio">
+                                    <picture>
+                                        <source class="lazy img-fluid" srcset="${URL_MINIATURAS+img_webp}" type="image/webp">
+                                        <source class="lazy img-fluid" srcset="${URL_MINIATURAS+element.imageCH}" type="image/png"> 
+                                        <img class="img-fluid lazy" src="${URL_MINIATURAS+img_webp}" alt="Logo once+" width="139" height="30">
+                                    </picture>
+                                </div>
+                                <div class="info-audio">
+                                    <h2>${element.title || 'title'}</h2>
+                                    <div class="timeDisplay">0:00 / 0:00</div>
+                                </div>
+                                <div class="audio-controls">
+                                    <button class="play-btn">
+                                        <i class="fa-solid fa-play"></i>                    
+                                    </button>
+                                    <button class="pause-btn">
+                                        <i class="fa-solid fa-pause"></i>
+                                    </button>
+                                </div>
+                                <div class="hidden-player" id="player-${index}"></div>
+                            </div>
+                        </div>`;
+            });
+            
+            CONTAINER_REPRODUCTORES.innerHTML = html;
+            // 
+            if (typeof YT !== 'undefined' && YT.Player) {
+                initializePlayers();
+            } 
+        }
+
+        function initializePlayers() {
+            let audioContainers = document.querySelectorAll('.audio-container');
+            audioContainers.forEach(function(container, index) {
+                let videoId = container.dataset.id;
+                let playerId = 'player-' + index;
+                //
+                let playerElement = document.getElementById(playerId);
+                if (!playerElement) {
+                    return;
+                }
+                
+                if (window.players && window.players[playerId]) {
+                    console.log('Reproductor ya existe:', playerId);
+                    return;
+                }
+                
+                if (!window.players) window.players = {};
+                
+                if (typeof YT === 'undefined' || !YT.Player) {
+                    console.error('YouTube API no está cargada');
+                    return;
+                }
+                try {
+                    window.players[playerId] = new YT.Player(playerId, {
+                        height: '1',
+                        width: '1',
+                        videoId: videoId,
+                        playerVars: {
+                            'autoplay': 0,
+                            'controls': 0,
+                            'disablekb': 1,
+                            'fs': 0,
+                            'iv_load_policy': 3,
+                            'modestbranding': 1,
+                            'showinfo': 0,
+                            'rel': 0
+                        },
+                        events: {
+                            'onReady': function(event) { 
+                                onPlayerReady(event, playerId, container); 
+                            },
+                            'onStateChange': function(event) { 
+                                onPlayerStateChange(event, playerId); 
+                            },
+                            'onError': function(error) {
+                                console.error('Error en reproductor', playerId, ':', error);
+                            }
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error creando reproductor', playerId, ':', error);
+                }
+            });
+        }
+
+        function onYouTubePlayerAPIReady() {
+            if (document.querySelectorAll('.audio-container').length > 0) {
+                initializePlayers();
+            }
+        }
+        function onPlayerReady(event, playerId, container) {
+            
+            let playButton = container.querySelector(".play-btn");
+            let pauseButton = container.querySelector(".pause-btn");                
+            let progressBar = container.querySelector(".progressBar");
+            
+            if (!playButton || !pauseButton || !progressBar) {
+                console.error('Elementos no encontrados en:', playerId);
+                return;
+            }
+            
+            pauseButton.setAttribute('disabled', 'true');
+            
+            playButton.addEventListener("click", function(e) {
+                if (activePlayerId && activePlayerId !== playerId) {
+                    stopPlayer(activePlayerId);
+                }                
+                playPlayer(playerId);
+            });
+            
+            pauseButton.addEventListener("click", function(e) {
+                pausePlayer(playerId);
+            });
+            
+            progressBar.addEventListener('click', function(e) {
+                const player = window.players[playerId];
+                if (player && player.getDuration) {
+                    if (activePlayerId && activePlayerId !== playerId) {
+                        stopPlayer(activePlayerId);
+                    }
+                    if (activePlayerId !== playerId) {
+                        const container = document.getElementById(playerId).closest('.audio-container');
+                        const playButton = container.querySelector(".play-btn");
+                        const pauseButton = container.querySelector(".pause-btn");
+                        playButton.setAttribute('disabled', 'true');
+                        pauseButton.removeAttribute('disabled');
+                        activePlayerId = playerId;
+                    }
+                    const rect = this.getBoundingClientRect();
+                    const clickX = e.clientX - rect.left;
+                    const percent = (clickX / rect.width) * 100;
+                    const newTime = (percent / 100) * player.getDuration();
+                    
+                    player.seekTo(newTime, true);
+                    progress(percent, this);
+                    updateTimeDisplay(player, container.querySelector('.timeDisplay'));
+                    
+                    if (player.getPlayerState && player.getPlayerState() !== YT.PlayerState.PLAYING) {
+                        player.playVideo();
+                    }
+                }
+            });
+            
+            updateTimeDisplay(window.players[playerId], container.querySelector('.timeDisplay'));     
+        }
+        //
+        function playPlayer(playerId) {
+            const player = window.players[playerId];
+            if (player) {
+                const container = document.getElementById(playerId).closest('.audio-container');
+                const playButton = container.querySelector(".play-btn");
+                const pauseButton = container.querySelector(".pause-btn");
+                
+                playButton.setAttribute('disabled', 'true');
+                pauseButton.removeAttribute('disabled');
+                player.playVideo();
+                
+                activePlayerId = playerId;
+            }
+        }
+        function pausePlayer(playerId) {
+            const player = window.players[playerId];
+            if (player) {
+                const container = document.getElementById(playerId).closest('.audio-container');
+                const playButton = container.querySelector(".play-btn");
+                const pauseButton = container.querySelector(".pause-btn");
+                
+                playButton.removeAttribute('disabled');
+                pauseButton.setAttribute('disabled', 'true');
+                player.pauseVideo();
+                
+                if (activePlayerId === playerId) {
+                    activePlayerId = null;
+                }
+            }
+        }
+        // 
+        function stopPlayer(playerId) {
+            const player = window.players[playerId];
+            if (player) {
+                const container = document.getElementById(playerId).closest('.audio-container');
+                const playButton = container.querySelector(".play-btn");
+                const pauseButton = container.querySelector(".pause-btn");
+                
+                playButton.removeAttribute('disabled');
+                pauseButton.setAttribute('disabled', 'true');
+                player.pauseVideo();
+                  
+                if (activePlayerId === playerId) {
+                    activePlayerId = null;
+                }
+            }
+        }
+        function progress(percent, element) {
+            percent = Math.max(0, Math.min(100, percent));
+            const innerBar = element.querySelector('div');
+            if (innerBar) {
+                innerBar.style.width = percent + '%';
+            } else {
+                console.error('No se encontró la barra de progreso interna');
+            }
+        }
+
+        function formatTime(seconds) {
+            let minutes = Math.floor(seconds / 60);
+            let remainingSeconds = Math.floor(seconds % 60);
+            return minutes + ':' + (remainingSeconds < 10 ? '0' : '') + remainingSeconds;
+        }
+
+        function updateTimeDisplay(player, timeDisplayElement) {
+            if (player && player.getDuration) {
+                let currentTime = player.getCurrentTime() || 0;
+                let duration = player.getDuration() || 0;
+                timeDisplayElement.textContent = 
+                    formatTime(currentTime) + ' / ' + formatTime(duration);
+            }
+        }
+
+        function onPlayerStateChange(event, playerId) {
+            let player = window.players[playerId];
+            let container = document.getElementById(playerId).closest('.audio-container');
+            
+            if (!container) {
+                console.error('Contenedor no encontrado :', playerId);
+                return;
+            }
+            let timeDisplay = container.querySelector('.timeDisplay');
+            let progressBar = container.querySelector('.progressBar');
+            
+            if (event.data == YT.PlayerState.PLAYING) {
+                activePlayerId = playerId;
+                if (player && player.getDuration) {
+                    let playerTotalTime = player.getDuration();
+                    timers[playerId] = setInterval(function() {
+                        if (player && player.getCurrentTime) {
+                            let playerCurrentTime = player.getCurrentTime();
+                            let playerTimeDifference = (playerCurrentTime / playerTotalTime) * 100;
+                            progress(playerTimeDifference, progressBar);
+                            updateTimeDisplay(player, timeDisplay);
+                        }
+                    }, 1000);
+                }
+            } else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+                if (timers[playerId]) {
+                    clearInterval(timers[playerId]);
+                }
+                updateTimeDisplay(player, timeDisplay);
+                
+                if (activePlayerId === playerId) {
+                    activePlayerId = null;
+                }
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function(event) {
+            if (!window.youtubeAPILoaded) {
+                let tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/player_api";
+                let firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                window.youtubeAPILoaded = true;
+            }
+            initialitationReproductorPGM();
+        });
+    </script>
+</body>
+</html>

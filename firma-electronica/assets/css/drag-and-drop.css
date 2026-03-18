@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.drop-zone {
+    border: 3px dashed #ccc;
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    background: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.drop-zone.drag-over {
+    border-color: #4CAF50;
+    background: #f0f8f0;
+    transform: scale(1.02);
+}
+
+.drop-zone.error {
+    border-color: #f44336;
+    background: #fff0f0;
+}
+
+.drop-zone-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #999;
+}
+
+.drop-zone h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.drop-zone p {
+    color: #666;
+    font-size: 14px;
+}
+
+.drop-zone input[type="file"] {
+    display: none;
+}
+
+.browse-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    background: #2196F3;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.browse-btn:hover {
+    background: #1976D2;
+}
+
+.file-list {
+    margin-top: 30px;
+}
+
+.file-item {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    gap: 0.5rem;
+}
+
+.file-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.file-icon {
+    font-size: 2rem;
+    color: var(--bs-dark);
+}
+
+.file-details h4 {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.file-details p {
+    color: #999;
+    font-size: 13px;
+}
+
+
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.upload-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: none;
+}
+
+.upload-btn:hover {
+    background: #45a049;
+}
+
+.upload-btn.show {
+    display: block;
+}

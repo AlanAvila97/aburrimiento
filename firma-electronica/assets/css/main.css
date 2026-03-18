@@ -1,0 +1,92 @@
+/*-------------------------------------------------------------
+# Colors Root
+--------------------------------------------------------------*/
+:root{
+  --pickled-bluewood-950: #2b3d50;
+  --vulcan-950: #191c24;
+  --maroon-flush-700 : #c00848; 
+  --maroon-flush-700-rbga : 192, 8, 72; 
+  --mine-shaft-900 : #333132;
+  --zircon-50 : #f5f7fb;
+  --waterloo-600 : #6c7293;
+  --silver-300 : #c9c9c9;
+  --shark-950 : #2c2e33;
+}
+[data-bs-theme="light"] {
+  --body-canal-once : var(--zircon-50);
+  --text-canal-once : var(--bs-dark);
+  --elements-canal-once : var(--maroon-flush-700);
+  --text-elements-canal-once : var(--bs-dark);
+  --subtitle-canal-once : var(--silver-300);
+  --color-elements : var(--bs-dark);
+  --bg-input : var(--bs-light);
+  --border-input : var(--silver-300);
+  --border-focus-input : var(--bs-light);
+  --bg-card : var(--bs-light);
+  --color-card : var(--bs-dark);
+  --bg-dropdown-card : var(--bs-light);
+  --link-dropdown-card : var(--mine-shaft-900);
+  --link-active-canal-once : var(--mine-shaft-900);
+  --floating-label-canal-once : var(--silver-300);
+  --bg-organization-chart-card : var(--mine-shaft-900);
+  --footer-canal-once : var(--bs-light);
+}
+[data-bs-theme="dark"] {
+  --body-canal-once : var(--bs-dark);
+  --text-canal-once : var(--bs-light);
+  --elements-canal-once : var(--vulcan-950);
+  --text-elements-canal-once : var(--bs-light);
+  --subtitle-canal-once : var(--waterloo-600);
+  --color-elements : var(--bs-light);
+  --bg-input : var(--vulcan-950);
+  --border-input : var(--vulcan-950);
+  --border-focus-input : var(--bs-light);
+  --bg-card : var(--vulcan-950);
+  --color-card : var(--bs-light);
+  --bg-dropdown-card : var(--vulcan-950);
+  --link-dropdown-card : var(--vulcan-950);
+  --link-active-canal-once : var(--bs-dark);
+  --floating-label-canal-once : var(--waterloo-600);
+  --bg-organization-chart-card : var(--bs-light);
+  /* --text-organization-chart-card : var(--bs-light); */
+  --footer-canal-once : var(--bs-dark);
+}
+/*-------------------------------------------------------------
+# CSS GLOBAL
+-------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*-------------------------------------------------------------
+# CSS GLOBAL
+-------------------------------------------------------------*/
+.content-search{
+    width: 20%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0.75rem;
+    background: var(--maroon-flush-700);
+    border: 1px solid var(--maroon-flush-700);
+    border-radius: 0.375rem;
+}
+.content-search input,
+.content-search input::placeholder,
+.content-search i{
+    color: #fff!important;
+}
+.content-search input{
+    border: none;
+    width: 85%;
+    background: transparent;
+}
+.content-search input:focus{
+    background-color: transparent;
+}
+#btn_add_career{
+    padding: 0.375rem 0.75rem;
+
+}

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Olas CSS + JS</title>
+<style>
+  :root{
+    --wave-color-1: #0b76b7;
+    --wave-color-2: #0f9bd6;
+    --wave-color-3: #7cd1ff;
+    --wave-speed-1: 10s;   /* duración de la animación (loop) */
+    --wave-speed-2: 14s;
+    --wave-speed-3: 20s;
+    --wave-translate: 30%;  /* cuanto se desplaza en X (loop) */
+    --sea-height: 40vh;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(#bfe9ff 0%, #dff6ff 50%, #fff 100%);
+    font-family: Inter, system-ui, sans-serif;
+  }
+
+  .scene{
+    width:100%;
+    max-width:1000px;
+    height: calc(var(--sea-height) + 120px);
+    position:relative;
+    overflow:hidden;
+    border-radius:14px;
+    box-shadow: 0 10px 30px rgba(10,30,60,0.12);
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  }
+
+  /* Contenedor SVG que mantiene las olas en la parte inferior */
+  .waves{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:var(--sea-height);
+    pointer-events:none;
+  }
+
+  svg{
+    width:200%;
+    height:100%;
+    display:block;
+    transform: translate3d(0,0,0);
+  }
+
+  /* cada capa de ola se posiciona absoluta para superponerlas */
+  .wave{
+    position:absolute;
+    left:0;
+    width:200%; /* duplicado horizontal para que pueda deslizarse y verse continuo */
+    height:100%;
+    bottom:0;
+  }
+
+  .wave path{
+    transform: translate3d(0,0,0);
+  }
+
+  /* Animaciones: se mueve en X para dar sensación de flujo */
+  @keyframes drift{
+    from { transform: translateX(0%); }
+    to   { transform: translateX(calc(var(--wave-translate) * -1)); }
+  }
+  @keyframes drift-reverse{
+    from { transform: translateX(0%); }
+    to   { transform: translateX(var(--wave-translate)); }
+  }
+
+  /* capas con distinta opacidad, velocidad y blend */
+  .wave.w1{ bottom:0; opacity:0.9; mix-blend-mode: screen; }
+  .wave.w2{ bottom:6%; opacity:0.75; mix-blend-mode: screen; }
+  .wave.w3{ bottom:12%; opacity:0.55; mix-blend-mode: screen; }
+
+  .wave.w1 svg{ animation: drift var(--wave-speed-1) linear infinite; }
+  .wave.w2 svg{ animation: drift-reverse var(--wave-speed-2) linear infinite; }
+  .wave.w3 svg{ animation: drift var(--wave-speed-3) linear infinite; }
+
+  /* Ajustes cuando el usuario pasa el mouse */
+  .scene:hover { cursor:pointer; }
+  .scene.pause .wave svg { animation-play-state: paused; }
+
+  /* una pequeña UI encima para controlar (opcional) */
+  .controls{
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    z-index: 30;
+    display:flex;
+    gap:8px;
+    align-items:center;
+    background: rgba(255,255,255,0.6);
+    padding:6px 8px;
+    border-radius:8px;
+    backdrop-filter: blur(6px);
+    font-size:13px;
+  }
+  .controls input[type="range"]{ width:120px; }
+  .title{
+    position:absolute;
+    left:18px;
+    top:14px;
+    z-index:20;
+    color:#01385a;
+    font-weight:600;
+  }
+
+  /* responsivo: reduce altura en pantallas pequeñas */
+  @media (max-width:520px){
+    :root{ --sea-height: 32vh; }
+    .controls input[type="range"]{ width:90px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scene" id="scene" aria-label="Animación de olas">
+  <div class="title">Olas CSS + JS</div>
+
+  <div class="controls" aria-hidden="false">
+    <label style="font-weight:500">Velocidad</label>
+    <input id="speed" type="range" min="5" max="30" value="14" />
+    <button id="toggle">Pausa</button>
+  </div>
+
+  <div class="waves" aria-hidden="true">
+    <!-- capa 1 -->
+    <div class="wave w1" style="--color:var(--wave-color-1)">
+      <svg viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="var(--wave-color-1)" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="var(--wave-color-1)" stop-opacity="0.7"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,70 C150,30 300,110 450,80 C600,50 750,120 900,90 C1050,60 1200,100 1350,80 L1350,200 L0,200 Z" fill="url(#g1)"/>
+      </svg>
+    </div>
+
+    <!-- capa 2 -->
+    <div class="wave w2" style="--color:var(--wave-color-2)">
+      <svg viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="var(--wave-color-2)" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="var(--wave-color-2)" stop-opacity="0.6"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,90 C200,130 350,20 520,70 C720,120 870,55 1050,80 C1180,98 1350,60 1500,75 L1500,200 L0,200 Z" fill="url(#g2)"/>
+      </svg>
+    </div>
+
+    <!-- capa 3 -->
+    <div class="wave w3" style="--color:var(--wave-color-3)">
+      <svg viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g3" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="var(--wave-color-3)" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="var(--wave-color-3)" stop-opacity="0.5"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,60 C120,40 260,100 420,75 C640,40 800,120 1020,95 C1200,75 1350,110 1500,90 L1500,200 L0,200 Z" fill="url(#g3)"/>
+      </svg>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // JS mínimo: controla velocidad/pausa e interacción
+  const scene = document.getElementById('scene');
+  const speedRange = document.getElementById('speed');
+  const toggleBtn = document.getElementById('toggle');
+
+  // actualizar las variables CSS que contienen las duraciones
+  function setSpeed(value){
+    // value en segundos (ej. 14)
+    // ajustamos cada capa con ligeros offsets
+    document.documentElement.style.setProperty('--wave-speed-1', (value * 0.7) + 's');
+    document.documentElement.style.setProperty('--wave-speed-2', (value * 1.0) + 's');
+    document.documentElement.style.setProperty('--wave-speed-3', (value * 1.4) + 's');
+  }
+
+  // pausa / reanuda
+  let paused = false;
+  function togglePause(){
+    paused = !paused;
+    scene.classList.toggle('pause', paused);
+    toggleBtn.textContent = paused ? 'Reanudar' : 'Pausa';
+  }
+
+  speedRange.addEventListener('input', (e) => setSpeed(e.target.value));
+  toggleBtn.addEventListener('click', togglePause);
+
+  // efecto sutil: alterar velocidad con mousemove (opcional)
+  scene.addEventListener('mousemove', (e) => {
+    const w = scene.clientWidth;
+    const pct = Math.abs((e.clientX - scene.getBoundingClientRect().left) / w - 0.5) * 2; // 0..1
+    // mapear a rango de 6..24
+    const base = parseFloat(speedRange.value);
+    const factor = 1 + pct * 0.6; // entre 1 y 1.6
+    setSpeed(base * factor);
+  });
+
+  // inicial
+  setSpeed(parseFloat(speedRange.value));
+</script>
+
+</body>
+</html>

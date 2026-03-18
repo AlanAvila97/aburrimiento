@@ -1,0 +1,101 @@
+:root{    
+    --bs-header-page: #290f3ecc; 
+    --bs-footer-page: transparent;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-descargables::after{
+    /* background-image: url('../img/banner_acompanamiento.png'); */
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-descargables .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/FONDO_SUPERIOR_SINTONIZA.png);
+    background-size: cover;
+    background-attachment: initial;
+}
+body.bg-descargables .section-banner.infancias{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/banner_prescolar.png);
+}
+body.bg-descargables .section-banner.escolares{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/Banner-Escolares.jpg);
+}
+body.bg-descargables .section-banner.juegos{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/Banner-Juegos.jpg);
+}
+body.bg-descargables .section-banner.fondos{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/Banner-Fondos-de-pantalla.jpg);
+}
+#banner_descargable.section-banner .container-title-banner{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#secciones_descargables.section-content-center{
+    margin-top: 6em;
+    margin-bottom: 4em;
+}
+/*-------------------------------------------------------------
+# Section Content Descargables
+--------------------------------------------------------------*/
+#secciones_descargables .content-items-banners-secciones .items-banners{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+#secciones_descargables .content-items-banners-secciones .items-banners .overlay-text{
+    position: absolute;
+}
+#secciones_descargables .content-items-banners-secciones .items-banners .overlay-text h3{
+    margin: 0;
+}
+#secciones_descargables .content-items-banners-secciones .items-banners .img_brightness_shadow{
+    filter: brightness(0.8);
+    -webkit-filter: brightness(0.8);
+}
+#secciones_descargables .content-items-banners-secciones .items-banners img{
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+#secciones_descargables .btn-back{
+    width: 25rem;
+    padding: 1rem 3rem;
+}
+#secciones_descargables .btn-back h4{
+    font-size: clamp(1rem, 1.8rem, 3rem);
+    margin: 0;
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer{
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Background sitio
+    --------------------------------------------------------------*/
+    #banner_descargable.section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Center
+    --------------------------------------------------------------*/
+    #secciones_descargables.section-content-center{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}

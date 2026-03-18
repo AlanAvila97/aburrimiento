@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">	
+    <!--  -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/header.css">      
+    <link rel="stylesheet" href="./assets/css/footer.css">     
+    <link rel="stylesheet" href="./assets/css/equipo-onn.css">     
+    <style>
+    </style> 
+</head>
+<body class="bg-equipo-onn">
+    <div id="wrapper">
+        <header class="header header-once">
+            <div class="container-header">
+                <div class="logo">
+                    <a href="./" aria-label="Redirección a página principal">                    
+                        <picture>
+                            <source class="lazy img-fluid" srcset="./assets/img/logo_onn.svg" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/logo_onn.svg" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy" src="./assets/img/logo_onn.svg" alt="Logo Once" width="139" height="45">
+                        </picture>
+                    </a>
+                </div><!-- End div logo -->
+                <div class="sections-nav ">
+                    <a href="./aconpamiento.html" class="btn btn-bg-onn">
+                        Madres, padres, docentes y cuidadores
+                    </a>
+                    <a href="./descargables.html" class="btn btn-bg-onn">
+                        Descargable
+                    </a>
+                    <a href="./radio-musica.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                        <i class="fa fa-circle"></i>
+                        Radio y música
+                    </a>
+                    <a href="./veo_online.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                        <i class="fa fa-circle"></i>
+                        Veo ONNline
+                    </a>
+                </div><!-- End div seccion nav -->            
+                <div class="content-menu-hamburguer">
+                    <input type="checkbox" class="menu-btn" id="openSidebarMenu">
+                    <div id="sidebarMenu">
+                        <div class="container-menu scroll-menu">
+                            <a href="./aconpamiento.html" class="btn btn-bg-onn">
+                                Madres, padres, docentes y cuidadores
+                            </a>
+                            <a href="./descargables.html" class="btn btn-bg-onn">
+                                Descargable
+                            </a>
+                            <a href="./radio-musica.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa fa-circle"></i>
+                                Radio y música
+                            </a>
+                            <a href="./veo_online.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa fa-circle"></i>
+                                Veo ONNline
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End div container header -->
+        </header>
+        <main>
+            <section class="section-content-center section-banner">
+                <div class="container w-60 container-title-banner text-center">
+                    <h1 class="text-light fw-light text-uppercase fs-1xl">equipo onN</h1>
+                </div>
+            </section>
+            <section id="texto_principal" class="section-content-center">
+                <div class="container w-60 container-title-onn py-4 text-center">
+                    <p class="text-light h2 fw-light">
+                        Desde hace más de dos décadas, ONCE Niñas y Niños ha construido un camino sólido en la creación 
+                        de contenidos educativos, creativos y de calidad para la infancia. Ese esfuerzo ha sido 
+                        reconocido con numerosos premios nacionales e internacionales que celebran nuestro compromiso 
+                        con las niñas, los niños y sus familias. Explora los reconocimientos que hemos recibido a lo 
+                        largo de los años.
+                    </p>
+                </div>
+            </section>
+            <section id="grid-premios" class="section-grid-three-columns">
+                <div class="container w-60 container-grid-three-columns py-4 text-center">
+                    <div class="items-grid"
+                         data-bs-toggle="modal" data-bs-target="#modalEquipo">
+                            <picture class="w-100 h-100">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" type="image/webp">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    type="image/png"> 
+                                <img class="img-fluid lazy img-fluid-responsive" 
+                                    src="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    alt="Logo plataforma" width="139" height="45"
+                                    data-image="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png"
+                                    data-name="Alan"
+                                    data-text="Mi comida favorita son los tacos al pastor">
+                            </picture>
+                    </div>
+                    <div class="items-grid"
+                        data-bs-toggle="modal" data-bs-target="#modalEquipo">
+                            <picture class="w-100 h-100">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" type="image/webp">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    type="image/png"> 
+                                <img class="img-fluid lazy img-fluid-responsive" 
+                                    src="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    alt="Logo plataforma" width="139" height="45"
+                                    data-image="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png"
+                                    data-name="Alan 2"
+                                    data-text="texto 2">
+                            </picture>
+                    </div>
+                    <div class="items-grid"
+                        data-bs-toggle="modal" data-bs-target="#modalEquipo">
+                            <picture class="w-100 h-100">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" type="image/webp">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    type="image/png"> 
+                                <img class="img-fluid lazy img-fluid-responsive" 
+                                    src="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    alt="Logo plataforma" width="139" height="45"
+                                    data-image="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png"
+                                    data-name="Alan 3"
+                                    data-text="texto 3">
+                            </picture>
+                    </div>
+                    <div class="items-grid"
+                        data-bs-toggle="modal" data-bs-target="#modalEquipo" >
+                            <picture class="w-100 h-100">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" type="image/webp">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    type="image/png"> 
+                                <img class="img-fluid lazy img-fluid-responsive" 
+                                    src="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    alt="Logo plataforma" width="139" height="45"
+                                    data-image="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png"
+                                    data-name="Alan 4"
+                                    data-text="texto 4">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="items-grid"
+                        data-bs-toggle="modal" data-bs-target="#modalEquipo">
+                            <picture class="w-100 h-100">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" type="image/webp">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    type="image/png"> 
+                                <img class="img-fluid lazy img-fluid-responsive" 
+                                    src="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    alt="Logo plataforma" width="139" height="45"
+                                    data-image="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png"
+                                    data-name="Alan 5"
+                                    data-text="texto 5">                                
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="items-grid"
+                        data-bs-toggle="modal" data-bs-target="#modalEquipo">
+                            <picture class="w-100 h-100">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" type="image/webp">
+                                <source class="lazy img-fluid" 
+                                    srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    type="image/png"> 
+                                <img class="img-fluid lazy img-fluid-responsive" 
+                                    src="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png" 
+                                    alt="Logo plataforma" width="139" height="45"
+                                    data-image="https://onceninasyninos.tv/wp-content/uploads/2025/08/NE_Alan_1.png"
+                                    data-name="Alan 6"
+                                    data-text="texto 6">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="content-items-banners-secciones d-flex flex-column align-items-center gap-5 mt-3">
+                    <a href="./premios-historico.html" 
+                        class="btn btn-secondary btn-lg btn-outline-primary  text-light text-decoration-underline btn-back">
+                        <h4 class="font-comfortaa">Ver todos los años</h4>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container container-footer container-footer-full gap-3">
+                <div class="footer-navigation-web d-flex justify-content-center align-items-center gap-4">
+                    <a type="button" class=" text-light">
+                        <picture class="w-100 h-100">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" alt="Logo plataforma" width="139" height="45">
+                        </picture>
+                    </a>
+                    <a type="button" class=" text-light">
+                        <picture class="w-100 h-100">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-IPN-182_1.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-IPN-182_1.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/LOGO-IPN-182_1.png" alt="Logo plataforma" width="139" height="45">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalEquipo" tabindex="-1" aria-labelledby="modalEquipoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">                    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-image gap-3">
+                        <div class="image-team">
+                            <img id="img_team" class="img-fluid lazy img-fluid-responsive" 
+                                src="" alt="Logo plataforma" width="139" height="45">
+                        </div>
+                        <div class="text-team text-light">
+                            <h2 id="name_team" class="h2"></h2>
+                            <p id="description_team" class="h5 font-comfortaa">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--  -->
+    <script src="./assets/js/actions-main.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/equipo-on.js"></script>
+</body>
+</html>

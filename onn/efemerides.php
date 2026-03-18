@@ -1,0 +1,313 @@
+<?php 
+    $id = isset($_GET['episodes']) ? $_GET['episodes'] : '';
+    $class_banner = '';
+    switch ($id) {
+        case '1':
+            $class_banner = 'enero';
+            break;        
+        case '2':
+            $class_banner = 'febrero';
+            break;        
+        case '3':
+            $class_banner = 'marzo';
+            break;        
+        default:
+            # code...
+            break;
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">	
+    <!-- Swiper -->
+    <link rel="stylesheet" href="./assets/vendor/swiper/css/swiper-bundle.min.css" />
+    <!-- fancybox  -->
+    <link type="text/css" rel="stylesheet" href="./assets/vendor/fancybox/css/fancybox.css" />
+    <!--  -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/header.css">      
+    <link rel="stylesheet" href="./assets/css/footer.css">     
+    <link rel="stylesheet" href="./assets/css/efemerides.css">     
+    <style>
+    </style> 
+</head>
+<body class="bg-efemerides">
+    <div id="wrapper">
+        <header class="header header-once">
+            <div class="container-header">
+                <div class="logo">
+                    <a href="./" aria-label="Redirección a página principal">                    
+                        <picture>
+                            <source class="lazy img-fluid" srcset="./assets/img/logo_onn.svg" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/logo_onn.svg" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy" src="./assets/img/logo_onn.svg" alt="Logo Once" width="139" height="45">
+                        </picture>
+                    </a>
+                </div><!-- End div logo -->
+                <div class="sections-nav ">
+                    <a href="./aconpamiento.html" class="btn btn-bg-onn">
+                        Madres, padres, docentes y cuidadores
+                    </a>
+                    <a href="./descargables.html" class="btn btn-bg-onn">
+                        Descargable
+                    </a>
+                    <a href="./radio-musica.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                        <i class="fa fa-circle"></i>
+                        Radio y música
+                    </a>
+                    <a href="./veo_online.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                        <i class="fa fa-circle"></i>
+                        Veo ONNline
+                    </a>
+                </div><!-- End div seccion nav -->            
+                <div class="content-menu-hamburguer">
+                    <input type="checkbox" class="menu-btn" id="openSidebarMenu">
+                    <div id="sidebarMenu">
+                        <div class="container-menu scroll-menu">
+                            <a href="./aconpamiento.html" class="btn btn-bg-onn">
+                                Madres, padres, docentes y cuidadores
+                            </a>
+                            <a href="./descargables.html" class="btn btn-bg-onn">
+                                Descargable
+                            </a>
+                            <a href="./radio-musica.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa fa-circle"></i>
+                                Radio y música
+                            </a>
+                            <a href="./veo_online.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa fa-circle"></i>
+                                Veo ONNline
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End div container header -->
+        </header>
+        <main>
+            <section class="section-content-center section-banner">
+                <div class="container w-60 container-title-banner text-center">
+                    <h1 class="text-light fw-light text-uppercase fs-1xl">Enero</h1>
+                </div>
+            </section>
+            <section id="slider_meses" class="section-months-slider">
+                <div class="container w-75 container-months-slider py-4 text-center d-flex justify-content-center align-items-center">
+                    <div class="content-navigation navigation-prev cursor-pointer">
+                        <picture class="w-100 h-100 d-block">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/navigation-months.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/navigation-months.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/navigation-months.png" alt="Logo Once" width="139" height="45">
+                        </picture>
+                    </div>
+                    <div id="lightgallery" class="swiper slider-months">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide <?php echo ($id != 1 ) ? 'd-none' : 'd-block'; ?>" >
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2023/12/Celebrar-Año-Nuevo-en-familia-Once-Niñas-y-Niños-WEB.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1">
+                                    <img class="img-fluid-responsive alignnone size-medium wp-image-19277"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2023/12/Botón-Celebrar-Año-Nuevo-en-familia-Once-Niñas-y-Niños-300x300.png"
+                                            alt="Botón Celebrar Año Nuevo en Familia Once Niñas y Niños" width="300" height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 1 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2023/12/Feliz-Año-Nuevo-en-Diferentes-idiomas-FB-y-WEB.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1">
+                                    <img class="img-fluid-responsive alignnone wp-image-17000 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2022/01/Botones_Efemérides_PT2-01-01-AñoNuevoDiferenteIdiomas_on2022_v2-300x300.png"
+                                            alt="Feliz años nuevo en diferentes idiomas " width="300" height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 1 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2020/01/Día-Mundial-del-Braille-Once-Niñas-y-Niños-WEB.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1">
+                                    <img class="img-fluid-responsive alignnone wp-image-9252 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2020/01/Botón_Info_Braille-300x300.png" alt="4 de enero. Día Mundial del Braille" width="300"
+                                            height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 1 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2019/12/Día-de-Reyes-Once-Niñas-y-Niños-FB-e-IG.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1">
+                                    <img class="img-fluid-responsive alignnone wp-image-9238 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2019/12/Botones_Efemérides_DíaDereyes_06_01-300x300.png" alt="6 de enero. Día de Reyes" width="300"
+                                            height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 1 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/01/Acuérdate-de-DíaDelAbrazo-Once-Niñas-y-Niños-Web.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1">
+                                    <img class="img-fluid-responsive alignnone wp-image-9586 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2020/01/Botones_Efemérides_DíaDelAbrazo_21-01-300x300.png" alt="21 de enero. Día del Abrazo" width="300"
+                                            height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 2 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/01/Acuérdate-de...-Día-Internacional-de-la-Educación-Once-Niñas-y-Niños-WEB.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1"-Niños-WEB.png">
+                                    <img class="img-fluid-responsive alignnone wp-image-14311 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2021/01/Botones_Efemérides_PT2_24-01_DíaInternacionalDeLaEducación-300x300.png"
+                                            alt="24 de enero. Día Internacional de la Educación " width="300" height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 2 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/01/Acuérdate-de-DIA-DEL-BILOGO_Once-Niñas-y-Niños.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1">
+                                    <img class="img-fluid-responsive alignnone wp-image-9639 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2020/01/DIA-DEL-BIOLOGO-BOTON-300x300.png" alt="25 de enero. Día de la y el biólogo" width="300"
+                                            height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 2 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/01/Acuérdate-de-Día-mundial-de-la-Educación-Ambiental-Once-Niñas-y-Niños-WEB.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1"-Niños-WEB.png">
+                                    <img class="alignnone size-medium wp-image-19327"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2024/01/Día-mundial-de-la-Educación-Ambiental_Botón-300x300.png"
+                                            alt="Botón Día Mundial de la Educación Ambiental Once Niñas y Niños" width="300" height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 2 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/01/Acuérdate-de...-Lewis-Carrol-Once-Niñas-y-Niños-FB-y-WEB.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1">
+                                    <img class="img-fluid-responsive alignnone wp-image-9641 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2019/07/Botones_Efemérides_DíaLewisCarroll_27-01-300x300.png" alt="27 de enero. Lewis Carroll" width="300"
+                                            height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 2 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/01/Día-Internacional-de-la-protección-de-datos-personales-Once-Niñas-y-Niños-WEB.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1"-Niñas-y-Niños-WEB.png">
+                                    <img class="alignnone wp-image-17129 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2022/01/Botón-WEB-Dìa-Internacional-de-la-protección-de-datos-personales-300x300.png"
+                                            alt="28 de enero. Día Internacional de la protección de datos personales" width="300" height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 3 ) ? 'd-none' : 'd-block'; ?>">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/01/1-IG-Día-Internacnional-de-la-protección-de-datos-personales-Once-Niñas-y-Niños-WEB.jpg"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1"-Once-Niñas-y-Niños-WEB.jpg">
+                                    <img class="img-fluid-responsive alignnone wp-image-14344 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2021/01/Día-Escolar-de-la-no-violencia-y-la-paz-Botón-300x300.png"
+                                            alt="30 de enero. Día escolar de la no violencia y la paz" width="300" height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 3 ) ? 'd-none' : 'd-block'; ?> ">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2023/01/Header_Web_ONN-Somos-familia-2023.png"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1">
+                                    <img class="img-fluid-responsive alignnone wp-image-9681 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2019/07/Botones_Efemérides_DíaDeLaConstitución_05-02-300x300.png"
+                                            alt="5 de febrero Día de la Constitución Mexicana" width="300" height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 3 ) ? 'd-none' : 'd-block'; ?> ">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/02/Día-de-Julio-Verne-Once-Niñas-y-Niños-WEB.jpg"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1">
+                                    <img src="https://onceninasyninos.tv/wp-content/uploads/2020/02/Botones_Efemérides_DíaJulioVerne_08-02-300x300.png"
+                                            class="alignnone wp-image-9699 size-medium" 
+                                            alt="8 de febrero Julio Verne" width="300" height="300">
+                                </a>
+                            </div> 
+                            <div class="swiper-slide <?php echo ($id != 3 ) ? 'd-none' : 'd-block'; ?> ">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/02/Día-Internacional-de-la-mujer-y-la-niña-en-la-ciencia-Once-Niñas-y-Niños-WEB-scaled.jpg"
+                                class="item-months text-decoration-none" data-fancybox="gallery" data-caption="Caption #1"-Niñas-y-Niños-WEB-scaled.jpg">
+                                    <img class="img-fluid-responsive alignnone wp-image-9704 size-medium"
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2020/02/boton_ciencia_nina_mujer-300x300.png"
+                                            alt="11 de febrero. Día Internacional de la mujer y la niña en la ciencia " width="300" height="300">
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="swiper-button-next d-none"></div>
+                        <div class="swiper-button-prev d-none"></div>
+                    </div>
+                    <div class="content-navigation navigation-next cursor-pointer">
+                        <picture class="w-100 h-100 d-block">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/navigation-months.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/navigation-months.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/navigation-months.png" alt="Logo Once" width="139" height="45">
+                        </picture>
+                    </div>
+                </div>
+                <div class="content-items-banners-secciones d-flex flex-column align-items-center gap-5 mt-2 mt-lg-5">
+                    <a href="./aconpamiento.html" 
+                        class="btn btn-lg text-light text-decoration-underline btn-back">
+                        <h4 class="font-comfortaa">Regresar</h4>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container container-footer container-footer-full gap-3">
+                <div class="footer-navigation-web d-flex justify-content-center align-items-center gap-4">
+                    <a type="button" class=" text-light">
+                        <picture class="w-100 h-100 d-block">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" alt="Logo plataforma" width="139" height="45">
+                        </picture>
+                    </a>
+                    <a type="button" class=" text-light">
+                        <picture class="w-100 h-100 d-block">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-IPN-182_1.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-IPN-182_1.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/LOGO-IPN-182_1.png" alt="Logo plataforma" width="139" height="45">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="modalEfemerides" tabindex="-1" aria-labelledby="modalEfemeridesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">                    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-image">
+                        <img class="img-fluid lazy img-fluid-responsive"
+                             src="" 
+                             alt="Imagen Efemerides">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script src="./assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="./assets/vendor/swiper/js/swiper-bundle.min.js"></script>
+    <!-- fancybox  -->
+    <script src="./assets/vendor/fancybox/js/fancybox.umd.js"></script>
+    <!--  -->
+    <script src="./assets/js/actions-main.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/efemerides.js"></script>
+</body>
+</html>

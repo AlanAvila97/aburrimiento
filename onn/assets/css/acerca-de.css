@@ -1,0 +1,269 @@
+:root{    
+    --bs-header-page:#252e77; 
+    --bs-footer-page: transparent;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-acerca::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/fondo_acerca_de.png);
+    background-size: cover;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#texto_principal.section-content-center{
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+}
+#texto_historia.section-content-center,
+#texto_premios.section-content-center{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+#texto_premios.section-content-center{
+    margin-top: 4rem;
+}
+#section_contactanos.section-content-center,
+#section_galeria.section-content-center{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+/*-------------------------------------------------------------
+# Section Content Banner Acerca de
+--------------------------------------------------------------*/
+.section-banner-acerca{
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.section-banner-acerca::before{
+    content: '';
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/before_banner_onn.png);
+    width: 450px;
+    height: 370px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -5rem;
+    left: 0rem;
+}
+.section-banner-acerca::after{
+    content: '';
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/affter_banner_onn.png);
+    width: 450px;
+    height: 370px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -5rem;
+    right: 0rem;
+}
+.section-banner-acerca .container-banner-acerca picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-banner-acerca .container-banner-acerca .img-fluid-responsive{
+    max-width: 400px;
+}
+/*-------------------------------------------------------------
+# Section Content Texto Historia
+--------------------------------------------------------------*/
+#texto_historia .container-title-onn picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+#texto_historia .container-title-onn .img-fluid-responsive{
+    max-width: 500px;
+}
+/*-------------------------------------------------------------
+# Section Content Texto Historia
+--------------------------------------------------------------*/
+#texto_premios .content-video{
+    width: 100%;
+    border-radius: 1rem;
+}
+#texto_premios .content-video .video-js{
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+#texto_premios .content-video .vjs-big-play-centered .vjs-big-play-button{
+    width: 100px;
+    height: 100px;
+    background-color: #F94A4A;
+    border: none;
+    border-radius: 50%;
+    top: 45%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#texto_premios .content-video .vjs-big-play-centered .vjs-big-play-button .vjs-icon-placeholder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#texto_premios .content-video .vjs-big-play-centered .vjs-big-play-button .vjs-icon-placeholder:before{
+    width: 100%;
+    height: 100%;
+    font-size: clamp(1rem, 4.5rem, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*-------------------------------------------------------------
+# Section Content Contactanos
+--------------------------------------------------------------*/
+#section_contactanos .container-title-onn{
+    position: relative;
+    z-index: 3;
+}
+#section_contactanos .container-title-onn::after{
+    position: absolute;
+    content: '';
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/celular_1.png);
+    width: 230px;
+    display: block;
+    height: 320px;
+    top: 7rem;
+    right: -5rem;
+    z-index: -1;
+}
+/*-------------------------------------------------------------
+# Section Content Slider Galeria
+--------------------------------------------------------------*/
+#section_galeria .container-slider {
+    display: flex;
+    flex-direction: column;
+    margin: 11rem 0 4rem 0;
+    position: relative;
+    align-items: center;
+}
+#section_galeria .container-slider::before {
+    content: '';
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/before_container_gallery.png);
+    width: 51%;
+    height: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -7rem;
+}
+#section_galeria .container-slider::after {
+    content: '';
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/affter_container-gallery.png);
+    width: 67%;
+    height: 56%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 2rem;
+}
+#section_galeria .container-slider .swiper {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3rem;
+}
+#section_galeria .container-slider  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section_galeria .container-slider .swiper-pagination-bullet {
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+    background: #D9D9D9;
+}
+#section_galeria .container-slider .swiper-pagination-bullet-active {
+    background: #9D00F2;
+}
+/*-------------------------------------------------------------
+# Section Content Equipo
+--------------------------------------------------------------*/
+#grid-equipo .container-grid-three-columns{
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    body.bg-acerca::after{
+        background-size: contain;
+    }
+    #section_contactanos.section-content-center,
+    #section_galeria.section-content-center,
+    #grid-equipo .container-grid-three-columns{
+        margin-bottom: 2rem;
+    }
+    #section_galeria.section-content-center{
+        margin-top: 1rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Banner Acerca de
+    --------------------------------------------------------------*/
+    .section-banner-acerca{
+        flex-direction: column;
+    }
+    .section-banner-acerca::before {
+        display: none;
+    }
+    .section-banner-acerca::after{
+        background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/movile_banner_onn.png);
+        background-position: center;
+        position: relative;
+        top: 2rem;
+        width: 90%;
+        height: 250px;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Slider Descargables
+    --------------------------------------------------------------*/
+    #section_galeria .container-slider::before,
+    #section_galeria .container-slider::after {
+        display: none!important;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Contactanos
+    --------------------------------------------------------------*/
+    #section_contactanos.section-content-center .container-title-onn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #section_contactanos .container-title-onn::before {
+        content: '';
+        background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/celular_1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+        display: block;
+        height: 320px;
+    }
+    #section_contactanos .container-title-onn::after {
+        display: none;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Slider Galeria
+    --------------------------------------------------------------*/
+    #section_galeria .container-slider{
+        margin: 4rem 0 4rem 0;
+    }
+}

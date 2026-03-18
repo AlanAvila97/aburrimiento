@@ -1,0 +1,104 @@
+:root{
+    --bs-footer-page: transparent;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-infografias::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/banner_acompanamiento.png);
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-infografias .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/Banner-Tejiendo-vínculos-infografías.jpg);
+    background-color: rgb(47, 32, 5, 48%);    
+    background-attachment: local;
+    background-size: cover;
+}
+body.bg-infografias .section-banner .container-title-banner{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#texto_principal.section-content-center{
+    margin-top: 8em;
+    margin-bottom: 0em;
+}
+/*-------------------------------------------------------------
+# Section Content Months Slider
+--------------------------------------------------------------*/
+#slider_meses.section-months-slider{
+    margin-top: 8em;
+    margin-bottom: 1em;
+}
+#slider_meses.section-months-slider .container-months-slider{
+    gap: 1rem;
+}
+.section-months-slider .swiper {
+    width: 100%;
+    height: 100%;
+}
+.section-months-slider .swiper-slide {
+    text-align: center;
+}
+.section-months-slider .swiper-slide a{
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.section-months-slider .swiper-slide:nth-child(1n) a{
+    background-color: #9D00F2;
+}
+.section-months-slider .swiper-slide:nth-child(2n) a{
+    background-color: #68B1C7;
+}
+.section-months-slider .swiper-slide:nth-child(3n) a{
+    background-color: #6FDCED;
+}
+.section-months-slider .swiper-slide a h5{
+}
+.section-months-slider .content-navigation.navigation-prev{
+    transform: rotate(180deg);
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer{
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Background sitio
+    --------------------------------------------------------------*/
+    body.bg-infografias .section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Center
+    --------------------------------------------------------------*/
+    #texto_principal.section-content-center{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Footer
+    -------------------------------------------------------------*/
+    .footer {
+        padding-top: 2rem;
+    }
+}

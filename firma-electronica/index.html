@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Alertify -->
+	<link rel="stylesheet" href="./assets/vendor/alertify/css/alertify.min.css"> 
+    <link rel="stylesheet" href="./assets/vendor/alertify/css/themes/bootstrap.css">    
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">	
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div class="container pt-4">
+        <section class="section-procesos">
+            <div class="container-procesos">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h1 class="h3 mb-0 text-primary-canal-once">Dashboard</h1>
+                </div>
+                <div class="card">                    
+                    <div class="card-header pt-3 pb-0 px-0">
+                        <nav>
+                            <div class="nav nav-tabs px-3" id="nav-tab" role="tablist">
+                                <button class="nav-link active" 
+                                    id="nav-home-tab" data-bs-toggle="tab" 
+                                    data-bs-target="#nav-home" type="button" 
+                                    role="tab" aria-controls="nav-home" 
+                                    aria-selected="true">
+                                    PB
+                                </button>
+                                <button class="nav-link" 
+                                    id="nav-profile-tab" data-bs-toggle="tab" 
+                                    data-bs-target="#nav-profile" type="button" 
+                                    role="tab" aria-controls="nav-profile" 
+                                    aria-selected="false">
+                                    PA
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="card-body">
+                        <div class="w-100">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" 
+                                    id="nav-home" role="tabpanel" 
+                                    aria-labelledby="nav-home-tab" tabindex="0">
+                                    <div class="py-2 d-flex justify-content-between align-items-center gap-3">
+                                        <div class="content-search">                                            
+                                            <input type="text" class="form-control" placeholder="Busqueda" 
+                                                aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <button id="btn_add_career" type="button" class="btn btn-primary-canal-once">
+                                            <i class="fa-solid fa-plus pe-2"></i>
+                                            Agregar Proceso
+                                        </button>
+                                    </div>
+                                    <div class="container-table">
+                                        <div class="header-table"></div>
+                                        <div class="body-table"></div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" 
+                                    id="nav-profile" role="tabpanel" 
+                                    aria-labelledby="nav-profile-tab" tabindex="0">                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                                
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="./assets/vendor/bootstrap/js/popper.min.js"></script>
+	<script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Sortable -->
+     <script src="./assets/vendor/sortable/js/Sortable.min.js"></script>
+</body>
+</html>

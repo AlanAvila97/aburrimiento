@@ -1,0 +1,15 @@
+.footer-noticias{
+    background-color: #131e23;
+}
+.footer-noticias .logo img{
+    max-height: 100px;
+    object-fit: contain;
+}
+.footer-noticias .container-btn-apps a img{
+    max-height: 65px;
+    object-fit: contain;
+    width: 175px;
+}
+.footer-noticias .social-networks a{
+    text-decoration: none;
+}
