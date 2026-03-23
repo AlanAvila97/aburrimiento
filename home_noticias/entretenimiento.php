@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Internacional</title>
+        <title>Entretenimiento</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php require_once("./includes/header-elements.php");?>
-        <link rel="stylesheet" href="./assets/css/internacional.css">
+        <link rel="stylesheet" href="./assets/css/entretenimiento.css">
     </head>
     <body>
         <div class="wrapper">
@@ -13,11 +13,14 @@
                 <?php require_once("./partials/header.php");?>
                 <main class="content">
                     <navbar class="title-head">
-                        <h1>Internacional</h1>
+                        <h1>Entretenimiento</h1>
                     </navbar>
                     <section class="section-main-news">
                         <div class="container container-main-news">
-                            <?php include("./components/grid-notas-collage-vertical.php");?>                        
+                            <?php include("./components/grid-notas-collage-vertical.php");?>
+                            <div class="aside-main-news">
+
+                            </div>
                         </div>
                     </section>
                     <section class="section-notices section-body-notices mt-4">
@@ -27,15 +30,15 @@
                                     <div class="container-conflicts">
                                         <div class="title-notes text-center w-50">
                                             <h2 class="h3 text-uppercase fw-bold border-bottom border-2 border-after-start">
-                                                Conflictos y Geopolítica
+                                                La pantalla
                                             </h2>
-                                        </div>
+                                        </div>                                        
                                         <?php include("./components/grid-notas-columnas.php");?>
                                     </div>
                                     <div class="container-migrations">
                                         <div class="title-notes text-center w-50">
                                             <h2 class="h3 text-uppercase fw-bold border-bottom border-2 border-after-start">
-                                                Migración y DDHH
+                                                La rockola
                                             </h2>
                                         </div>
                                         <?php include("./components/grid-notas-columnas.php");?>
@@ -45,7 +48,7 @@
                                     <div class="align-items-center container-related-news d-flex flex-column justify-content-center px-3">
                                         <div class="title-notes text-center w-100 pt-3">
                                             <h2 class="h4 text-uppercase fw-bold border-bottom border-2 border-after-end">
-                                                Notas relacionadas
+                                                Lo más visto
                                             </h2>
                                         </div>
                                         <?php include("./components/notas-relevantes.php");?>

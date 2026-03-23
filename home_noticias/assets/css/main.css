@@ -54,6 +54,21 @@ h3{
     padding-top: 70px;
 }
 /*-------------------------------------------------------------
+# title
+-------------------------------------------------------------*/
+.title-head{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    box-shadow: 0px 4px 6px 0px rgb(0 0 0 / 25%);
+    margin-bottom: 2rem;
+    display: grid;
+    place-items: center;
+}
+.title-head h1{
+    text-transform: uppercase;
+}
+/*-------------------------------------------------------------
 # Estilos titulos secciones
 -------------------------------------------------------------*/
 .section-notices .title-notes h2{
@@ -85,7 +100,43 @@ h3{
     }
 }
 /*-------------------------------------------------------------
-# Estilos grid imagen y texto abajo
+# Estilos Notas recientes
+-------------------------------------------------------------*/
+.section-notices .container-related-news{
+    height: 100%;
+    background: var(--wild-sand);
+}
+.section-notices .container-related-news .items-related-notes .list-related-notes{
+    list-style-type: decimal;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;   
+}
+/*-------------------------------------------------------------
+# Estilos grid de collage horizontal
+-------------------------------------------------------------*/
+.col-columns{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+.col-columns img{
+    height: 100%;
+}
+/*-------------------------------------------------------------
+# Estilos grid de 3
+-------------------------------------------------------------*/
+.section-main-news .container-main-news .col-siblins a {
+    height: 100%;
+}
+.section-main-news .container-main-news .col-main img,
+.section-main-news .container-main-news .col-siblins img {
+    height    : 100%;
+    min-height: 500px;
+    max-height: 500px;
+}
+/*-------------------------------------------------------------
+# Estilos grid de 3 / imagen y texto abajo
 -------------------------------------------------------------*/
 .section-notices .content-items-news{
     display: grid;

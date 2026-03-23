@@ -1,19 +1,4 @@
 /*-------------------------------------------------------------
-# title
--------------------------------------------------------------*/
-.title-head{
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-    box-shadow: 0px 4px 6px 0px rgb(0 0 0 / 25%);
-    margin-bottom: 2rem;
-    display: grid;
-    place-items: center;
-}
-.title-head h1{
-    text-transform: uppercase;
-}
-/*-------------------------------------------------------------
 # Main news
 -------------------------------------------------------------*/
 .section-main-news .container-main-news .col-main a{
@@ -35,16 +20,6 @@
 }
 .section-body-notices .container-conflicts{
     width: 100%;
-}
-.section-body-notices .container-related-news{
-    height: 100%;
-    background: var(--wild-sand);
-}
-.section-body-notices .container-related-news .items-related-notes .list-related-notes{
-    list-style-type: decimal;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;   
 }
 /*-------------------------------------------------------------
 # recents news
