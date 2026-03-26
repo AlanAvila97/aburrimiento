@@ -1,39 +1,39 @@
 <div class="row w-100 row-gap-3 mx-0">
-    <div class="col-12 col-main">
-        <a class="d-block text-decoration-none" href="">
+    <div class="col-12">
+        <a class="d-block text-decoration-none" href="<?= htmlspecialchars($hrfs[0] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
             <picture>                                            
                 <source media="(max-width: 680px)" 
                     srcset="https://dummyimage.com/800x475/ccc/fff">
                 <source media="(max-width: 991px)" 
                     srcset="https://dummyimage.com/1366x812/ccc/fff">
                 <img class="img-responsive" 
-                    src="https://dummyimage.com/1920x800/ccc/fff" 
-                    alt=""/>
-            </picture>
-        </a>
-    </div>
-    <div class="col-12 col-md-6 col-siblins">
-        <a class="d-block text-decoration-none" href="">
-            <picture>                                            
-                <source media="(max-width: 680px)" 
-                    srcset="https://dummyimage.com/800x475/ccc/fff">
-                <source media="(max-width: 991px)" 
-                    srcset="https://dummyimage.com/1366x812/ccc/fff">
-                <img class="img-responsive" 
-                    src="https://dummyimage.com/1920x800/ccc/fff" 
+                     src="<?= htmlspecialchars($images[0] ?? '', ENT_QUOTES, 'UTF-8'); ?>"  
                     alt=""/>
             </picture>
         </a>
     </div>
     <div class="col-12 col-md-6">
-        <a class="d-block text-decoration-none" href="">
+        <a class="d-block text-decoration-none" href="<?= htmlspecialchars($hrfs[1] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
             <picture>                                            
-                <source media="(max-width: 680px)" 
+               <source media="(max-width: 680px)" 
                     srcset="https://dummyimage.com/800x475/ccc/fff">
                 <source media="(max-width: 991px)" 
                     srcset="https://dummyimage.com/1366x812/ccc/fff">
                 <img class="img-responsive" 
-                    src="https://dummyimage.com/1920x800/ccc/fff" 
+                    src="<?= htmlspecialchars($images[1] ?? '', ENT_QUOTES, 'UTF-8'); ?>"  
+                    alt=""/>
+            </picture>
+        </a>
+    </div>
+     <div class="col-12 col-md-6">
+        <a class="d-block text-decoration-none" href="<?= htmlspecialchars($hrfs[2] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+            <picture>                                            
+               <source media="(max-width: 680px)" 
+                    srcset="https://dummyimage.com/800x475/ccc/fff">
+                <source media="(max-width: 991px)" 
+                    srcset="https://dummyimage.com/1366x812/ccc/fff"> 
+                <img class="img-responsive" 
+                    src="<?= htmlspecialchars($images[2] ?? '', ENT_QUOTES, 'UTF-8'); ?>" 
                     alt=""/>
             </picture>
         </a>

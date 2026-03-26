@@ -2,32 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plantilla Sin Subsecciones</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="https://oncenoticias.digital/iconos/logotran16.PNG">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://oncenoticias.digital/iconos/logotran32.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="https://oncenoticias.digital/iconos/logotran64.png">
-    <link rel="icon" type="image/png" sizes="256x256" href="https://oncenoticias.digital/iconos/logotran256.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://oncenoticias.digital/iconos/logotran512.png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://oncenoticias.digital/iconos/icono_app.png">
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="//d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2024/11/icono_app_180x180.png">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
-    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">
-    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">
-    <!-- Swiper -->
-    <link rel="stylesheet" href="./assets/vendor/swiper/css/swiper-bundle.min.css">
-    <!-- CSS de la plantilla -->
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/section-columns.css">
-    <link rel="stylesheet" href="./assets/css/section-images-carrousel.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php require_once("./includes/header-elements.php"); ?>
+    <!--  -->
     <link rel="stylesheet" href="./assets/css/no_subsection.css">
 </head>
 
@@ -36,65 +15,70 @@
         <div class="main ">
             <?php require_once("./partials/header.php");?>
             <main class="content">
-                <!-- Encabezado -->
-                <header class="ns-header">
+                 <navbar class="title-head">
                     <h1>Plantilla Sin Subsecciones</h1>
-                    <i class="ns-live-dot fa-solid fa-edit"></i>
-                </header>
-
-                <!-- Bloque superior -->
-                <?php 
-                        $numColms = 3;
-                        $title = "Notas destacadas";
+                </navbar>
+                <section class="section-main-news">
+                    <div class="container container-main-news">
+                        
+                        <?php
+                        $hrfs = ["#", "#", "#"];
                         $images = [
-                            "https://dummyimage.com/560x220/ccc/fff",
-                            "https://dummyimage.com/560x220/ccc/fff",
-                            "https://dummyimage.com/560x220/ccc/fff",
+                            "https://dummyimage.com/1080x812/ccc/fff",
+                            "https://dummyimage.com/480x812/ccc/fff",
+                            "https://dummyimage.com/480x812/ccc/fff"
                         ];
-                         include('./partials/components/section-images-carrousel.php'); ?>
-
+                       include("./components/slide-three-images.php");?>
+                    </div>
+                </section>
                 
-
                 <!-- Al Momento -->
-                       <?php 
-                        $numColms = 3;
-                        $title = "Al Momento";
-                        $items = [ 
-                            ["img" => "https://dummyimage.com/320x210/ccc/fff", "alt" => "Nota 1", "titulo" => "Titulo 1", "sumario" => "Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1 Sumario 1"],
-                            ["img" => "https://dummyimage.com/320x210/ccc/fff", "alt" => "Nota 2", "titulo" => "Titulo 2", "sumario" => "Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2 Sumario 2"],
-                            ["img" => "https://dummyimage.com/320x210/ccc/fff", "alt" => "Nota 3", "titulo" => "Titulo 3", "sumario" => "Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3 Sumario 3"],
-                             ];
-                         include('./partials/components/section-columns.php'); ?>
-
-                <!-- Lo mas reciente -->
-                <section class="container section-notices section-last-notes">
+                 <section class="section-notices section-body-notices mt-4">
                     <article class="container">
-                        <div class="title-notes text-center w-50">
-                            <h2 class="h2 text-uppercase fw-bold border-bottom border-2 border-after-start">
-                                Lo Más Reciente
-                            </h2>
-                        </div>
-                        <div class="recent-grid mt-4 row row-gap-3 row-gap-lg-0">
-                            <article class="recent-card">
-                                <img src="https://dummyimage.com/360x150/ccc/fff" alt="Reciente 1">
-                                <br> 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam Lorem ipsum dolor sit amet,
-                                    consectetuer adipiscing elit, sed diam</p>
-                            </article>
-                            <article class="recent-card">
-                                <img src="https://dummyimage.com/360x150/ccc/fff" alt="Reciente 2">
-                                <br> 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam Lorem ipsum dolor sit amet,
-                                    consectetuer adipiscing elit, sed diam</p>
-                            </article>
-                            <article class="recent-card">
-                                <img src="https://dummyimage.com/360x150/ccc/fff" alt="Reciente 3">
-                                <br> 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam Lorem ipsum dolor sit amet,
-                                    consectetuer adipiscing elit, sed diam</p>
-                            </article>
+                        <div class="flex-column-reverse flex-lg-row row w-100 mx-0">
+                              <div class=" mt-3 mt-mb-0 ">
+                            <div class="w-50">
+                                    <?php
+                                     $title= "Al Momento";
+                                     include('./components/title-notes.php'); ?>
+                                     </div>
+                           <?php 
+                        $length = 3;
+                        $items = [ 
+                            ["img" => "https://dummyimage.com/320x210/ccc/fff", "alt" => "Nota 1", "titulo" => "Titulo 1", "sumario" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem libero distinctio debitis praesentium et laborum magni itaque a consectetur odio accusamus, adipisci modi vitae sed? Quos dolores ea aut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem libero distinctio debitis praesentium et laborum magni itaque a consectetur odio accusamus, adipisci modi vitae sed? Quos dolores ea aut!"],
+                            ["img" => "https://dummyimage.com/320x210/ccc/fff", "alt" => "Nota 2", "titulo" => "Titulo 2", "sumario" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem libero distinctio debitis praesentium et laborum magni itaque a consectetur odio accusamus, adipisci modi vitae sed? Quos dolores ea aut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem libero distinctio debitis praesentium et laborum magni itaque a consectetur odio accusamus, adipisci modi vitae sed? Quos dolores ea aut!"],
+                            ["img" => "https://dummyimage.com/320x210/ccc/fff", "alt" => "Nota 3", "titulo" => "Titulo 3", "sumario" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem libero distinctio debitis praesentium et laborum magni itaque a consectetur odio accusamus, adipisci modi vitae sed? Quos dolores ea aut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem libero distinctio debitis praesentium et laborum magni itaque a consectetur odio accusamus, adipisci modi vitae sed? Quos dolores ea aut!"],
+                             ];
+                         include('./components/grid-notas-vertical.php'); ?>
+                         </div>
                         </div>
                     </article>
+                </section>
+                <!-- Lo mas reciente -->
+                <section class="section-notices section-recents-news mb-5">
+                    <div class="container container-recents-news">
+                        <div class="content-recent-news">
+                             <div class="w-50">
+                                     <?php 
+                                     $class = "h3 border-after-start";
+                                     $title= "Lo más reciente";
+                                     include('./components/title-notes.php'); ?>
+                                     </div>
+                            <?php 
+                                $images = [
+                                    "https://dummyimage.com/800x475/ccc/fff",
+                                    "https://dummyimage.com/800x475/ccc/fff",
+                                    "https://dummyimage.com/800x475/ccc/fff"
+                                    ];
+                                $summarys = [
+                                    "Lorem ipsum dolor sit sectetur adipisicing elit. Corporis quidem libero distinctio debitis praesentium et laborum magni itaque a consectetur odio accusamus, adipisci modi vitae sed? Quos dolores ea aut!",
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem libero distinctio debitis praesentium et laborum magni itaque a consectetur odio accusamus, adipisci modi vitae sed? Quos dolores ea aut!",
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem libero distinctio debitis praesentium et laborum magni itaque a consectetur odio accusamus, adipisci modi vitae sed? Quos dolores ea aut!"
+                                    ];
+                                $hrfs = ["#", "#", "#"];
+                            include("./components/grid-notas-columnas.php"); ?>
+                        </div>
+                    </div>
                 </section>
             </main>
             <?php require_once("./partials/footer.php");?>
@@ -114,9 +98,6 @@
             </div>
         </div>
     </div>
-    <!-- Bootstrap -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
+        <?php require_once("./includes/footer-elements.php"); ?>
 </body>
 </html>
