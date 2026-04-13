@@ -113,6 +113,7 @@ h3{
 -------------------------------------------------------------*/
 .section-notices .container-related-news{
     height: 100%;
+    justify-content: flex-start !important;
     background: var(--wild-sand);
 }
 .section-notices .container-related-news .items-related-notes .list-related-notes{
