@@ -9,7 +9,7 @@
         </div>
         <div class="text mt-2">
             <p class="m-0 text-elipsis-vertical">
-                <?= htmlspecialchars($summarys[0] ?? '', ENT_QUOTES, 'UTF-8'); ?>
+                <?= htmlspecialchars(html_entity_decode($summarys[0] ?? '', ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8'); ?>
             </p>
         </div>
     </a>
@@ -23,7 +23,7 @@
         </div>
         <div class="text mt-2">
             <p class="m-0 text-elipsis-vertical">
-                <?= htmlspecialchars($summarys[1] ?? '', ENT_QUOTES, 'UTF-8'); ?>
+                <?= htmlspecialchars(html_entity_decode($summarys[1] ?? '', ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8'); ?>
             </p>
         </div>
     </a>
@@ -37,7 +37,7 @@
         </div>
         <div class="text mt-2">
             <p class="m-0 text-elipsis-vertical">
-                <?= htmlspecialchars($summarys[2] ?? '', ENT_QUOTES, 'UTF-8'); ?>
+                <?= htmlspecialchars(html_entity_decode($summarys[2] ?? '', ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8'); ?>
             </p>
         </div>
     </a>

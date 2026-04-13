@@ -13,7 +13,7 @@ $hrfs = $hrfs ?? [];
             <li class="item h4 fw-bold">
                 <a class="text-decoration-none" href="<?= htmlspecialchars($hrfs[$i] ?? '#', ENT_QUOTES, 'UTF-8'); ?>">
                     <p class="m-0 text-black text-elipsis-vertical">
-                        <?= htmlspecialchars($note, ENT_QUOTES, 'UTF-8'); ?>
+                        <?= htmlspecialchars(html_entity_decode($note, ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8'); ?>
                     </p>
                 </a>
             </li>

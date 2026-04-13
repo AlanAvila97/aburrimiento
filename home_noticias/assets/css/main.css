@@ -202,6 +202,7 @@ h3{
 -------------------------------------------------------------*/
 .lead-block {
     display: grid;
+    color: #000;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
     margin-bottom: 16px;
@@ -219,6 +220,7 @@ h3{
     margin: 0;
     color: var(--color-text);
     font-size: 0.95rem;
+    font-weight: 600;
     line-height: 1.3;
 }
 

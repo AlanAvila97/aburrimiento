@@ -10,8 +10,8 @@ $items = $items ?? [];
             <img src="<?= htmlspecialchars($img, ENT_QUOTES, 'UTF-8'); ?>"
              alt="<?= htmlspecialchars($alt, ENT_QUOTES, 'UTF-8'); ?>">
               <div> 
-                <h4 class="fw-bold text-uppercase"><?= htmlspecialchars($titulo, ENT_QUOTES, 'UTF-8'); ?></h4>
-                <p><?= htmlspecialchars($sumario, ENT_QUOTES, 'UTF-8'); ?></p>
+                <h4 class="fw-bold text-uppercase"><?= htmlspecialchars(html_entity_decode($titulo, ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8'); ?></h4>
+                <p><?= htmlspecialchars(html_entity_decode($sumario, ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8'); ?></p>
              </div> 
             </article> <?php endfor; ?>
          </div>

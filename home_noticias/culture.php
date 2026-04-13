@@ -50,6 +50,7 @@
                         $summary1 = "Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario";
                         $subtitle2 = "Título Título Título";
                         $summary2 = "Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario Sumario";
+                        $href = "#";
                        include('./components/grid-notas-horizontal.php'); ?>
                                 </div>
                                 <!-- Memoria e Identidad -->
@@ -61,11 +62,12 @@
                                      </div>
                                     <?php 
                         $image = "https://dummyimage.com/420x210/ccc/fff"; 
-                        $principalContent = "jhkkjuhgkj thjfdtknorj ijrounbrog  origorn infolsns kfeéflkes  nognoldrsgndsrl nodgnodrgnol    olnolgdsrg";
+                        $principalContent = "holá :4 jhkkjuhgkj thjfdtknorj ijrounbrog  origorn infolsns kfeéflkes434;@grr rrrrnognoldrsgndsrl nodgnodrgnol    olnolgdsrg";
                         $subtitle1 = "Título2 Título2 Título2";
                         $summary1 = "Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2";
                         $subtitle2 = "Título2 Título2 Título2";
                         $summary2 = "Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2 Sumario2";
+                        $href = "#";
                        include('./components/grid-notas-horizontal.php'); ?>
                                 </div>
                             </div>
