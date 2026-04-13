@@ -25,8 +25,48 @@
                                 "https://dummyimage.com/420x205/ccc/fff"
                                 ];
                             include("./components/grid-notas-collage-vertical.php");?>
-                            <div class="aside-main-news">
+                            <div class="aside-main-news phone-frame">
+                                <div class="header-scroll">
+                                    <h2>EN CORTO</h2>
+                                    <span class="count">5 historias</span>
+                                </div>
+                                <div class="scroll-container" id="scrollContainer">
+                                    <div class="card-scroll">
+                                        <div class="card-img">
+                                            <img src="https://dummyimage.com/420x205/ccc/fff" class="img-responsive" alt="">
+                                        </div>
+                                        <span class="card-tag">Política</span>
+                                    </div>
 
+                                    <div class="card-scroll">
+                                        <div class="card-img">
+                                            <img src="https://dummyimage.com/420x205/ccc/fff" class="img-responsive" alt="">
+                                        </div>
+                                        <span class="card-tag">Economía</span>
+                                    </div>
+
+                                    <div class="card-scroll">
+                                        <div class="card-img">
+                                            <img src="https://dummyimage.com/420x205/ccc/fff" class="img-responsive" alt="">
+                                        </div>
+                                        <span class="card-tag">Tecnología</span>
+                                    </div>
+
+                                    <div class="card-scroll">
+                                        <div class="card-img">
+                                            <img src="https://dummyimage.com/420x205/ccc/fff" class="img-responsive" alt="">
+                                        </div>
+                                        <span class="card-tag">Cultura</span>
+                                    </div>
+
+                                    <div class="card-scroll">
+                                        <div class="card-img">
+                                            <img src="https://dummyimage.com/420x205/ccc/fff" class="img-responsive" alt="">
+                                        </div>
+                                        <span class="card-tag">Deportes</span>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </section>
