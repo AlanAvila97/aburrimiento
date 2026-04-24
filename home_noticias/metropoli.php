@@ -24,20 +24,26 @@
                             "https://dummyimage.com/1080x812/ccc/fff",
                             "https://dummyimage.com/480x812/ccc/fff",
                             "https://dummyimage.com/480x812/ccc/fff", ];
+                        $subtitles = [
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                        ];
                         $hrfs = ["#", "#", "#"]; 
+                        
                         include("./components/slide-three-images.php");?>
                     </div>
                 </section>
                 <section class="section-notices section-body-notices mt-4">
                     <article class="container">
-                        <div class="flex-column-reverse flex-lg-row row w-100 mx-0">
+                        <div class="flex-column flex-lg-row row w-100 mx-0">
                             <div class="col-lg-8 mt-3 mt-mb-0 d-flex flex-column row-gap-5">
                                 <div class="container-conflicts">
-                                    <div class="w-50">
+                                    
                                     <?php
                                      $title= "CDMX";
                                      include('./components/title-notes.php'); ?>
-                                     </div>
+                                     
                                     <?php 
                                       $images = [
                                         "https://dummyimage.com/800x475/ccc/fff",
@@ -53,11 +59,10 @@
                                     include("./components/grid-notas-columnas.php"); ?>
                                 </div>
                                 <div class="container-migrations">
-                                    <div class="w-50">
                                     <?php
                                      $title= "Zona Conurbada";
                                      include('./components/title-notes.php'); ?>
-                                     </div>
+                                    
                                     <?php 
                                       $images = [
                                         "https://dummyimage.com/800x475/ccc/fff",
@@ -100,12 +105,12 @@
                 <section class="section-notices section-recents-news mt-4 mb-5">
                     <div class="container container-recents-news">
                         <div class="content-recent-news">
-                            <div class="w-50">
+                            
                                      <?php 
                                      $class = "h3 border-after-start";
                                      $title= "Lo más reciente";
                                      include('./components/title-notes.php'); ?>
-                                     </div>
+                                    
                             <?php 
                                 $images = [
                                     "https://dummyimage.com/800x475/ccc/fff",

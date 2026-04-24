@@ -76,7 +76,9 @@ h3{
     padding-bottom: 0.5rem;
     margin-bottom: 0;
     position: relative;
+    text-align: center;
 }
+
 .section-notices .title-notes h2::after{
     content: '';
     background: var(--torch-red-500);
@@ -99,6 +101,14 @@ h3{
         width: 100%!important;
     }
 }
+
+@media (min-width: 992px) {
+    .section-recents-news .content-recent-news .title-notes {
+        width: 66.66666667%;
+    }
+}
+
+
 /*-------------------------------------------------------------
 # Separador rojo
 -------------------------------------------------------------*/
