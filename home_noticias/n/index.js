@@ -3,21 +3,22 @@ const CONTENT_MODAL = document.querySelector('#interviewModal');
 // 
 let modalInterview = null;
 // 
-function initialitationModal(element) {
-    const modalElement = document.querySelector(element);
-    if (!modalElement) {
-        console.error(`Modal element ${element} not found`);
-        return null;
+const initialitationModal = () => {
+    let modalElement = document.querySelector('#interviewModal');
+    if (!modalElement) return;
+    // 
+    var modalDialog = modalElement.querySelector('.modal-dialog');
+    modalDialog.classList.add('modal-dialog-centered');
+    // 
+    if (modalElement.parentNode !== document.body) {
+        document.body.appendChild(modalElement);
     }
-    //
-    if (modalElement._bsModal) {
-        modalElement._bsModal.dispose();
-    }
-    return new bootstrap.Modal(modalElement, {
-        keyboard: false,
-        focus: true,
-    })
-}
+    modal = new bootstrap.Modal(modalElement, { 
+        keyboard: false, 
+        focus: true,        
+    });
+    actionsModal(modal);
+};
 /**
  * @description Configura las acciones de los modales
  * @param {HTMLElement} modal - Modal inicializado
@@ -38,6 +39,11 @@ function actionsModal(modal){
         if (modal._element.contains(document.activeElement)) {
             document.activeElement.blur();
         }
+        // 
+        let modal_clone = modal._element;
+        let modal_content = modal_clone.querySelector('.modal-body');
+        modal_content.innerHTML = '';
+        // 
         document.querySelector('html').style.overflow = 'auto';
     });
     modal._element.addEventListener('hidden.bs.modal', function () {
@@ -45,8 +51,13 @@ function actionsModal(modal){
     });
 }
 function parserLinkVideo(video) {
-    let link = video.split('v=');    
-    return link[1];
+    try {
+        let link = video.split('v=');    
+        return link[1];
+    } catch (error) {
+        console.log(error)
+        return false;
+    }
 }
 const sliderNoticiasPrincipales = () => {
     var swiper_principal_notices = new Swiper(".slider-principal-notices", {
@@ -154,15 +165,15 @@ const viewInterviewVideo = (e) => {
     let element =  e.target.closest('.item-interview');
     if(!element) return;
     //
-    let textTitle = element.dataset.title;
-    let linkVideo = parserLinkVideo(element.dataset.link);
+    let textTitle = element.dataset.title;    
+    let linkVideo = parserLinkVideo(element.dataset.extracto);
+    if(!linkVideo) return;
     // 
-    let elemetTitle  =  CONTENT_MODAL.querySelector('.modal-title');
+    let elemetTitle  =  CONTENT_MODAL.querySelector('.modal-title');    
         elemetTitle.textContent = textTitle;
     // 
     let elementContet = CONTENT_MODAL.querySelector('.modal-body');
-        // elementContet.innerHTML = `<lite-youtube videoid="${linkVideo}" autoload> </lite-youtube>`
-        
+    elementContet.innerHTML = `<lite-youtube videoid="${linkVideo}" autoload> </lite-youtube>`;
 }
 // 
 ITEMS_MODAL.forEach(item => {

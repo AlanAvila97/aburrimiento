@@ -5,15 +5,15 @@
                 <div class="logo">
                     <picture>
                         <source class="lazy img-fluid" 
-                            srcset="./assets/img/oncenoticias350x150.png" 
+                            srcset="http://192.168.7.198/wp-content/themes/jannah/templates/partials/assets/img/oncenoticias350x150.png" 
                             type="image/webp" 
                             alt="Logo Once Noticias" loading="lazy">
                         <source class="lazy img-fluid" 
-                            srcset="./assets/img/oncenoticias350x150.png" 
+                            srcset="http://192.168.7.198/wp-content/themes/jannah/templates/partials/assets/img/oncenoticias350x150.png" 
                             type="image/png" 
                             alt="Logo Once Noticias" loading="lazy"> 
                         <img class="img-fluid lazy img-responsive" 
-                            src="./assets/img/oncenoticias350x150.png" 
+                            src="http://192.168.7.198/wp-content/themes/jannah/templates/partials/assets/img/oncenoticias350x150.png" 
                             alt="Logo Once Noticias" width="139" height="30">
                     </picture>
                 </div>
@@ -34,37 +34,37 @@
                     <h2 class="h3 text-white">Redes Sociales</h2>
                 </div>
                 <div class="d-flex flex-wrap flex-xl-nowrap gap-3 justify-content-between mt-3 social-networks w-100">
-                    <a href="">
+                    <a href="https://twitter.com/OnceNoticiasTV">
                         <span class="fa-stack">
                             <i class="fa-regular fa-circle fa-stack-2x text-white"></i>
                             <i class="fa-brands fa-x-twitter fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    <a href="">
+                    <a href="https://www.facebook.com/OnceNoticiasTV">
                         <span class="fa-stack">
                             <i class="fa-regular fa-circle fa-stack-2x text-white"></i>
                             <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/oncenoticias.digital/">
                         <span class="fa-stack">
                             <i class="fa-regular fa-circle fa-stack-2x text-white"></i>
                             <i class="fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    <a href="">
+                    <a href="https://www.tiktok.com/@oncenoticias.digital">
                         <span class="fa-stack">
                             <i class="fa-regular fa-circle fa-stack-2x text-white"></i>
                             <i class="fa-brands fa-tiktok fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    <a href="">
+                    <a href="https://www.youtube.com/channel/UCM4vf-nmAxPq8Do0Xi3qXkg">
                         <span class="fa-stack">
                             <i class="fa-regular fa-circle fa-stack-2x text-white"></i>
                             <i class="fa-brands fa-youtube fa-stack-1x fa-inverse"></i>
                         </span>
                     </a>
-                    <a href="">
+                    <a href="https://whatsapp.com/channel/0029VaKdOdMKQuJRN1OuSJ0F">
                         <span class="fa-stack">
                             <i class="fa-regular fa-circle fa-stack-2x text-white"></i>
                             <i class="fa-brands fa-whatsapp fa-stack-1x fa-inverse"></i>

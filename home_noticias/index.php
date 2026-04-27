@@ -53,30 +53,57 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="https://dummyimage.com/300x600/ccc/fff"/>
+                                        <div class="overlay-text"> 
+                                            <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="https://dummyimage.com/300x600/ccc/fff"/>
+                                        <div class="overlay-text"> 
+                                            <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="https://dummyimage.com/300x600/ccc/fff"/>
+                                        <div class="overlay-text"> 
+                                            <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="https://dummyimage.com/300x600/ccc/fff"/>
+                                        <div class="overlay-text"> 
+                                            <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="https://dummyimage.com/300x600/ccc/fff"/>
+                                        <div class="overlay-text"> 
+                                            <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="https://dummyimage.com/300x600/ccc/fff"/>
+                                        <div class="overlay-text"> 
+                                            <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="https://dummyimage.com/300x600/ccc/fff"/>
+                                        <div class="overlay-text"> 
+                                            <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="https://dummyimage.com/300x600/ccc/fff"/>
+                                        <div class="overlay-text"> 
+                                            <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="https://dummyimage.com/300x600/ccc/fff"/>
+                                        <div class="overlay-text"> 
+                                            <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-button-next d-none"></div>
@@ -241,8 +268,10 @@
                                 Entrevistas
                             </h2>
                         </div>
-                        <div class="mt-4 row row-gap-3 row-gap-lg-0">
-                            <div class="col-lg-4 item-interview " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="mt-4 content-item-interview row-gap-3 row-gap-lg-0">
+                            <div class="item-interview" data-bs-toggle="modal" data-bs-target="#interviewModal" 
+                                data-title="México y EUA refuerzan alianza binacional"
+                                data-link="https://www.youtube.com/watch?v=SF9TtPFiY8o">
                                 <picture>
                                     <source class="lazy img-fluid" 
                                         srcset="https://dummyimage.com/200x200/ccc/fff" 
@@ -256,8 +285,13 @@
                                         src="https://dummyimage.com/200x200/ccc/fff" 
                                         alt="Imagen nota" width="139" height="30">
                                 </picture>
+                                <div class="overlay-text"> 
+                                    <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                </div>
                             </div>
-                            <div class="col-lg-4 item-interview " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="item-interview " data-bs-toggle="modal" data-bs-target="#interviewModal"
+                                data-title="México y EUA refuerzan alianza binacional"
+                                data-link="https://www.youtube.com/watch?v=SF9TtPFiY8o">
                                 <picture>
                                     <source class="lazy img-fluid" 
                                         srcset="https://dummyimage.com/200x200/ccc/fff" 
@@ -271,8 +305,13 @@
                                         src="https://dummyimage.com/200x200/ccc/fff" 
                                         alt="Imagen nota" width="139" height="30">
                                 </picture>
+                                <div class="overlay-text"> 
+                                    <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                </div>                                
                             </div>
-                            <div class="col-lg-4 item-interview " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="item-interview" data-bs-toggle="modal" data-bs-target="#interviewModal"
+                                data-title="México y EUA refuerzan alianza binacional"
+                                data-link="https://www.youtube.com/watch?v=SF9TtPFiY8o">
                                 <picture>
                                     <source class="lazy img-fluid" 
                                         srcset="https://dummyimage.com/200x200/ccc/fff" 
@@ -286,6 +325,9 @@
                                         src="https://dummyimage.com/200x200/ccc/fff" 
                                         alt="Imagen nota" width="139" height="30">
                                 </picture>
+                                <div class="overlay-text"> 
+                                    <h3 class="h5 mb-0">México y EUA refuerzan alianza binacional</h3> 
+                                </div>                                
                             </div>
                         </div>
                     </article>
@@ -447,11 +489,12 @@
         </div>
     </div>
     <!-- Bootstrap -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
     <!-- Swiper -->
     <script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script>
+    <!-- Lite Youtube -->
+    <script type="module" src="assets/vendor/lite-youtube/lite-youtube.min.js"></script>
     <!-- JS -->
     <script src="assets/js/index.js"></script>
 </body>

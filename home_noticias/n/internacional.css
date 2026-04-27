@@ -15,14 +15,6 @@
     object-fit: cover;
     height: 100%;
 }
-.section-main-news .container-main-news .col-main .overlay-text{
-    height: 20%;
-}
-.section-main-news .container-main-news .overlay-text h3{
-    font-size: 2rem;
-    line-clamp: 1;
-    -webkit-line-clamp: 1;
-}
 /*-------------------------------------------------------------
 # body news
 -------------------------------------------------------------*/
