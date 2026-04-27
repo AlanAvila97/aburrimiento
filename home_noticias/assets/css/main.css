@@ -320,6 +320,72 @@ h3{
     }
 }
 
+/*-------------------------------------------------------------
+# Estilos componente grid de transmisiones
+-------------------------------------------------------------*/
+.c-media-grid {
+    --c-media-grid-radius: 4px;
+    --c-media-grid-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    --c-media-grid-shadow-hover: 0 10px 20px rgb(0 0 0 / 16%);
+}
+
+.c-media-grid__card {
+    color: #000;
+    background: #fff;
+    border-radius: var(--c-media-grid-radius);
+    overflow: hidden;
+    box-shadow: var(--c-media-grid-shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.c-media-grid__card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--c-media-grid-shadow-hover);
+}
+
+.c-media-grid__figure {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: #e6e6e6;
+}
+
+.c-media-grid__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.c-media-grid__card:hover .c-media-grid__image {
+    transform: scale(1.04);
+}
+
+.c-media-grid__body {
+    padding: 0.8rem 0.95rem 1rem;
+}
+
+.c-media-grid__title {
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+@media (max-width: 767px) {
+    .c-media-grid__title {
+        font-size: 0.95rem;
+    }
+}
+
 
 
 

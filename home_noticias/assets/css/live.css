@@ -1,0 +1,431 @@
+/*-------------------------------------------------------------
+# ESTILOS TRANSMISIÓN EN VIVO
+-------------------------------------------------------------*/
+
+/* Sección principal de transmisión */
+.section-live-streaming {
+    background: #f8f9fa;
+    min-height: calc(100vh - 200px);
+}
+
+/*-------------------------------------------------------------
+# Reproductor de video
+-------------------------------------------------------------*/
+.video-player-wrapper {
+    background: white;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+    background: #000;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badge EN VIVO */
+.live-badge {
+    z-index: 10;
+}
+
+.live-badge .badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0.75rem;
+}
+
+.live-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    animation: pulse-live 1s ease-in-out infinite;
+}
+
+@keyframes pulse-live {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* Contador de espectadores */
+.viewers-count {
+    z-index: 10;
+}
+
+.viewers-count .bg-opacity-75 {
+    backdrop-filter: blur(4px);
+}
+
+/* Controles de video */
+.video-controls {
+    z-index: 9;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.video-controls button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.video-controls button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/*-------------------------------------------------------------
+# Información de la transmisión
+-------------------------------------------------------------*/
+.live-info {
+    background: white;
+}
+
+.live-avatar img {
+    border: 2px solid #fb2444;
+}
+
+.live-info h2 {
+    color: #000;
+}
+
+.live-info .btn-danger {
+    background: var(--torch-red-500);
+    border-color: var(--torch-red-500);
+}
+
+.live-info .btn-danger:hover {
+    background: #d91f3b;
+    border-color: #d91f3b;
+}
+
+/*-------------------------------------------------------------
+# Descripción
+-------------------------------------------------------------*/
+.live-description {
+    border-radius: 0 0 0.8rem 0.8rem;
+}
+
+.live-description h4 {
+    color: #000;
+    font-weight: 600;
+}
+
+.live-description .btn-link {
+    color: var(--torch-red-500);
+    text-decoration: none;
+}
+
+.live-description .btn-link:hover {
+    color: #d91f3b;
+}
+
+/*-------------------------------------------------------------
+# Chat en Vivo
+-------------------------------------------------------------*/
+.live-chat-wrapper {
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background: #2c3e50;
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.chat-header h4 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Contenedor de mensajes */
+.chat-messages {
+    background: white;
+    max-height: 500px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Mensaje individual */
+.chat-message {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-message img {
+    border: 2px solid #f0f0f0;
+}
+
+.chat-message strong {
+    color: #2c3e50;
+}
+
+.chat-message .text-danger {
+    color: var(--torch-red-500) !important;
+}
+
+/* Input de chat */
+.chat-input {
+    background: #f8f9fa;
+    border-radius: 0 0 0.8rem 0.8rem;
+}
+
+#chatInput {
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+#chatInput:focus {
+    border-color: var(--torch-red-500);
+    box-shadow: 0 0 0 0.2rem rgba(251, 36, 68, 0.25);
+}
+
+#btnSendChat {
+    background: var(--torch-red-500);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#btnSendChat:hover {
+    background: #d91f3b;
+}
+
+/*-------------------------------------------------------------
+# Transmisiones Relacionadas
+-------------------------------------------------------------*/
+.section-related-streams {
+    background: white;
+}
+
+.section-related-streams .title-notes h2 {
+    border-color: #bcbcbc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.section-related-streams .title-notes h2::after {
+    content: '';
+    background: var(--torch-red-500);
+    top: 95%;
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Tarjeta de transmisión */
+.stream-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.stream-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.stream-thumbnail {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.stream-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.stream-card:hover .stream-thumbnail img {
+    transform: scale(1.05);
+}
+
+/* Badge pequeño EN VIVO */
+.live-badge-small .badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.3rem 0.5rem;
+}
+
+.live-indicator-small {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    animation: pulse-live 1s ease-in-out infinite;
+}
+
+/* Espectadores en tarjeta */
+.stream-viewers .badge {
+    font-size: 0.75rem;
+}
+
+.stream-card .card-body {
+    padding: 1rem;
+}
+
+.stream-card .card-title {
+    font-weight: 600;
+    color: #000;
+}
+
+/*-------------------------------------------------------------
+# Responsive
+-------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .video-container {
+        aspect-ratio: auto;
+        min-height: 250px;
+    }
+
+    .chat-messages {
+        max-height: 350px;
+    }
+
+    .live-info .row {
+        flex-direction: column;
+    }
+
+    .live-info .live-avatar {
+        margin-right: 0 !important;
+        margin-bottom: 1rem;
+    }
+
+    .live-info .d-flex.gap-2 {
+        flex-wrap: wrap;
+    }
+
+    .section-live-streaming .row {
+        flex-direction: column;
+    }
+
+    .video-player-wrapper,
+    .live-chat-wrapper {
+        margin-bottom: 1rem;
+    }
+
+    .section-related-streams .title-notes h2::after {
+        width: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-live-streaming {
+        padding: 1rem 0.5rem !important;
+    }
+
+    .video-container {
+        min-height: 200px;
+    }
+
+    .chat-messages {
+        max-height: 300px;
+    }
+
+    .live-badge .badge {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .viewers-count {
+        font-size: 0.75rem;
+    }
+
+    .live-info h2 {
+        font-size: 1rem;
+    }
+
+    .live-info .d-flex.gap-2 button {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .stream-card .card-body {
+        padding: 0.75rem;
+    }
+
+    .stream-card .card-title {
+        font-size: 0.85rem;
+    }
+}
+
+/*-------------------------------------------------------------
+# Animaciones adicionales
+-------------------------------------------------------------*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.live-chat-wrapper {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Efecto de enfoque en controles */
+.video-controls button:focus {
+    outline: 2px solid var(--torch-red-500);
+    outline-offset: 2px;
+}
+
+/* Estado deshabilitado */
+.video-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
