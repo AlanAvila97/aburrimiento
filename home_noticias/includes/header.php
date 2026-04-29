@@ -32,7 +32,7 @@
 </style>
 <header class="navbar navbar-expand navbar-light navbar-bg p-0">
     <div class="container-navbar">
-        <div class="social-networks d-none d-lg-flex gap-2">
+        <div class="social-networks d-flex gap-2">
             <a href="https://twitter.com/OnceNoticiasTV">
                 <span class="fa-stack">
                     <i class="fa-regular fa-circle fa-stack-2x text-white"></i>

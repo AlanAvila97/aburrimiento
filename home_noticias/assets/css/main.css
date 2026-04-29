@@ -30,8 +30,8 @@ h3{
 }
 :root{
     --torch-red-500: #fb2444;
-    --gallery-100: #efefef;
-    --wild-sand: #f4f4f4;
+    --gallery-100: #eeeeee;
+    --wild-sand: #ffffff;
 }
 .img-responsive{
     width: 100%;
@@ -103,10 +103,7 @@ h3{
 .title-head h1{
     text-transform: uppercase;
 }
-/*-------------------------------------------------------------
-# Estilos titulos secciones
--------------------------------------------------------------*/
-.section-notices .title-notes h2{
+.title-notes h2{
     border-color: #bcbcbc;
     padding-bottom: 0.5rem;
     margin-bottom: 0;
@@ -114,7 +111,7 @@ h3{
     text-align: center;
 }
 
-.section-notices .title-notes h2::after{
+.title-notes h2::after{
     content: '';
     background: var(--torch-red-500);
     top: 95%;
@@ -122,17 +119,20 @@ h3{
     width: 100px;
     height: 5px;
 }
-.section-notices .title-notes .border-after-start::after{
+.title-notes .border-after-start::after{
     left: 0;
 }
-.section-notices .title-notes .border-after-end::after{
+.title-notes .border-after-end::after{
     right: 0;
 }
+/*-------------------------------------------------------------
+# Estilos titulos secciones
+-------------------------------------------------------------*/
 .section-notices .item-interview{
     cursor: pointer;
 }
 @media (max-width: 991px){ 
-    .section-notices .title-notes{
+    .title-notes{
         width: 100%!important;
     }
 }

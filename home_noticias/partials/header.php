@@ -1,6 +1,6 @@
 <header class="navbar navbar-expand navbar-light navbar-bg p-0">
     <div class="container-navbar">
-        <div class="social-networks d-none d-lg-flex gap-2">
+        <div class="social-networks d-flex gap-2">
             <a href="">
                 <span class="fa-stack">
                     <i class="fa-regular fa-circle fa-stack-2x text-white"></i>
@@ -39,30 +39,114 @@
             </a>
         </div>
         <div class="container-actions-navbar">
-            <div class="container-live-day d-none d-lg-flex align-items-center justify-content-center gap-3 px-4">
+            <div class="container-live-day d-flex align-items-center justify-content-center gap-3 px-4">
                 <div class="btn-live">
-                    <picture>
+                    <picture class="d-none d-lg-block">
                         <source class="lazy img-fluid" 
-                            srcset="./assets/img/upscalemedia-transformed__2_-removebg-preview.png" 
+                            srcset="./assets/img/tv_en_vivo.svg" 
                             type="image/webp" 
-                            alt="Logo Once Noticias" loading="lazy">
+                            alt="Logo Once Noticias" loading="lazy">                        
                         <source class="lazy img-fluid" 
-                            srcset="./assets/img/upscalemedia-transformed__2_-removebg-preview.png" 
+                            srcset="./assets/img/tv_en_vivo.svg" 
                             type="image/png" 
                             alt="Logo Once Noticias" loading="lazy"> 
                         <img class="img-fluid lazy img-responsive" 
-                            src="./assets/img/upscalemedia-transformed__2_-removebg-preview.png" 
+                            src="./assets/img/tv_en_vivo.svg" 
                             alt="Logo Once Noticias" width="139" height="30">
-                    </picture>
+                    </picture> 
+                    <div class="d-flex d-lg-none">                        
+                        <input type="checkbox" id="checkbox_menu_movile">
+                        <label for="checkbox_menu_movile">
+                            <img class="img-fluid lazy img-responsive" 
+                                src="./assets/img/tabler_menu-4.svg" 
+                                alt="Logo Once Noticias" width="139" height="30">
+                        </label>
+                        <div class="align-items-start align-items-lg-center d-flex hamburger-menu justify-content-lg-center justify-content-start">
+                            <div class="align-items-start container-menu d-flex flex-column justify-content-center row-gap-3">
+                                <label for="checkbox_menu_movile" class="toggle toggle-active">
+                                    <div class="bars" id="bar1"></div>
+                                    <div class="bars" id="bar2"></div>
+                                    <div class="bars" id="bar3"></div>
+                                </label>
+                                <div class="title-notes text-center w-100">
+                                    <h2 class="h3 text-uppercase fw-bold border-bottom border-2 border-after-start">
+                                        CATEGORÍAS
+                                    </h2>
+                                </div>
+                                <div class="scroll-container-menu d-flex flex-column row-gap-3 w-100">
+                                    <a href="" class="d-block">
+                                        <h2 class="h3 text-uppercase text-black fw-bold"> 
+                                            Internacional
+                                        </h2>
+                                    </a>
+                                    <a href="" class="d-block">
+                                        <h2 class="h3 text-uppercase text-black fw-bold">
+                                            Política
+                                        </h2>
+                                    </a>
+                                    <a href="" class="d-block">
+                                        <h2 class="h3 text-uppercase text-black fw-bold">
+                                            Economía
+                                        </h2>
+                                    </a>
+                                    <a href="" class="d-block">
+                                        <h2 class="h3 text-uppercase text-black fw-bold">
+                                            Seguridad
+                                        </h2>
+                                    </a>
+                                    <a href="" class="d-block">
+                                        <h2 class="h3 text-uppercase text-black fw-bold"> 
+                                            Salud
+                                        </h2>
+                                    </a>
+                                    <a href="" class="d-block">
+                                        <h2 class="h3 text-uppercase text-black fw-bold"> 
+                                            Estados
+                                        </h2>
+                                    </a>
+                                    <a href="" class="d-block">
+                                        <h2 class="h3 text-uppercase text-black fw-bold"> 
+                                            Metrópoli
+                                        </h2>
+                                    </a>
+                                    <a href="" class="d-block">
+                                        <h2 class="h3 text-uppercase text-black fw-bold"> 
+                                            Opinión
+                                        </h2>
+                                    </a>
+                                    <a href="" class="d-block">
+                                        <h2 class="h3 text-uppercase text-black fw-bold"> 
+                                            ¿Cómo se hace?
+                                        </h2>
+                                    </a>
+                                </div>
+                                <div class=" d-flex justify-content-start">
+                                    <picture class="d-block">
+                                        <source class="lazy img-fluid" 
+                                            srcset="./assets/img/tv_en_vivo.svg"
+                                            type="image/webp" 
+                                            alt="Logo Once Noticias" loading="lazy">                        
+                                        <source class="lazy img-fluid" 
+                                            srcset="./assets/img/tv_en_vivo.svg"
+                                            type="image/png" 
+                                            alt="Logo Once Noticias" loading="lazy"> 
+                                        <img class="img-fluid lazy img-responsive" 
+                                            src="./assets/img/tv_en_vivo.svg"
+                                            alt="Logo Once Noticias" width="139" height="30">
+                                    </picture> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info-current-day px-2 py-1">
+                <div class="info-current-day d-none d-lg-flex px-2 py-1">
                     <h2 class="h6 m-0 text-uppercase fw-bold">  Sábado, 1 Noviembre, 2025 </h2>
                 </div>
             </div>
-            <div class="container-search d-flex align-items-center justify-content-center px-4">
-                <div class="justify-content-end justify-content-xl-between row w-100">
-                    <div class="col-lg-10 input-search d-none d-xl-flex">                                    
-                        <div class="input-group">
+            <div class="container-search d-flex align-items-center justify-content-center px-0 px-lg-4">
+                <div class="elements-search justify-content-around justify-content-lg-between row w-100">
+                    <div class="col-auto col-lg-10 input-search d-flex">
+                        <div class="input-group d-none d-lg-flex">
                             <input id="input_search"
                                 type="text" class="form-control" 
                                 placeholder="" 
@@ -74,16 +158,31 @@
                                 Buscar
                             </button>
                         </div>
+                        <div class="content-input-search d-flex justify-content-center align-items-center d-lg-none">
+                            <a class="text-decoration-none" href="">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-12 col-xl-2 d-flex justify-content-end container-bars">
+                    <div class="col-auto col-lg-2 d-flex justify-content-center container-bars">
                         <input type="checkbox" id="checkbox_menu">
                         <label for="checkbox_menu" class="toggle">
                             <div class="bars" id="bar1"></div>
                             <div class="bars" id="bar2"></div>
                             <div class="bars" id="bar3"></div>
                         </label>
-                        <div class="align-items-center d-flex hamburger-menu justify-content-center">
-                            <div class="align-items-center container-menu d-flex flex-column justify-content-center p-5 row-gap-4">
+                        <div class="align-items-start align-items-lg-center d-flex hamburger-menu justify-content-lg-center justify-content-end">
+                            <div class="align-items-start container-menu d-flex flex-column justify-content-center row-gap-4">
+                                <label for="checkbox_menu" class="toggle toggle-active">
+                                    <div class="bars" id="bar1"></div>
+                                    <div class="bars" id="bar2"></div>
+                                    <div class="bars" id="bar3"></div>
+                                </label>
+                                <div class="title-notes text-center w-100">
+                                    <h2 class="h3 text-uppercase fw-bold border-bottom border-2 border-after-start">
+                                        CATEGORÍAS
+                                    </h2>
+                                </div>
                                 <a href="" class="d-block">
                                     <h2 class="h3 text-uppercase text-black fw-bold"> AGENDA POLITÉCNICA </h2>
                                 </a>
