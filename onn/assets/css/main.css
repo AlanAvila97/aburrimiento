@@ -1,0 +1,376 @@
+@font-face { 
+    font-family: 'LilitaOne-Regular'; 
+    font-style: normal; 
+    font-weight: normal; 
+    src: 
+        local('LilitaOne-Regular'), 
+        url('../fonts/lilita-one/LilitaOne-Regular.ttf'); 
+    font-display: swap;
+}
+@font-face { 
+    font-family: 'Comfortaa-Regular'; 
+    font-style: normal; 
+    font-weight: normal; 
+    src: 
+        local('Comfortaa-Regular'), 
+        url('../fonts/comfortaa/Comfortaa-Regular.ttf'); 
+    font-display: swap;
+}
+@font-face { 
+    font-family: 'Comfortaa-Light'; 
+    font-style: normal; 
+    font-weight: normal; 
+    src: 
+        local('Comfortaa-Light'), 
+        url('../fonts/comfortaa/Comfortaa-Light.ttf'); 
+    font-display: swap;
+}
+@font-face { 
+    font-family: 'Inter'; 
+    font-style: normal; 
+    font-weight: normal; 
+    src: 
+        local('Inter'), 
+        url('../fonts/Inter/Inter.ttc'); 
+    font-display: swap;
+}
+@font-face { 
+    font-family: 'Cabin-Regular'; 
+    font-style: normal; 
+    font-weight: normal; 
+    src: 
+        local('Inter'), 
+        url('../fonts/cabin/Cabin-Regular.ttf'); 
+    font-display: swap;
+}
+@font-face { 
+    font-family: 'Nunito'; 
+    font-style: normal; 
+    font-weight: lighter; 
+    src: 
+        local('Inter'), 
+        url('../fonts/Nunito/Nunito-Light.ttf'); 
+    font-display: swap;
+}
+/*-------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+h1, h2, h3, h4,  h5{
+    font-family: "LilitaOne-Regular";
+}
+p{
+    font-family: "Nunito";
+}
+body{
+    background-image: url('../img/banner_Inicio.png');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background: #000;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url('../img/banner_Inicio.png');
+    background-size: 100% 100%;
+}
+header,
+footer,
+section{
+    position: relative;
+    z-index: 2;
+}
+section img{
+    position: relative;
+    z-index: 1;
+}
+.font-lilitaone{
+    font-family: "LilitaOne-Regular"!important;
+}
+.font-comfortaa{
+    font-family: "Comfortaa-Regular"!important;
+}
+.font-comfortaa-light{
+    font-family: "Comfortaa-Light"!important;
+}
+.font-inter{
+    font-family: "Inter"!important;
+}
+.font-cabin{
+    font-family: "Cabin-Regular"!important;
+}
+.fs-1xl{
+    font-size: clamp(2.5rem, 3.5rem, 3.8rem);
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+.text-wrapper{
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.img-fluid-responsive{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.overlay-body{
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: brightness(1);
+    background-size: cover;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+.overlay-body-active{
+    z-index: 3;
+    backdrop-filter: brightness(0.5);
+    transition: backdrop-filter .25s ease-out;
+    -webkit-transition: backdrop-filter .25s ease-out;
+    -moz-transition: backdrop-filter .25s ease-out;
+    -ms-transition: backdrop-filter .25s ease-out;
+    -o-transition: backdrop-filter .25s ease-out;
+}
+.btn-back{
+    width: 25rem;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.btn-back h4{
+    margin: 0;
+}
+/*--------------------------------------------------------------
+# Scroll
+--------------------------------------------------------------*/
+.scroll-section{
+    overflow-y: auto;
+}
+.scroll-section::-webkit-scrollbar{
+    width: 15px;
+}
+.scroll-section::-webkit-scrollbar-thumb{
+    background: #9D00F2;
+    border-radius: 2rem;
+    height: 18px;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+.section-content-center{
+    margin-top: 8em;
+    margin-bottom: 8em;
+}
+/*-------------------------------------------------------------
+# Section Content Center Image
+--------------------------------------------------------------*/
+.section-content-image{
+    overflow: hidden;
+    margin-bottom: 0em;
+}
+.section-content-image .img-team-onn{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+.section-banner{
+    margin-top: 0;
+    margin-bottom: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(47, 32, 5, 48%);
+    background-blend-mode: overlay;
+}
+.section-banner .container-title-banner{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+/*-------------------------------------------------------------
+# Section Content Columns
+--------------------------------------------------------------*/
+.section-columns-info h2{
+    font-family: "Inter";
+}
+/*-------------------------------------------------------------
+# Section Content Rows
+--------------------------------------------------------------*/
+.section-content-row .container-row{
+    padding-top: 0rem;
+    margin-bottom: 4rem;
+}
+/*-------------------------------------------------------------
+# Section Content Days
+--------------------------------------------------------------*/
+.section-content-days .container-days .swiper {
+    width: 100%;
+    height: 100%;
+}
+.section-content-days .container-days .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-content-days .container-days .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*-------------------------------------------------------------
+# Section Content Grid Four Columns
+--------------------------------------------------------------*/
+.section-grid-four-columns .container-grid-four-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem 0.5rem;
+}
+.section-grid-four-columns .container-grid-four-columns .items-grid a{
+    border-radius: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+}
+.section-grid-four-columns .container-grid-four-columns .items-grid h4{
+    margin: 0;
+    color: #542084;
+}
+/*-------------------------------------------------------------
+# Section Content Grid Three Columns
+--------------------------------------------------------------*/
+.section-grid-three-columns .container-grid-three-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem 0.5rem;
+}
+.section-grid-three-columns .container-grid-three-columns .items-grid a picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-grid-three-columns .container-grid-three-columns .items-grid a img{
+    max-width: 200px
+}
+.section-grid-three-columns .container-grid-three-columns .items-grid h4{
+    margin: 0;
+    color: #542084;
+}
+/*-------------------------------------------------------------
+# Section Content Grid Two Columns
+--------------------------------------------------------------*/
+.section-grid-two-columns .container-grid-two-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem 0.5rem;
+}
+.section-grid-two-columns .container-grid-two-columns .items-grid picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-grid-two-columns .container-grid-two-columns .items-grid h4{
+    margin: 0;
+    color: #542084;
+}
+/*-------------------------------------------------------------
+# Section Content Iframe
+--------------------------------------------------------------*/
+.container-iframe{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+.container-iframe lite-youtube,
+.container-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    .container {
+        max-width: 540px;
+        width: 90%!important;
+    }
+    .fs-1xl{
+        font-size: clamp(1rem, 2.5rem, 3.5em);
+    }
+    .btn-back{
+        width: 90%;
+    }
+    /*-------------------------------------------------------------
+    # Background sitio
+    --------------------------------------------------------------*/
+    .section-banner h1{
+        text-shadow: 4px 2px #0000007a;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Rows
+    --------------------------------------------------------------*/
+    .section-content-row .container-row .item-row .text-item,
+    .section-content-row .container-row .item-row .image-item{
+        width: 100%!important;
+    }        
+    /*-------------------------------------------------------------
+    # Section Content Grid Four Columns
+    --------------------------------------------------------------*/
+    .section-grid-four-columns .container-grid-four-columns{
+        gap: 1rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Grid Three Columns
+    --------------------------------------------------------------*/
+    .section-grid-three-columns .container-grid-three-columns{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /*-------------------------------------------------------------
+    # Section Content Grid two Columns
+    --------------------------------------------------------------*/
+    .section-grid-two-columns .container-grid-two-columns{
+        grid-template-columns: 1fr;
+    }
+}

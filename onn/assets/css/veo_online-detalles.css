@@ -1,0 +1,110 @@
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-veo-online::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/fondo_bg_veo_online.png);
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-veo-online .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/veo_online.png);
+    background-size: cover;
+    background-attachment: initial;
+}
+body.bg-veo-online .section-banner .container-title-banner{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#video_programa.section-content-center{
+    margin-top: 6rem;
+    margin-bottom: 4em;
+}
+#video_programa.section-content-center .list-episodes a{
+    cursor: pointer;
+}
+/*-------------------------------------------------------------
+# Section Content Video Programa
+--------------------------------------------------------------*/
+#video_programa .content-video{
+    width: 100%;
+    border-radius: 1rem;
+}
+#video_programa .content-video .video-js{
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+#video_programa .content-video .vjs-big-play-centered .vjs-big-play-button{
+    width: 100px;
+    height: 100px;
+    background-color: #F94A4A;
+    border: none;
+    border-radius: 50%;
+    top: 45%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#video_programa .content-video .vjs-big-play-centered .vjs-big-play-button .vjs-icon-placeholder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#video_programa .content-video .vjs-big-play-centered .vjs-big-play-button .vjs-icon-placeholder:before{
+    width: 100%;
+    height: 100%;
+    font-size: clamp(1rem, 4.5rem, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer .footer-navigation-web a .img-fluid-responsive{
+    max-height: 90px;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Background sitio
+    --------------------------------------------------------------*/
+    body.bg-veo-online .section-banner{
+        background-color: transparent;
+        background-position: left;
+    }
+    body.bg-veo-online .section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Series
+    --------------------------------------------------------------*/
+    #texto_series .container-series picture{
+        width: 80% !important;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Programation
+    --------------------------------------------------------------*/
+    #texto_programacion .container-grid-three-columns{
+        margin-bottom: 4rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Grid Three Columns
+    --------------------------------------------------------------*/
+    .section-grid-three-columns .container-grid-three-columns.grid-programation{
+        grid-template-columns: 1fr;
+    }
+}

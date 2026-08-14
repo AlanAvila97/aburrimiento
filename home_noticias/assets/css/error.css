@@ -1,0 +1,42 @@
+body{
+    background-image: url();
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background: #000;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: url(https://d22jn00zjrk7sl.cloudfront.net/wp-content/uploads/2026/05/bg-error.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right;
+}
+.content{
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-error{
+    width: 100%;
+    max-width: 650px;
+}
+.logo-noticias{
+    max-width: 200px;
+}
+@media (max-width: 480px){ 
+    body::after {
+        background-position: 80% 0rem;
+    }
+}

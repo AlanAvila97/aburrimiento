@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordeón con Listas y Enlaces</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .accordion {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .accordion-header:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+        }
+
+        .accordion-header h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .accordion-icon {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .accordion-icon::before {
+            content: '+';
+            font-size: 28px;
+            font-weight: 300;
+            display: block;
+            line-height: 24px;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: #f9f9f9;
+        }
+
+        .accordion-content-inner {
+            padding: 0 25px;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 800px;
+            padding: 20px 0;
+        }
+
+        .accordion-content p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos para listas */
+        .accordion-content ul,
+        .accordion-content ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .accordion-content li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para enlaces */
+        .accordion-content a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .accordion-content a:hover {
+            color: #764ba2;
+            border-bottom: 1px solid #764ba2;
+        }
+
+        /* Efecto de degradado en items activos */
+        .accordion-item.active .accordion-header {
+            background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+        }
+
+        /* Estilo alternativo para listas con iconos */
+        .link-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .link-list li {
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .link-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        @media (max-width: 650px){ 
+            .news-card-revistas{
+                max-height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recursos de Aprendizaje</h1>
+        
+        <div class="accordion" id="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Aprende HTML</h3>
+                    <span class="accordion-icon"></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Recursos recomendados para aprender HTML:</p>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+                            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
+                            <li><a href="https://html.com/" target="_blank">HTML.com - Guía completa</a></li>
+                            <li><a href="https://htmlreference.io/" target="_blank">HTML Reference</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Aprende CSS</h3>
+                    <span class="accordion-icon"></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Los mejores recursos para dominar CSS:</p>
+                        <ul class="link-list">
+                            <li><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">MDN Web Docs - CSS</a></li>
+                            <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                            <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy (Juego interactivo)</a></li>
+                            <li><a href="https://cssgridgarden.com/" target="_blank">Grid Garden (Juego interactivo)</a></li>
+                            <li><a href="https://web.dev/learn/css/" target="_blank">web.dev - Learn CSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Aprende JavaScript</h3>
+                    <span class="accordion-icon"></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Recursos esenciales para JavaScript:</p>
+                        <ol>
+                            <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a></li>
+                            <li><a href="https://javascript.info/" target="_blank">The Modern JavaScript Tutorial</a></li>
+                            <li><a href="https://eloquentjavascript.net/" target="_blank">Eloquent JavaScript (Libro gratuito)</a></li>
+                            <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+                        </ol>
+                        <p>También te recomiendo practicar en <a href="https://codepen.io/" target="_blank">CodePen</a> para experimentar con código en tiempo real.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Herramientas y Frameworks</h3>
+                    <span class="accordion-icon"></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Herramientas populares para desarrollo web:</p>
+                        <ul>
+                            <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> - Editor de código</li>
+                            <li><a href="https://git-scm.com/" target="_blank">Git</a> - Control de versiones</li>
+                            <li><a href="https://github.com/" target="_blank">GitHub</a> - Plataforma de colaboración</li>
+                        </ul>
+                        <p>Frameworks modernos:</p>
+                        <ul class="link-list">
+                            <li><a href="https://react.dev/" target="_blank">React</a></li>
+                            <li><a href="https://vuejs.org/" target="_blank">Vue.js</a></li>
+                            <li><a href="https://angular.io/" target="_blank">Angular</a></li>
+                            <li><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Seleccionar todos los headers del acordeón
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        // Agregar evento click a cada header
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                // Obtener el item padre
+                const accordionItem = this.parentElement;
+                
+                // Verificar si el item ya está activo
+                const isActive = accordionItem.classList.contains('active');
+                
+                // Cerrar todos los items
+                const allItems = document.querySelectorAll('.accordion-item');
+                allItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Si el item no estaba activo, abrirlo
+                if (!isActive) {
+                    accordionItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

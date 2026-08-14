@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">	
+    <!--  -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/header.css">      
+    <link rel="stylesheet" href="./assets/css/footer.css">      
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <header class="header header-once">
+        <div class="container-header">
+            <div class="content-menu-hamburguer">
+                <input type="checkbox" class="menu-btn" id="openSidebarMenu">
+                <div id="sidebarMenu">
+                    <div class="container-menu scroll-menu">
+                        <a id="MenuInicio" href="./" class="items Seccion-Menu" aria-label="Redirección a página principal">Inicio</a>
+                        <a id="MenuHorarios" href="./horarios" class="items Seccion-Menu" aria-label="Redirección a página horarios">Horarios</a>
+                        <hr>
+                        <a class="items Seccion-Menu" href="./multiplataforma/" aria-label="Redirección a página Multiplataforma">
+                            <picture>
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/logo-once+_1.webp" type="image/webp" alt="Logo Multiplataforma Once+" loading="lazy">
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/logo-once+_1.png" type="image/png" alt="Logo Multiplataforma Once+" loading="lazy"> 
+                                <img class="img-fluid lazy img-multiplataforma" src="https://canalonce.mx/REST/data/images/logo-once+_1.webp" alt="Logo Multiplataforma Once+" width="139" height="30">
+                            </picture>
+                        </a>
+                        <a class="items Seccion-Menu onceplus" href="./oncemas" aria-label="Redirección a página once+">
+                            <picture>
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/once-mas_2.webp" type="image/webp" >
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/once-mas_2.png" type="image/png" > 
+                                <img class="img-fluid lazy" src="https://canalonce.mx/REST/data/images/once-mas_2.webp" alt="Logo once+" width="139" height="30">
+                            </picture>
+                        </a>
+                        <a class="items Seccion-Menu" href="https://oncenoticias.digital/" aria-label="Enlace externo al sitio Once Noticias" target="_blank">
+                            <picture>
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/logo-noticas_20_01.webp" type="image/webp">
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/logo-noticas_20_01.png" type="image/png"> 
+                                <img class="img-fluid lazy" src="https://canalonce.mx/REST/data/images/logo-noticas_20_01.webp" alt="Logo OND" width="139" height="30">
+                            </picture>
+                        </a>
+                        <a class="items Seccion-Menu" href="https://onceninasyninos.tv/" aria-label="Enlace externo al sitio Once Niñas y Niños" target="_blank">
+                            <picture>
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/once-onn2.webp" type="image/webp">
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/once-onn2.png" type="image/png"> 
+                                <img class="img-fluid lazy" src="https://canalonce.mx/REST/data/images/once-onn2.webp" alt="Logo ONN" width="139" height="30">
+                            </picture>
+                        </a>
+                        <a class="items Seccion-Menu" href="./mexico" aria-label="Redirección a página Once México">
+                            <picture>
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/logo_internacional_new.webp" type="image/webp">
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/logo_internacional_new.png" type="image/png"> 
+                                <img class="img-fluid lazy" src="https://canalonce.mx/REST/data/images/logo_internacional_new.webp" alt="Logo OM" width="139" height="30">
+                            </picture>
+                        </a>
+                        <a class="items Seccion-Menu" href="./digital" aria-label="Redirección a página Once Digital">
+                            <picture>
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/once-digital_2.webp" type="image/webp">
+                                <source class="lazy img-fluid" srcset="https://canalonce.mx/REST/data/images/once-digital_2.png" type="image/png"> 
+                                <img class="img-fluid lazy" src="https://canalonce.mx/REST/data/images/once-digital_2.webp" alt="Once Digital" width="139" height="30">
+                            </picture>
+                        </a>
+                        <hr>
+                        <div class="container-social-networks">
+                            <a id="MenuTWCanalOnceTv" class="social-icons icon-social-network Seccion-Menu" href="https://twitter.com/CanalOnceTV" aria-label="Enlace externo al twitter del Canal Once" title="Enlace externo al twitter del Canal Once">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a id="MenuFCCanalOnceTv" class="social-icons icon-social-network Seccion-Menu" href="https://www.facebook.com/CANALONCETV/" aria-label="Enlace externo al facebook del Canal Once" title="Enlace externo al facebook del Canal Once">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a id="MenuIGCanalOnceTv" class="social-icons icon-social-network Seccion-Menu" href="https://www.instagram.com/canaloncetv/" aria-label="Enlace externo al instagram del Canal Once" title="Enlace externo al instagram del Canal Once">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a id="MenuYTCanalOnceTv" class="social-icons icon-social-network Seccion-Menu" href="https://www.youtube.com/user/CanalOnceIPN" aria-label="Enlace externo al youtube del Canal Once" title="Enlace externo al youtube del Canal Once">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a id="MenuTKCanalOnceTv" class="social-icons icon-social-network Seccion-Menu" href="https://www.tiktok.com/@canaloncetv"  aria-label="Enlace externo al tiktok del Canal Once"  title="Enlace externo al tiktok del Canal Once">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="./" aria-label="Redirección a página principal">                    
+                    <picture>
+                        <source class="lazy img-fluid" srcset="./assets/img/logo_onn.svg" type="image/webp">
+                        <source class="lazy img-fluid" 
+                            srcset="./assets/img/logo_onn.svg" 
+                            type="image/png"> 
+                        <img class="img-fluid lazy" src="./assets/img/logo_onn.svg" alt="Logo Once" width="139" height="45">
+                    </picture>
+                </a>
+            </div><!-- End div logo -->
+            <div class="sections-nav ">
+                <a href="./aconpamiento.html" class="btn btn-bg-onn">
+                    Madres, padres, docentes y cuidadores
+                </a>
+                <a href="./descargables.html" class="btn btn-bg-onn">
+                    Descargable
+                </a>
+                <a href="./radio-musica.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                    <i class="fa fa-circle"></i>
+                    Radio y música
+                </a>
+                <a href="./veo_online.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                    <i class="fa fa-circle"></i>
+                    Veo ONNline
+                </a>
+            </div><!-- End div seccion nav -->            
+        </div><!-- End div container header -->
+    </header>
+    <script src="./assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--  -->
+    <script src="./assets/js/actions-main.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

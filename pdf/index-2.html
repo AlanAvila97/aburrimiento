@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visualizar PDF desde archivo local</title>
+  <script src="https://unpkg.com/pdf-lib@^1.16.0/dist/pdf-lib.min.js"></script>
+  <style>
+    #pdf-viewer {
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      width: 100%;
+      height: 600px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Cargar y visualizar PDF local</h2>
+    <input type="file" id="pdf-input" accept=".pdf" />
+    <div>
+      <button id="view-btn" disabled>Visualizar PDF</button>
+      <button id="modify-btn" disabled>Añadir marca de agua</button>
+    </div>
+    <iframe id="pdf-viewer"></iframe>
+  </div>
+
+  <script>
+    let pdfBytes = null;
+    
+    // Elementos del DOM
+    const pdfInput = document.getElementById('pdf-input');
+    const viewBtn = document.getElementById('view-btn');
+    const modifyBtn = document.getElementById('modify-btn');
+    const pdfViewer = document.getElementById('pdf-viewer');
+    
+    // Cuando se selecciona un archivo
+    pdfInput.addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      
+      try {
+        // Leer el archivo como ArrayBuffer
+        pdfBytes = await file.arrayBuffer();
+        viewBtn.disabled = false;
+        modifyBtn.disabled = false;
+        alert('PDF cargado correctamente. Haz clic en "Visualizar PDF"');
+      } catch (error) {
+        console.error('Error al leer el archivo:', error);
+        alert('Error al cargar el PDF');
+      }
+    });
+    
+    // Visualizar PDF original
+    viewBtn.addEventListener('click', () => {
+      if (!pdfBytes) return;
+      
+      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      pdfViewer.src = url;
+    });
+    
+
+  </script>
+</body>
+</html>

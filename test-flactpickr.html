@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <input id="yearPicker" placeholder="Selecciona un año" />
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+    <script>
+
+  flatpickr("#yearPicker", {    
+        dateFormat: "d/m/Y",
+        minDate: "01.01.1900",
+        maxDate: "01.01.2100",
+        allowInput: true,
+        onChange: function (e) {
+        },
+        //here what was added
+        onReady: function (selectedDates, dateStr, instance) {
+
+        },
+        onMonthChange: function (selectedDates, dateStr, instance) {
+        }
+  });
+    </script>
+</body>
+</html>

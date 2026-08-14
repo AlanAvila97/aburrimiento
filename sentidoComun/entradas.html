@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                width: 100%;
+                height: 100svh;
+                height: 100%;
+                /* display: flex;
+                justify-content: center;
+                align-items: center; */
+                background-color: #000;
+            }
+            .container,
+            .container-fluid,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                --bs-gutter-x: 1.5rem;
+                --bs-gutter-y: 0;
+                width: 100%;
+                padding-right: calc(var(--bs-gutter-x) * 0.5);
+                padding-left: calc(var(--bs-gutter-x) * 0.5);
+                margin-right: auto;
+                margin-left: auto;
+            }
+            @media (min-width: 576px) {
+                .container,
+                .container-sm {
+                    max-width: 540px;
+                }
+            }
+            @media (min-width: 768px) {
+                .container,
+                .container-md,
+                .container-sm {
+                    max-width: 720px;
+                }
+            }
+            @media (min-width: 992px) {
+                .container,
+                .container-lg,
+                .container-md,
+                .container-sm {
+                    max-width: 960px;
+                }
+            }
+            @media (min-width: 1200px) {
+                .container,
+                .container-lg,
+                .container-md,
+                .container-sm,
+                .container-xl {
+                    max-width: 1140px;
+                }
+            }
+            @media (min-width: 1400px) {
+                .container,
+                .container-lg,
+                .container-md,
+                .container-sm,
+                .container-xl,
+                .container-xxl {
+                    max-width: 1320px;
+                }
+            }
+            .section-entradas .container-entradas{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .section-entradas .container-entradas .header-entradas{
+                width: 100%;
+                height: 100%;
+                background-image: url('https://sentidocomunmx.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-21-at-3.45.24-PM-e1769032009104.jpeg');
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+                position: relative;
+                min-height: 500px;
+            }
+            .section-entradas .container-entradas .header-entradas .overlay-text{
+                background: linear-gradient(to bottom, transparent, rgb(0 0 0 / 25%));
+                position: absolute;
+                bottom: 0;
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                padding: 1rem 2rem ;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+                justify-content: flex-end;
+                color: #fff;
+            }
+            .section-entradas .container-entradas .header-entradas .overlay-text p.categorie{
+                background-color: #f5141f;
+                padding: 0.5rem;
+                border-radius: 0.2rem;
+                font-size: clamp(1rem, 1rem, 1.2rem);
+                width: max-content;
+            }
+            .section-entradas .container-entradas .header-entradas .overlay-text h2.title{
+                font-size: clamp(1rem, 2rem, 2.5rem);
+            }
+            .section-entradas .container-entradas .header-entradas .overlay-text p.desc{
+                font-size: clamp(1rem, 1.4rem, 1.7rem);
+            }
+            .section-entradas .container-entradas .header-entradas .overlay-text p.date{
+                font-size: 0.9rem;
+            }
+            .section-entradas .container-entradas .header-entradas .overlay-text .content-text{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                max-width: 90%;
+            }
+            .section-entradas .container-entradas .body-entradas{
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: 1fr 30%;
+                margin-top: 1rem;
+            }
+            .section-entradas .container-entradas .body-entradas #ultimas-noticias-wid .contenedor{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: space-between;
+                gap: 1rem;
+            }
+            .section-entradas .container-entradas .body-entradas #ultimas-noticias-wid .contenedor .item-ultimas-noticias a{
+                color: #fff;
+                text-decoration: none;
+            }
+            .section-entradas .container-entradas .body-entradas #ultimas-noticias-wid .contenedor .item-ultimas-noticias a span{
+                font-size: 10px;
+                display: block;
+                position: relative;
+                line-height: 12px;
+                margin-bottom: 5px;
+            }
+            .section-entradas .container-entradas .body-entradas #ultimas-noticias-wid .contenedor .item-ultimas-noticias a h3{
+                font-size: 19px;
+            }
+            .section-entradas .container-entradas .body-entradas #ultimas-noticias-wid .contenedor .item-ultimas-noticias {
+                position: relative;
+            }
+            .section-entradas .container-entradas .body-entradas #ultimas-noticias-wid .contenedor .item-ultimas-noticias:before {
+                position: absolute;
+                bottom: 0;
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: #f5141f;
+                transition: all .3s;
+            }
+            .section-entradas .container-entradas .body-entradas #ultimas-noticias-wid .contenedor .item-ultimas-noticias:hover:before {
+                width: 100%;
+            }
+            .section-entradas .container-entradas .body-entradas #ultimas-noticias-wid .contenedor .item-ultimas-noticias:before {
+                left: 50%;
+            }
+            .section-entradas .container-entradas .body-entradas #ultimas-noticias-wid .contenedor .item-ultimas-noticias:hover:before {
+                left:0;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="section-entradas">
+            <div class="container-entradas">
+                <article class="header-entradas">
+                    <div class="overlay-text">
+                        <div class="content-text">
+                            <p class="categorie">Noticias</p>
+                            <h2 class="title">Soberanía nacional: cooperación México-EUA</h2>
+                            <p class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus tempore odio perferendis 
+                                non repellat dolore ex hic, iure accusamus deserunt? Fugit qui consectetur laboriosam veniam 
+                                laborum laudantium adipisci ex. Reprehenderit!
+                            </p>
+                            <p class="date">22/01/2026</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="body-entradas container">
+                    <div class="text-entrada">
+                        
+                    </div>
+                    <div id="ultimas-noticias-wid" class="other-entradas">
+                        <div class="contenedor">
+                            <div class="item-ultimas-noticias">
+                                <a href="">
+                                    <span>22/01/2026</span>
+                                    <h3>Detienen a presunto asesino de líder limonero</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </body>
+</html>

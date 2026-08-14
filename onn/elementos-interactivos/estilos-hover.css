@@ -1,0 +1,23 @@
+
+#letras-on,
+#microfono,
+#trofeo,
+#graduados,
+#camara,
+#regalo,
+#buzon,
+#tv {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+#letras-on:hover,
+#microfono:hover,
+#trofeo:hover,
+#graduados:hover,
+#camara:hover,
+#regalo:hover,
+#buzon:hover,
+#tv:hover {
+  opacity: 1;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">	
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="./assets/vendor/sweet-alert/css/sweetalert2.min.css">	
+    <!--  -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/formulario.css">
+</head>
+<body>
+    <section class="section-login">
+        <div class="container-login">
+            <div class="container-form grid-item">
+                <div class="heading text-center fw-bold">
+                    <h2 class="h1 mb-0 fw-bold">Iniciar Sesión</h2>
+                </div>
+                <form id="form-efirma" class="form" action="">
+                    <div class="content-upload-file">
+                        <label class="title-inputs" for="doc_certificado">Certificado (.cer):</label>
+                        <input placeholder="Ubicación del Certificado" 
+                            id="doc_certificado" name="doc_certificado"class="input simulator-input active-upload" 
+                            required="certificado" readonly data-type="certificado"/>
+                        <button type="button" class="btn-search btn_certificado active-upload" 
+                            data-type="certificado">Buscar</button>
+                        <input id="hidde_doc_certificado" name="hidde_doc_certificado" type="file" class="input d-none"required=""
+                            accept="application/x-x509-ca-cert"/>
+                    </div>
+                    <div class="content-upload-file">
+                        <label class="title-inputs" for="doc_clave">Clave Privada:</label>
+                        <input placeholder="Ubicación de la llave privada" 
+                            id="doc_clave" name="doc_clave"class="input simulator-input active-upload" 
+                            required="" readonly data-type="clave"/>
+                        <button type="button" class="btn-search btn_clave active-upload" data-type="clave">Buscar</button>
+                        <input id="hidde_doc_clave" name="hidde_doc_clave" type="file" class="input d-none" 
+                            required="" accept=".key"/>
+                    </div>
+                    <div class="content-input">
+                        <label class="title-inputs" for="contraseniaEfirma">Contraseña de clave privada:</label>
+                        <div class="input-password">
+                            <input placeholder="Ingresa tu contraseña" id="contraseniaEfirma" name="contraseniaEfirma" type="password" 
+                                class="input" required="" />
+                            <i id="btn-view-password" data-id="contraseniaEfirma" 
+                               class="fa-solid fa-eye btn-view-password"></i>
+                        </div>
+                    </div>
+                    <div class="content-input">
+                        <label class="title-inputs" for="rfc">RFC:</label>
+                        <input placeholder="RFC" id="rfc" name="rfc" type="text" class="input" required="" disabled/>
+                    </div>
+                    <input value="Aceptar" type="submit" class="login-button" />
+                    <div class="footer-form">
+                        <a href="">
+                            Aviso Privacidad
+                        </a>
+                        <a href="">
+                            Manual
+                        </a>
+                    </div>
+                </form>
+                <form id="form-usuario" class="form" action="">
+                    <div class="content-input">
+                        <label class="title-inputs" for="usuario">Usuario:</label>
+                        <input placeholder="Usuario" id="usuario" name="usuario" type="text" class="input" required="" />
+                    </div>
+                    <div class="content-input">
+                        <label class="title-inputs" for="contrasenia_user">Contraseña:</label>
+                        <div class="input-password">
+                            <input placeholder="Contraseña" id="contrasenia_user" name="contrasenia_user" type="password" 
+                                class="input " required="" />
+                            <i id="btn-view-password" data-id="contrasenia_user" 
+                               class="fa-solid fa-eye btn-view-password"></i>
+                        </div>
+                    </div>
+                    <input value="Aceptar" type="submit" class="login-button" />
+                    <div class="footer-form">
+                        <a href="">
+                            Aviso Privacidad
+                        </a>
+                        <a href="">
+                            Manual
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="container-efirma grid-item text-center">
+                <picture>
+                    <source media="(min-width: )" srcset="" sizes="">
+                    <img class="img-fluid" src="./assets/images/Canal_Once_Logo2025_Horizontal_Blanco.png" 
+                        alt="" srcset="">
+                </picture>
+                <p class="text-usuario mt-3 mb-4">
+                    ¿No cuentas con E firma?
+                </p>
+                <p class="text-efirma mt-3 mb-4">
+                    ¿No cuentas con Usuario?
+                </p>
+                <button id="btn-user" class="">
+                    Iniciar Sesión
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap -->
+    <script src="./assets/vendor/bootstrap/js/popper.min.js"></script>
+	<script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Sweet Alert -->
+	<script src="./assets/vendor/sweet-alert/js/sweetalert2.all.min.js"></script>
+    <script>
+        const btnUser = document.getElementById('btn-user');
+        const btnUpload = document.querySelectorAll('.active-upload');
+        const containerLogin = document.querySelector('.container-login');
+        const btnViewPassword = document.querySelectorAll('.btn-view-password');
+        const uploadArchive = (type, inputHidden) => {
+            let input = document.querySelector(`#doc_${type}`);
+            let button = document.querySelector(`.btn_${type}`);
+            let element = document.querySelector(`#${inputHidden}`);
+            let security_type_document = element.accept;
+            element.addEventListener("change",  function(e){ 
+                    let file = element.files[0];
+                    if (!file) return;
+                    try {                  
+                        //     
+                        // console.log(file)     
+                        // console.log(file.type)     
+                        // console.log(security_type_document)     
+
+                        if(file.type != security_type_document) {
+                            Swal.fire({
+                                icon: "error",
+                                title: "¡Alerta!",
+                                text: "Estas usando un formato incorrecto, por favor corrigelo para avanzar.",
+                                footer: ''
+                            });
+                            return;
+                        }; 
+                        input.value = file.name;
+                        button.classList.add('btn-success');
+                        //       
+                    } catch (error) {
+                        input.value = '';
+                        button.classList.remove('btn-success');
+                        console.error('Error al leer el archivo:', error);
+                        console.log('Error al cargar el PDF');
+                    }
+                });
+                element.click();
+        }
+        const handleViewPassword = (e) => {
+            const button = e.target.closest('i');
+            if(button){
+                let input_password = document.querySelector(`#${button.dataset.id}`);
+                if(input_password.value === '') return;
+                input_password.type = (input_password.type === 'password') ? 'text' : 'password';
+            }
+        }
+        const handleUploadArchives = (e) => {
+            let element = e.target;
+            let type = element.dataset.type,
+                input_hidden = `hidde_doc_${type}`;
+            uploadArchive(type, input_hidden);
+        }
+        btnUser.addEventListener('click', () => {
+            containerLogin.classList.add('animating');
+            containerLogin.classList.toggle('reversed');
+            setTimeout(() => {
+                containerLogin.classList.remove('animating');
+            }, 600);
+        });
+        btnViewPassword.forEach(element => {
+            element.addEventListener('click', (e) => handleViewPassword(e));
+        });
+        btnUpload.forEach(element => {
+            element.addEventListener('click', (e) => handleUploadArchives(e));
+        });
+    </script>
+</body>
+</html>

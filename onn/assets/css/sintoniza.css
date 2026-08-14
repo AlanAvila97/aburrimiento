@@ -1,0 +1,83 @@
+:root{
+    --bs-footer-page:#77003A;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-sintoniza::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/fondo_rosa_SINTONIZA.jpg);
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-sintoniza .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/Banner-sintoniza_27.jpg);
+    background-attachment: local;
+    background-size: cover;
+}
+body.bg-sintoniza .section-banner .container-title-banner{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#texto_principal.section-content-center{
+    margin-bottom: 4em;
+}
+#sintonizanos.section-content-center{
+    margin-top: 4rem;
+}
+#plataformas_sintonizanos.section-content-center .container-plataforms .img-fluid-responsive{
+    max-height: 60px;
+}
+/*-------------------------------------------------------------
+# Section Content Columns
+--------------------------------------------------------------*/
+.section-columns-info h2::before{
+    content: '\2022';
+    margin-right: 0.2rem;
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer .footer-navigation-web a .img-fluid-responsive{
+    max-height: 90px;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Background sitio
+    --------------------------------------------------------------*/
+    body.bg-sintoniza .section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Center
+    --------------------------------------------------------------*/
+    #texto_principal.section-content-center,
+    #sintonizanos.section-content-center,
+    #plataformas_sintonizanos.section-content-center{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #sintonizanos.section-content-center{
+        margin-bottom: 0rem;
+    }
+    #plataformas_sintonizanos.section-content-center{
+        margin-top: 0rem;
+    }
+    #plataformas_sintonizanos.section-content-center .container-plataforms .img-fluid-responsive{
+        max-height: 80px;
+        object-fit: contain;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Footer
+    -------------------------------------------------------------*/
+    .footer {
+        padding-top: 2rem;
+    }
+}

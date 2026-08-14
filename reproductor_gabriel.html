@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Audio Player</title>
+    <link rel="icon" sizes="192x192" href="https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-192x192.png">
+
+    <link rel="preload" href="./assets/css/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/fontawesome/css/all.min.css"></noscript>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+        }    
+        .section-reproductores .container-reproductores{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .audio-container {
+            width: 100%;
+            padding: 0px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 0px 10px 0px #0000004d;
+        }
+        .audio-container .content-info-audio{
+            padding: 1.5rem 1rem;
+            display: grid;
+            grid-template-columns: 30% 1fr 25%;
+            justify-items: center;
+            align-items: center;
+            gap: 1rem;
+        }    
+        .hidden-player {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+        }
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .audio-controls button {
+            cursor: pointer;
+            border-color: none;
+            border-radius: 50%;
+            background: rgba(0,27,46,1);
+            height: 60px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }        
+        .audio-controls button i{
+            color: #bbb;
+            font-size: 0.7rem;
+        }
+        .audio-controls button:disabled {
+            background: #cecece6e;
+            box-shadow: inset 0px 0px 5px 2px #5c5a5a;
+            border-color: #5c5a5a8f;
+        }
+        .audio-controls button:disabled i{
+            color: rgba(0,27,46,1);
+        }
+        .progressBar {            
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            border-radius: 10px 10px 0rem 0rem;
+            cursor: pointer;
+            height: 10px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .progressBar div {
+            height: 100%;
+            background-color: rgba(175,29,77,1);
+            width: 0%;
+        }
+        /* .progressBar {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progressBar div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #007bff;
+            width: 0%;
+            transition: width 0.2s ease;
+            border-radius: 4px;
+        } */
+        .audio-container .logo-audio{
+            width: 100%;
+            height: auto;
+        }
+        .audio-container .logo-audio picture{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .audio-container .logo-audio picture img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            object-fit: contain;
+            box-shadow: 0px 0px 3px 3px #00000024;
+            border-radius: 5px;
+        }
+        .audio-container .info-audio{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-reproductores">
+        <div class="container-reproductores">
+        </div>
+    </section>
+    <script src="./assets/js/action-main.js"></script>
+    <script>
+        let players = {};
+        const dataMp3 = [
+            {
+                'id': 'audio_1',
+                'title': 'Reproductor 1',
+                'desc': 'desc',
+                'link': 'https://canalonce.mx/REST/data/audioonn/canciones/Todo%20duerme.mp3',
+                'imageCH': 'https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg',
+                'imagenw': 'https://canalonce.mx/REST/data/miniaturas/dialogos-en-confianza_min.jpg',
+                'bg': '#000'
+            },
+            {
+                'id': 'audio_2',
+                'title': 'Reproductor 2',
+                'desc': 'desc',
+                'link': 'https://canalonce.mx/REST/data/audioonn/canciones/La%20hora%20de%20comer.mp3',
+                'imageCH': 'https://canalonce.mx/REST/data/miniaturas/banner-en-vivo-la-verdrag.jpg',
+                'imagenw': 'https://canalonce.mx/REST/data/miniaturas/banner-en-vivo-la-verdrag.jpg',
+                'bg': '#000'
+            },
+            {
+                'id': 'audio_3',
+                'title': 'Reproductor 3',
+                'desc': 'desc',
+                'link': 'https://canalonce.mx/REST/data/audioonn/canciones/Aquí%20y%20allá.mp3',
+                'imageCH': 'https://canalonce.mx/REST/data/miniaturas/avatar-envejecer-2024_320x177.jpg',
+                'imagenw': 'https://canalonce.mx/REST/data/miniaturas/avatar-envejecer-2024_320x177.jpg',
+                'bg': '#000'
+            },
+        ]
+        const CONTAINER_REPRODUCTORES = document.querySelector('.container-reproductores');
+        const secondsToString = (seconds) => {
+            let duracion = '';        
+            let hour = Math.floor(seconds / 3600);
+            hour = (hour < 10)? '0' + hour : hour;        
+            let minute = Math.floor((seconds / 60) % 60);        
+            minute = (minute < 10)? '0' + minute : minute;        
+            let second = seconds % 60;
+            second = Math.round(second);
+            second = (second < 10)? '0' + second : second;
+            if(hour != 0o0){
+                duracion = hour + ':' + minute + ':' + second;
+            }else{
+                duracion = minute + ':' + second;
+            }
+            return duracion;
+        }
+        const actualizarProgreso = (e, timer, ele_progress) => {
+            let audio = e.target;
+            if (audio.duration) {
+                const progress_audio = (audio.currentTime / audio.duration) * 100;
+                progress(progress_audio, ele_progress)
+                timer.textContent = secondsToString(audio.currentTime);
+            }
+        }
+        const setAttrButtons = (element, status, icon_attr) => {
+            let icon = element.querySelector('i');                    
+                icon.setAttribute('class', icon_attr);
+                element.dataset.status = status;
+        }
+        const actualizarBotones = (button, type = 0) => {
+            const buttons_icons = CONTAINER_REPRODUCTORES.querySelectorAll("button");
+            buttons_icons.forEach(element => {
+                setAttrButtons(element, (true), 'fa-solid fa-play');
+            });
+            if(type === 1) {
+                setAttrButtons(button, status, 'fa-solid fa-pause');
+            }
+        }
+        const progress = (percent, element) => {
+            let percent_audio = Math.max(0, Math.min(100, percent));
+            const innerBar = element.querySelector('div');
+            if (innerBar) {
+                innerBar.style.width = percent + '%';
+            } else {
+                console.error('No se encontró la barra de progreso interna');
+            }
+        }
+        const playAudio = (e, content_audio) => {
+            let list_audios = CONTAINER_REPRODUCTORES.querySelectorAll('audio');
+            let audio = content_audio.querySelector('audio'),
+                progress = content_audio.querySelector('.progressBar'),
+                text_timer = content_audio.querySelector('.timer');
+            // 
+            list_audios.forEach(element => {
+                if(element.id === audio.id) { 
+                    audio.play();
+                }else{ 
+                    element.pause();
+                }
+            });
+            audio.addEventListener('timeupdate', (e) => actualizarProgreso(e, text_timer, progress));
+            actualizarBotones(e.currentTarget, 1);
+        }
+        const pauseAudio = (button, content_audio) => {
+            let list_audios = CONTAINER_REPRODUCTORES.querySelectorAll('audio');
+            list_audios.forEach(element => {
+                element.pause();
+            });
+            actualizarBotones(button);
+        }
+        const updateProgressBarVisual = (content_audio) => {
+            const audioElement = content_audio.querySelector('audio');
+            const progressBarFill = content_audio.querySelector('.progressBar div');
+            if (audioElement.duration && progressBarFill) {
+                const percent = (audioElement.currentTime / audioElement.duration) * 100;
+                progressBarFill.style.width = percent + '%';
+            }
+        };
+        const updateProgressBar = (e, content_audio) => {
+            let audio = content_audio.querySelector('audio'),
+                button = content_audio.querySelector('.play-btn'),
+                progressBar = content_audio.querySelector('.progressBar'),
+                text_timer = content_audio.querySelector('.timer')
+            // 
+            pauseAudio(button, content_audio)
+            // 
+            const rect = progressBar.getBoundingClientRect();       
+            const clickX = e.clientX - rect.left;
+            const barWidth = rect.width;
+            const percent = clickX / barWidth;
+            // 
+            if (audio.duration) {
+                audio.currentTime = audio.duration * percent;
+                updateProgressBarVisual(content_audio);
+                const currentTime = audio.currentTime;
+                text_timer.textContent = secondsToString(currentTime);
+                //
+                audio.play();
+                actualizarBotones(button, 1);
+            }
+        }
+        const actionAudio = (e, content_audio) => {
+            const button = e.target.closest('button');
+            if(button ){
+                let icon = button.querySelector('i');
+                const status = button.dataset.status === 'true';
+                if(status){
+                    playAudio(e, content_audio)
+                }else{
+                    pauseAudio(e, content_audio)
+                }
+                button.dataset.status = (!status).toString();
+            }
+        }    
+        const initialitationReproductorMp3 = () => {
+            let html = '', array_id = [];
+            dataMp3.forEach((element, index) => {
+                //                                 
+                let id_video = element.id;
+                let img_webp = (element.imagenw == null) ? element.imageCH : element.imagenw;
+                // 
+                array_id.push(id_video);
+                // 
+                html += `<div id="${id_video}" class="audio-container" data-id="${id_video}" data-audio="${element.link}">
+                            <div class="progressBar">
+                                <div></div>
+                            </div>
+                            <div class="content-info-audio">
+                                <div class="logo-audio">
+                                    <picture>
+                                        <source class="lazy img-fluid" srcset="${img_webp}" type="image/webp">
+                                        <source class="lazy img-fluid" srcset="${element.imageCH}" type="image/png"> 
+                                        <img class="img-fluid lazy" src="${img_webp}" alt="Logo once+" width="139" height="30">
+                                    </picture>
+                                </div>
+                                <div class="info-audio">
+                                    <h2>${element.title || 'title'}</h2>
+                                    <div class="timeDisplay">
+                                        <span class="timer">00:00 </span> / <span class="duration"></span>                                        
+                                    </div>
+                                </div>
+                                <div class="audio-controls">
+                                    <button class="play-btn" data-status="true">
+                                        <i class="fa-solid fa-play"></i>                    
+                                    </button>
+                                </div>
+                                <div class="hidden-player"></div>
+                            </div>
+                        </div>`;
+            });
+            CONTAINER_REPRODUCTORES.innerHTML = html;
+            array_id.forEach(element => {
+                let audios = CONTAINER_REPRODUCTORES.querySelector(`#${element}`),
+                    audio_container = audios.querySelector(`.hidden-player`),
+                    link_audios = audios.dataset.audio;
+                //
+                let time_audio =  audios.querySelector('.timeDisplay .duration') 
+                let au = document.createElement('audio');
+                    au.id = `player_${element}`;
+                    au.src = link_audios;
+                //
+                au.addEventListener('loadedmetadata', function(){
+                            let duration = au.duration;          
+                            let durationMp3 = secondsToString(duration);  
+                    setTextElement(time_audio, `${durationMp3}`);
+                });
+                // 
+                audio_container.append(au);
+                // 
+                let play_icon = audios.querySelector('.play-btn'),
+                    progress_bar = audios.querySelector('.progressBar');
+                play_icon.addEventListener('click', (e) => actionAudio(e, audios) )
+                progress_bar.addEventListener('click', (e) => updateProgressBar(e, audios) )
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function(event) {
+            initialitationReproductorMp3();
+        });
+    </script>
+</body>
+</html>

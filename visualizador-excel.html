@@ -1,0 +1,85 @@
+<!-- Versión con pestañas visuales -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>x-spreadsheet - Tabs de hojas</title>
+    <link rel="stylesheet" href="https://unpkg.com/x-spreadsheet@1.1.5/dist/xspreadsheet.css">
+    <script src="https://unpkg.com/x-spreadsheet@1.1.5/dist/xspreadsheet.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+    <style>
+        body { margin: 0; padding: 20px; font-family: Arial; background: #f0f0f0; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; }
+        .upload-bar { padding: 20px; background: #2c3e50; color: white; }
+        .sheet-tabs { display: flex; gap: 5px; padding: 10px 20px; background: #ecf0f1; border-bottom: 2px solid #bdc3c7; overflow-x: auto; }
+        .sheet-tab { padding: 8px 20px; background: #95a5a6; color: white; border: none; cursor: pointer; border-radius: 4px 4px 0 0; transition: all 0.3s; }
+        .sheet-tab:hover { background: #7f8c8d; }
+        .sheet-tab.active { background: #3498db; }
+        #spreadsheet { height: 70vh; }
+        input { margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="upload-bar">
+            <input type="file" id="fileInput" accept=".xlsx,.xls">
+            <button onclick="document.getElementById('fileInput').click()">📁 Seleccionar Excel</button>
+        </div>
+        <div id="sheetTabs" class="sheet-tabs"></div>
+        <div id="spreadsheet"></div>
+    </div>
+
+    <script>
+        let workbook = null;
+        let spreadsheet = null;
+        let currentSheetIndex = 0;
+        
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                const data = new Uint8Array(e.target.result);
+                workbook = XLSX.read(data, { type: 'array' });
+                renderSheetTabs();
+                loadSheet(0);
+            };
+            
+            reader.readAsArrayBuffer(file);
+        });
+        
+        function renderSheetTabs() {
+            const tabsContainer = document.getElementById('sheetTabs');
+            tabsContainer.innerHTML = '';
+            
+            workbook.SheetNames.forEach((name, index) => {
+                const tab = document.createElement('button');
+                tab.className = 'sheet-tab' + (index === currentSheetIndex ? ' active' : '');
+                tab.textContent = name;
+                tab.onclick = () => loadSheet(index);
+                tabsContainer.appendChild(tab);
+            });
+        }
+        
+        function loadSheet(index) {
+            currentSheetIndex = index;
+            const sheetName = workbook.SheetNames[index];
+            const worksheet = workbook.Sheets[sheetName];
+            const data = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+            
+            // Actualizar tabs
+            document.querySelectorAll('.sheet-tab').forEach((tab, i) => {
+                tab.classList.toggle('active', i === index);
+            });
+            
+            // Cargar en spreadsheet
+            if (spreadsheet) {
+                const container = document.getElementById('spreadsheet');
+                container.innerHTML = '';
+            }
+            
+            spreadsheet = xSpreadsheet('#spreadsheet').loadData(data);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">	
+    <!-- Swiper -->
+    <link rel="stylesheet" href="./assets/vendor/swiper/css/swiper-bundle.min.css" />
+    <!-- fancybox  -->
+    <link type="text/css" rel="stylesheet" href="./assets/vendor/fancybox/css/fancybox.css" />
+    <!-- Videojs -->
+    <link rel="stylesheet" href="./assets/vendor/videojs/css/video-js.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/videojs/css/videojs-http-source-selector.css">	
+    <link rel="stylesheet" href="./assets/vendor/videojs/css/videojs.caption.min.css">	
+    <!--  -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/header.css">      
+    <link rel="stylesheet" href="./assets/css/footer.css">     
+    <link rel="stylesheet" href="./assets/css/acerca-de.css">     
+</head>
+<body class="bg-acerca">
+    <div id="wrapper" >
+        <header class="header header-once">
+            <div class="container-header">
+                <div class="logo">
+                    <a href="./" aria-label="Redirección a página principal">                    
+                        <picture>
+                            <source class="lazy img-fluid" srcset="./assets/img/logo_onn.svg" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/logo_onn.svg" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy" src="./assets/img/logo_onn.svg" alt="Logo Once" width="139" height="45">
+                        </picture>
+                    </a>
+                </div><!-- End div logo -->
+                <div class="sections-nav ">
+                    <a href="./aconpamiento.html" class="btn btn-bg-onn">
+                        Madres, padres, docentes y cuidadores
+                    </a>
+                    <a href="./descargables.html" class="btn btn-bg-onn">
+                        Descargable
+                    </a>
+                    <a href="./radio-musica.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                        <i class="fa fa-circle"></i>
+                        Radio y música
+                    </a>
+                    <a href="./veo_online.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                        <i class="fa fa-circle"></i>
+                        Veo ONNline
+                    </a>
+                </div><!-- End div seccion nav -->            
+                <div class="content-menu-hamburguer">
+                    <input type="checkbox" class="menu-btn" id="openSidebarMenu">
+                    <div id="sidebarMenu">
+                        <div class="container-menu scroll-menu">
+                            <a href="./aconpamiento.html" class="btn btn-bg-onn">
+                                Madres, padres, docentes y cuidadores
+                            </a>
+                            <a href="./descargables.html" class="btn btn-bg-onn">
+                                Descargable
+                            </a>
+                            <a href="./radio-musica.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa fa-circle"></i>
+                                Radio y música
+                            </a>
+                            <a href="./veo_online.html" class="btn btn-bg-onn d-flex justify-content-center align-items-center gap-2">
+                                <i class="fa fa-circle"></i>
+                                Veo ONNline
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End div container header -->
+        </header>
+        <main>
+            <section id="banner_acerca" class="section-banner-acerca">
+                <div class="container w-60 container-banner-acerca text-center">
+                    <picture class="w-100 h-100">
+                        <source class="lazy img-fluid" 
+                            srcset="./assets/img/logo_lg_ONN.png" type="image/webp">
+                        <source class="lazy img-fluid" 
+                            srcset="./assets/img/logo_lg_ONN.png" 
+                            type="image/png"> 
+                        <img class="img-fluid lazy img-fluid-responsive" 
+                            src="./assets/img/logo_lg_ONN.png" alt="Logo Once" width="139" height="45">
+                    </picture>
+                </div>
+            </section>
+            <section id="texto_principal" class="section-content-center">
+                <div class="container w-60 container-title-onn py-0 py-lg-4  text-center">
+                    <h2 class="text-light font-lilitaone h1 mb-5 fs-1xl">
+                        Acerca de
+                    </h2>
+                    <p class="text-light h2 fw-light font-comfortaa-light">
+                        <b class="fw-bold">Nuestro objetivo desde el 2001</b> es que <b class="fw-bold">Niñas y Niños encuentren</b>
+                        en <b class="fw-bold">nuestra programación</b> un <b class="fw-bold">espacio</b> en el cual 
+                        puedan <b class="fw-bold">verse reflejados</b> a través de <b class="fw-bold">historias cercanas</b>  
+                        y conocer otras <b class="fw-bold">experiencias</b> y <b class="fw-bold">formas de vida</b> que enriquezcan su mundo.
+                    </p>
+                    <picture class="w-100 h-100 d-block my-5">
+                        <source class="lazy img-fluid" 
+                            srcset="./assets/img/Group_25.png" type="image/webp">
+                        <source class="lazy img-fluid" 
+                            srcset="./assets/img/Group_25.png" 
+                            type="image/png"> 
+                        <img class="img-fluid lazy img-fluid-responsive" 
+                            src="./assets/img/Group_25.png" alt="Logo Once" width="139" height="45">
+                    </picture>
+                </div>
+            </section>
+            <section id="texto_historia" class="section-content-center">
+                <div class="container w-60 container-title-onn py-0 py-lg-4 text-center">
+                    <h2 class="text-light font-lilitaone h1 mb-4 fs-1xl">
+                        Nuestra historia
+                    </h2>
+                </div>
+                <div class="container w-60 container-title-onn py-2 text-center">
+                    <p class="text-light fw-bold h2 fs-4">
+                        Antecedentes:
+                    </p>
+                    <p class="text-light h2 mt-3 fs-4">
+                        <b class="fw-bold">Década de los 70 </b>: Comienza la programación infantil en Canal Once.
+                        <br><b class="fw-bold">1990</b>: La programación para niños adquiere el nombre de Ventana Infantil.
+                        <br><b class="fw-bold">1992</b>: Cambia de nombre a Ventana de colores.
+                        <br><b class="fw-bold">1996</b>: Comienza la transmisión de “Bizbirije”.
+                        <br><b class="fw-bold">1998</b>: Cambia de ventana de colores a Zona O.
+                    </p>
+                    <p class="text-light fw-bold h2 mt-5 fs-4">
+                        Actual:
+                    </p>
+                    <p class="text-light h2 mt-3 fs-4">
+                        <b class="fw-bold">2001</b>: Comienza Once Niños.
+                        <br><b class="fw-bold">2015</b>: Se crea el Canal Once Niños transmitido por la señal del 11.2. El primer canal de televisión abierta dedicado a niñas y niños. 
+                        <br><b class="fw-bold">2020</b>: Cambió su nombre a Once Niñas y Niños.
+                        <br><b class="fw-bold">2023</b>: Nombramiento. Embajadores de UNICEF
+                    </p>
+                    <picture class="w-100 h-100">
+                        <source class="lazy img-fluid" 
+                            srcset="./assets/img/imagen-trofeo-acerca.png" type="image/webp">
+                        <source class="lazy img-fluid" 
+                            srcset="./assets/img/imagen-trofeo-acerca.png" 
+                            type="image/png"> 
+                        <img class="img-fluid lazy img-fluid-responsive" 
+                            src="./assets/img/imagen-trofeo-acerca.png" alt="Logo Once" width="139" height="45">
+                    </picture>
+                </div>
+            </section>
+            <section id="texto_premios" class="section-content-center">
+                <div class="container w-60 container-title-onn py-0 py-lg-4 text-center">
+                    <h2 class="text-light font-lilitaone h1 mb-5 fs-1xl">
+                        Premios y reconocimientos
+                    </h2>
+                    <p class="text-light h2 mt-3 fs-4">
+                        ¡Estos premios los ganamos juntos!
+                    </p>
+                    <div class="content-video mt-5">
+                        <video id="streamplayer" 
+                            class="video-js vjs-big-play-centered" 
+                            controls preload="auto" 
+                            playsinline data-setup='{"fluid": true}'>
+                        </video>
+                    </div>
+                    <div id="grid-premios" class="section-grid-four-columns">
+                        <div class="container-grid-four-columns py-4 text-center">
+                            <div class="items-grid">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/10/ODT_PREMIOS_RECONOCIMIENTOS_ONN2021.pdf" target="_blank">
+                                    <picture class="w-100 h-100">
+                                        <source class="lazy img-fluid" 
+                                            srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2021_.jpg" type="image/webp">
+                                        <source class="lazy img-fluid" 
+                                            srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2021_.jpg" 
+                                            type="image/png"> 
+                                        <img class="img-fluid lazy img-fluid-responsive" 
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2021_.jpg" alt="Logo plataforma" width="139" height="45">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="items-grid">
+                                <a href="" target="_blank">
+                                    <picture class="w-100 h-100">
+                                        <source class="lazy img-fluid" 
+                                            srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2022_.jpg" type="image/webp">
+                                        <source class="lazy img-fluid" 
+                                            srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2022_.jpg" 
+                                            type="image/png"> 
+                                        <img class="img-fluid lazy img-fluid-responsive" 
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2022_.jpg" alt="Logo plataforma" width="139" height="45">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="items-grid">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/10/ODT_PREMIOS_RECONOCIMIENTOS_ONN2023.pdf" target="_blank">
+                                    <picture class="w-100 h-100">
+                                        <source class="lazy img-fluid" 
+                                            srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2023_.jpg" 
+                                            type="image/webp">
+                                        <source class="lazy img-fluid" 
+                                            srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2023_.jpg" 
+                                            type="image/png"> 
+                                        <img class="img-fluid lazy img-fluid-responsive" 
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2023_.jpg" 
+                                            alt="Logo plataforma" width="139" height="45">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="items-grid">
+                                <a href="https://onceninasyninos.tv/wp-content/uploads/2024/10/ODT_PREMIOS_RECONOCIMIENTOS_ONN2024.pdf" target="_blank">
+                                    <picture class="w-100 h-100">
+                                        <source class="lazy img-fluid" 
+                                            srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2024_.jpg" type="image/webp">
+                                        <source class="lazy img-fluid" 
+                                            srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2024_.jpg" 
+                                            type="image/png"> 
+                                        <img class="img-fluid lazy img-fluid-responsive" 
+                                            src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Premios2024_.jpg" alt="Logo plataforma" width="139" height="45">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-items-banners-secciones d-flex flex-column align-items-center gap-5 mt-3">
+                        <a href="./premios-historico.html" 
+                            class="btn btn-secondary btn-lg btn-outline-primary  text-light text-decoration-underline btn-back">
+                            <h4 class="font-comfortaa">Ver todos los años</h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="section_contactanos" class="section-content-center">
+                <div class="container w-60 container-title-onn py-4 text-center">
+                    <h2 class="text-light font-lilitaone h1 mb-3 fs-1xl">
+                        ¡Escríbenos!
+                    </h2>
+                    <p class="text-light h2 mt-3 fs-4">
+                        ¿Tienes dudas, sugerencias o algo que quieras compartir con nosotros? 
+                        <b class="fw-bold">Escríbenos</b>, nos encanta saber de ti.
+                    </p>
+                    <p class="text-light h2 mt-3 mt-lg-5 fs-4">
+                        ¡Llámanos vía telefónica al
+                    </p>
+                    <h2 class="text-light font-lilitaone h1 mb-3 fs-1xl">
+                        55 51 66 40 00
+                    </h2>
+                    <p class="text-light h2 mt-3 mt-lg-5 fs-4">
+                        envía tu mensaje vía mail a:
+                    </p>
+                    <h2 class="text-light font-lilitaone h1 mb-3 mb-lg-5 fs-1xl">
+                        onceninasyninos@canalonce.ipn.mx
+                    </h2>
+                    <p class="text-light h2 mt-3 mt-lg-5 fs-4">
+                        o escríbenos directamente llenando el siguiente formulario:
+                    </p>
+                </div>
+            </section>
+            <section id="section_galeria" class="section-content-center">
+                <div class="container w-60 container-title-onn py-4 text-center">
+                    <h2 class="text-light font-lilitaone h1 mb-5 fs-1xl">
+                        La galería de arte ONCE
+                    </h2>
+                    <p class="text-light h2 mt-3 fs-4">
+                        En este espacio encontrarás dibujos, pinturas y creaciones de niñas y niños como tú. 
+                        ¡<b class="fw-bold">Compártenos</b> las tuyas aquí! 
+                    </p>
+                    <div class="container-slider">
+                        <div class="swiper slider-galeria">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <picture class="w-100 h-100 d-block">
+                                            <source class="lazy img-fluid" 
+                                                srcset="./assets/img/item-galeria-acerca.png" type="image/webp">
+                                            <source class="lazy img-fluid" 
+                                                srcset="./assets/img/item-galeria-acerca.png" 
+                                                type="image/png"> 
+                                            <img class="img-fluid lazy img-fluid-responsive" 
+                                                src="./assets/img/item-galeria-acerca.png" alt="Logo plataforma" width="139" height="45">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <picture class="w-100 h-100 d-block">
+                                            <source class="lazy img-fluid" 
+                                                srcset="./assets/img/item-galeria-acerca.png" type="image/webp">
+                                            <source class="lazy img-fluid" 
+                                                srcset="./assets/img/item-galeria-acerca.png" 
+                                                type="image/png"> 
+                                            <img class="img-fluid lazy img-fluid-responsive" 
+                                                src="./assets/img/item-galeria-acerca.png" alt="Logo plataforma" width="139" height="45">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <picture class="w-100 h-100 d-block">
+                                            <source class="lazy img-fluid" 
+                                                srcset="./assets/img/item-galeria-acerca.png" type="image/webp">
+                                            <source class="lazy img-fluid" 
+                                                srcset="./assets/img/item-galeria-acerca.png" 
+                                                type="image/png"> 
+                                            <img class="img-fluid lazy img-fluid-responsive" 
+                                                src="./assets/img/item-galeria-acerca.png" alt="Logo plataforma" width="139" height="45">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination d-none"></div>
+                        </div>
+                        <div class="content-pagination mt-4">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">                        
+                        <a href="" 
+                            class="btn btn-secondary btn-lg btn-outline-primary  text-light text-decoration-underline btn-back">
+                            <h4 class="font-comfortaa">Instagram</h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="grid-equipo" class="section-grid-three-columns">
+                <div class="container w-60 container-title-onn py-4 text-center">
+                    <h2 class="text-light font-lilitaone h1 mb-5 fs-1xl">
+                        Equipo ONN
+                    </h2>
+                    <p class="text-light h2 mt-3 fs-4">
+                        Conoce a tus personajes favoritos
+                    </p>
+                    <div class="container-grid-three-columns">
+                        <div class="items-grid">
+                            <a href="https://onceninasyninos.tv/wp-content/uploads/2025/08/BIOGRAFIA-ALAN.png"
+                               data-fancybox="gallery" data-caption="Caption #1">
+                                <picture class="w-100 h-100">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Alan.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Alan.png" 
+                                        type="image/png"> 
+                                    <img class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Alan.png" alt="Logo plataforma" width="139" height="45">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="items-grid">
+                            <a href="https://onceninasyninos.tv/wp-content/uploads/2025/08/BIOGRAFIA-LUPITA-2-1.png"
+                               data-fancybox="gallery" data-caption="Caption #1">
+                                <picture class="w-100 h-100">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Lupita-1.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Lupita-1.png" 
+                                        type="image/png"> 
+                                    <img class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Lupita-1.png" alt="Logo plataforma" width="139" height="45">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="items-grid">
+                            <a href="https://onceninasyninos.tv/wp-content/uploads/2025/08/Biografia-staff.png"
+                               data-fancybox="gallery" data-caption="Caption #1">
+                                <picture class="w-100 h-100">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Staff.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Staff.png" 
+                                        type="image/png"> 
+                                    <img class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Staff.png" alt="Logo plataforma" width="139" height="45">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="items-grid">
+                            <a href="https://onceninasyninos.tv/wp-content/uploads/2025/08/BIOGRAFIA-MEMO.png"
+                               data-fancybox="gallery" data-caption="Caption #1">
+                                <picture class="w-100 h-100">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Memo.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Memo.png" 
+                                        type="image/png"> 
+                                    <img class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Memo.png" alt="Logo plataforma" width="139" height="45">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="items-grid">
+                            <a href="https://onceninasyninos.tv/wp-content/uploads/2025/08/BIOGRAFIA-NORA.png"
+                               data-fancybox="gallery" data-caption="Caption #1">
+                                <picture class="w-100 h-100">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Nora.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Nora.png" 
+                                        type="image/png"> 
+                                    <img class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Nora.png" alt="Logo plataforma" width="139" height="45">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="items-grid">
+                            <a href="https://onceninasyninos.tv/wp-content/uploads/2025/08/BIOGRAFIA-LUCY.png"
+                               data-fancybox="gallery" data-caption="Caption #1">
+                                <picture class="w-100 h-100">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Lucy.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/Lucy.png" 
+                                        type="image/png"> 
+                                    <img class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/Lucy.png" alt="Logo plataforma" width="139" height="45">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="items-grid">
+                            <a href="https://onceninasyninos.tv/wp-content/uploads/2025/08/BIOGRAFIA-IPN9000.png"
+                               data-fancybox="gallery" data-caption="Caption #1">
+                                <picture class="w-100 h-100">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/IPN9000.png" type="image/webp">
+                                    <source class="lazy img-fluid" 
+                                        srcset="https://onceninasyninos.tv/wp-content/uploads/2025/08/IPN9000.png" 
+                                        type="image/png"> 
+                                    <img class="img-fluid lazy img-fluid-responsive" 
+                                        src="https://onceninasyninos.tv/wp-content/uploads/2025/08/IPN9000.png" alt="Logo plataforma" width="139" height="45">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3 mt-5">
+                        <a href="./" 
+                            class="btn btn-secondary btn-lg btn-outline-primary  text-light text-decoration-underline btn-back">
+                            <h4 class="font-comfortaa">Volver al inicio</h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="modal fade" id="modalEquipo" tabindex="-1" aria-labelledby="modalEquipoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">                    
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-image gap-3">
+                            <div class="image-team">
+                                <img id="img_team" class="img-fluid lazy img-fluid-responsive" 
+                                    src="" alt="Logo plataforma" width="139" height="45">
+                            </div>
+                            <div class="text-team text-light">
+                                <h2 id="name_team" class="h2"></h2>
+                                <p id="description_team" class="h5 font-comfortaa">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container container-footer container-footer-full gap-3">
+                <div class="footer-navigation-web d-flex justify-content-center align-items-center gap-4">
+                    <a type="button" class=" text-light">
+                        <picture class="w-100 h-100 d-block">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/LOGO-CANAL-ONCE-2210X960-300x130_1.png" alt="Logo plataforma" width="139" height="45">
+                        </picture>
+                    </a>
+                    <a type="button" class=" text-light">
+                        <picture class="w-100 h-100 d-block">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-IPN-182_1.png" type="image/webp">
+                            <source class="lazy img-fluid" 
+                                srcset="./assets/img/LOGO-IPN-182_1.png" 
+                                type="image/png"> 
+                            <img class="img-fluid lazy img-fluid-responsive" 
+                                src="./assets/img/LOGO-IPN-182_1.png" alt="Logo plataforma" width="139" height="45">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="./assets/vendor/swiper/js/swiper-bundle.min.js"></script>
+    <!-- fancybox  -->
+    <script src="./assets/vendor/fancybox/js/fancybox.umd.js"></script>
+    <!-- Videojs -->
+	<script src="./assets/vendor/videojs/js/video.min.js"></script>
+	<script src="./assets/vendor/videojs/js/Youtube.min.js"></script>
+	<script src='./assets/vendor/videojs/js/videojs-http-source-selector.js'></script>
+	<script src='./assets/vendor/videojs/js/videojs-contrib-quality-levels.min.js'></script>
+	<script src="./assets/vendor/videojs/js/videojs-landscape-fullscreen.min.js"></script>
+	<script src="./assets/vendor/videojs/js/videojs-player-analytics.js"></script>
+	<script src="./assets/vendor/videojs/js/videojs-vimeo.umd.js"></script>
+	<script src="./assets/vendor/videojs/js/videojs.hotkeys.min.js"></script>
+	<script src="./assets/vendor/videojs/js/silvermine-videojs-chromecast.min.js"></script>
+	<script src='./assets/vendor/videojs/js/cast_sender.js?loadCastFramework=1'></script>
+    <script src='./assets/vendor/videojs/js/videojs-http-source-selector.js'></script>
+    <!--  -->
+    <script src="./assets/js/actions-main.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/acerca-de.js"></script>
+</body>
+</html>

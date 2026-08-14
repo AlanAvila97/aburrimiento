@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        padding-bottom: 1rem;
+    }
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @media (min-width: 576px) {
+        .container,
+        .container-sm {
+            max-width: 540px;
+        }
+    }
+    @media (min-width: 768px) {
+        .container,
+        .container-md,
+        .container-sm {
+            max-width: 720px;
+        }
+    }
+    @media (min-width: 992px) {
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm {
+            max-width: 960px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            max-width: 1140px;
+        }
+    }
+    @media (min-width: 1400px) {
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl,
+        .container-xxl {
+            max-width: 1320px;
+        }
+    }
+    .section-revista{
+        margin-top: 70px;
+    }
+    .section-revista .container-revista{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 40% 1fr;
+    }
+    /* Noticias */
+    .section-revista .container-revista .portada-revista{
+        padding: 0rem 1rem 1rem 1rem;
+        position: relative;
+    }
+    .section-revista .container-revista .portada{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        position: sticky;
+        top: 1rem;
+    }   
+    .section-revista .container-revista .portada-revista img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+        display: block;
+        max-height: 550px;
+    }
+    .section-revista .container-revista .portada-revista .btn-download{
+        background: url(https://sentidocomunmx.com/wp-content/uploads/2026/01/Backboton.jpg);
+        background-size: cover;
+        background-attachment: local;
+        background-position: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        font-size: clamp(1rem, 1.2rem, 2rem);
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        min-width: 200px;
+        justify-content: center;
+    }
+    .section-revista .container-revista .portada-revista .btn-download img{
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        max-width: 40px;
+        filter: invert(1);
+        padding-left: 1rem;
+    }
+    /* Noticias */
+    .news-section {
+        display: flex;
+        gap: 20px;
+    }
+
+    /* Primera columna 70% */
+    .cell:first-child {
+        flex: 7;
+    }
+
+    /* Segunda columna 30% */
+    .cell:last-child {
+        flex: 3;
+    }
+
+    /* Left */
+    .news-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .news-container a{
+        text-decoration: none;
+    }
+    .news-card {
+        background-color: #292524;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 370px;
+        max-height: 370px;
+    }
+
+    .news-card-revistas {
+        background-color: #292524;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        max-height: 478px;
+    }
+
+    .image-wrapper {
+        height: 220px;
+        overflow: hidden;
+    }
+
+    .image-wrapper-revistas {
+        overflow: hidden;
+    }
+
+    .image-wrapper-revistas img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-wrapper img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .badge {
+        background-color: #e10600;
+        color: #fff;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 12px;
+        padding: 4px 8px;
+    }
+
+    .news-card h2 {
+        color: #fff;
+        font-size: 22px;
+        line-height: 1.3;
+        margin-bottom: 16px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .meta {
+        color: #aaa;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .meta .category {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .news-card p {
+        color: #ccc;
+        font-size: 14px;
+        line-height: 1.5;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    /* Right */
+    /* Elemento fijo */
+    .latest-news-container {
+        position: sticky;
+        top: 20px;
+        max-height: calc(100vh - 25px);
+        overflow-y: auto;
+    }
+
+    .latest-news-item {
+        position: relative;
+    }
+
+    .latest-news-item:before {
+        position: absolute;
+        bottom: 0;
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: #701D47;
+        transition: all .3s;
+        left: 50%;
+    }
+
+    .latest-news-item:hover:before {
+        left: 0;
+        width: 100%;
+    }
+
+    .latest-news-item a {
+        text-decoration: none;
+    }
+    .latest-news-item a span {
+        font-size: 12px;
+        display: block;
+        position: relative;
+        color: #fff;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+
+    .latest-news-item:hover a h3 {
+        color: #970e20;
+        /* margin: 10px 0; */
+    }
+
+    .latest-news-item a h3 {
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        .news-section {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .latest-news-container {
+            background-color: #D6D3D1;
+            border-radius: 5px;
+        }
+    }
+    @media (max-width: 991px){ 
+        .section-revista .container-revista{
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .section-revista .container-revista .portada-revista{
+            padding: 0;
+        }
+    }
+    @media (max-width: 650px){ 
+        .news-card-revistas{
+            max-height: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <section class="section-revista">
+        <div class="container-revista container">
+            <div class="portada-revista">
+                <div class="portada">
+                    <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-Portada-14.jpg" 
+                        class="img-fluid"
+                        alt="">
+                    <a href="https://sentidocomunmx.com/wp-content/uploads/2026/01/sentido_comun_14.pdf" 
+                       class="btn-download" download>
+                        Descargar
+                        <img src="./download_sentido.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="news-container">
+                    <a href="https://sentidocomunmx.com/?p=819">
+                        <article class="news-card">
+                            <div class="image-wrapper">
+                                <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/venezuela2026-300x226.png" alt="Tennis player">
+                            </div>
+                            <div class="content">
+                                <h2>Reforma histórica en Venezuela permite inversión petrolera</h2>
+                                <div class="meta">
+                                    <span class="date">Enero 30, 2026</span>
+                                </div>
+                                <p>La Asamblea Nacional de Venezuela aprobó una reforma que permite la entrada de inversión extranjera en el sector petrolero, con el fin de impulsar la competitividad y atraer capitales.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="https://sentidocomunmx.com/?p=812">
+                        <article class="news-card">
+                            <div class="image-wrapper">
+                                <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/salinasSAT2026-300x169.jpeg" alt="Tennis player">
+                            </div>
+                            <div class="content">
+                                <h2>Deuda fiscal de Grupo Salinas será cubierta en pagos</h2>
+                                <div class="meta">
+                                    <span class="date">Enero 30, 2026</span>
+                                </div>
+                                <p>El SAT informó que Grupo Salinas ya realizó un primer pago de la deuda millonaria y cubrirá el resto en parcialidades.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="https://sentidocomunmx.com/?p=760">
+                        <article class="news-card">
+                            <div class="image-wrapper">
+                                <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Mananera29.01.26-e1769729972606-300x165.png" alt="Tennis player">
+                            </div>
+                            <div class="content">
+                                <h2>Gobierno busca que ningún caso de violencia infantil se quede sin atención</h2>
+                                <div class="meta">
+                                    <span class="date">Enero 29, 2026</span>
+                                </div>
+                                <p>La estrategia de la Secretaría de Mujeres y el Gobierno Federal busca homologar la actuación de autoridades de salud y fiscalías estatales ante casos de violencia en infancias.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="https://sentidocomunmx.com/?p=792">
+                        <article class="news-card">
+                            <div class="image-wrapper">
+                                <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Sheinbaum28.01.26-e1769728828413-300x211.png" alt="Tennis player">
+                            </div>
+                            <div class="content">
+                                <h2>Sheinbaum refuerza diálogo sobre comercio bilateral con Trump</h2>
+                                <div class="meta">
+                                    <span class="date">Enero 29, 2026</span>
+                                </div>
+                                <p>La conversación entre los mandatarios de México y Estados Unidos se centró en la frontera, la lucha contra el narcotráfico y el comercio.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="https://sentidocomunmx.com/?p=782">
+                        <article class="news-card">
+                            <div class="image-wrapper">
+                                <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/MarcoRubio2026-300x157.png" alt="Tennis player">
+                            </div>
+                            <div class="content">
+                                <h2>Senado de EE. UU. analiza política hacia Venezuela</h2>
+                                <div class="meta">
+                                    <span class="date">Enero 29, 2026</span>
+                                </div>
+                                <p>Marco Rubio, secretario de Estado, afirmó que la decisión de atacar Venezuela se fundamenta en acusaciones de narcotráfico contra Nicolás Maduro.</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="https://sentidocomunmx.com/?p=768">
+                        <article class="news-card">
+                            <div class="image-wrapper">
+                                <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Atentado29.01.26-226x300.png" alt="Tennis player">
+                            </div>
+                            <div class="content">
+                                <h2>Ataque a diputados en Sinaloa activa respuesta federal</h2>
+                                <div class="meta">
+                                    <span class="date">Enero 29, 2026</span>
+                                </div>
+                                <p>El Gabinete de Seguridad creó una célula de inteligencia para esclarecer el ataque.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>   
+    <script>
+        document.querySelector('.btn-download').addEventListener('click', async function(e) {
+            e.preventDefault();
+            const pdfUrl = this.getAttribute('data-pdf-url');
+            try {
+                const response = await fetch(pdfUrl);
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'sentido_comun_14.pdf';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+            } catch (error) {
+                window.open(pdfUrl, '_blank');
+            }
+        });
+    </script>
+
+</body>
+</html>

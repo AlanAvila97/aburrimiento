@@ -1,0 +1,324 @@
+/*-------------------------------------------------------------
+# CSS GLOBAL
+-------------------------------------------------------------*/
+@font-face { 
+    font-family: 'Barlow-Regular'; 
+    font-style: normal; 
+    font-weight: normal; 
+    src: local('Barlow-Regular'), 
+         url('../fonts/Barlow-Regular.ttf'); 
+    font-display: swap
+}
+@font-face { 
+    font-family: 'Barlow-Bold'; 
+    font-style: normal; 
+    font-weight: bold; 
+    src: local('Barlow-Bold'), 
+         url('../fonts/Barlow-Bold.ttf'); 
+    font-display: swap
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow-Regular", Tahoma, sans-serif;
+}
+h1,
+h2,
+h3{
+    font-family: "Barlow-Bold", Tahoma, sans-serif;
+}
+:root{
+    --torch-red-500: #fb2444;
+    --gallery-100: #efefef;
+    --wild-sand: #f4f4f4;
+}
+.img-responsive{
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+.text-elipsis-vertical{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.bg-categories{
+    background-color: #f1f7f9;
+}
+.pt-70{
+    padding-top: 70px;
+}
+.overlay-text {
+    background-color: #00000087;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 30%;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+.overlay-text h3 {
+    color: #fff;
+    font-size: 2rem;
+}
+.overlay-text h3{
+    width: 100%;    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.modal-header{
+    background-color: var(--torch-red-500);
+}
+.modal-header .modal-title{
+    color: #fff;
+}
+.modal-header .btn-close{
+    filter: invert(1);
+    opacity: 1;
+    -webkit-filter: invert(1);
+}
+/*-------------------------------------------------------------
+# title
+-------------------------------------------------------------*/
+.title-head{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    box-shadow: 0px 4px 6px 0px rgb(0 0 0 / 25%);
+    margin-bottom: 2rem;
+    display: grid;
+    place-items: center;
+}
+.title-head h1{
+    text-transform: uppercase;
+}
+/*-------------------------------------------------------------
+# Estilos titulos secciones
+-------------------------------------------------------------*/
+.section-notices .title-notes h2{
+    border-color: #bcbcbc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+    position: relative;
+    text-align: center;
+}
+.section-notices .title-notes h2::after{
+    content: '';
+    background: var(--torch-red-500);
+    top: 95%;
+    position: absolute;
+    width: 100px;
+    height: 5px;
+}
+.section-notices .title-notes .border-after-start::after{
+    left: 0;
+}
+.section-notices .title-notes .border-after-end::after{
+    right: 0;
+}
+.section-notices .item-interview{
+    cursor: pointer;
+}
+@media (max-width: 991px){ 
+    .section-notices .title-notes{
+        width: 100%!important;
+    }
+}
+
+@media (min-width: 992px) {
+    .section-recents-news .content-recent-news .title-notes {
+        width: 66.66666667%;
+    }
+}
+
+/*-------------------------------------------------------------
+# Separador rojo
+-------------------------------------------------------------*/
+.separator-red {
+    width: 100%;
+    height: 4px;
+    background: var(--torch-red-500);
+    margin: 16px 0 20px;
+}
+/*-------------------------------------------------------------
+# Estilos Notas recientes
+-------------------------------------------------------------*/
+.section-notices .container-related-news{
+    height: 100%;
+    justify-content: flex-start !important;
+    background: var(--wild-sand);
+}
+.section-notices .container-related-news .items-related-notes .list-related-notes{
+    list-style-type: decimal;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;   
+}
+/*-------------------------------------------------------------
+# Estilos grid de collage horizontal
+-------------------------------------------------------------*/
+.col-columns{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+.col-columns img{
+    height: 100%;
+}
+/*-------------------------------------------------------------
+# Estilos grid de 3
+-------------------------------------------------------------*/
+.section-main-news .container-main-news .col-main a,
+.section-main-news .container-main-news .col-siblins a {
+    position: relative;
+}
+.section-main-news .container-main-news .col-siblins a {
+    height: 100%;
+}
+.section-main-news .container-main-news .col-main a,
+.section-main-news .container-main-news .col-columns a{
+    position: relative;
+}
+.section-main-news .container-main-news .col-main img,
+.section-main-news .container-main-news .col-siblins img {
+    height    : 100%;
+    /* min-height: 500px; */
+    max-height: 500px;
+}
+/* .section-main-news .container-main-news .col-siblins .overlay-text h3{
+
+} */
+.section-main-news .container-main-news .col-main .overlay-text h3,
+.section-main-news .container-main-news .col-siblins .overlay-text h3{
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+}
+.section-main-news .container-main-news .col-siblins .overlay-text h3{
+    font-size: 1.5rem;
+}
+/*-------------------------------------------------------------
+# Estilos grid de 3 / imagen y texto abajo
+-------------------------------------------------------------*/
+.section-notices .content-items-news{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+.section-notices .content-items-news .item-news{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000;
+}
+.section-notices .content-items-news .item-news .img-new img{
+    height: 100%;
+    min-height: 148px;
+    max-height: 148px;
+}
+.section-recents-news .content-items-news .item-news .img-new img{
+    min-height: 220px;
+    max-height: 220px;
+}
+@media (max-width: 780px){ 
+    .section-notices .content-items-news{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+/*-------------------------------------------------------------
+# Estilos grid de 1 columna / imagen y texto al lado
+-------------------------------------------------------------*/
+.grid-news-vertical {
+    display: grid;
+    gap: 14px;
+    padding: 5%;
+    margin-bottom: 34px;
+}
+
+.grid-news-vertical .item-news {
+    display: grid;
+    grid-template-columns: 1fr 1.20fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.grid-news-vertical .item-news img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+@media (max-width: 767px) {
+    .grid-news-vertical .item-news {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+/*-------------------------------------------------------------
+# Estilos grid de 2 columnas / columna 1: imagen y texto abajo, columna 2: texto al lado y abajo
+-------------------------------------------------------------*/
+.lead-block {
+    display: grid;
+    color: #000;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 16px;
+}
+.lead-block a{
+    color: #000;
+}
+.lead-block .thumb img,
+.sub-item img,
+.recent-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.lead-caption {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.lead-block .thumb img {
+    height: 210px;
+}
+.lead-copy a h4{
+    width: 100%;    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+@media (max-width: 767px) {
+
+    .lead-block,
+    .sub-item,
+    .recent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lead-block .thumb img {
+        height: 190px;
+    }
+}
+
+
+
+

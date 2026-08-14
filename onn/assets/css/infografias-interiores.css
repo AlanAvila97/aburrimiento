@@ -1,0 +1,59 @@
+:root{
+    --bs-footer-page: transparent;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-infografias-interiores::after{
+    background-image: url('../img/fondo_infografias_interiores.png');
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-infografias-interiores .section-banner{
+    background-image: url('../img/FONDO_SUPERIOR_SINTONIZA.png');
+    background-color: rgb(47, 32, 5, 48%);    
+}
+body.bg-infografias-interiores .section-banner .container-title-banner{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#texto_principal.section-content-center{
+    margin-top: 8em;
+    margin-bottom: 4em;
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer{
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Background sitio
+    --------------------------------------------------------------*/
+    body.bg-infografias-interiores .section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Center
+    --------------------------------------------------------------*/
+    #texto_principal.section-content-center{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Footer
+    -------------------------------------------------------------*/
+    .footer {
+        padding-top: 2rem;
+    }
+}

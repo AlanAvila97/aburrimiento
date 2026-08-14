@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preload" href="../assets/css/fontawesome/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../assets/fontawesome/css/fontawesome.css"></noscript>
+    <link rel="preload" href="../assets/css/fontawesome/css/solid.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../assets/fontawesome/css/solid.min.css"></noscript>
+    <link rel="preload" href="../assets/css/fontawesome/css/regular.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../assets/fontawesome/css/regular.min.css"></noscript>
+    <link rel="preload" href="../assets/css/fontawesome/css/brands.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../assets/fontawesome/css/brands.min.css"></noscript>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fff;
+        }
+        .menu{
+            position: relative;
+            width: 220px;
+            height: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu li{
+            position: absolute;
+            list-style: none;
+            transition: 0.75s;
+            width: 0px;
+            height: 0px;
+            border: 0px solid var(--clr);
+            transform: translateX(calc(var(--x) * 16px)) translateY(calc(var(--y) * 16px));
+            transition-delay: calc(0.1s * var(--y));
+        }
+        .menu.active li{
+            transform: translateX(calc(var(--x) * 80px)) translateY(calc(var(--y) *80px));
+            width: 60px;
+            height: 60px;
+            border: 3px solid var(--clr);
+        }
+        .menu li i{
+            scale: 0;
+            transition-delay: calc(0.1s * var(--y));
+        }
+        .menu.active li i{
+            scale: 1;
+        }
+        .menu li a{
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+        .menu li a i{
+            font-size: 2rem;
+            color: #000;
+        }
+        .menu li a:hover{
+            transition: 0s;
+            background-color: #000;
+            box-shadow: 0 0 10px #000;
+        }
+        .menu li a:hover i{
+            color: #fff;
+        }        
+        .menu .toggleBtn{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+        .menu .toggleBtn i{            
+            z-index: 1000;
+            color: #000;
+            transition: 0.75s;
+            transform: scale(0) rotate(0deg);
+        }
+        .menu.active .toggleBtn i{
+            transform: scale(1) rotate(270deg);
+        }
+        .menu .toggleBtn::before{
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #000000;
+            transition: 0.5s;
+        }
+        .menu.active .toggleBtn::before{
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border: 3px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <div class="toggleBtn">
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <!-- up -->
+        <li style="--x:0;--y:-1;--clr:#000;"> 
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <!-- rg -->
+        <li style="--x:1;--y:0;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <!-- dow -->
+        <li style="--x:0;--y:1;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <!-- lef -->
+        <li style="--x:-1;--y:0;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        
+        <!-- <li style="--x:-1;--y:0;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <li style="--x:1;--y:0;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <li style="--x:0;--y:-1;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <li style="--x:1;--y:1;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <li style="--x:-1;--y:-1;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <li style="--x:0;--y:1;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <li style="--x:1;--y:-1;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li>
+        <li style="--x:-1;--y:1;--clr:#000;">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </li> -->
+    </ul>
+    <script>
+        let menuToggle =  document.querySelector('.toggleBtn');
+        let menu =  document.querySelector('.menu');
+        let list =  document.querySelectorAll('li')
+        // const handleItemList = (e) => {
+        //     let item =  e.target.closest('li');
+        //     if(item){
+        //         removeAllClass(list, 'active')
+        //         item.classList.add('active');
+        //     }
+        // }
+        menuToggle.onclick = () => {
+            menu.classList.toggle('active');
+            menuToggle.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

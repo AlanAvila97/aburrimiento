@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .section-slider .container-slider{
+            width: 100%;
+            height: auto;
+            display: flex;
+        }
+        .section-slider .container-slider .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        .section-slider .container-slider .swiper .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-slider .container-slider .swiper .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .section-slider .container-slider .swiper .swiper-button-next, 
+        .section-slider .container-slider .swiper .swiper-button-prev{
+            color: #ffffff;
+            background: #08080873;
+            padding: 0.7rem;
+            width: 40px;
+            height: 80px;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-slider">
+        <div class="container-slider">  
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys" 
+                           href="https://sentidocomunmx.com/wp-content/uploads/2026/01/sentido_comun_15-1.pdf" target="_blank">
+                            <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-Portada-11.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys" href="https://sentidocomunmx.com/wp-content/uploads/2026/01/sentido_comun_15-1.pdf" target="_blank">
+                            <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-Portada-12.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys" href="https://sentidocomunmx.com/wp-content/uploads/2026/01/sentido_comun_15-1.pdf" target="_blank">
+                            <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-Portada-15.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys" href="https://sentidocomunmx.com/wp-content/uploads/2026/01/sentido_comun_15-1.pdf" target="_blank">
+                            <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-Portada-14.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys" href="https://sentidocomunmx.com/wp-content/uploads/2026/01/sentido_comun_15-1.pdf" target="_blank">
+                            <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-Portada-13.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys" href="https://sentidocomunmx.com/wp-content/uploads/2026/01/sentido_comun_15-1.pdf" target="_blank">
+                            <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-Portada-12.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="item-slider-partys" href="https://sentidocomunmx.com/wp-content/uploads/2026/01/sentido_comun_15-1.pdf" target="_blank">
+                            <img src="https://sentidocomunmx.com/wp-content/uploads/2026/01/Sentido-Comun-Portada-10.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            rewind: true,
+            preloadImages: false,
+            lazy: true,
+            resizeObserver: true, 
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                300: {
+                    slidesPerView: 2,
+                },
+                310: {
+                    slidesPerView: 2,
+                },
+                320: {
+                    slidesPerView: 2,
+                },
+                480: {
+                    slidesPerView: 2,
+                },
+                500: {
+                    slidesPerView: 2,
+                },
+                600: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 3,
+                },
+                950: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+                1500: {
+                    slidesPerView: 4,
+                },
+                2100: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+    </script>
+</body>
+</html>

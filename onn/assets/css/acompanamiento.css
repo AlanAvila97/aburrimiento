@@ -1,0 +1,103 @@
+:root{    
+    --bs-header-page:#252e77; 
+    --bs-footer-page: transparent;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-acompanamiento::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/banner_acompanamiento.png);
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#principal_acompanamiento.section-content-center{
+    margin-bottom: 5rem;
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-acompanamiento .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/EDUCADORES.jpg);
+    background-size: cover;
+    background-attachment: initial;
+}
+#banner_acompanamiento.section-banner .container-title-banner{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+/*-------------------------------------------------------------
+# Section Content List
+--------------------------------------------------------------*/
+.content-list p{
+    margin-bottom: 1rem;
+}
+.content-list p::before{
+    content: '\2022';
+    margin-right: 0.2rem;
+}
+/*-------------------------------------------------------------
+# Section Content Rows
+--------------------------------------------------------------*/
+#secondary_acompanamiento .item-row .img-fluid-responsive{
+    max-height: 230px;
+}
+/*-------------------------------------------------------------
+# Section Content Days
+--------------------------------------------------------------*/
+#slider_days .swiper-slide a{
+    position: relative;
+}
+#slider_days .swiper-slide .title-month{
+    position: absolute;
+    bottom: 0;
+    background: #9D00F2;
+    width: 15rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+#slider_days .swiper-slide .title-month h2{
+    font-weight: bold;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Section Content Banner Image
+    --------------------------------------------------------------*/
+    #banner_acompanamiento.section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Background sitio
+    --------------------------------------------------------------*/
+    body.bg-acompanamiento .section-banner{
+        background-position: left;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Center
+    --------------------------------------------------------------*/
+    #principal_acompanamiento.section-content-center{
+        margin-top: 2rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Rows
+    --------------------------------------------------------------*/
+    #principal_acompanamiento .item-row .img-fluid-responsive{
+        max-height: 100%;
+    }
+}
+@media (max-width: 650px){ 
+    /*-------------------------------------------------------------
+    # Section Content Days
+    --------------------------------------------------------------*/
+    #slider_days{
+        
+    }    
+}

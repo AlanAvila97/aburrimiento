@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
+	<!-- Fontawesome  -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/regular.min.css">	
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/brands.min.css">
+    <style>
+        .title-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            padding: 0rem 1rem;
+        }        
+        .title-section i{
+            font-size: 0.6rem;
+        }
+        .title-section h2{
+            margin: 0;
+        }
+        /*  */
+        .content-header-info{
+            width: 100%;   
+            display: grid;
+            grid-template-columns: 1fr 25%;
+            padding: 0rem 3rem;
+        }
+        .content-header-info .info-general{
+            width: 100%;
+            height: 100%;
+            padding: 1rem 0.5rem;
+        }
+        .content-header-info .info-general h1,
+        .content-header-info .info-general h5,
+        .title-section *,
+        .item-info h3{
+            color: var(--bs-primary);
+        }
+        .content-header-info .info-general p{
+            font-size: clamp(1rem, 1.1rem, 2rem)
+        }
+        .content-header-info .content-image-perfil{
+            display: grid;
+            place-content: center;
+        }
+        .content-header-info .img-perfil{
+            clip-path: ellipse(40% 50% at 50% 50%);
+            width: 270px;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .content-about{
+            width: 100%;   
+            padding: 0rem 3rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content-about .info-about {
+            width: 100%;
+            height: auto;
+            padding: 0rem 1rem;
+        }
+        .content-about .info-about p{
+            font-size: clamp(1rem, 1.2rem, 2rem);
+            text-align: justify;
+        }
+        .content-specific-information{
+            width: 100%;
+            height: auto;
+            padding: 0rem 3rem;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+        }            
+        .content-specific-information .education,
+        .content-specific-information .work-experience{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .content-specific-information .item-info{
+            padding: 0rem 1rem;
+        }        
+        .item-info .general-info .subtitle-general-info p{
+            margin: 0;
+        }
+        .item-info .general-info .activities li{
+            text-align: justify;
+        }
+    </style>	
+</head>
+<body>
+    <div class="main">
+        <main class="content">	
+            <div class="card" >
+                <div class="card-body">
+                    <div class="container mt-4">
+                        <div class="content-header-info ">
+                            <div class="info-general border-4 border-top border-bottom border-primary">
+                                <h1 class="text-uppercase fw-bold">Mario Sánchez</h1>
+                                <h5 class="text-uppercase pt-2 h6">Licenciado en Administración</h5>
+                                <div class="form-group pt-3 d-flex flex-column">
+                                    <p class="email">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <span>correo@gmail.com</span>
+                                    </p>
+                                    <p class="cell-phone">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                        <span>Cel. 12345-67890</span>
+                                    </p>
+                                    <p class="address">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>CDMX, México</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content-image-perfil">
+                                <picture class="d-block w-100 h-100">
+                                    <source class="lazy img-fluid" srcset="./assets/img/images.jpg" type="image/webp" alt="Imagen Usuario" loading="lazy">
+                                    <source class="lazy img-fluid" srcset="./assets/img/images.jpg" type="image/png" alt="Imagen Usuario" loading="lazy"> 
+                                    <img class="img-fluid img-perfil" src="./assets/img/images.jpg" alt="Imagen Usuario" width="139" height="30">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="content-about mt-3">
+                            <div class="title-section">
+                                <i class="fa-solid fa-circle "></i>
+                                <h2 class="title-about text-uppercase">
+                                    Sobre mi
+                                </h2>
+                            </div>
+                            <div class="info-about">
+                                <p class="mt-3">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, mollitia omnis? Quae 
+                                    corrupti repellendus architecto repudiandae officia, dicta pariatur ut consectetur 
+                                    laudantium suscipit, praesentium quibusdam, velit dolore placeat ipsam expedita?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content-specific-information mt-3">
+                            <div class="education ">
+                                <div class="title-section mb-3">
+                                    <i class="fa-solid fa-circle "></i>
+                                    <h2 class="title-education text-uppercase">
+                                        Educación
+                                    </h2>
+                                </div>
+                                <div class="school">
+                                    <div class="item-info">
+                                        <div class="general-info">
+                                            <h3 class="name-school h4 font-bolder">Universidad Fantasma</h3>
+                                            <div class="career subtitle-general-info d-flex gap-1 h6 mt-2">
+                                                <p class="name fw-medium">Lic. en Administración,</p>
+                                                <p class="date fw-medium">2016</p>
+                                            </div>
+                                        </div>
+                                        <ul class="activities ps-3">
+                                            <li class="fw-normal">Actividad 1</li>
+                                            <li class="fw-normal">Actividad 2</li>
+                                            <li class="fw-normal">Actividad 3</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="general-info">
+                                            <h3 class="name-school h4 font-bolder">Escuela Bachilleres</h3>
+                                            <div class="career subtitle-general-info d-flex gap-1 h6 mt-2">
+                                                <p class="name fw-medium">Carrera de Bachilleres,</p>
+                                                <p class="date fw-medium">2012</p>
+                                            </div>
+                                        </div>
+                                        <ul class="average ps-3">
+                                            <li class="fw-normal">Actividad 1</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="course-habilities">
+                                    <div class="title-section mb-4">
+                                        <i class="fa-solid fa-circle "></i>
+                                        <h2 class="title-education text-uppercase">
+                                            Cursos / Habilidades
+                                        </h2>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="general-info">
+                                            <h3 class="name-average h4 font-bolder">Curso fantasma</h3>
+                                        </div>
+                                        <ul class="average subtitle-general-info ps-3">
+                                            <li class="fw-normal">Instituto Fantasma</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="general-info">
+                                            <h3 class="name-average h4 font-bolder">Habilidad fantasma</h3>
+                                        </div>
+                                        <ul class="average subtitle-general-info ps-3">
+                                            <li class="fw-normal">Habilidad Fantasma</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="language-course">
+                                    <div class="title-section mb-4">
+                                        <i class="fa-solid fa-circle "></i>
+                                        <h2 class="title-education text-uppercase">
+                                            Idiomas
+                                        </h2>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="general-info">
+                                            <h3 class="name-language h4 font-bolder">Idioma Inglés</h3>
+                                        </div>
+                                        <ul class="language ps-3">
+                                            <li class="fw-normal">Nivel fantasma</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-experience">
+                                <div class="title-section mb-3">
+                                    <i class="fa-solid fa-circle "></i>
+                                    <h2 class="h-4 title-work-experience text-uppercase">
+                                        Experiencia Laboral
+                                    </h2>
+                                </div>
+                                <div class="item-info">
+                                    <div class="general-info">
+                                        <h3 class="job h4 font-bolder">Responsable de Administración</h3>
+                                        <div class="company subtitle-general-info d-flex gap-1 h6 mt-2">
+                                            <p class="name fw-medium">Empresa fantasma,</p>
+                                            <p class="date fw-medium">Ene 2016 - Jul 2017</p>
+                                        </div>
+                                    </div>
+                                    <ul class="activities ps-3">
+                                        <li class="fw-normal">Actividad 1</li>
+                                        <li class="fw-normal">Actividad 2</li>
+                                        <li class="fw-normal">Actividad 3</li>
+                                    </ul>
+                                </div>
+                                <div class="item-info">
+                                    <div class="general-info">
+                                        <h3 class="job h4 font-bolder">Responsable de Administración</h3>
+                                        <div class="company d-flex gap-2 h6 mt-2">
+                                            <p class="name fw-medium">Empresa fantasma</p>
+                                            <p class="date fw-medium">Ene 2016 - Jul 2017</p>
+                                        </div>
+                                    </div>
+                                    <ul class="activities ps-3">
+                                        <li class="fw-normal">Actividad 1</li>
+                                        <li class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum suscipit modi similique cupiditate rerum reiciendis sit repellendus aspernatur, aliquid quos, atque omnis? Distinctio provident ex cum quia! Ducimus, beatae suscipit!</li>
+                                        <li class="fw-normal">Actividad 3</li>
+                                    </ul>
+                                </div>
+                                <div class="item-info">
+                                    <div class="info-work">
+                                        <h3 class="job h4 font-bolder">Responsable de Administración</h3>
+                                        <div class="company d-flex gap-2 h6 mt-2">
+                                            <p class="name fw-medium">Empresa fantasma</p>
+                                            <p class="date fw-medium">Ene 2016 - Jul 2017</p>
+                                        </div>
+                                    </div>
+                                    <ul class="activities ps-3">
+                                        <li class="fw-normal">Actividad 1</li>
+                                        <li class="fw-normal">Actividad 2</li>
+                                        <li class="fw-normal">Actividad 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>	
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./assets/vendor/bootstrap/js/popper.min.js"></script>
+	<script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/*-------------------------------------------------------------
+# Main news
+-------------------------------------------------------------*/
+.section-main-news .container-main-news .col-main a{
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+.section-main-news .container-main-news .col-main a picture{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.section-main-news .container-main-news .col-main a img{
+    object-fit: cover;
+    height: 100%;
+}
+/*-------------------------------------------------------------
+# body news
+-------------------------------------------------------------*/
+.section-body-notices .content-notices{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 33%;
+}
+.section-body-notices .container-conflicts{
+    width: 100%;
+}
+/*-------------------------------------------------------------
+# recents news
+-------------------------------------------------------------*/
+.section-recents-news .content-recent-news{
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+}

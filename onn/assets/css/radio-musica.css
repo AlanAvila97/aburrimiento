@@ -1,0 +1,354 @@
+:root{
+    --bs-footer-page: transparent;     
+}
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-radio-musica::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/fondo_radio_bg.png);
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-radio-musica .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/fondo_radio.jpg);
+    background-size: cover;
+    background-attachment: initial;
+    background-color: transparent;
+}
+body.bg-radio-musica .section-banner .container-title-banner{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#texto_principal.section-content-center{
+    margin-bottom: 4em;
+}
+#play_list_radio.section-content-center,
+#musica_para_mi.section-content-center{
+    margin-top: 3rem;
+}
+#musica_para_mi.section-content-center{
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+}
+/*-------------------------------------------------------------
+# Section Content Reproductor
+--------------------------------------------------------------*/
+.section-reproductor{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-reproductor .banner-overlay{
+    width: 100%;
+    height: auto;
+}
+.section-reproductor .container-reproductor-onn{
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+.section-reproductor .container-reproductor-onn .reproductor{
+    width: 75%;
+    height: auto;
+    min-height: 300px;
+    background: #FFC739;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 50%;
+    position: relative;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.section-reproductor .container-reproductor-onn .reproductor .info-reproductor{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-reproductor .container-reproductor-onn .reproductor .controls-reproductor{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.section-reproductor .container-reproductor-onn .reproductor .controls-reproductor img{
+    cursor: pointer;
+    max-height: 90px;
+}
+.section-reproductor .container-reproductor-onn .reproductor #date-podcast{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+/*-------------------------------------------------------------
+# Seccion Current Song
+-------------------------------------------------------------*/
+#play_list_radio{
+    position: relative;
+    z-index: 3;
+}
+#play_list_radio::after{
+    position: absolute;
+    content: '';
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/floating_radio_muneco.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 360px;
+    display: block;
+    height: 420px;
+    top: 10rem;
+    right: 0rem;
+    z-index: -1;
+}
+#play_list_radio .container-play_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+#play_list_radio .current-item-list{
+    width: 80%;
+    height: auto;
+    max-height: 285px;
+    background: #FF524C;
+    border-radius: 2rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    margin-top: 4rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+#play_list_radio .current-item-list .image-song{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#play_list_radio .current-item-list .image-song picture{
+    padding: 1rem;
+    width: 100%;
+}
+#play_list_radio .current-item-list .image-song .floating-btn{
+    position: absolute;
+    width: auto;
+    cursor: pointer;
+}
+#play_list_radio .current-item-list .image-song .floating-btn img{
+    max-height: 80px;
+}
+#play_list_radio .current-item-list .info-song{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*-------------------------------------------------------------
+# Seccion Play list Songs
+-------------------------------------------------------------*/
+#play_list_radio .content-play-list{
+    width: 80%;
+    height: auto;
+    background: #FF524C;
+    margin-top: 4rem;
+    padding: 1rem 0.7rem 1rem 1rem;
+}
+#play_list_radio .play-list{
+    width: 100%;
+    max-height: 511px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#play_list_radio .play-list .item-list{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    width: 100%;
+    cursor: pointer;
+}
+#play_list_radio .play-list .item-list .image-song{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#play_list_radio .play-list .item-list .image-song picture{
+    padding: .2rem;
+    width: 80%;
+}
+#play_list_radio .play-list .item-list .image-song .floating-btn{
+    position: absolute;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#play_list_radio .play-list .item-list .image-song .floating-btn picture{
+    width: 70%;
+}
+#play_list_radio .play-list .item-list .info-song{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer{
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+.footer .footer-navigation-web a .img-fluid-responsive{
+    max-height: 90px;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 1110px){ 
+    /*-------------------------------------------------------------
+    # Section Content Reproductor
+    --------------------------------------------------------------*/
+    .section-reproductor .container-reproductor-onn .reproductor{
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Background sitio
+    --------------------------------------------------------------*/
+    body.bg-radio-musica .section-banner{
+        background-position: left;
+        background-color: transparent;
+    }
+    body.bg-radio-musica .section-banner .container-title-banner{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Reproductor
+    --------------------------------------------------------------*/
+    .section-reproductor{
+        flex-direction: column;
+    }
+    .section-reproductor .container-reproductor-onn{
+        position: relative;
+    }
+    .section-reproductor .container-reproductor-onn .reproductor{
+        width: 100%;
+    }
+    .section-reproductor .container-reproductor-onn .reproductor #date-podcast{
+        position: relative;
+        bottom: 0;
+        right: 0;
+    }
+    /*-------------------------------------------------------------
+    # Section Content Center
+    --------------------------------------------------------------*/
+    #texto_principal.section-content-center{
+        margin-top: 4rem;
+    }
+    #play_list_radio.section-content-center,
+    #musica_para_mi.section-content-center{
+        margin-bottom: 3rem;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Current Song
+    -------------------------------------------------------------*/
+    #play_list_radio::after{
+        display: none;
+    }
+    #play_list_radio .current-item-list{
+        max-height: 100%;
+        width: 100%;
+        grid-template-columns: 45% 1fr;
+    }
+    #play_list_radio .current-item-list .info-song,
+    #play_list_radio .current-item-list .image-song{
+        padding: 0rem;
+    }    
+    #play_list_radio .current-item-list .image-song picture{
+        width: 100%;
+    }
+    #play_list_radio .current-item-list .image-song picture img{
+        max-height: 250px;
+        object-fit: contain;
+    }
+    #play_list_radio .current-item-list .image-song .floating-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #play_list_radio .current-item-list .image-song .floating-btn picture{
+        width: 65%;
+    }        
+    #play_list_radio .current-item-list .info-song .author-rep{
+        display: none;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Play list Songs
+    -------------------------------------------------------------*/
+    #play_list_radio .content-play-list{
+        width: 100%;
+    }
+    #play_list_radio .play-list{
+        gap: 1rem;
+    }
+    #play_list_radio .play-list .item-list{
+        grid-template-columns: 45% 1fr;
+    }
+    #play_list_radio .play-list .item-list .info-song{
+        padding: 0;
+    }
+    #play_list_radio .play-list .item-list .info-song .author-rep{
+        display: none;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Footer
+    -------------------------------------------------------------*/
+    .footer{
+        padding-top: 2rem;
+    }
+}
+@media (max-width: 780px){ 
+    /*-------------------------------------------------------------
+    # Section Content Reproductor
+    --------------------------------------------------------------*/
+    .section-reproductor .container-reproductor-onn .reproductor{
+        width: 100%;
+    }
+}
+@media (max-width: 380px){ 
+    /*-------------------------------------------------------------
+    # Seccion Current Song
+    -------------------------------------------------------------*/
+    #play_list_radio .current-item-list{
+        grid-template-columns: 1fr;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Play list Songs
+    -------------------------------------------------------------*/
+    #play_list_radio .play-list .item-list{
+        grid-template-columns: 1fr;
+    }
+}

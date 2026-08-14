@@ -1,0 +1,150 @@
+/*-------------------------------------------------------------
+# Background sitio
+--------------------------------------------------------------*/
+body.bg-veo-online::after{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/fondo_bg_veo_online.png);
+}
+/*-------------------------------------------------------------
+# Section Content Banner Image
+--------------------------------------------------------------*/
+body.bg-veo-online .section-banner{
+    background-image: url(https://onceninasyninos.tv/wp-content/uploads/2025/08/catch_on.jpg);
+    background-size: cover;
+    background-attachment: initial;
+}
+body.bg-veo-online .section-banner .container-title-banner{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+/*-------------------------------------------------------------
+# Section Content Center
+--------------------------------------------------------------*/
+#banner_program.section-content-center{
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+#programation{
+    margin-top: 2em;
+}
+/*-------------------------------------------------------------
+# Section Content Texto Historia
+--------------------------------------------------------------*/
+#banner_program .content-banner{
+    width: 100%;
+    border-radius: 1rem;
+}
+#banner_program .content-banner .video-js{
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+#banner_program .content-banner .vjs-big-play-centered .vjs-big-play-button{
+    width: 100px;
+    height: 100px;
+    background-color: #F94A4A;
+    border: none;
+    border-radius: 50%;
+    top: 45%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#banner_program .content-banner .vjs-big-play-centered .vjs-big-play-button .vjs-icon-placeholder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#banner_program .content-banner .vjs-big-play-centered .vjs-big-play-button .vjs-icon-placeholder:before{
+    width: 100%;
+    height: 100%;
+    font-size: clamp(1rem, 4.5rem, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*-------------------------------------------------------------
+# Section Content Grid Four Columns
+--------------------------------------------------------------*/
+
+/*-------------------------------------------------------------
+# Section Content Grid Three Columns
+--------------------------------------------------------------*/
+#programation .container-grid-three-columns{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+#programation .items-grid{
+    position: relative;
+    width: 100%;
+    height: auto;            
+    border: 0.7rem solid #f27b42;
+}
+#programation .items-grid img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+}
+#programation .items-grid .data{
+    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #6b1faccc;
+    z-index: 2;
+}
+#programation .items-grid:hover .data{
+    display: block;
+    opacity: 1;
+    transition: opacity .5s ease;
+    -webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -ms-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+}
+#programation .items-grid a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0px 5px;
+    text-decoration-color: #f27b42;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#programation .items-grid a p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+/*-------------------------------------------------------------
+# Seccion Footer
+-------------------------------------------------------------*/
+.footer .footer-navigation-web a .img-fluid-responsive{
+    max-height: 90px;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px){ 
+    /*-------------------------------------------------------------
+    # Section Content Grid Three Columns
+    --------------------------------------------------------------*/
+    #programation .container-grid-three-columns{
+        margin-top: 4rem;
+    }
+}
