@@ -13,6 +13,7 @@ function initLiveStream() {
     initChatFunctionality();
     initInteractions();
     initViewerCount();
+    initScheduleTabs();
 }
 
 /*-------------------------------------------------------------
@@ -252,6 +253,23 @@ function initViewerCount() {
 /*-------------------------------------------------------------
 # Funciones Auxiliares
 -------------------------------------------------------------*/
+
+// Cambiar entre pestañas Horarios e Histórico
+function initScheduleTabs() {
+    const tabs = document.querySelectorAll('.schedule-tab');
+    const panels = document.querySelectorAll('#chatMessages .tabcontent');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const target = this.dataset.tabTarget;
+
+            tabs.forEach(t => t.classList.toggle('active', t === this));
+            panels.forEach(panel => {
+                panel.style.display = panel.id === target ? 'block' : 'none';
+            });
+        });
+    });
+}
 
 // Mostrar notificación tipo toast
 function showToast(title, message) {

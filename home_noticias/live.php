@@ -59,9 +59,7 @@
 
                                         <!-- Controles adicionales -->
                                         <div class="video-controls position-absolute bottom-0 end-0 m-3 d-flex gap-2">
-                                            <button class="btn btn-sm btn-light" id="btnFullscreen" title="Pantalla completa">
-                                                <i class="fas fa-expand"></i>
-                                            </button>
+                                            
                                         </div>
                                     </div>
 
@@ -84,9 +82,6 @@
                                                 </p>
                                                 <div class="d-flex gap-2 flex-wrap">
                                                    
-                                                    <button class="btn btn-sm btn-outline-secondary" id="btnShare">
-                                                        <i class="fas fa-share-alt me-1"></i> Compartir
-                                                    </button>
                                                   
                                                 </div>
                                             </div>
@@ -100,14 +95,43 @@
                             <div class="col-lg-4">
                                 <!-- Horarios -->
                                 <div class="live-schedule-wrapper d-flex flex-column h-100">
-                                    <div class="schedule-header bg-dark text-white p-3 rounded-top">
-                                        <h4 class="mb-0 d-flex align-items-center gap-2">
-                                            <i class="fas fa-clock"></i>
-                                            Horarios
-                                        </h4>
+                                    <div class="schedule-tabs d-flex rounded-top overflow-hidden">
+                                        <button type="button" class="schedule-tab active flex-fill" data-tab-target="Live">
+                                            <i class="fas fa-clock"></i> Horarios
+                                        </button>
+                                        <button type="button" class="schedule-tab flex-fill" data-tab-target="Historico">
+                                           <i class="fas fa-history"></i> Histórico de noticiarios
+                                        </button>
                                     </div>
 
                                     <div class="chat-messages flex-grow-1 p-3 bg-white overflow-y-auto" id="chatMessages">
+                                       <div id="Historico" class="tabcontent" style="display: none;">
+                                        <a href="#" class="historico-item d-flex gap-3 align-items-center py-2 text-dark text-decoration-none">
+                                            <img src="https://dummyimage.com/120x68/212529/ffffff" alt="Matutino" class="rounded" width="120" height="68">
+                                            <span class="small fw-semibold">MATUTINO 20 MAYO 2026<br><span class="text-muted">1:36:56</span></span>
+                                        </a>
+                                        <a href="#" class="historico-item d-flex gap-3 align-items-center py-2 text-dark text-decoration-none">
+                                            <img src="https://dummyimage.com/120x68/495057/ffffff" alt="Matutino" class="rounded" width="120" height="68">
+                                            <span class="small fw-semibold">MATUTINO 21 MAYO 2026<br><span class="text-muted">1:39:55</span></span>
+                                        </a>
+                                        <a href="#" class="historico-item d-flex gap-3 align-items-center py-2 text-dark text-decoration-none">
+                                            <img src="https://dummyimage.com/120x68/6c757d/ffffff" alt="Especial" class="rounded" width="120" height="68">
+                                            <span class="small fw-semibold">A LAS 2 21 MAYO 2026<br><span class="text-muted">55:48</span></span>
+                                        </a>
+                                        <a href="#" class="historico-item d-flex gap-3 align-items-center py-2 text-dark text-decoration-none">
+                                            <img src="https://dummyimage.com/120x68/6c757d/ffffff" alt="Matutino" class="rounded" width="120" height="68">
+                                            <span class="small fw-semibold">MATUTINO 19 MAYO 2026<br><span class="text-muted">1:35:36</span></span>
+                                        </a>
+                                        <a href="#" class="historico-item d-flex gap-3 align-items-center py-2 text-dark text-decoration-none">
+                                            <img src="https://dummyimage.com/120x68/6c757d/ffffff" alt="Matutino" class="rounded" width="120" height="68">
+                                            <span class="small fw-semibold">MATUTINO 10 MAYO 2026<br><span class="text-muted">1:32:24</span></span>
+                                        </a>
+                                         <a href="#" class="historico-item d-flex gap-3 align-items-center py-2 text-dark text-decoration-none">
+                                            <img src="https://dummyimage.com/120x68/6c757d/ffffff" alt="Matutino" class="rounded" width="120" height="68">
+                                            <span class="small fw-semibold">MATUTINO 6 MAYO 2026<br><span class="text-muted">1:37:54</span></span>
+                                        </a>
+                                        
+                                    </div>
                                        <div id="Live" class="tabcontent" style="display: block;"> 
                                         <strong>Lunes a viernes:</strong> 
                                         <hr class="rounded"> 
