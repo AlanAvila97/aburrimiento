@@ -241,3 +241,115 @@
         max-height: 150px;
     }
 }
+
+/*-------------------------------------------------------------
+# Componente Badges / Etiquetas de Categorías
+-------------------------------------------------------------*/
+.category-badges,
+.badge-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.category-badge,
+.badge-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8C0B19;
+    color: #ffffff !important;
+    font-family: 'Barlow-Regular', Tahoma, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 0.35rem 0.9rem;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.category-badge:hover,
+.badge-tag:hover {
+    background-color: #a71122;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+.category-badge:active,
+.badge-tag:active {
+    background-color: #6e0813;
+    transform: translateY(0);
+}
+
+/*-------------------------------------------------------------
+# Componente Migajas de Pan (Breadcrumbs)
+-------------------------------------------------------------*/
+.breadcrumb-nav {
+    width: 100%;
+}
+
+.breadcrumb-custom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.5rem 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0.92rem;
+    font-family: 'Barlow-Regular', Tahoma, sans-serif;
+    gap: 0.15rem;
+}
+
+.breadcrumb-custom .breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    color: #6c757d;
+}
+
+.breadcrumb-custom .breadcrumb-item a {
+    color: #333333;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.15s ease;
+}
+
+.breadcrumb-custom .breadcrumb-item a:hover {
+    color: #8C0B19;
+}
+
+.breadcrumb-custom .breadcrumb-item.active {
+    color: #8C0B19;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.breadcrumb-custom .breadcrumb-separator {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0.5rem;
+    font-size: 0.7rem;
+    color: #a0a0a0;
+    user-select: none;
+}
+
+.breadcrumb-custom .breadcrumb-icon {
+    font-size: 0.85rem;
+    color: #8C0B19;
+}
+
+.breadcrumb-custom .breadcrumb-item a:hover .breadcrumb-icon {
+    color: #a71122;
+}
+
