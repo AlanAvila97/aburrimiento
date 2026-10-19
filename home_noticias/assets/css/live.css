@@ -299,6 +299,38 @@
     padding: 0.3rem 0.5rem;
 }
 
+/*-------------------------------------------------------------
+# Pestañas Horarios / Histórico
+-------------------------------------------------------------*/
+.schedule-tab {
+    border: 0;
+    background: #8d97a6;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 0.9rem 1rem;
+    transition: background 0.2s ease;
+}
+
+.schedule-tab:not(.active):hover {
+    background: #7b8595;
+}
+
+.schedule-tab.active {
+    background: #6d1f48;
+    font-weight: 600;
+}
+
+.historico-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.historico-item:hover {
+    background: #f8f9fa;
+}
+
 .live-indicator-small {
     display: inline-block;
     width: 6px;

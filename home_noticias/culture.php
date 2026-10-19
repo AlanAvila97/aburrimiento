@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Economía</title>
+    <title>Cultura</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php require_once("./includes/header-elements.php"); ?>
     <!-- CSS específico para esta sección -->
+    <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/culture.css">
 </head>
 
@@ -18,6 +19,31 @@
                 <navbar class="title-head">
                     <h1>Cultura</h1>
                 </navbar>
+
+                <!-- Migajas de pan / Breadcrumbs -->
+                <section class="section-breadcrumbs mb-2">
+                    <div class="container">
+                        <?php
+                        $breadcrumbs = [
+                            ["name" => "Inicio", "href" => "./index.php"],
+                            ["name" => "Cultura", "href" => ""]
+                        ];
+                        include("./components/breadcrumbs.php");
+                        ?>
+                    </div>
+                </section>
+
+                <!-- Categorías / Etiquetas -->
+                <section class="section-category-badges mb-3">
+                    <div class="container">
+                        <?php
+                        $tags = ["Cultura", "Tendencias"];
+                        $hrfs = ["#", "#"];
+                        include("./components/category-badges.php");
+                        ?>
+                    </div>
+                </section>
+
                 <!-- Encabezado -->
                  <section class="section-main-news">
                     <div class="container container-main-news">
