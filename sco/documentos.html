@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Centro de Documentación - Sistemas de Canal Once</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#191c1d",
+                        "surface-container-low": "#eff4ff",
+                        "primary-container": "#a11e42",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "primary-fixed": "#ffd9dd",
+                        "secondary-fixed": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#8e0b35",
+                        "on-secondary-container": "#626566",
+                        "on-tertiary-fixed": "#111c2d",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#d3e4fe",
+                        "background": "#f8f9ff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "primary-fixed-dim": "#ffb2bc",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#ffb5bf",
+                        "outline": "#8b7073",
+                        "surface-container": "#e5eeff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "on-tertiary-container": "#bfcae1",
+                        "outline-variant": "#dfbfc2",
+                        "inverse-on-surface": "#eaf1ff",
+                        "tertiary-container": "#4a5569",
+                        "tertiary": "#333e51",
+                        "secondary-container": "#e1e3e4",
+                        "inverse-primary": "#ffb2bc",
+                        "surface-dim": "#cbdbf5",
+                        "on-primary-fixed": "#400012",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface-variant": "#584143",
+                        "surface-tint": "#af2a4c",
+                        "on-background": "#0b1c30",
+                        "tertiary-fixed": "#d8e3fb",
+                        "surface-bright": "#f8f9ff",
+                        "inverse-surface": "#213145",
+                        "surface": "#f8f9ff",
+                        "primary": "#7f002d",
+                        "on-surface": "#0b1c30",
+                        "secondary": "#5c5f60",
+                        "on-secondary-fixed-variant": "#454748",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "sidebar-width": "260px",
+                        "stack-sm": "8px",
+                        "gutter": "16px",
+                        "header-height": "64px",
+                        "mega-menu-width": "800px",
+                        "stack-md": "16px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "nav-item": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "mega-menu-heading": ["Inter"]
+                    },
+                    "fontSize": {
+                        "nav-item": ["14px", {
+                            "lineHeight": "20px",
+                            "fontWeight": "500"
+                        }],
+                        "headline-lg": ["32px", {
+                            "lineHeight": "40px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }],
+                        "label-md": ["12px", {
+                            "lineHeight": "16px",
+                            "fontWeight": "500"
+                        }],
+                        "headline-sm": ["20px", {
+                            "lineHeight": "28px",
+                            "fontWeight": "600"
+                        }],
+                        "headline-md": ["24px", {
+                            "lineHeight": "32px",
+                            "letterSpacing": "-0.01em",
+                            "fontWeight": "600"
+                        }],
+                        "body-sm": ["13px", {
+                            "lineHeight": "18px",
+                            "fontWeight": "400"
+                        }],
+                        "body-md": ["14px", {
+                            "lineHeight": "20px",
+                            "fontWeight": "400"
+                        }],
+                        "label-lg": ["14px", {
+                            "lineHeight": "20px",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }],
+                        "body-lg": ["16px", {
+                            "lineHeight": "24px",
+                            "fontWeight": "400"
+                        }],
+                        "mega-menu-heading": ["12px", {
+                            "lineHeight": "16px",
+                            "letterSpacing": "0.08em",
+                            "fontWeight": "700"
+                        }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Drag and Drop Hover State */
+        
+        #drop-zone.dragover {
+            background-color: theme('colors.surface-container-high');
+            border-color: theme('colors.primary');
+        }
+    </style>
+</head>
+
+<body class="min-h-screen font-body-md text-body-md antialiased overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header class="flex items-center justify-between px-gutter w-full fixed top-0 z-50 bg-primary text-on-primary docked full-width top-0 h-header-height border-b border-outline-variant flat no shadows">
+        <div class="flex items-center gap-gutter">
+            <h1 class="font-headline-md text-headline-md font-bold text-on-primary mr-8">Sistemas de Canal Once</h1>
+            <nav class="hidden md:flex items-center gap-6">
+                <!-- No explicit active state in TopNav per context, defaulting to regular links -->
+                <a class="font-nav-item text-nav-item text-on-primary/80 hover:bg-primary-container/20 transition-colors cursor-pointer active:opacity-80 px-2 py-1 rounded" href="#">Formatos</a>
+                <a class="font-nav-item text-nav-item text-on-primary border-b-2 border-on-primary pb-1 cursor-pointer px-2" href="#">Personal</a>
+                <!-- Assuming Personal encompasses Documentación -->
+                <a class="font-nav-item text-nav-item text-on-primary/80 hover:bg-primary-container/20 transition-colors cursor-pointer active:opacity-80 px-2 py-1 rounded" href="#">Nómina</a>
+                <a class="font-nav-item text-nav-item text-on-primary/80 hover:bg-primary-container/20 transition-colors cursor-pointer active:opacity-80 px-2 py-1 rounded" href="#">Reportes</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <button aria-label="Notifications" class="p-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+            <button aria-label="Help" class="p-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+            <button aria-label="Profile" class="p-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+        </div>
+    </header>
+    <!-- SideNavBar -->
+    <aside class="hidden md:flex flex-col bg-surface-container-low text-primary docked left-0 h-full w-sidebar-width border-r border-outline-variant flat no shadows fixed left-0 top-header-height h-[calc(100vh-theme(spacing.header-height))] py-stack-md z-40">
+        <div class="px-gutter mb-6">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
+                    HR
+                </div>
+                <div>
+                    <h2 class="font-headline-sm text-headline-sm text-primary">HR Portal</h2>
+                    <p class="font-body-sm text-body-sm text-secondary">Administración</p>
+                </div>
+            </div>
+        </div>
+        <nav class="flex-1 flex flex-col gap-1 px-2">
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-variant/50 transition-all duration-200 ease-in-out font-label-lg text-label-lg" href="#">
+                <span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-primary font-bold border-l-4 border-primary bg-primary/5 transition-all duration-200 ease-in-out font-label-lg text-label-lg" href="#">
+                <span class="material-symbols-outlined filled">description</span> Recibos
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-variant/50 transition-all duration-200 ease-in-out font-label-lg text-label-lg" href="#">
+                <span class="material-symbols-outlined">assignment</span> Requisiciones
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-variant/50 transition-all duration-200 ease-in-out font-label-lg text-label-lg" href="#">
+                <span class="material-symbols-outlined">fact_check</span> Solicitudes
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-variant/50 transition-all duration-200 ease-in-out font-label-lg text-label-lg" href="#">
+                <span class="material-symbols-outlined">swap_horiz</span> Movimientos
+            </a>
+            <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-variant/50 transition-all duration-200 ease-in-out font-label-lg text-label-lg" href="#">
+                <span class="material-symbols-outlined">settings</span> Configuración
+            </a>
+        </nav>
+    </aside>
+    <!-- Main Content Canvas -->
+    <main class="pt-[theme(spacing.header-height)] md:pl-[theme(spacing.sidebar-width)] min-h-screen">
+        <div class="p-container-padding max-w-5xl mx-auto space-y-stack-lg">
+            <!-- Page Header -->
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Centro de Documentación</h2>
+                    <p class="font-body-md text-body-md text-secondary mt-1">Gestión y almacenamiento de expedientes digitales del personal.</p>
+                </div>
+                <button class="hidden sm:flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Nuevo Folder
+                </button>
+            </div>
+            <!-- Drag and Drop Area -->
+            <div class="w-full border-2 border-dashed border-outline-variant rounded-xl bg-surface-container-lowest p-stack-lg flex flex-col items-center justify-center text-center transition-all duration-200 cursor-pointer hover:border-primary hover:bg-surface-container-low group min-h-[240px]"
+                id="drop-zone">
+                <div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-4 group-hover:bg-primary-container/10 group-hover:scale-105 transition-all">
+                    <span class="material-symbols-outlined text-[32px] text-primary">cloud_upload</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Arrastra tus archivos aquí o haz clic para subir</h3>
+                <p class="font-body-sm text-body-sm text-secondary mb-6 max-w-md">Soporta PDF, DOCX, XLSX, y JPG hasta 50MB. Los documentos se asignarán automáticamente al expediente activo si existe.</p>
+                <button class="bg-surface-variant text-on-surface-variant border border-outline-variant px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+                    Examinar Archivos
+                </button>
+                <input class="hidden" id="file-upload" multiple="" type="file" />
+            </div>
+            <!-- Recent Documents Section -->
+            <div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+                <div class="p-stack-md border-b border-outline-variant flex items-center justify-between bg-surface">
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+                        <span class="material-symbols-outlined text-secondary">history</span> Documentos Recientes
+                    </h3>
+                    <div class="flex items-center gap-2">
+                        <div class="relative">
+                            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[18px]">search</span>
+                            <input class="pl-9 pr-4 py-1.5 text-body-sm border border-outline-variant rounded-lg bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all w-48 sm:w-64" placeholder="Buscar..." type="text" />
+                        </div>
+                        <button class="p-1.5 text-secondary border border-outline-variant rounded-lg hover:bg-surface-variant transition-colors" title="Filtrar">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+                    </div>
+                </div>
+                <!-- Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr class="bg-surface-bright border-b border-outline-variant">
+                                <th class="py-3 px-4 font-label-md text-label-md text-secondary uppercase tracking-wider">Nombre del Archivo</th>
+                                <th class="py-3 px-4 font-label-md text-label-md text-secondary uppercase tracking-wider">Tamaño</th>
+                                <th class="py-3 px-4 font-label-md text-label-md text-secondary uppercase tracking-wider">Fecha de Subida</th>
+                                <th class="py-3 px-4 font-label-md text-label-md text-secondary uppercase tracking-wider text-right">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-outline-variant">
+                            <!-- Row 1 PDF -->
+                            <tr class="hover:bg-surface-container-low/50 transition-colors group">
+                                <td class="py-3 px-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded bg-error-container/30 text-error flex items-center justify-center flex-shrink-0">
+                                            <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Contrato_Laboral_2024.pdf</p>
+                                            <p class="font-body-sm text-body-sm text-secondary">Expediente: Juan Pérez</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-4 font-body-sm text-body-sm text-secondary">2.4 MB</td>
+                                <td class="py-3 px-4 font-body-sm text-body-sm text-secondary">Hoy, 10:45 AM</td>
+                                <td class="py-3 px-4 text-right">
+                                    <button class="p-1.5 text-secondary hover:text-primary hover:bg-primary-container/10 rounded transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+                                    <button class="p-1.5 text-secondary hover:text-on-surface rounded transition-colors ml-1" title="Más opciones">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+                                </td>
+                            </tr>
+                            <!-- Row 2 Excel -->
+                            <tr class="hover:bg-surface-container-low/50 transition-colors group">
+                                <td class="py-3 px-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded bg-green-100 text-green-700 flex items-center justify-center flex-shrink-0">
+                                            <span class="material-symbols-outlined text-[18px]">table_chart</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Reporte_Asistencia_Octubre.xlsx</p>
+                                            <p class="font-body-sm text-body-sm text-secondary">General / Reportes</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-4 font-body-sm text-body-sm text-secondary">845 KB</td>
+                                <td class="py-3 px-4 font-body-sm text-body-sm text-secondary">Ayer, 16:30 PM</td>
+                                <td class="py-3 px-4 text-right">
+                                    <button class="p-1.5 text-secondary hover:text-primary hover:bg-primary-container/10 rounded transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+                                    <button class="p-1.5 text-secondary hover:text-on-surface rounded transition-colors ml-1" title="Más opciones">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+                                </td>
+                            </tr>
+                            <!-- Row 3 Word -->
+                            <tr class="hover:bg-surface-container-low/50 transition-colors group">
+                                <td class="py-3 px-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+                                            <span class="material-symbols-outlined text-[18px]">description</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Minuta_Junta_Directiva.docx</p>
+                                            <p class="font-body-sm text-body-sm text-secondary">Dirección</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-4 font-body-sm text-body-sm text-secondary">1.1 MB</td>
+                                <td class="py-3 px-4 font-body-sm text-body-sm text-secondary">12 Oct 2024</td>
+                                <td class="py-3 px-4 text-right">
+                                    <button class="p-1.5 text-secondary hover:text-primary hover:bg-primary-container/10 rounded transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+                                    <button class="p-1.5 text-secondary hover:text-on-surface rounded transition-colors ml-1" title="Más opciones">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+                                </td>
+                            </tr>
+                            <!-- Row 4 PDF -->
+                            <tr class="hover:bg-surface-container-low/50 transition-colors group">
+                                <td class="py-3 px-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded bg-error-container/30 text-error flex items-center justify-center flex-shrink-0">
+                                            <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Identificacion_Oficial_MG.pdf</p>
+                                            <p class="font-body-sm text-body-sm text-secondary">Expediente: María Gómez</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-4 font-body-sm text-body-sm text-secondary">4.5 MB</td>
+                                <td class="py-3 px-4 font-body-sm text-body-sm text-secondary">10 Oct 2024</td>
+                                <td class="py-3 px-4 text-right">
+                                    <button class="p-1.5 text-secondary hover:text-primary hover:bg-primary-container/10 rounded transition-colors" title="Descargar">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+                                    <button class="p-1.5 text-secondary hover:text-on-surface rounded transition-colors ml-1" title="Más opciones">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Pagination Footer -->
+                <div class="p-3 border-t border-outline-variant bg-surface-bright flex items-center justify-between">
+                    <span class="font-body-sm text-body-sm text-secondary">Mostrando 1 a 4 de 24 documentos</span>
+                    <div class="flex items-center gap-1">
+                        <button class="p-1 text-secondary hover:bg-surface-variant rounded transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+                        <button class="px-2.5 py-1 text-on-primary bg-primary rounded font-label-md text-label-md">1</button>
+                        <button class="px-2.5 py-1 text-secondary hover:bg-surface-variant rounded font-label-md text-label-md transition-colors">2</button>
+                        <button class="px-2.5 py-1 text-secondary hover:bg-surface-variant rounded font-label-md text-label-md transition-colors">3</button>
+                        <button class="p-1 text-secondary hover:bg-surface-variant rounded transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Simple Drag and Drop visual feedback
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-upload');
+
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropZone.classList.add('dragover');
+        }
+
+        function unhighlight(e) {
+            dropZone.classList.remove('dragover');
+        }
+
+        dropZone.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            let dt = e.dataTransfer;
+            let files = dt.files;
+
+            // Just visual feedback for the demo
+            if (files.length > 0) {
+                const originalText = dropZone.querySelector('h3').innerText;
+                dropZone.querySelector('h3').innerText = `${files.length} archivo(s) listo(s) para subir.`;
+                setTimeout(() => {
+                    dropZone.querySelector('h3').innerText = originalText;
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+
+</html>

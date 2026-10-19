@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Recursos Humanos - SCO</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons (reemplaza Material Symbols) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Fuente -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+    <!--  -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <!-- ===== TOP NAV BAR ===== -->
+    <header class="topbar d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center flex-shrink-0">
+            <span class="brand-title">SCO</span>
+            <div class="brand-divider"></div>
+            <div class="d-flex flex-column justify-content-center">
+                <span class="brand-sub-title">Sistemas de Canal Once</span>
+                <span class="brand-sub-caption">Recursos Humanos</span>
+            </div>
+        </div>
+
+        <div class="flex-grow-1 d-flex justify-content-center position-relative px-4">
+            <div class="search-wrap w-100" style="max-width: 420px;">
+                <i class="bi bi-search"></i>
+                <input type="text" class="form-control search-pill" placeholder="Presiona / para buscar">
+                <span class="kbd-hint d-none d-md-block">/</span>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-end gap-4 flex-shrink-0">
+            <nav class="d-none d-md-flex align-items-center gap-4 position-relative">
+                <button class="top-nav-link active border-0 bg-transparent d-flex align-items-center gap-1" id="megaMenuTrigger">
+          Formatos <i class="bi bi-chevron-down" style="font-size: 14px;"></i>
+        </button>
+                <a class="top-nav-link" href="#">Personal</a>
+                <a class="top-nav-link" href="#">Nómina</a>
+                <a class="top-nav-link" href="#">Reportes</a>
+            </nav>
+
+            <div class="d-flex align-items-center gap-1 border-start ps-3" style="border-color: rgba(255,255,255,.2) !important;">
+                <button class="icon-btn"><i class="bi bi-bell"></i></button>
+                <button class="icon-btn"><i class="bi bi-gear"></i></button>
+            </div>
+        </div>
+
+        <!-- Mega Menu -->
+        <div class="mega-menu row row-cols-4 g-4" id="megaMenu">
+            <div class="col d-flex flex-column">
+                <h3><i class="bi bi-receipt"></i> Recibos</h3>
+                <a href="#">Pago Único</a>
+                <a href="#">Modifica Recibo PU</a>
+                <a href="#">Recibos Honorarios</a>
+                <a href="#">Modifica Recibo</a>
+            </div>
+            <div class="col d-flex flex-column">
+                <h3><i class="bi bi-arrow-left-right"></i> Movimientos</h3>
+                <a href="#">Mov. Personal 3000 Fijos</a>
+                <a href="#">Movimiento Personal 1000</a>
+                <a href="#">Imprime Movimiento 3000</a>
+                <a href="#">Imprime Movimiento 1000</a>
+            </div>
+            <div class="col d-flex flex-column">
+                <h3><i class="bi bi-clipboard-check"></i> Requisiciones</h3>
+                <a href="#">Requisición Personal</a>
+                <a href="#">Requisición Serv. Social</a>
+                <a href="#">Imprime Requi.Serv.Soc.</a>
+            </div>
+            <div class="col d-flex flex-column">
+                <h3><i class="bi bi-file-earmark-plus"></i> Solicitudes</h3>
+                <a href="#">Solicitud Pago 3000</a>
+                <a href="#">Solicitud Pago PU</a>
+                <a href="#">Imprime Solicitud Pago 3000</a>
+                <a href="#">Imprime Solicitud Pago PU</a>
+                <a href="#">Editar Solicitud Pago 3000</a>
+                <a href="#">Editar Solicitud Pago PU</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-body">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar scrollbar-hide">
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="form-control" placeholder="Buscar formatos o folios...">
+                <kbd class="d-none d-md-inline-block">⌘K</kbd>
+            </div>
+
+            <nav class="d-flex flex-column gap-2 flex-grow-1 overflow-auto">
+                <a href="#" class="nav-item-link active"><i class="bi bi-grid-1x2"></i> Dashboard</a>
+                <a href="#" class="nav-item-link"><i class="bi bi-file-earmark-text"></i> Recibos</a>
+                <a href="#" class="nav-item-link"><i class="bi bi-clipboard-check"></i> Requisiciones</a>
+                <a href="#" class="nav-item-link"><i class="bi bi-file-earmark-plus"></i> Solicitudes</a>
+                <a href="#" class="nav-item-link"><i class="bi bi-person-plus"></i> Movimientos</a>
+
+                <div class="d-flex flex-column gap-1">
+                    <button class="nav-submenu-toggle" id="statsToggle">
+            <span class="d-flex align-items-center gap-3"><i class="bi bi-bar-chart"></i> Estadísticas</span>
+            <i class="bi bi-chevron-down" id="statsChevron"></i>
+          </button>
+                    <div class="nav-submenu d-none" id="statsSubmenu">
+                        <a href="#">Reporte Mensual</a>
+                        <a href="#">Gráficas de Nómina</a>
+                        <a href="#">Indicadores RH</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav-item-link mt-auto"><i class="bi bi-shield-lock"></i> Configuración</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item-link"><i class="bi bi-question-circle"></i> Ayuda</a>
+                <a href="#" class="nav-item-link nav-link-logout"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+
+            <!-- Quick Actions - Pinned Tiles -->
+
+            <!-- Dense Activity Feed -->
+
+        </main>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const trigger = document.getElementById('megaMenuTrigger');
+            const menu = document.getElementById('megaMenu');
+            let isOpen = false;
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+                    e.preventDefault();
+                    document.querySelector('input[type="text"]').focus();
+                }
+            });
+
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                isOpen = !isOpen;
+                menu.classList.toggle('show-menu', isOpen);
+            });
+
+            document.addEventListener('click', (e) => {
+                if (isOpen && !menu.contains(e.target) && !trigger.contains(e.target)) {
+                    isOpen = false;
+                    menu.classList.remove('show-menu');
+                }
+            });
+            const statsToggle = document.getElementById('statsToggle');
+            const statsSubmenu = document.getElementById('statsSubmenu');
+            const statsChevron = document.getElementById('statsChevron');
+            statsToggle.addEventListener('click', () => {
+                statsSubmenu.classList.toggle('d-none');
+                statsChevron.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Formatos - HR Portal</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+
+    <style>
+         :root {
+            --primary: #7f002d;
+            --primary-container: #a11e42;
+            --on-primary: #ffffff;
+            --on-primary-container: #ffb5bf;
+            --secondary: #5c5f60;
+            --secondary-container: #e1e3e4;
+            --background: #f8f9ff;
+            --on-background: #0b1c30;
+            --surface: #f8f9ff;
+            --surface-bright: #f8f9ff;
+            --surface-container-lowest: #ffffff;
+            --surface-container-low: #eff4ff;
+            --surface-container: #e5eeff;
+            --surface-container-high: #dce9ff;
+            --surface-container-highest: #d3e4fe;
+            --surface-variant: #d3e4fe;
+            --on-surface: #0b1c30;
+            --on-surface-variant: #584143;
+            --outline: #8b7073;
+            --outline-variant: #dfbfc2;
+            --tertiary: #333e51;
+            --tertiary-container: #4a5569;
+            --primary-fixed: #ffd9dd;
+            --on-primary-fixed: #400012;
+            --header-height: 64px;
+            --sidebar-width: 260px;
+            --gutter: 16px;
+            --container-padding: 24px;
+            --stack-sm: 8px;
+            --stack-md: 16px;
+            --stack-lg: 24px;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: var(--background);
+            color: var(--on-background);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            padding-top: var(--header-height);
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* ---------- Top Nav ---------- */
+        
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--primary);
+            color: var(--on-primary);
+            border-bottom: 1px solid var(--outline-variant);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 var(--gutter);
+            z-index: 1050;
+        }
+        
+        .top-nav .brand {
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: -0.01em;
+            color: var(--on-primary);
+            white-space: nowrap;
+        }
+        
+        .top-nav .main-links {
+            display: flex;
+            gap: var(--gutter);
+            height: 100%;
+            margin-left: var(--stack-lg);
+        }
+        
+        .top-nav .main-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 4px;
+            border-bottom: 2px solid transparent;
+            transition: background-color .2s ease;
+        }
+        
+        .top-nav .main-links a:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--on-primary);
+        }
+        
+        .top-nav .main-links a.active {
+            color: var(--on-primary);
+            border-bottom-color: var(--on-primary);
+        }
+        
+        .top-nav .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .top-nav .search-box .material-symbols-outlined {
+            position: absolute;
+            left: 10px;
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 18px;
+        }
+        
+        .top-nav .search-box input {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            border-radius: 4px;
+            color: var(--on-primary);
+            padding: 6px 12px 6px 32px;
+            font-size: 13px;
+            width: 190px;
+            outline: none;
+        }
+        
+        .top-nav .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .top-nav .search-box input:focus {
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+        }
+        
+        .top-nav .icon-btn {
+            background: transparent;
+            border: none;
+            color: var(--on-primary);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color .2s ease;
+        }
+        
+        .top-nav .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        /* ---------- Side Nav ---------- */
+        
+        .side-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            bottom: 0;
+            width: var(--sidebar-width);
+            background: var(--surface-container-low);
+            border-right: 1px solid var(--outline-variant);
+            padding: var(--stack-md) 0;
+            overflow-y: auto;
+            z-index: 1030;
+        }
+        
+        .side-nav .profile {
+            display: flex;
+            align-items: center;
+            gap: var(--stack-sm);
+            padding: 0 var(--gutter);
+            margin-bottom: var(--stack-lg);
+        }
+        
+        .side-nav .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--outline-variant);
+        }
+        
+        .side-nav .profile .title {
+            font-weight: 600;
+            font-size: 20px;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        
+        .side-nav .profile .subtitle {
+            font-size: 12px;
+            color: var(--secondary);
+        }
+        
+        .side-nav .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            padding: 0 8px;
+        }
+        
+        .side-nav .nav-links a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px;
+            border-radius: 4px;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            border-left: 4px solid transparent;
+            transition: background-color .2s ease;
+        }
+        
+        .side-nav .nav-links a:hover {
+            background: rgba(211, 228, 254, 0.5);
+        }
+        
+        .side-nav .nav-links a.active {
+            color: var(--primary);
+            border-left-color: var(--primary);
+            background: rgba(127, 0, 45, 0.05);
+        }
+        
+        .side-nav .nav-links a.mt-auto {
+            margin-top: auto;
+        }
+        /* ---------- Main content ---------- */
+        
+        .main-content {
+            margin-left: 0;
+            padding: var(--gutter);
+        }
+        
+        @media (min-width: 768px) {
+            .main-content {
+                margin-left: var(--sidebar-width);
+                padding: var(--container-padding);
+            }
+        }
+        
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: var(--stack-md);
+            margin-bottom: var(--stack-lg);
+        }
+        
+        .page-header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+        
+        .page-header p {
+            color: var(--secondary);
+            margin: 4px 0 0;
+        }
+        
+        .btn-outline-custom {
+            background: var(--surface-container-lowest);
+            color: var(--secondary);
+            border: 1px solid var(--outline-variant);
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .btn-outline-custom:hover {
+            background: var(--surface-variant);
+            color: var(--secondary);
+        }
+        
+        .btn-primary-custom {
+            background: var(--primary);
+            color: var(--on-primary);
+            border: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .btn-primary-custom:hover {
+            background: var(--primary-container);
+            color: var(--on-primary);
+        }
+        /* ---------- Card / Table ---------- */
+        
+        .table-card {
+            background: var(--surface-container-lowest);
+            border: 1px solid var(--outline-variant);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+        
+        .table-controls {
+            padding: var(--stack-md);
+            border-bottom: 1px solid var(--outline-variant);
+            background: var(--surface-bright);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--stack-sm);
+        }
+        
+        .table-controls .search-input {
+            position: relative;
+            width: 260px;
+            max-width: 100%;
+        }
+        
+        .table-controls .search-input .material-symbols-outlined {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary);
+            font-size: 18px;
+        }
+        
+        .table-controls .search-input input {
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--outline-variant);
+            border-radius: 4px;
+            padding: 7px 12px 7px 34px;
+            font-size: 13px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        }
+        
+        .table-controls .search-input input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 1px var(--primary);
+        }
+        
+        .table-controls .show-select {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--secondary);
+        }
+        
+        .table-controls select {
+            border: 1px solid var(--outline-variant);
+            border-radius: 4px;
+            background: var(--surface);
+            padding: 5px 8px;
+            font-size: 13px;
+        }
+        
+        .formatos-table {
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+        
+        .formatos-table thead tr {
+            background: var(--surface-container-low);
+            border-bottom: 1px solid var(--outline-variant);
+        }
+        
+        .formatos-table thead th {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 12px;
+            padding: 12px 16px;
+            border: none;
+        }
+        
+        .formatos-table tbody td {
+            padding: 12px 16px;
+            vertical-align: middle;
+            border-color: rgba(223, 191, 194, 0.4);
+            font-size: 14px;
+        }
+        
+        .formatos-table tbody tr {
+            transition: background-color .15s ease;
+        }
+        
+        .formatos-table tbody tr:hover {
+            background: rgba(211, 228, 254, 0.2);
+        }
+        
+        .formatos-table .format-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--on-background);
+        }
+        
+        .formatos-table .format-name .material-symbols-outlined {
+            color: rgba(127, 0, 45, 0.7);
+        }
+        
+        .formatos-table .clave {
+            color: var(--secondary);
+            font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+            font-size: 12px;
+        }
+        
+        .formatos-table .text-muted-custom {
+            color: var(--secondary);
+        }
+        
+        .badge-tipo {
+            display: inline-flex;
+            align-items: center;
+            padding: 2px 10px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .badge-personal {
+            background: var(--surface-container-highest);
+            color: var(--tertiary-container);
+        }
+        
+        .badge-finanzas {
+            background: var(--primary-fixed);
+            color: var(--on-primary-fixed);
+        }
+        
+        .badge-operaciones {
+            background: #eaf1ff;
+            color: #213145;
+        }
+        
+        .row-actions {
+            text-align: right;
+        }
+        
+        .row-actions button {
+            background: transparent;
+            border: none;
+            color: var(--secondary);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color .15s ease, color .15s ease;
+        }
+        
+        .row-actions button:hover {
+            background: rgba(127, 0, 45, 0.1);
+            color: var(--primary);
+        }
+        /* ---------- Pagination ---------- */
+        
+        .table-footer {
+            padding: var(--stack-md);
+            border-top: 1px solid var(--outline-variant);
+            background: var(--surface-bright);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--stack-sm);
+        }
+        
+        .table-footer .record-count {
+            font-size: 13px;
+            color: var(--secondary);
+        }
+        
+        .table-footer .record-count strong {
+            color: var(--on-background);
+            font-weight: 600;
+        }
+        
+        .pagination-custom {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .pagination-custom .page-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            background: var(--surface-container-lowest);
+            color: var(--secondary);
+            font-size: 13px;
+            font-weight: 500;
+            transition: background-color .15s ease, color .15s ease;
+        }
+        
+        .pagination-custom .page-btn:hover {
+            background: rgba(211, 228, 254, 0.4);
+            border-color: var(--outline-variant);
+        }
+        
+        .pagination-custom .page-btn.active {
+            background: var(--primary);
+            color: var(--on-primary);
+            font-weight: 600;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pagination-custom .nav-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            border: 1px solid var(--outline-variant);
+            background: var(--surface-container-lowest);
+            color: var(--secondary);
+        }
+        
+        .pagination-custom .nav-btn:hover {
+            background: var(--surface);
+            color: var(--primary);
+        }
+        
+        .pagination-custom .ellipsis {
+            width: 32px;
+            text-align: center;
+            color: var(--secondary);
+            font-size: 13px;
+        }
+        
+        @media (max-width: 767.98px) {
+            .top-nav .main-links {
+                display: none;
+            }
+            .top-nav .search-box input {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Nav -->
+    <header class="top-nav">
+        <div class="d-flex align-items-center">
+            <span class="brand">Sistemas de Canal Once</span>
+            <nav class="main-links d-none d-md-flex">
+                <a href="#" class="active">Formatos</a>
+                <a href="#">Personal</a>
+                <a href="#">Nómina</a>
+                <a href="#">Reportes</a>
+            </nav>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <div class="search-box">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Search...">
+            </div>
+            <button class="icon-btn"><span class="material-symbols-outlined">notifications</span></button>
+            <button class="icon-btn"><span class="material-symbols-outlined">help</span></button>
+            <button class="icon-btn"><span class="material-symbols-outlined">account_circle</span></button>
+        </div>
+    </header>
+
+    <!-- Side Nav -->
+    <nav class="side-nav d-none d-md-flex flex-column">
+        <div class="profile">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4ml9rcxr1S-Emj2aPJrl21JokGSm23pk0TQWHOdDLrEdaXJgBkPE2m7WU1l3G1ZP8ToKhnd4liccNqm1GKVTP8aHIrzLo46aezRWg7C26WkDgyUgCbgq1aprIgMtj9ZKJkSlnVaPYS4Tbdm4VQl6Gt-ol4A3EeN99Z8F62C_E42LGi2hY7qnAymlypxn_2QHa0Z8j-OmU9nrJ2ZaWPy9Vfhq3VkLEFSpuM2EOSfFsLydZgjznZxS1"
+                alt="Perfil de administrador RH">
+            <div>
+                <div class="title">HR Portal</div>
+                <div class="subtitle">Administración</div>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#"><span class="material-symbols-outlined">dashboard</span><span>Dashboard</span></a>
+            <a href="#"><span class="material-symbols-outlined">description</span><span>Recibos</span></a>
+            <a href="#" class="active"><span class="material-symbols-outlined filled">assignment</span><span>Requisiciones</span></a>
+            <a href="#"><span class="material-symbols-outlined">fact_check</span><span>Solicitudes</span></a>
+            <a href="#"><span class="material-symbols-outlined">swap_horiz</span><span>Movimientos</span></a>
+            <a href="#" class="mt-auto"><span class="material-symbols-outlined">settings</span><span>Configuración</span></a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="page-header">
+            <div>
+                <h1>Directorio de Formatos</h1>
+                <p>Administración y control de documentos institucionales.</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-custom">
+        <span class="material-symbols-outlined" style="font-size:18px;">filter_list</span>
+        Filtrar
+      </button>
+                <button class="btn btn-primary-custom">
+        <span class="material-symbols-outlined" style="font-size:18px;">add</span>
+        Nuevo Formato
+      </button>
+            </div>
+        </div>
+
+        <div class="table-card">
+            <div class="table-controls">
+                <div class="search-input">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" placeholder="Buscar formatos...">
+                </div>
+                <div class="show-select">
+                    <span>Mostrar:</span>
+                    <select>
+          <option>10</option>
+          <option>25</option>
+          <option>50</option>
+        </select>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table formatos-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre del Formato</th>
+                            <th>Clave</th>
+                            <th>Tipo</th>
+                            <th>Departamento</th>
+                            <th>Frecuencia</th>
+                            <th>Última Modificación</th>
+                            <th class="text-end">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="format-name"><span class="material-symbols-outlined">description</span>Solicitud de Vacaciones</td>
+                            <td class="clave">RH-VAC-001</td>
+                            <td><span class="badge-tipo badge-personal">Personal</span></td>
+                            <td>Recursos Humanos</td>
+                            <td class="text-muted-custom">Anual</td>
+                            <td class="text-muted-custom">12 Oct 2023</td>
+                            <td class="row-actions">
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">edit</span></button>
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">download</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="format-name"><span class="material-symbols-outlined">request_quote</span>Reembolso de Gastos</td>
+                            <td class="clave">FIN-GAS-042</td>
+                            <td><span class="badge-tipo badge-finanzas">Finanzas</span></td>
+                            <td>Contabilidad</td>
+                            <td class="text-muted-custom">Bajo demanda</td>
+                            <td class="text-muted-custom">05 Nov 2023</td>
+                            <td class="row-actions">
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">edit</span></button>
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">download</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="format-name"><span class="material-symbols-outlined">assignment_ind</span>Evaluación de Desempeño</td>
+                            <td class="clave">RH-EVAL-015</td>
+                            <td><span class="badge-tipo badge-personal">Personal</span></td>
+                            <td>Recursos Humanos</td>
+                            <td class="text-muted-custom">Semestral</td>
+                            <td class="text-muted-custom">28 Ago 2023</td>
+                            <td class="row-actions">
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">edit</span></button>
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">download</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="format-name"><span class="material-symbols-outlined">inventory</span>Requisición de Material</td>
+                            <td class="clave">OP-MAT-008</td>
+                            <td><span class="badge-tipo badge-operaciones">Operaciones</span></td>
+                            <td>Logística</td>
+                            <td class="text-muted-custom">Bajo demanda</td>
+                            <td class="text-muted-custom">15 Dic 2023</td>
+                            <td class="row-actions">
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">edit</span></button>
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">download</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="format-name"><span class="material-symbols-outlined">badge</span>Alta de Nuevo Ingreso</td>
+                            <td class="clave">RH-ALT-002</td>
+                            <td><span class="badge-tipo badge-personal">Personal</span></td>
+                            <td>Recursos Humanos</td>
+                            <td class="text-muted-custom">Bajo demanda</td>
+                            <td class="text-muted-custom">02 Ene 2024</td>
+                            <td class="row-actions">
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">edit</span></button>
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">download</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="format-name"><span class="material-symbols-outlined">build</span>Reporte de Mantenimiento</td>
+                            <td class="clave">OP-MAN-033</td>
+                            <td><span class="badge-tipo badge-operaciones">Operaciones</span></td>
+                            <td>Infraestructura</td>
+                            <td class="text-muted-custom">Mensual</td>
+                            <td class="text-muted-custom">10 Nov 2023</td>
+                            <td class="row-actions">
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">edit</span></button>
+                                <button><span class="material-symbols-outlined" style="font-size:18px;">download</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <div class="record-count">
+                    Mostrando <strong>1-10</strong> de <strong>245</strong> registros
+                </div>
+                <div class="pagination-custom">
+                    <button class="nav-btn"><span class="material-symbols-outlined" style="font-size:18px;">chevron_left</span></button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <span class="ellipsis">...</span>
+                    <button class="page-btn">25</button>
+                    <button class="nav-btn"><span class="material-symbols-outlined" style="font-size:18px;">chevron_right</span></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
